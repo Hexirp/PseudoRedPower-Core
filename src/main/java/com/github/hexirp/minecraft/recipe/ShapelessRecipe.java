@@ -1,6 +1,6 @@
 package com.github.hexirp.minecraft.recipe;
 
-import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * このクラスは不定形のレシピを表現する.
@@ -26,16 +26,9 @@ public class ShapelessRecipe {
 	}
 	
 	/**
-	 * レシピの材料を取得する.
+	 * 不定形レシピを登録する.
 	 */
-	public Object[] order() {
-		return order.calc();
-	}
-	
-	/**
-	 * レシピの結果を取得する.
-	 */
-	public ItemStack product() {
-		return product.get();
+	public final void registry() {
+		GameRegistry.addShapelessRecipe(product.get(), order.calc());
 	}
 }

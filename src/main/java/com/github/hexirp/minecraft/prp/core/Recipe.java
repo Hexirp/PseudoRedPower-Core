@@ -1,7 +1,6 @@
 package com.github.hexirp.minecraft.prp.core;
 
 import com.github.hexirp.minecraft.recipe.RecipeProduct;
-import com.github.hexirp.minecraft.recipe.RecipeRegistration;
 import com.github.hexirp.minecraft.recipe.ShapedRecipe;
 import com.github.hexirp.minecraft.recipe.ShapedRecipeAbstractOrder;
 import com.github.hexirp.minecraft.recipe.ShapedRecipeMaterialMap;
@@ -22,7 +21,7 @@ public class Recipe {
 	 * Recipe群を追加する.
 	 */
 	static final void add() {
-		RecipeRegistration.addShapedRecipe(new ShapedRecipe(
+		new ShapedRecipe(
 		    new RecipeProduct(Blocks.bedrock, 1),
 		    new ShapedRecipeOrder(
 		        new ShapedRecipeAbstractOrder()
@@ -30,20 +29,20 @@ public class Recipe {
 		            .add("AAA")
 		            .add("AAA"),
 		        new ShapedRecipeMaterialMap()
-		            .put('A', Blocks.obsidian))));
+		            .put('A', Blocks.obsidian))).registry();
 					
-		RecipeRegistration.addShapedRecipe(new ShapedRecipe(
+		new ShapedRecipe(
 		    new RecipeProduct(Items.chainmail_helmet, 1),
 		    new ShapedRecipeOrder(
 		        new ShapedRecipeAbstractOrder()
 		            .add(" A ")
 		            .add("A A"),
 		        new ShapedRecipeMaterialMap()
-		            .put('A', Items.iron_ingot))));
+		            .put('A', Items.iron_ingot))).registry();
 					
-		RecipeRegistration.addShapelessRecipe(new ShapelessRecipe(
+		new ShapelessRecipe(
 		    new RecipeProduct(Blocks.bedrock, 1),
 		    new ShapelessRecipeMaterial()
-		        .add(Blocks.obsidian, 3)));
+		        .add(Blocks.obsidian, 3)).registry();
 	}
 }

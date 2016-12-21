@@ -1,6 +1,6 @@
 package com.github.hexirp.minecraft.recipe;
 
-import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * このクラスは定型レシピを表現する.
@@ -11,18 +11,8 @@ public class ShapedRecipe {
 	/** レシピの結果. */
 	private final RecipeProduct product;
 	
-	/** レシピの結果を取得する. */
-	public ItemStack getProduct() {
-		return product.get();
-	}
-	
 	/** レシピの並べ方. */
 	private final ShapedRecipeOrder order;
-	
-	/** レシピの並べ方を取得する. */
-	public Object[] calcOrder() {
-		return order.calc();
-	}
 	
 	/**
 	 * コントストラクタ.
@@ -33,5 +23,12 @@ public class ShapedRecipe {
 	public ShapedRecipe(RecipeProduct item, ShapedRecipeOrder input) {
 		product = item;
 		order = input;
+	}
+	
+	/**
+	 * 定型レシピを登録する.
+	 */
+	public final void registry() {
+		GameRegistry.addRecipe(product.get(), order.calc());
 	}
 }
