@@ -1,10 +1,10 @@
 [
 {
-  "modid": "prp-core",
-  "name": "PseudoRedPower-Core",
+  "modid": "prp-core", //"${mod_id}",
+  "name": "PseudoRedPower-Core", //"${name}",
   "description": "PseudoRedPower-Core is a MOD of Minecraft and is the copied RedPower2 to 1.8.9 or later. So, if you think that this MOD is interesting, respect the author of RedPower2 as well.",
-  "version": "1.0.0.0",
-  "mcversion": "1.8.9",
+  "version": "1.0.0.0", //"${version}",
+  "mcversion": "1.8.9", //"${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["Hexirp"],

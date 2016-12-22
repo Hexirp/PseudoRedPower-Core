@@ -1,7 +1,7 @@
 package com.github.hexirp.annotation;
 
 /**
- * NonNullが付けられていると見なされる範囲を指定するための列挙型.
+ * NonNullByDefaultにおいて、NonNullが付けられていると見なされる範囲を指定するための列挙型.
  *
  * @author Hexirp
  */

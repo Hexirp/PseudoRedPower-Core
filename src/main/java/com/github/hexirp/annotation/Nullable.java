@@ -8,8 +8,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 関数の引数の定義につけられた場合、その引数はNullである可能性が存在します. また、関数そのものの定義につけられた場合、その関数の返り値がNullである可能性が存在します.
- * これはNullチェックを強制します.
+ * 関数の引数の定義につけられた場合、その引数はNullである可能性がある. また、関数そのものの定義につけられた場合、その関数の返り値がNullである可能性がある.
+ * これはNullチェックを強制する.
  *
  * @author Hexirp
  */

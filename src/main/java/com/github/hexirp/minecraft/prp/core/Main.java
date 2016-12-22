@@ -13,14 +13,15 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  *
  * @author Hexirp
  */
-@Mod(modid = Main.MOD_ID, name = Main.NAME, version = Main.VERSION)
+@Mod(modid = Main.MOD_ID, name = Main.NAME,
+    version = Main.VERSION)
 public final class Main {
 	/** MODの短縮名である. */
-	public static final String MOD_ID = "prp-core";
-
+	public static final String MOD_ID = "prp-core"; //"${id}";
+	
 	/** MODの名前である. */
-	public static final String NAME = "PseudoRedPower-Core";
-
+	public static final String NAME = "PseudoRedPower-Core"; //"${name}";
+	
 	/**
 	 * MODのバージョンである.
 	 *
@@ -34,8 +35,8 @@ public final class Main {
 	 * </ul>
 	 * </p>
 	 */
-	public static final String VERSION = "1.0.0.0";
-
+	public static final String VERSION = "1.0.0.0"; //"${version}";
+	
 	/**
 	 * 初期化前処理を行う.
 	 *
