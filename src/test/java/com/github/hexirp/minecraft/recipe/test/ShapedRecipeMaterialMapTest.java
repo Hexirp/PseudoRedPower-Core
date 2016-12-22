@@ -9,6 +9,10 @@ import org.junit.Test;
 
 import com.github.hexirp.minecraft.recipe.ShapedRecipeMaterialMap;
 
+/**
+ * @author Hexirp
+ * @see com.github.hexirp.minecraft.recipe.ShapedRecipeMaterialMap
+ */
 public class ShapedRecipeMaterialMapTest {
 	
 	/**

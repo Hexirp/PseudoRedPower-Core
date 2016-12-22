@@ -9,6 +9,10 @@ import org.junit.Test;
 
 import com.github.hexirp.minecraft.recipe.ShapedRecipeAbstractOrder;
 
+/**
+ * @author Hexirp
+ * @see com.github.hexirp.minecraft.recipe.ShapedRecipeAbstractOrder
+ */
 public class ShapedRecipeAbstractOrderTest {
 	/**
 	 * コントストラクタは一定の内容を生成する.

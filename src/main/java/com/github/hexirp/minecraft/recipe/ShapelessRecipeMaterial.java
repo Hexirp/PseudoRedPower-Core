@@ -45,7 +45,8 @@ public class ShapelessRecipeMaterial {
 	 * @param times 回数
 	 */
 	private <T> void repeat(Consumer<T> action, T arg, int times) {
-		assert (0 <= times);
+		if (0 <= times) {} else
+			throw new IllegalArgumentException();
 		for (int counter = 0; counter < times; counter++) {
 			action.accept(arg);
 		}

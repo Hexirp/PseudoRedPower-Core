@@ -6,6 +6,10 @@ import org.junit.Test;
 
 import com.github.hexirp.minecraft.recipe.ShapelessRecipeMaterial;
 
+/**
+ * @author Hexirp
+ * @see com.github.hexirp.minecraft.recipe.ShapelessRecipeMaterial
+ */
 public class ShapelessRecipeMaterialTest {
 	
 	/**
@@ -48,5 +52,13 @@ public class ShapelessRecipeMaterialTest {
 		Object[] ret2 = new Object[] { 'A', 'A', 'A', 'A', 'E' };
 		
 		assertEquals(ret1, ret2);
+	}
+	
+	/**
+	 * addのtimesは0以上でなければならない.
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testAddInCaseOfError() {
+		new ShapelessRecipeMaterial().add('a', -1);
 	}
 }
