@@ -27,12 +27,13 @@ public class ShapedRecipeOrder {
 	}
 	
 	/**
-	 * {@link net.minecraftforge.fml.common.registry.GameRegistry.addRecipe(ItemStack, Object...)}
-	 * のためにレシピの並べ方を変換する.
+	 * レシピの並べ方をリストへ変換する.
 	 */
 	public Object[] calc() {
-		List<Object> ret = append(order.order(), input.toList());
-		
+		List<Object> ret = append(
+		    order.order(),
+		    input.toList());
+			
 		return ret.toArray();
 	}
 	

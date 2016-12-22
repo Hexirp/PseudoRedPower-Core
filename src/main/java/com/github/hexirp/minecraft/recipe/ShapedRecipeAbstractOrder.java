@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * このクラスはレシピの並べ方を文字で抽象的に表現する.
  *
- * 実際にはメソッドチェーンを使用するためにList<String>を包むクラスである。
+ * 実際にはメソッドチェーンを使用するために{@code List<String>}を包むクラスである。
  *
  * <pre>
  * new ShapedRecipeAbstractOrder()

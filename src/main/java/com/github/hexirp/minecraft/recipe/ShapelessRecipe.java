@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  *
  * @author Hexirp
  */
-public class ShapelessRecipe {
+public class ShapelessRecipe implements Registerable {
 	/** レシピの結果. */
 	private RecipeProduct product;
 	
@@ -26,8 +26,9 @@ public class ShapelessRecipe {
 	}
 	
 	/**
-	 * 不定形レシピを登録する.
+	 * @see com.github.hexirp.minecraft.recipe.Registerable#registry()
 	 */
+	@Override
 	public final void registry() {
 		GameRegistry.addShapelessRecipe(product.get(), order.calc());
 	}

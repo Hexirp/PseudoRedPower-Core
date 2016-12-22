@@ -10,7 +10,6 @@ import java.lang.annotation.Target;
  * パッケージに対して付けられた場合、そのパッケージの全ての要素においてデフォルトでNonNullが付けられていると見なされる.
  *
  * @author Hexirp
- *        
  */
 @Documented
 @Retention(RetentionPolicy.CLASS)

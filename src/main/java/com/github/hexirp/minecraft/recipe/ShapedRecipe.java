@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  *
  * @author Hexirp
  */
-public class ShapedRecipe {
+public class ShapedRecipe implements Registerable {
 	/** レシピの結果. */
 	private final RecipeProduct product;
 	
@@ -26,8 +26,9 @@ public class ShapedRecipe {
 	}
 	
 	/**
-	 * 定型レシピを登録する.
+	 * @see com.github.hexirp.minecraft.recipe.Registerable#registry()
 	 */
+	@Override
 	public final void registry() {
 		GameRegistry.addRecipe(product.get(), order.calc());
 	}

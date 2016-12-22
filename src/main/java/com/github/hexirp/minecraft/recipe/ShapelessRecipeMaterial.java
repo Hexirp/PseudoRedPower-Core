@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 /**
  * このクラスは不定形レシピの材料を表現する.
  *
- * 実際にはメソッドチェーンを使用するためにList<Object>を使用するためのクラスである。
+ * 実際にはメソッドチェーンを使用するために{@code List<Object>}を包むクラスである。
  *
  * @author Hexirp
  */
