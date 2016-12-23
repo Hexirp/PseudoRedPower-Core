@@ -1,8 +1,13 @@
 package com.github.hexirp.minecraft.prp.core;
 
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * このクラスはMODの情報を定義する.
@@ -17,10 +22,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
     version = Main.VERSION)
 public final class Main {
 	/** MODの短縮名である. */
-	public static final String MOD_ID = "prp-core"; //"${id}";
+	public static final String MOD_ID = "prp_core"; //"${id}"
 	
 	/** MODの名前である. */
-	public static final String NAME = "PseudoRedPower-Core"; //"${name}";
+	public static final String NAME = "PseudoRedPower-Core"; //"${name}"
 	
 	/**
 	 * MODのバージョンである.
@@ -35,7 +40,7 @@ public final class Main {
 	 * </ul>
 	 * </p>
 	 */
-	public static final String VERSION = "1.0.0.0"; //"${version}";
+	public static final String VERSION = "1.0.0.0"; //"${version}"
 	
 	/**
 	 * 初期化前処理を行う.
@@ -44,6 +49,20 @@ public final class Main {
 	 */
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		Recipe.add();
+		new Recipe().add();
+		
+		Item sampleitem = new Item()
+		    .setCreativeTab(CreativeTabs.tabMaterials)
+		    .setUnlocalizedName("SampleItem")
+		    .setMaxStackSize(64);
+			
+		GameRegistry.registerItem(sampleitem, "sampleitem");
+		
+		if (event.getSide().isClient()) {
+			ModelLoader.setCustomModelResourceLocation(
+			    sampleitem,
+			    0,
+			    new ModelResourceLocation(MOD_ID + ":" + "sampleitem", "inventory"));
+		}
 	}
 }

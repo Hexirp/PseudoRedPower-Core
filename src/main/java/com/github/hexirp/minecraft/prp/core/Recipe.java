@@ -17,10 +17,12 @@ import net.minecraft.init.Items;
  * @author Hexirp
  */
 public class Recipe {
+	public Recipe() {}
+	
 	/**
 	 * Recipe群を追加する.
 	 */
-	static final void add() {
+	public void add() {
 		new ShapedRecipe(
 		    new RecipeProduct(Blocks.bedrock, 1),
 		    new ShapedRecipeOrder(
