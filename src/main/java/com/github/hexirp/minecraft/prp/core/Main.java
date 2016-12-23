@@ -21,14 +21,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @Mod(modid = Main.MOD_ID, name = Main.NAME,
     version = Main.VERSION)
 public final class Main {
-	/** MODの短縮名である. */
+	/** MODの短縮名. */
 	public static final String MOD_ID = "prp_core"; //"${id}"
 	
-	/** MODの名前である. */
+	/** MODの名前. */
 	public static final String NAME = "PseudoRedPower-Core"; //"${name}"
 	
 	/**
-	 * MODのバージョンである.
+	 * MODのバージョン.
 	 *
 	 * <p>
 	 * 更新基準:
@@ -42,6 +42,8 @@ public final class Main {
 	 */
 	public static final String VERSION = "1.0.0.0"; //"${version}"
 	
+	public static Item sampleitem;
+	
 	/**
 	 * 初期化前処理を行う.
 	 *
@@ -51,7 +53,7 @@ public final class Main {
 	public void preInit(FMLPreInitializationEvent event) {
 		new Recipe().add();
 		
-		Item sampleitem = new Item()
+		sampleitem = new Item()
 		    .setCreativeTab(CreativeTabs.tabMaterials)
 		    .setUnlocalizedName("SampleItem")
 		    .setMaxStackSize(64);

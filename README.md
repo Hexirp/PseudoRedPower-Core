@@ -1,6 +1,6 @@
 # PseudoRedPower-Core
 
-PseudoRedPower-Core is a MOD of Minecraft and is **the copied RedPower2** to 1.8.9 or later. So, if you think that this MOD is interesting, respect the author of RedPower2 as well.
+PseudoRedPower-Core is a MOD of Minecraft and is **the copied RedPower2** to 1.8.9 or later. So, if you think that this MOD is interesting, respect the author of RedPower2.
 
 ## Feature
 
