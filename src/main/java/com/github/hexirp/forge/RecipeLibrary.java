@@ -39,4 +39,16 @@ public abstract class RecipeLibrary extends LinkedList<Recipe> implements Recipe
 		
 		return this;
 	}
+	
+	/**
+	 * メソッドチェーン可能な追加メソッド.
+	 *
+	 * @param c 追加する値
+	 * @return 自分自身
+	 */
+	public RecipeLibrary _addAll(Recipe c) {
+		this.add(c);
+		
+		return this;
+	}
 }

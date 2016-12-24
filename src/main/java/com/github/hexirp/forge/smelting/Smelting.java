@@ -1,6 +1,6 @@
 package com.github.hexirp.forge.smelting;
 
-import com.github.hexirp.forge.Registerable;
+import com.github.hexirp.forge.Recipe;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  *
  * @author Hexirp
  */
-public class Smelting implements Registerable {
+public class Smelting implements Recipe {
 	/** 結果. */
 	private final Item product;
 	
