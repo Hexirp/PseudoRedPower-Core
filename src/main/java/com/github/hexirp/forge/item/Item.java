@@ -39,6 +39,7 @@ public class Item implements Registerable {
 	 * コントストラクタ. 名前はシステム内部名でありゲーム本体では表示されないため、 別途{@code lang}ファイルを{@code resources}フォルダに置く必要がある.
 	 * モデルのリソースは{@code asset\prp\core\\models\item\name}に置く.
 	 *
+	 * @param data 自分自身が定義されるMODのデータ
 	 * @param e 初期化前処理イベント
 	 * @param name スネークケースでの内部名を指定する. 例:{@code sample_item}
 	 * @param tab クリエイティブモードでのインベントリのタブのどこに入れられるかを指定する.

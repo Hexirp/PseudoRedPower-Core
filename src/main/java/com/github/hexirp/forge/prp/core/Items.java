@@ -25,6 +25,7 @@ public class Items {
 	/**
 	 * Eventを内部に保持するためのコントストラクタ.
 	 *
+	 * @param data MODのデータ
 	 * @param e 初期化前処理イベント
 	 */
 	public Items(ModMetadata data, FMLPreInitializationEvent e) {

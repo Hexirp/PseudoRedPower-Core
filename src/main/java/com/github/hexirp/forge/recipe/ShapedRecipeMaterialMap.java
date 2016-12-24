@@ -23,6 +23,8 @@ public class ShapedRecipeMaterialMap {
 	
 	/**
 	 * 文字とアイテムとの対応関係を{@code List<Object>}に変換する.
+	 *
+	 * @return 対応関係がリストで表現されたもの
 	 */
 	public final List<Object> toList() {
 		List<Object> ret = new LinkedList<Object>();
@@ -40,6 +42,7 @@ public class ShapedRecipeMaterialMap {
 	 *
 	 * @param key 単一文字
 	 * @param value ItemクラスとBlockクラスのみが渡されるべきである
+	 * @return 自分自身
 	 */
 	public ShapedRecipeMaterialMap put(Character key, Object value) {
 		material.put(key, value);

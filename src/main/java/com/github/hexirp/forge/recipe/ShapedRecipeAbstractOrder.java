@@ -28,6 +28,8 @@ public class ShapedRecipeAbstractOrder {
 	
 	/**
 	 * 文字で表現されたレシピの並べ方を返す.
+	 *
+	 * @return 内部の値
 	 */
 	public List<String> order() {
 		return order;
@@ -37,6 +39,7 @@ public class ShapedRecipeAbstractOrder {
 	 * レシピの下側に行を追加する.
 	 *
 	 * @param string 追加される文字列
+	 * @return 自分自身
 	 */
 	public ShapedRecipeAbstractOrder add(String string) {
 		order.add(string);

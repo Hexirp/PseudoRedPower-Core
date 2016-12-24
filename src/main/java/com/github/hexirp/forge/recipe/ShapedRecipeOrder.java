@@ -27,19 +27,22 @@ public class ShapedRecipeOrder {
 	}
 	
 	/**
-	 * レシピの並べ方をリストへ変換する.
+	 * レシピの並べ方を配列へ変換する.
+	 *
+	 * @return レシピの並べ方の配列での表現
 	 */
 	public Object[] calc() {
-		List<Object> ret = append(
-		    order.order(),
-		    input.toList());
-			
+		List<Object> ret = append(order.order(), input.toList());
+		
 		return ret.toArray();
 	}
 	
 	/**
 	 * 二つのリストを結合する関数.それらの値の型は異なっても良いし、同じでもよい。
 	 *
+	 * @param <A> BとCの共通祖先
+	 * @param <B> 任意の型
+	 * @param <C> 任意の型
 	 * @param a どのような型を要素としていても良い
 	 * @param b どのような型を要素としていても良い
 	 * @return 二つの引数の値の型が共通して継承する型を型引数とするリスト型

@@ -20,7 +20,11 @@ public class ShapelessRecipeMaterial {
 		list = new LinkedList<Object>();
 	}
 	
-	/** 不定形レシピの材料を配列に変換する */
+	/**
+	 * 不定形レシピの材料を配列に変換する
+	 *
+	 * @return 材料の配列での表
+	 */
 	public Object[] calc() {
 		return list.toArray();
 	}
@@ -30,6 +34,7 @@ public class ShapelessRecipeMaterial {
 	 *
 	 * @param obj ItemクラスとBlockクラスのみが渡されるべきである
 	 * @param n 個数
+	 * @return 自分自身
 	 */
 	public ShapelessRecipeMaterial add(Object obj, int n) {
 		repeat(list::add, obj, n);
@@ -40,6 +45,7 @@ public class ShapelessRecipeMaterial {
 	/**
 	 * 返り値を返さない操作を引数に複数回適用する.
 	 *
+	 * @param <T> 好きな型
 	 * @param action 返り値を返さない操作
 	 * @param arg 引数
 	 * @param times 回数

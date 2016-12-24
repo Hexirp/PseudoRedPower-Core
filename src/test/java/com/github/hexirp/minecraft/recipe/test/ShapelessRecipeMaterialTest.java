@@ -63,7 +63,7 @@ public class ShapelessRecipeMaterialTest {
 	}
 	
 	/**
-	 * addのtimesは0異常ではなければならない.
+	 * addのtimesは0以上ではなければならない.
 	 */
 	@Test
 	public void testAddInNonException() {

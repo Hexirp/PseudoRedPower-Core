@@ -15,7 +15,11 @@ public class RecipeProduct {
 	/** 保持対象. */
 	private final ItemStack product;
 	
-	/** Getter */
+	/**
+	 * Getter
+	 * 
+	 * @return 内部の値
+	 */
 	public ItemStack get() {
 		return product;
 	}
