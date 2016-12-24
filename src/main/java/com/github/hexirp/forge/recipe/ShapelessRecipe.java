@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.recipe;
 
+import com.github.hexirp.forge.Recipe;
+
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**

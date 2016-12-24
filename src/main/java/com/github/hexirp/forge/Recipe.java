@@ -1,6 +1,4 @@
-package com.github.hexirp.forge.recipe;
-
-import com.github.hexirp.forge.Registerable;
+package com.github.hexirp.forge;
 
 /**
  * レシピを表現する.
