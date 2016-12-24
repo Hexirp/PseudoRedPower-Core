@@ -1,6 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.item.Item;
+import com.github.hexirp.forge.item.RegisterableItem;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.ModMetadata;
@@ -37,6 +38,11 @@ public class Items {
 	 * アイテムを追加する.
 	 */
 	public void add() {
-		new Item(metadata, event, "sample_item", CreativeTabs.tabMaterials).registry();
+		new RegisterableItem(
+		    metadata,
+		    event,
+		    new Item(
+		        "sample_item",
+		        CreativeTabs.tabMaterials)).registry();
 	}
 }
