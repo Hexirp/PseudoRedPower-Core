@@ -42,7 +42,7 @@ public class Item {
 	 * @param metadata 登録されるModの情報
 	 * @param event 登録されるイベントの情報
 	 */
-	public void registry(ModMetadata metadata, FMLPreInitializationEvent event) {
+	public void register(ModMetadata metadata, FMLPreInitializationEvent event) {
 		GameRegistry.registerItem(item, name);
 		
 		if (event.getSide().isClient()) setResourceLocation(metadata);

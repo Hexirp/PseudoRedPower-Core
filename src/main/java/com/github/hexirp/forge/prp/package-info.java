@@ -1,5 +1,5 @@
 /**
- * PseudoRedPower全体に渡るパッケージ.
+ * PRP全体に渡るパッケージ.
  *
  * @author Hexirp
  */

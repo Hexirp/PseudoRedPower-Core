@@ -37,7 +37,7 @@ public class RegisterableItem implements Registerable {
 	}
 	
 	@Override
-	public void registry() {
-		item.registry(metadata, event);
+	public void register() {
+		item.register(metadata, event);
 	}
 }

@@ -28,7 +28,7 @@ public class ShapelessRecipe implements Registerable {
 	}
 	
 	@Override
-	public final void registry() {
+	public final void register() {
 		GameRegistry.addShapelessRecipe(product.get(), order.calc());
 	}
 }

@@ -57,10 +57,10 @@ public final class Core {
 	public void preInit(FMLPreInitializationEvent event) {
 		Metadata.set(metadata);
 		
-		new Items(metadata, event).add();
+		new Items(metadata, event).register();
 		
-		new Recipes().add();
+		new Recipes().register();
 		
-		new Smeltings().add();
+		new Smeltings().register();
 	}
 }

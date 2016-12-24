@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.Registerable;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 import com.github.hexirp.forge.recipe.ShapedRecipe;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
@@ -16,16 +17,17 @@ import net.minecraft.init.Items;
  *
  * @author Hexirp
  */
-public class Recipes {
+public class Recipes implements Registerable {
 	/**
 	 * コントストラクタ. 設定を受け取れるようにする予定.
 	 */
 	public Recipes() {}
 	
 	/**
-	 * Recipe群を追加する.
+	 * ゲームにRecipe群を追加する.
 	 */
-	public void add() {
+	@Override
+	public void register() {
 		new ShapedRecipe(
 		    new RecipeProduct(Blocks.bedrock, 1),
 		    new ShapedRecipeOrder(
@@ -34,7 +36,7 @@ public class Recipes {
 		            .add("AAA")
 		            .add("AAA"),
 		        new ShapedRecipeMaterialMap()
-		            .put('A', Blocks.obsidian))).registry();
+		            .put('A', Blocks.obsidian))).register();
 					
 		new ShapedRecipe(
 		    new RecipeProduct(Items.chainmail_helmet, 1),
@@ -43,11 +45,11 @@ public class Recipes {
 		            .add(" A ")
 		            .add("A A"),
 		        new ShapedRecipeMaterialMap()
-		            .put('A', Items.iron_ingot))).registry();
+		            .put('A', Items.iron_ingot))).register();
 					
 		new ShapelessRecipe(
 		    new RecipeProduct(Blocks.bedrock, 1),
 		    new ShapelessRecipeMaterial()
-		        .add(Blocks.obsidian, 3)).registry();
+		        .add(Blocks.obsidian, 3)).register();
 	}
 }

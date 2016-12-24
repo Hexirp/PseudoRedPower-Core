@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.Registerable;
 import com.github.hexirp.forge.item.Item;
 import com.github.hexirp.forge.item.RegisterableItem;
 
@@ -12,7 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  *
  * @author Hexirp
  */
-public class Items {
+public class Items implements Registerable {
 	/**
 	 * Modの情報.
 	 */
@@ -37,12 +38,13 @@ public class Items {
 	/**
 	 * アイテムを追加する.
 	 */
-	public void add() {
+	@Override
+	public void register() {
 		new RegisterableItem(
 		    metadata,
 		    event,
 		    new Item(
 		        "sample_item",
-		        CreativeTabs.tabMaterials)).registry();
+		        CreativeTabs.tabMaterials)).register();
 	}
 }

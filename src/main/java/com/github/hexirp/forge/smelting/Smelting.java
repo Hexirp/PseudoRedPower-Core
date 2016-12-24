@@ -35,7 +35,7 @@ public class Smelting implements Registerable {
 	}
 	
 	@Override
-	public void registry() {
+	public void register() {
 		GameRegistry.addSmelting(product, new ItemStack(material), exp);
 	}
 }
