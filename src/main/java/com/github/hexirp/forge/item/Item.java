@@ -1,11 +1,11 @@
 package com.github.hexirp.forge.item;
 
 import com.github.hexirp.forge.Registerable;
-import com.github.hexirp.forge.prp.core.Metadata;
 
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -16,9 +16,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class Item implements Registerable {
 	/**
+	 * MODの情報.
+	 */
+	private final ModMetadata metadata;
+	
+	/**
 	 * 情報を取り出すためにEventを保持する.
 	 */
-	private FMLPreInitializationEvent event;
+	private final FMLPreInitializationEvent event;
 	
 	/**
 	 * 良く使うためアイテムの名前を保持する.
@@ -38,7 +43,8 @@ public class Item implements Registerable {
 	 * @param name スネークケースでの内部名を指定する. 例:{@code sample_item}
 	 * @param tab クリエイティブモードでのインベントリのタブのどこに入れられるかを指定する.
 	 */
-	public Item(FMLPreInitializationEvent e, String name, CreativeTabs tab) {
+	public Item(ModMetadata data, FMLPreInitializationEvent e, String name, CreativeTabs tab) {
+		this.metadata = data;
 		this.event = e;
 		this.name = name;
 		this.item = new net.minecraft.item.Item()
@@ -57,7 +63,7 @@ public class Item implements Registerable {
 	 * 自分自身のモデルのリソースのファイルパスを登録する.
 	 */
 	private void setResourceLocation() {
-		String path = Metadata.MOD_ID + ":" + name;
+		String path = metadata.modId + ":" + name;
 		
 		ModelResourceLocation location = new ModelResourceLocation(path, "inventory");
 		

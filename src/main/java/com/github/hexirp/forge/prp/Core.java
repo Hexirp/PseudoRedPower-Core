@@ -19,6 +19,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  */
 @Mod(modid = Metadata.MOD_ID, useMetadata = true)
 public final class Core {
+	/**
+	 * MODの情報. Forgeにより初期化されるため、自分では初期化しない.
+	 */
 	@Mod.Metadata
 	public static ModMetadata metadata;
 	
@@ -33,6 +36,6 @@ public final class Core {
 		
 		new Recipes().add();
 		
-		new Items(event).add();
+		new Items(metadata, event).add();
 	}
 }

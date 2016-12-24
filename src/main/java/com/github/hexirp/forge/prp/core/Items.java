@@ -3,6 +3,7 @@ package com.github.hexirp.forge.prp.core;
 import com.github.hexirp.forge.item.Item;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
@@ -12,16 +13,22 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  */
 public class Items {
 	/**
+	 * Modの情報.
+	 */
+	private final ModMetadata metadata;
+	
+	/**
 	 * 情報を取り出すためにEventを保持する.
 	 */
-	private FMLPreInitializationEvent event;
+	private final FMLPreInitializationEvent event;
 	
 	/**
 	 * Eventを内部に保持するためのコントストラクタ.
 	 *
 	 * @param e 初期化前処理イベント
 	 */
-	public Items(FMLPreInitializationEvent e) {
+	public Items(ModMetadata data, FMLPreInitializationEvent e) {
+		metadata = data;
 		event = e;
 	}
 	
@@ -29,6 +36,6 @@ public class Items {
 	 * アイテムを追加する.
 	 */
 	public void add() {
-		new Item(event, "sample_item", CreativeTabs.tabMaterials).registry();
+		new Item(metadata, event, "sample_item", CreativeTabs.tabMaterials).registry();
 	}
 }
