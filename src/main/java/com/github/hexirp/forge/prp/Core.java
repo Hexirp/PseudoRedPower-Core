@@ -1,11 +1,15 @@
-package com.github.hexirp.minecraft.prp.core;
+package com.github.hexirp.forge.prp;
+
+import com.github.hexirp.forge.prp.core.Items;
+import com.github.hexirp.forge.prp.core.Metadata;
+import com.github.hexirp.forge.prp.core.Recipes;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
- * このクラスはMODの情報を定義する.
+ * このクラスはPseudoRedPower-Coreの情報を定義する.
  *
  * <p>
  * 警告: 「神クラス」にならないように.
@@ -14,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * @author Hexirp
  */
 @Mod(modid = Metadata.MOD_ID, useMetadata = true)
-public final class Main {
+public final class Core {
 	@Mod.Metadata
 	public static ModMetadata metadata;
 	

@@ -1,6 +1,6 @@
-package com.github.hexirp.minecraft.prp.core;
+package com.github.hexirp.forge.prp.core;
 
-import com.github.hexirp.minecraft.item.Item;
+import com.github.hexirp.forge.item.Item;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

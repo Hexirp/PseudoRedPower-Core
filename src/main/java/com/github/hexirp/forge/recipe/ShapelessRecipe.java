@@ -1,6 +1,6 @@
-package com.github.hexirp.minecraft.recipe;
+package com.github.hexirp.forge.recipe;
 
-import com.github.hexirp.minecraft.Registerable;
+import com.github.hexirp.forge.Registerable;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

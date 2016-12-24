@@ -7,11 +7,11 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.github.hexirp.minecraft.recipe.ShapedRecipeMaterialMap;
+import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
 
 /**
  * @author Hexirp
- * @see com.github.hexirp.minecraft.recipe.ShapedRecipeMaterialMap
+ * @see com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap
  */
 public class ShapedRecipeMaterialMapTest {
 	

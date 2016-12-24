@@ -1,4 +1,4 @@
-package com.github.hexirp.minecraft.prp.core;
+package com.github.hexirp.forge.prp.core;
 
 import net.minecraftforge.fml.common.ModMetadata;
 

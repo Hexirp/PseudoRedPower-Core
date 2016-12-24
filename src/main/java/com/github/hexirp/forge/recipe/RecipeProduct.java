@@ -1,4 +1,4 @@
-package com.github.hexirp.minecraft.recipe;
+package com.github.hexirp.forge.recipe;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

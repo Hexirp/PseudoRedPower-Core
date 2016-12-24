@@ -1,12 +1,12 @@
-package com.github.hexirp.minecraft.prp.core;
+package com.github.hexirp.forge.prp.core;
 
-import com.github.hexirp.minecraft.recipe.RecipeProduct;
-import com.github.hexirp.minecraft.recipe.ShapedRecipe;
-import com.github.hexirp.minecraft.recipe.ShapedRecipeAbstractOrder;
-import com.github.hexirp.minecraft.recipe.ShapedRecipeMaterialMap;
-import com.github.hexirp.minecraft.recipe.ShapedRecipeOrder;
-import com.github.hexirp.minecraft.recipe.ShapelessRecipe;
-import com.github.hexirp.minecraft.recipe.ShapelessRecipeMaterial;
+import com.github.hexirp.forge.recipe.RecipeProduct;
+import com.github.hexirp.forge.recipe.ShapedRecipe;
+import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
+import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
+import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
+import com.github.hexirp.forge.recipe.ShapelessRecipe;
+import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

@@ -7,11 +7,11 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.github.hexirp.minecraft.recipe.ShapedRecipeAbstractOrder;
+import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
 /**
  * @author Hexirp
- * @see com.github.hexirp.minecraft.recipe.ShapedRecipeAbstractOrder
+ * @see com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder
  */
 public class ShapedRecipeAbstractOrderTest {
 	/**

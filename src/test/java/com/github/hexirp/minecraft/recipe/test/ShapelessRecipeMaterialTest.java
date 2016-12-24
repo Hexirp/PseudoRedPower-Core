@@ -4,11 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.github.hexirp.minecraft.recipe.ShapelessRecipeMaterial;
+import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 
 /**
  * @author Hexirp
- * @see com.github.hexirp.minecraft.recipe.ShapelessRecipeMaterial
+ * @see com.github.hexirp.forge.recipe.ShapelessRecipeMaterial
  */
 public class ShapelessRecipeMaterialTest {
 	
@@ -58,7 +58,15 @@ public class ShapelessRecipeMaterialTest {
 	 * addのtimesは0以上でなければならない.
 	 */
 	@Test(expected = IllegalArgumentException.class)
-	public void testAddInCaseOfError() {
+	public void testAddInException() {
 		new ShapelessRecipeMaterial().add('a', -1);
+	}
+	
+	/**
+	 * addのtimesは0異常ではなければならない.
+	 */
+	@Test
+	public void testAddInNonException() {
+		new ShapelessRecipeMaterial().add('a', 0);
 	}
 }

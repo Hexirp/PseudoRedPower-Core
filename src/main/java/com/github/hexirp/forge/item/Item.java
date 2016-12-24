@@ -1,7 +1,7 @@
-package com.github.hexirp.minecraft.item;
+package com.github.hexirp.forge.item;
 
-import com.github.hexirp.minecraft.Registerable;
-import com.github.hexirp.minecraft.prp.core.Metadata;
+import com.github.hexirp.forge.Registerable;
+import com.github.hexirp.forge.prp.core.Metadata;
 
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;

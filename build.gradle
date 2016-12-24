@@ -3,10 +3,7 @@ sourceSets.main {
     resources.srcDirs project.projectDir.name
 }
 
-//def id = "prp_core"
-//def name = "PseudoRedPower-Core"
-def version = "1.0.0.0"
-//def mcversion = "1.8.9"
+version = "1.0.0.0"
 
 tasks.withType(Jar) {compileJava.options.encoding = 'UTF-8'}
 tasks.withType(Jar) {compileApiJava.options.encoding = 'UTF-8'}
