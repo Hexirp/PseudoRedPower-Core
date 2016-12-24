@@ -3,6 +3,7 @@ package com.github.hexirp.forge.prp;
 import com.github.hexirp.forge.prp.core.Items;
 import com.github.hexirp.forge.prp.core.Metadata;
 import com.github.hexirp.forge.prp.core.Recipes;
+import com.github.hexirp.forge.prp.core.Smeltings;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModMetadata;
@@ -56,8 +57,10 @@ public final class Core {
 	public void preInit(FMLPreInitializationEvent event) {
 		Metadata.set(metadata);
 		
+		new Items(metadata, event).add();
+		
 		new Recipes().add();
 		
-		new Items(metadata, event).add();
+		new Smeltings().add();
 	}
 }
