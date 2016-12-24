@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.prp.Core;
+
 import net.minecraftforge.fml.common.ModMetadata;
 
 /**
@@ -8,40 +10,22 @@ import net.minecraftforge.fml.common.ModMetadata;
  * @author Hexirp
  */
 public final class Metadata {
-	/** MODの短縮名. */
-	public static final String MOD_ID = "prp_core"; //"${id}";
+	/** MODの解説 */
+	private static final String DESCRIPTION = "PseudoRedPower-Core is the copied RedPower2 to 1.8.9 or later. So, if you think that this MOD is interesting, respect the author of RedPower2.";
 	
-	/** MODの名前. */
-	public static final String NAME = "PseudoRedPower-Core"; //"${name}";
-	
-	/**
-	 * MODのバージョン.
-	 *
-	 * <p>
-	 * 更新基準:
-	 * <ul>
-	 * <li>第一レベル: 対応するMinecraft本体のバージョンの上昇、メカニズムの削除。</li>
-	 * <li>第二レベル: 大規模なメカニズムの導入、バージョンの壁をもたらす変更。</li>
-	 * <li>第三レベル: 小規模なメカニズムの導入、大きな変更をもたらすバグの修正。</li>
-	 * <li>第四レベル: バグの修正。</li>
-	 * </ul>
-	 * </p>
-	 */
-	public static final String VERSION = "1.0.0.0"; //"${version}";
-	
-	public static final String DESCRIPTION = "PseudoRedPower-Core is the copied RedPower2 to 1.8.9 or later. So, if you think that this MOD is interesting, respect the author of RedPower2.";
-	
-	public static final String URL = "https://github.com/Hexirp/PseudoRedPower-Core";
+	/** MODのソースコードのリポジトリ. */
+	private static final String URL = "https://github.com/Hexirp/PseudoRedPower-Core";
 	
 	/**
 	 * MODの情報を設定する.
 	 *
-	 * @param metadata
+	 * @param metadata MODの情報
 	 */
 	public static final void set(ModMetadata metadata) {
-		metadata.modId = MOD_ID;
-		metadata.name = NAME;
-		metadata.version = VERSION;
+		metadata.modId = Core.MOD_ID;
+		metadata.name = Core.NAME;
+		metadata.version = Core.VERSION;
+		
 		metadata.description = DESCRIPTION;
 		metadata.authorList.add("Hexirp");
 		metadata.url = URL;
