@@ -1,4 +1,4 @@
-package com.github.hexirp.minecraft.recipe;
+package com.github.hexirp.minecraft;
 
 /**
  * 自分自身をゲームに登録することが出来る事を示す.
