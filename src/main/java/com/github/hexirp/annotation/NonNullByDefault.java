@@ -17,6 +17,11 @@ import java.lang.annotation.Target;
     ElementType.METHOD, ElementType.CONSTRUCTOR,
     ElementType.FIELD, ElementType.LOCAL_VARIABLE })
 public @interface NonNullByDefault {
+	/**
+	 * 対象を指定する.
+	 *
+	 * @return 対象リスト
+	 */
 	DefaultLocation[] value() default {
 	    DefaultLocation.PARAMETER, DefaultLocation.RETURN_TYPE,
 	    DefaultLocation.FIELD, DefaultLocation.TYPE_BOUND,
