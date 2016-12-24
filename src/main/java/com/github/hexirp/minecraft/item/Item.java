@@ -1,7 +1,7 @@
 package com.github.hexirp.minecraft.item;
 
 import com.github.hexirp.minecraft.Registerable;
-import com.github.hexirp.minecraft.prp.core.Main;
+import com.github.hexirp.minecraft.prp.core.Metadata;
 
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -57,7 +57,7 @@ public class Item implements Registerable {
 	 * 自分自身のモデルのリソースのファイルパスを登録する.
 	 */
 	private void setResourceLocation() {
-		String path = Main.MOD_ID + ":" + name;
+		String path = Metadata.MOD_ID + ":" + name;
 		
 		ModelResourceLocation location = new ModelResourceLocation(path, "inventory");
 		

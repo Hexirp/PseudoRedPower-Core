@@ -18,7 +18,7 @@ import net.minecraft.init.Items;
  */
 public class Recipes {
 	/**
-	 * コントストラクタ. 後程、Configデータを受け取れるようにする予定.
+	 * コントストラクタ. 設定を受け取れるようにする予定.
 	 */
 	public Recipes() {}
 	
