@@ -16,11 +16,16 @@ import net.minecraft.init.Items;
  *
  * @author Hexirp
  */
-public class Recipe {
+public class Recipes {
+	/**
+	 * コントストラクタ. 後程、Configデータを受け取れるようにする予定.
+	 */
+	public Recipes() {}
+	
 	/**
 	 * Recipe群を追加する.
 	 */
-	static final void add() {
+	public void add() {
 		new ShapedRecipe(
 		    new RecipeProduct(Blocks.bedrock, 1),
 		    new ShapedRecipeOrder(

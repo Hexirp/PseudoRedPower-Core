@@ -1,6 +1,5 @@
 /bin/
 /run/
-/ref-*.md
 .classpath
 .project
 /.settings/

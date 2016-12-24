@@ -1,5 +1,7 @@
 package com.github.hexirp.minecraft.recipe;
 
+import com.github.hexirp.minecraft.Registerable;
+
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -25,9 +27,6 @@ public class ShapelessRecipe implements Registerable {
 		order = input;
 	}
 	
-	/**
-	 * @see com.github.hexirp.minecraft.recipe.Registerable#registry()
-	 */
 	@Override
 	public final void registry() {
 		GameRegistry.addShapelessRecipe(product.get(), order.calc());

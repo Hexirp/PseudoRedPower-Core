@@ -1,7 +1,6 @@
 package com.github.hexirp.minecraft.prp.core;
 
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
@@ -16,14 +15,14 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Main.MOD_ID, name = Main.NAME,
     version = Main.VERSION)
 public final class Main {
-	/** MODの短縮名である. */
-	public static final String MOD_ID = "prp-core"; //"${id}";
+	/** MODの短縮名. */
+	public static final String MOD_ID = "prp_core"; //"${id}";
 	
-	/** MODの名前である. */
+	/** MODの名前. */
 	public static final String NAME = "PseudoRedPower-Core"; //"${name}";
 	
 	/**
-	 * MODのバージョンである.
+	 * MODのバージョン.
 	 *
 	 * <p>
 	 * 更新基準:
@@ -42,8 +41,10 @@ public final class Main {
 	 *
 	 * @param event イベントモデルによる初期化前処理イベント
 	 */
-	@EventHandler
+	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		Recipe.add();
+		new Recipes().add();
+		
+		new Items(event).add();
 	}
 }
