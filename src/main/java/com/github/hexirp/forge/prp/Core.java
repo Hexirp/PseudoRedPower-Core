@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.prp;
 
+import com.github.hexirp.annotation.Nullable;
 import com.github.hexirp.forge.prp.core.Items;
 import com.github.hexirp.forge.prp.core.Metadata;
 import com.github.hexirp.forge.prp.core.Recipes;
@@ -25,6 +26,7 @@ public final class Core {
 	 * MODの情報. Forgeにより初期化されるため、自分では初期化しない.
 	 */
 	@Mod.Metadata
+	@Nullable
 	public static ModMetadata metadata;
 	
 	/**
