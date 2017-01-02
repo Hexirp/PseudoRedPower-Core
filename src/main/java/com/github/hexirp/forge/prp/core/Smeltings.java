@@ -14,10 +14,8 @@ import net.minecraft.init.Items;
  * @author Hexirp
  */
 public class Smeltings extends Library implements Recipe {
-	/**
-	 * コントストラクタ. 設定を受け取れるようにする予定.
-	 */
-	public Smeltings() {
+	@Override
+	protected void add() {
 		library.add(
 		    new SmeltingRecipe(
 		        new SmeltingRecipeInga(

@@ -13,10 +13,8 @@ import net.minecraft.init.Items;
  * @author Hexirp
  */
 public class SampleRecipes extends Library implements Recipe {
-	/**
-	 * コントストラクタ. 設定を受け取れるようにする予定.
-	 */
-	public SampleRecipes() {
+	@Override
+	protected void add() {
 		library.add(new ProductPhase(Blocks.bedrock, 1).order()
 		    .add("AAA")
 		    .add("AAA")

@@ -10,10 +10,8 @@ import com.github.hexirp.forge.prp.core.recipes.SampleRecipes;
  * @author Hexirp
  */
 public class Recipes extends Library implements Recipe {
-	/**
-	 * コントストラクタ. 設定を受け取れるようにする予定.
-	 */
-	public Recipes() {
+	@Override
+	protected void add() {
 		library.add(new SampleRecipes());
 	}
 }

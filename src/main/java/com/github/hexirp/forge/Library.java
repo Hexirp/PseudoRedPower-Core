@@ -8,11 +8,19 @@ import java.util.List;
  *
  * @author Hexirp
  */
-public class Library implements Registerable {
+public abstract class Library implements Registerable {
 	/**
 	 * 保持する辞書.
 	 */
 	protected final List<Recipe> library = new LinkedList<Recipe>();
+	
+	/** 自分自身のライブラリに追加する */
+	protected abstract void add();
+	
+	/** コントストラクタ. 設定を受け取れるようにする予定. */
+	public Library() {
+		add();
+	}
 	
 	@Override
 	public void register() {
