@@ -2,8 +2,6 @@ package com.github.hexirp.forge.recipe;
 
 import com.github.hexirp.forge.Recipe;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -12,30 +10,25 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Hexirp
  */
 public class SmeltingRecipe implements Recipe {
-	/** 結果. */
-	private final Item product;
-	
-	/** 材料. */
-	private final Item material;
+	/** 原因と結果 */
+	private final SmeltingRecipeInga inga;
 	
 	/** 経験値が得られる確率. */
-	private final float exp;
+	private SmeltingRecipeExp exp;
 	
 	/**
 	 * コントストラクタ.
 	 *
-	 * @param product 結果
-	 * @param material 材料
+	 * @param inga 材料と結果
 	 * @param exp 経験値が得られる確率. 0以上1以下でなければならない
 	 */
-	public SmeltingRecipe(Item product, Item material, float exp) {
-		this.product = product;
-		this.material = material;
+	public SmeltingRecipe(SmeltingRecipeInga inga, SmeltingRecipeExp exp) {
+		this.inga = inga;
 		this.exp = exp;
 	}
 	
 	@Override
 	public void register() {
-		GameRegistry.addSmelting(product, new ItemStack(material), exp);
+		GameRegistry.addSmelting(inga.getProduct(), inga.getMaterial(), exp.calc());
 	}
 }
