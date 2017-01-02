@@ -18,18 +18,29 @@ public class SampleRecipes extends Library implements Recipe {
 		library.add(new ProductPhase(Blocks.bedrock, 1).order()
 		    .add("AAA")
 		    .add("AAA")
-		    .add("AAA").map()
-		    .put('A', Blocks.obsidian)
+		    .add("AAA").map().put('A', Blocks.bedrock)
 		    .toRecipe());
 		
 		library.add(new ProductPhase(Items.chainmail_helmet, 1).order()
 		    .add(" A ")
-		    .add("A A").map()
-		    .put('A', Items.iron_ingot)
+		    .add("A A").map().put('A', Items.iron_ingot)
 		    .toRecipe());
 		
-		library.add(new ProductPhase(Blocks.bedrock, 1).material()
-		    .add(Blocks.obsidian, 3)
+		library.add(new ProductPhase(Items.chainmail_chestplate, 1).order()
+		    .add("A A")
+		    .add(" A ")
+		    .add("AAA").map().put('A', Items.iron_ingot)
+		    .toRecipe());
+		
+		library.add(new ProductPhase(Items.chainmail_leggings, 1).order()
+		    .add(" A ")
+		    .add("A A")
+		    .add("A A").map().put('A', Items.iron_ingot)
+		    .toRecipe());
+		
+		library.add(new ProductPhase(Items.chainmail_boots, 1).order()
+		    .add("A  ")
+		    .add("  A").map().put('A', Items.iron_ingot)
 		    .toRecipe());
 	}
 }
