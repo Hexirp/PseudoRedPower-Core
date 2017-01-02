@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.recipe;
+package com.github.hexirp.forge.smelting;
 
 import com.github.hexirp.forge.Recipe;
 

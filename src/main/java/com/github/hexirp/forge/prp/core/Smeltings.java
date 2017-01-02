@@ -2,9 +2,9 @@ package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.Library;
 import com.github.hexirp.forge.Recipe;
-import com.github.hexirp.forge.recipe.SmeltingRecipe;
-import com.github.hexirp.forge.recipe.SmeltingRecipeExp;
-import com.github.hexirp.forge.recipe.SmeltingRecipeInga;
+import com.github.hexirp.forge.smelting.SmeltingRecipe;
+import com.github.hexirp.forge.smelting.SmeltingRecipeExp;
+import com.github.hexirp.forge.smelting.SmeltingRecipeInga;
 
 import net.minecraft.init.Items;
 

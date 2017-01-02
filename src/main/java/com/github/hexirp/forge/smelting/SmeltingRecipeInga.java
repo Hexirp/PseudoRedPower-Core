@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.recipe;
+package com.github.hexirp.forge.smelting;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

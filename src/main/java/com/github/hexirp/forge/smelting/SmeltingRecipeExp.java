@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.recipe;
+package com.github.hexirp.forge.smelting;
 
 /**
  * 製錬レシピにおいて、経験値が得られる確率の目安を表現する.
