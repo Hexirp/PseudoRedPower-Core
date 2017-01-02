@@ -2,7 +2,6 @@ package com.github.hexirp.forge.recipe;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * このクラスは不定形レシピの材料を表現する.
@@ -37,24 +36,12 @@ public class ShapelessRecipeMaterial {
 	 * @return 自分自身
 	 */
 	public ShapelessRecipeMaterial add(Object obj, int n) {
-		repeat(list::add, obj, n);
+		if (0 <= n == false) throw new IllegalArgumentException();
+		
+		for (int counter = 0; counter < n; counter++) {
+			list.add(obj);
+		}
 		
 		return this;
-	}
-	
-	/**
-	 * 返り値を返さない操作を引数に複数回適用する.
-	 *
-	 * @param <T> 好きな型
-	 * @param action 返り値を返さない操作
-	 * @param arg 引数
-	 * @param times 回数
-	 */
-	private <T> void repeat(Consumer<T> action, T arg, int times) {
-		if (0 <= times) {} else
-			throw new IllegalArgumentException();
-		for (int counter = 0; counter < times; counter++) {
-			action.accept(arg);
-		}
 	}
 }

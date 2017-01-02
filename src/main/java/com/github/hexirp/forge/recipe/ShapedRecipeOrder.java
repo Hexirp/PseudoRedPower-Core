@@ -32,28 +32,12 @@ public class ShapedRecipeOrder {
 	 * @return レシピの並べ方の配列での表現
 	 */
 	public Object[] calc() {
-		List<Object> ret = append(order.order(), input.toList());
+		List<Object> ret = new LinkedList<>();
+		
+		order.order().forEach(ret::add);
+		
+		input.toList().forEach(ret::add);
 		
 		return ret.toArray();
-	}
-	
-	/**
-	 * 二つのリストを結合する関数.それらの値の型は異なっても良いし、同じでもよい。
-	 *
-	 * @param <A> BとCの共通祖先
-	 * @param <B> 任意の型
-	 * @param <C> 任意の型
-	 * @param a どのような型を要素としていても良い
-	 * @param b どのような型を要素としていても良い
-	 * @return 二つの引数の値の型が共通して継承する型を型引数とするリスト型
-	 */
-	private <A, B extends A, C extends A> List<A> append(List<B> a, List<C> b) {
-		List<A> ret = new LinkedList<A>();
-		
-		a.forEach(t -> ret.add(t));
-		
-		b.forEach(t -> ret.add(t));
-		
-		return ret;
 	}
 }

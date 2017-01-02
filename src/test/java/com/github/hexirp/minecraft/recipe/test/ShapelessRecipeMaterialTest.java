@@ -57,7 +57,7 @@ public class ShapelessRecipeMaterialTest {
 	/**
 	 * addのtimesは0以上でなければならない.
 	 */
-	@Test(expected = IllegalArgumentException.class)
+	@Test(expected = Exception.class)
 	public void testAddInException() {
 		new ShapelessRecipeMaterial().add('a', -1);
 	}

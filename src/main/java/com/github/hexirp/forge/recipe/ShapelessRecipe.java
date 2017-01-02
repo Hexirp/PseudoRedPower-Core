@@ -11,10 +11,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ShapelessRecipe implements Recipe {
 	/** レシピの結果. */
-	private RecipeProduct product;
+	private final RecipeProduct product;
 	
 	/** レシピの材料. */
-	private ShapelessRecipeMaterial order;
+	private final ShapelessRecipeMaterial order;
 	
 	/**
 	 * コントストラクタ.
@@ -28,7 +28,7 @@ public class ShapelessRecipe implements Recipe {
 	}
 	
 	@Override
-	public final void register() {
+	public void register() {
 		GameRegistry.addShapelessRecipe(product.get(), order.calc());
 	}
 }
