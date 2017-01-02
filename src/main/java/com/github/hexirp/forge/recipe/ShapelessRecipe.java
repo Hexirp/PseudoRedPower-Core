@@ -1,6 +1,6 @@
 package com.github.hexirp.forge.recipe;
 
-import com.github.hexirp.forge.Registerable;
+import com.github.hexirp.forge.Recipe;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -9,12 +9,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  *
  * @author Hexirp
  */
-public class ShapelessRecipe implements Registerable {
+public class ShapelessRecipe implements Recipe {
 	/** レシピの結果. */
-	private RecipeProduct product;
+	private final RecipeProduct product;
 	
 	/** レシピの材料. */
-	private ShapelessRecipeMaterial order;
+	private final ShapelessRecipeMaterial order;
 	
 	/**
 	 * コントストラクタ.
@@ -28,7 +28,7 @@ public class ShapelessRecipe implements Registerable {
 	}
 	
 	@Override
-	public final void register() {
+	public void register() {
 		GameRegistry.addShapelessRecipe(product.get(), order.calc());
 	}
 }

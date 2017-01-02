@@ -1,7 +1,8 @@
 package com.github.hexirp.forge.prp.core;
 
-import com.github.hexirp.forge.Registerable;
-import com.github.hexirp.forge.smelting.Smelting;
+import com.github.hexirp.forge.Library;
+import com.github.hexirp.forge.Recipe;
+import com.github.hexirp.forge.recipe.SmeltingRecipe;
 
 import net.minecraft.init.Items;
 
@@ -10,20 +11,14 @@ import net.minecraft.init.Items;
  *
  * @author Hexirp
  */
-public class Smeltings implements Registerable {
+public class Smeltings extends Library implements Recipe {
 	/**
 	 * コントストラクタ. 設定を受け取れるようにする予定.
 	 */
-	public Smeltings() {}
-	
-	/**
-	 * 製錬レシピを登録する.
-	 */
-	@Override
-	public void register() {
-		new Smelting(
+	public Smeltings() {
+		library.add(new SmeltingRecipe(
 		    Items.carrot,
 		    Items.coal,
-		    0.1f).register();
+		    0.1f));
 	}
 }

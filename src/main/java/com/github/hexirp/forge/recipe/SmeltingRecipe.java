@@ -1,6 +1,6 @@
-package com.github.hexirp.forge.smelting;
+package com.github.hexirp.forge.recipe;
 
-import com.github.hexirp.forge.Registerable;
+import com.github.hexirp.forge.Recipe;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  *
  * @author Hexirp
  */
-public class Smelting implements Registerable {
+public class SmeltingRecipe implements Recipe {
 	/** 結果. */
 	private final Item product;
 	
@@ -28,7 +28,7 @@ public class Smelting implements Registerable {
 	 * @param material 材料
 	 * @param exp 経験値が得られる確率. 0以上1以下でなければならない
 	 */
-	public Smelting(Item product, Item material, float exp) {
+	public SmeltingRecipe(Item product, Item material, float exp) {
 		this.product = product;
 		this.material = material;
 		this.exp = exp;
