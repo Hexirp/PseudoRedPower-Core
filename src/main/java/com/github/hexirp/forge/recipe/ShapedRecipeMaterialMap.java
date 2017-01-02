@@ -3,7 +3,6 @@ package com.github.hexirp.forge.recipe;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * このクラスは文字とアイテムとの対応関係を表現する.
@@ -14,7 +13,7 @@ import java.util.Map;
  */
 public class ShapedRecipeMaterialMap {
 	/** 文字とアイテムとの対応関係. */
-	private final Map<Character, Object> material;
+	private final LinkedHashMap<Character, Object> material;
 	
 	/** コントストラクタ. */
 	public ShapedRecipeMaterialMap() {

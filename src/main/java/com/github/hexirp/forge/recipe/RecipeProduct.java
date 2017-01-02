@@ -12,16 +12,19 @@ import net.minecraft.item.ItemStack;
  * @author Hexirp
  */
 public class RecipeProduct {
-	/** 保持対象. */
-	private final ItemStack product;
+	/** 結果. */
+	private final Item output;
+	
+	/** 生成数 */
+	private final int size;
 	
 	/**
 	 * Getter
-	 * 
+	 *
 	 * @return 内部の値
 	 */
 	public ItemStack get() {
-		return product;
+		return new ItemStack(output, size);
 	}
 	
 	/**
@@ -31,16 +34,18 @@ public class RecipeProduct {
 	 * @param size アイテムのスタック数
 	 */
 	public RecipeProduct(Item output, int size) {
-		product = new ItemStack(output, size);
+		this.output = output;
+		this.size = size;
 	}
 	
 	/**
 	 * ブロックを使用する場合のコントストラクタ.
 	 *
-	 * @param output レシピの結果となるブロック
-	 * @param size ブロックのスタック数
+	 * @param output レシピの結果となるアイテム
+	 * @param size アイテムのスタック数
 	 */
 	public RecipeProduct(Block output, int size) {
-		product = new ItemStack(output, size);
+		this.output = Item.getItemFromBlock(output);
+		this.size = size;
 	}
 }
