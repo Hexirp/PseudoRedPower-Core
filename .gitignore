@@ -2,7 +2,7 @@
 /run/
 .classpath
 .project
-/.settings/
 /ref/
 /doc/
 /build/
+/.*/
