@@ -6,3 +6,6 @@
 /doc/
 /build/
 /.*/
+/logs/
+/PseudoRedPower-Core_Client.launch
+/PseudoRedPower-Core_Server.launch

@@ -50,6 +50,8 @@ public class Item {
 	
 	/**
 	 * 自分自身のモデルのリソースのファイルパスを登録する.
+	 *
+	 * @param metadata MODIDを取り出すためのデータ
 	 */
 	private void setResourceLocation(ModMetadata metadata) {
 		String path = metadata.modId + ":" + name;
