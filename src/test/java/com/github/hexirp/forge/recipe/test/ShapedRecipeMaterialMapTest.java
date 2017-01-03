@@ -38,27 +38,26 @@ public class ShapedRecipeMaterialMapTest {
 		assertEquals(ret1, ret2);
 	}
 	
-	/**
-	 * putは内部のマップに値を追加する.
-	 */
-	@Test
-	public void testPut() {
-		ShapedRecipeMaterialMap testee = new ShapedRecipeMaterialMap();
-		List<Object> ret1 = testee
-		    .put('A', "AAA")
-		    .put('B', "BBB")
-		    .put('C', "CCC")
-		    .toList();
-		
-		List<Object> ret2 = new LinkedList<>();
-		ret2.add('A');
-		ret2.add("AAA");
-		ret2.add('B');
-		ret2.add("BBB");
-		ret2.add('C');
-		ret2.add("CCC");
-		
-		assertEquals(ret1, ret2);
-	}
-	
+	//	/**
+	//	 * putは内部のマップに値を追加する.
+	//	 */
+	//	@Test
+	//	public void testPut() {
+	//		ShapedRecipeMaterialMap testee = new ShapedRecipeMaterialMap();
+	//		List<Object> ret1 = testee
+	//		    .put('A', "AAA")
+	//		    .put('B', "BBB")
+	//		    .put('C', "CCC")
+	//		    .toList();
+	//
+	//		List<Object> ret2 = new LinkedList<>();
+	//		ret2.add('A');
+	//		ret2.add("AAA");
+	//		ret2.add('B');
+	//		ret2.add("BBB");
+	//		ret2.add('C');
+	//		ret2.add("CCC");
+	//
+	//		assertEquals(ret1, ret2);
+	//	}
 }

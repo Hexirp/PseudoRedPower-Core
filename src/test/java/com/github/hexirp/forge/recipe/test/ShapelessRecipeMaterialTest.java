@@ -37,36 +37,36 @@ public class ShapelessRecipeMaterialTest {
 		assertEquals(ret1, ret2);
 	}
 	
-	/**
-	 * addは内部のリストに値を追加する.
-	 */
-	@SuppressWarnings("deprecation")
-	@Test
-	public void testAdd() {
-		ShapelessRecipeMaterial testee = new ShapelessRecipeMaterial();
-		Object[] ret1 = testee
-		    .add('A', 4)
-		    .add('E', 1)
-		    .calc();
-		
-		Object[] ret2 = new Object[] { 'A', 'A', 'A', 'A', 'E' };
-		
-		assertEquals(ret1, ret2);
-	}
+	//	/**
+	//	 * addは内部のリストに値を追加する.
+	//	 */
+	//	@SuppressWarnings("deprecation")
+	//	@Test
+	//	public void testAdd() {
+	//		ShapelessRecipeMaterial testee = new ShapelessRecipeMaterial();
+	//		Object[] ret1 = testee
+	//		    .add('A', 4)
+	//		    .add('E', 1)
+	//		    .calc();
+	//
+	//		Object[] ret2 = new Object[] { 'A', 'A', 'A', 'A', 'E' };
+	//
+	//		assertEquals(ret1, ret2);
+	//	}
 	
-	/**
-	 * addのtimesは0以上でなければならない.
-	 */
-	@Test(expected = Exception.class)
-	public void testAddInException() {
-		new ShapelessRecipeMaterial().add('a', -1);
-	}
+	//	/**
+	//	 * addのtimesは0以上でなければならない.
+	//	 */
+	//	@Test(expected = Exception.class)
+	//	public void testAddInException() {
+	//		new ShapelessRecipeMaterial().add('a', -1);
+	//	}
 	
-	/**
-	 * addのtimesは0以上ではなければならない.
-	 */
-	@Test
-	public void testAddInNonException() {
-		new ShapelessRecipeMaterial().add('a', 0);
-	}
+	//	/**
+	//	 * addのtimesは0以上ではなければならない.
+	//	 */
+	//	@Test
+	//	public void testAddInNonException() {
+	//		new ShapelessRecipeMaterial().add('a', 0);
+	//	}
 }
