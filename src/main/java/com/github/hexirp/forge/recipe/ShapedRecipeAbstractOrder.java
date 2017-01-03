@@ -19,12 +19,7 @@ import java.util.List;
  */
 public class ShapedRecipeAbstractOrder {
 	/** 文字で表現されたレシピの並べ方. */
-	private final List<String> order;
-	
-	/** コントストラクタ. */
-	public ShapedRecipeAbstractOrder() {
-		this.order = new LinkedList<String>();
-	}
+	private final List<String> order = new LinkedList<String>();
 	
 	/**
 	 * 文字で表現されたレシピの並べ方を返す.

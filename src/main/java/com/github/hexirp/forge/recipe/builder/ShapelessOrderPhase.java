@@ -1,11 +1,9 @@
 package com.github.hexirp.forge.recipe.builder;
 
+import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 import com.github.hexirp.forge.recipe.ShapelessRecipe;
 import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
-
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 
 /** 材料の定義の段階の表現 */
 public class ShapelessOrderPhase {
@@ -23,27 +21,14 @@ public class ShapelessOrderPhase {
 	}
 	
 	/**
-	 * アイテムの場合の追加
+	 * 追加
 	 *
 	 * @param item アイテム
 	 * @param n 個数
 	 * @return 自分自身
 	 */
-	public ShapelessOrderPhase add(Item item, int n) {
+	public ShapelessOrderPhase add(MinecraftItem item, int n) {
 		material.add(item, n);
-		
-		return this;
-	}
-	
-	/**
-	 * ブロックの場合の追加
-	 *
-	 * @param brock アイテム
-	 * @param n 個数
-	 * @return 自分自身
-	 */
-	public ShapelessOrderPhase add(Block brock, int n) {
-		material.add(Item.getItemFromBlock(brock), n);
 		
 		return this;
 	}

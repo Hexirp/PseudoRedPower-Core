@@ -3,6 +3,8 @@ package com.github.hexirp.forge.recipe;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.github.hexirp.forge.item.MinecraftItem;
+
 /**
  * このクラスは不定形レシピの材料を表現する.
  *
@@ -12,12 +14,7 @@ import java.util.List;
  */
 public class ShapelessRecipeMaterial {
 	/** 不定形レシピの材料 */
-	private final List<Object> list;
-	
-	/** コントストラクタ */
-	public ShapelessRecipeMaterial() {
-		list = new LinkedList<Object>();
-	}
+	private final List<Object> list = new LinkedList<>();
 	
 	/**
 	 * 不定形レシピの材料を配列に変換する
@@ -35,7 +32,7 @@ public class ShapelessRecipeMaterial {
 	 * @param n 個数
 	 * @return 自分自身
 	 */
-	public ShapelessRecipeMaterial add(Object obj, int n) {
+	public ShapelessRecipeMaterial add(MinecraftItem obj, int n) {
 		if (0 <= n == false) throw new IllegalArgumentException();
 		
 		for (int counter = 0; counter < n; counter++) {

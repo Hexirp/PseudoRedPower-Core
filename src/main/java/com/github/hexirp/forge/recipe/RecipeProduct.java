@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.recipe;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import com.github.hexirp.forge.item.MinecraftItem;
+
 import net.minecraft.item.ItemStack;
 
 /**
@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
  */
 public class RecipeProduct {
 	/** 結果. */
-	private final Item output;
+	private final MinecraftItem output;
 	
 	/** 生成数 */
 	private final int size;
@@ -24,28 +24,17 @@ public class RecipeProduct {
 	 * @return 内部の値
 	 */
 	public ItemStack get() {
-		return new ItemStack(output, size);
+		return new ItemStack(output.get(), size);
 	}
 	
 	/**
-	 * アイテムを使用する場合のコントストラクタ.
+	 * コントストラクタ.
 	 *
 	 * @param output レシピの結果となるアイテム
 	 * @param size アイテムのスタック数
 	 */
-	public RecipeProduct(Item output, int size) {
+	public RecipeProduct(MinecraftItem output, int size) {
 		this.output = output;
-		this.size = size;
-	}
-	
-	/**
-	 * ブロックを使用する場合のコントストラクタ.
-	 *
-	 * @param output レシピの結果となるアイテム
-	 * @param size アイテムのスタック数
-	 */
-	public RecipeProduct(Block output, int size) {
-		this.output = Item.getItemFromBlock(output);
 		this.size = size;
 	}
 }

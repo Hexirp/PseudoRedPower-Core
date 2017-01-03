@@ -1,12 +1,7 @@
-/**
- *
- */
 package com.github.hexirp.forge.recipe.builder;
 
+import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.RecipeProduct;
-
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 
 /**
  * レシピを定義するための補助クラス.
@@ -23,18 +18,8 @@ public class ProductPhase {
 	 * @param output 結果
 	 * @param size 生成数
 	 */
-	public ProductPhase(Item output, int size) {
+	public ProductPhase(MinecraftItem output, int size) {
 		product = new RecipeProduct(output, size);
-	}
-	
-	/**
-	 * コントストラクタ.
-	 *
-	 * @param output 結果
-	 * @param size 生成数
-	 */
-	public ProductPhase(Block output, int size) {
-		product = new RecipeProduct(Item.getItemFromBlock(output), size);
 	}
 	
 	/**

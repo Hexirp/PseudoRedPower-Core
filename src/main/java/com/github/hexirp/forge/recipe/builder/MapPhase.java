@@ -1,13 +1,11 @@
 package com.github.hexirp.forge.recipe.builder;
 
+import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 import com.github.hexirp.forge.recipe.ShapedRecipe;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
 import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
-
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 
 /** 対応関係の定義の段階の表現 */
 public class MapPhase {
@@ -30,28 +28,14 @@ public class MapPhase {
 	}
 	
 	/**
-	 * アイテムの場合の追加
+	 * 追加
 	 *
 	 * @param key 文字
 	 * @param value ItemかBlock
 	 * @return 自分自身
 	 */
-	public MapPhase put(Character key, Item value) {
+	public MapPhase put(Character key, MinecraftItem value) {
 		map.put(key, value);
-		
-		return this;
-	}
-	
-	/**
-	 * ブロックの場合の追加
-	 *
-	 * @param key 文字
-	 * @param value ItemかBlock
-	 * @return 自分自身
-	 */
-	public MapPhase put(Character key, Block value) {
-		map.put(key, Item.getItemFromBlock(value));
-		
 		return this;
 	}
 	
