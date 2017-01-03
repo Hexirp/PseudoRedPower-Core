@@ -13,10 +13,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 /**
  * このクラスはPseudoRedPower-Coreの情報を定義する.
  *
- * <p>
- * 警告: 「神クラス」にならないように.
- * </p>
- *
  * @author Hexirp
  */
 @Mod(modid = Metadata.MOD_ID, name = Metadata.NAME, version = Metadata.VERSION, // 最小限の定義
