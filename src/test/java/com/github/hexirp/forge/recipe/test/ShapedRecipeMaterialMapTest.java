@@ -1,4 +1,4 @@
-package com.github.hexirp.minecraft.recipe.test;
+package com.github.hexirp.forge.recipe.test;
 
 import static org.junit.Assert.*;
 
@@ -49,7 +49,7 @@ public class ShapedRecipeMaterialMapTest {
 		    .put('B', "BBB")
 		    .put('C', "CCC")
 		    .toList();
-			
+		
 		List<Object> ret2 = new LinkedList<>();
 		ret2.add('A');
 		ret2.add("AAA");

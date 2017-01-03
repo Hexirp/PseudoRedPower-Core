@@ -1,4 +1,4 @@
-package com.github.hexirp.minecraft.recipe.test;
+package com.github.hexirp.forge.recipe.test;
 
 import static org.junit.Assert.*;
 

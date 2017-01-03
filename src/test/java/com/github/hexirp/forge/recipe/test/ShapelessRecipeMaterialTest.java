@@ -1,4 +1,4 @@
-package com.github.hexirp.minecraft.recipe.test;
+package com.github.hexirp.forge.recipe.test;
 
 import static org.junit.Assert.*;
 
@@ -48,7 +48,7 @@ public class ShapelessRecipeMaterialTest {
 		    .add('A', 4)
 		    .add('E', 1)
 		    .calc();
-			
+		
 		Object[] ret2 = new Object[] { 'A', 'A', 'A', 'A', 'E' };
 		
 		assertEquals(ret1, ret2);
