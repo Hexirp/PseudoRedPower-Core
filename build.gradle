@@ -1,10 +1,15 @@
+// 依存するパッケージの定義
+dependencies {
+	testCompile "junit:junit:4.12"
+}
+
 // MODのバージョンの定義
 version = "0.0.0.0"
 
 // ソースファイルの定義
 sourceSets.main {
-    java.srcDirs project.projectDir.name
-    resources.srcDirs project.projectDir.name
+	java.srcDirs project.projectDir.name
+	resources.srcDirs project.projectDir.name
 }
 
 // ソースコードのバージョンの定義
@@ -13,4 +18,5 @@ targetCompatibility = '1.8'
 
 // 日本語を使用するための設定
 tasks.withType(Jar) {compileJava.options.encoding = 'UTF-8'}
-tasks.withType(Jar) {compileApiJava.options.encoding = 'UTF-8'}
+//tasks.withType(Jar) {compileApiJava.options.encoding = 'UTF-8'}
+tasks.withType(Jar) {compileTestJava.options.encoding = 'UTF-8'}
