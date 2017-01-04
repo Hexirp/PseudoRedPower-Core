@@ -1,11 +1,9 @@
 package com.github.hexirp.forge.item;
 
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.ModMetadata;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 /**
  * このクラスは、無機能Itemを表現する.
@@ -13,11 +11,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Hexirp
  */
 public class Item {
-	/**
-	 * アイテムを保持する.
-	 */
-	private final net.minecraft.item.Item item;
-	
 	/**
 	 * アイテムの名前を保持する.
 	 */
@@ -27,37 +20,44 @@ public class Item {
 	 * コントストラクタ. 別途リソースを{@code resources}フォルダに置く必要がある.
 	 *
 	 * @param name スネークケースでの内部名を指定する. 例:{@code sample_item}
-	 * @param tab クリエイティブモードでのインベントリのタブのどこに入れられるかを指定する.
 	 */
-	public Item(String name, CreativeTabs tab) {
+	public Item(String name) {
 		this.name = name;
-		this.item = new net.minecraft.item.Item()
-		    .setUnlocalizedName(name)
-		    .setCreativeTab(tab);
 	};
 	
 	/**
-	 * 自分自身を登録する.
+	 * インスタンスを生成する.
 	 *
-	 * @param metadata 登録されるModの情報
-	 * @param event 登録されるイベントの情報
+	 * @return 生成されたアイテム.
 	 */
-	public void register(ModMetadata metadata, FMLPreInitializationEvent event) {
+	public net.minecraft.item.Item gen() {
+		return new net.minecraft.item.Item().setUnlocalizedName(name);
+	}
+	
+	/**
+	 * 自分自身を読み込む.
+	 *
+	 * @param env アイテムが登録される環境
+	 * @return インスタンス
+	 */
+	public net.minecraft.item.Item load(Environment env) {
+		net.minecraft.item.Item item = gen();
+		
 		GameRegistry.registerItem(item, name);
 		
-		if (event.getSide().isClient()) setResourceLocation(metadata);
+		eee(env, item);
+		
+		return item;
+	}
+
+	private void eee(Environment env, net.minecraft.item.Item item) {
+		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(item, 0, location(env));
 	}
 	
 	/**
 	 * 自分自身のモデルのリソースのファイルパスを登録する.
-	 *
-	 * @param metadata MODIDを取り出すためのデータ
 	 */
-	private void setResourceLocation(ModMetadata metadata) {
-		String path = metadata.modId + ":" + name;
-		
-		ModelResourceLocation location = new ModelResourceLocation(path, "inventory");
-		
-		ModelLoader.setCustomModelResourceLocation(item, 0, location);
+	private ModelResourceLocation location(Environment env) {
+		return new ModelResourceLocation(env.mod_id() + ":" + name, "inventory");
 	}
 }

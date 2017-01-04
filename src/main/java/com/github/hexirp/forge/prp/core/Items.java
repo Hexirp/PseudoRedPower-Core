@@ -1,10 +1,10 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.Registerable;
+import com.github.hexirp.forge.item.Environment;
 import com.github.hexirp.forge.item.Item;
 import com.github.hexirp.forge.item.RegisterableItem;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -14,15 +14,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * @author Hexirp
  */
 public class Items implements Registerable {
-	/**
-	 * Modの情報.
-	 */
-	private final ModMetadata metadata;
-	
-	/**
-	 * 情報を取り出すためにEventを保持する.
-	 */
-	private final FMLPreInitializationEvent event;
+	/** 自分自身が登録される環境の情報 */
+	private final Environment env;
 	
 	/**
 	 * Eventを内部に保持するためのコントストラクタ.
@@ -31,8 +24,7 @@ public class Items implements Registerable {
 	 * @param e 初期化前処理イベント
 	 */
 	public Items(ModMetadata data, FMLPreInitializationEvent e) {
-		metadata = data;
-		event = e;
+		env = new Environment(data, e);
 	}
 	
 	/**
@@ -41,10 +33,7 @@ public class Items implements Registerable {
 	@Override
 	public void register() {
 		new RegisterableItem(
-		    metadata,
-		    event,
-		    new Item(
-		        "sample_item",
-		        CreativeTabs.tabMaterials)).register();
+		    env,
+		    new Item("sample_item")).register();
 	}
 }

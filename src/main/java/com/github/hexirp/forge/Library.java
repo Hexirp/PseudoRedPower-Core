@@ -12,7 +12,7 @@ public abstract class Library implements Registerable {
 	/**
 	 * 保持する辞書.
 	 */
-	protected final List<Recipe> library = new LinkedList<Recipe>();
+	protected final List<Registerable> library = new LinkedList<>();
 	
 	/** 自分自身のライブラリに追加する */
 	protected abstract void add();
