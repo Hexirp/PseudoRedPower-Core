@@ -6,9 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
 /**
- * このクラスは、Itemを表現する.
- *
- * 実際にはMinecraftのItemクラスをラップしている.
+ * このクラスは、Itemを表現する. 実際にはMinecraftのItemクラスをラップしている.
  *
  * @author Hexirp
  */
@@ -23,7 +21,7 @@ public class ModItem {
 	 * コントストラクタ. こちら側でするので呼び出し側で名前を設定する必要はない. 別途リソースを{@code resources}フォルダに置く必要がある.
 	 *
 	 * @param name スネークケースでの内部名を指定する. 例:{@code sample_item}
-	 * @param item アイテム.
+	 * @param item アイテム
 	 */
 	public ModItem(String name, Item item) {
 		this.name = name;
@@ -34,22 +32,10 @@ public class ModItem {
 	 * 自分自身を読み込む.
 	 *
 	 * @param env アイテムが登録される環境
-	 * @return インスタンス
 	 */
-	public Item load(Environment env) {
+	public void load(Environment env) {
 		GameRegistry.registerItem(item, name);
 		
-		registerResource(env);
-		
-		return item;
-	}
-	
-	/**
-	 * リソースの場所を登録する.
-	 *
-	 * @param env 登録される環境
-	 */
-	private void registerResource(Environment env) {
 		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(item, 0, env.location(name, "inventory"));
 	}
 }

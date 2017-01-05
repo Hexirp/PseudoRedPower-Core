@@ -11,14 +11,14 @@ import com.github.hexirp.forge.Registerable;
  * @author Hexirp
  */
 public class RegisterableItem implements Registerable {
-	/** 自分自身が登録される環境の情報 */
+	/** 自分自身が登録される環境の情報. */
 	private final Environment env;
 	
 	/** 保持するアイテム */
 	private final ModItem item;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
 	 * @param env 自分自身が登録される環境の情報
 	 * @param item 保持するアイテム

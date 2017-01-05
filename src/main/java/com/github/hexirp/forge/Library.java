@@ -14,7 +14,7 @@ public abstract class Library implements Registerable {
 	 */
 	protected final List<Registerable> library = new LinkedList<>();
 	
-	/** 自分自身のライブラリに追加する */
+	/** 自分自身のライブラリに追加する. */
 	protected abstract void add();
 	
 	/** コントストラクタ. 設定を受け取れるようにする予定. */

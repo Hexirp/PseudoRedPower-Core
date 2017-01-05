@@ -15,11 +15,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * @author Hexirp
  */
 public class Items implements Registerable {
-	/** 自分自身が登録される環境の情報 */
+	/** 自分自身が登録される環境の情報. */
 	private final Environment env;
 	
 	/**
-	 * Eventを内部に保持するためのコントストラクタ.
+	 * Setter.
 	 *
 	 * @param data MODのデータ
 	 * @param e 初期化前処理イベント
@@ -28,9 +28,6 @@ public class Items implements Registerable {
 		env = new Environment(data, e);
 	}
 	
-	/**
-	 * アイテムを追加する.
-	 */
 	@Override
 	public void register() {
 		new ModItem("sample_item",

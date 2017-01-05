@@ -17,7 +17,7 @@ public class ShapedRecipe implements Recipe {
 	private final ShapedRecipeOrder order;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
 	 * @param item レシピの結果
 	 * @param input レシピの並べ方

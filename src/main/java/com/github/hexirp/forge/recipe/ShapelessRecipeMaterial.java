@@ -28,7 +28,7 @@ public class ShapelessRecipeMaterial {
 	/**
 	 * 不定形レシピの材料リストに追加する.
 	 *
-	 * @param obj ItemクラスとBlockクラスのみが渡されるべきである
+	 * @param obj アイテム
 	 * @param n 個数
 	 * @return 自分自身
 	 */

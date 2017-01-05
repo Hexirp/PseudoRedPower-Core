@@ -5,15 +5,17 @@ import com.github.hexirp.forge.recipe.RecipeProduct;
 import com.github.hexirp.forge.recipe.ShapelessRecipe;
 import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 
-/** 材料の定義の段階の表現 */
+/** 材料の定義の段階の表現. */
 public class ShapelessOrderPhase {
-	/** 材料 */
+	/** 材料. */
 	private final ShapelessRecipeMaterial material = new ShapelessRecipeMaterial();
 	
 	/** レシピの結果. */
 	private final RecipeProduct product;
 	
 	/**
+	 * Setter.
+	 *
 	 * @param product 結果
 	 */
 	ShapelessOrderPhase(RecipeProduct product) {
@@ -21,7 +23,7 @@ public class ShapelessOrderPhase {
 	}
 	
 	/**
-	 * 追加
+	 * 追加.
 	 *
 	 * @param item アイテム
 	 * @param n 個数
@@ -34,7 +36,7 @@ public class ShapelessOrderPhase {
 	}
 	
 	/**
-	 * レシピ生成
+	 * レシピ生成.
 	 *
 	 * @return 完成したレシピ
 	 */

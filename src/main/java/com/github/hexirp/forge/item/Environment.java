@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
 /**
- * 環境.
+ * アイテムを登録する際の環境を表現する.
  *
  * @author Hexirp
  */
@@ -18,7 +18,7 @@ public class Environment {
 	private final FMLPreInitializationEvent event;
 	
 	/**
-	 * コントストラクタ
+	 * Setter.
 	 *
 	 * @param metadata MOD
 	 * @param event Forge
@@ -29,27 +29,18 @@ public class Environment {
 	}
 	
 	/**
-	 * @return イベントが行われている場所
+	 * @return イベントが行われている場所.
 	 */
 	public Side side() {
 		return event.getSide();
 	}
 	
 	/**
-	 * @return どのMODで行われているか
-	 */
-	public String mod_id() {
-		return metadata.modId;
-	}
-	
-	/**
-	 * モデルのリソース保存場所を返す.
-	 *
+	 * @return モデルのリソース保存場所.
 	 * @param name リソースの名前
-	 * @param loc 不明
-	 * @return 保存場所
+	 * @param loc 意味がまだ分からない
 	 */
 	public ModelResourceLocation location(String name, String loc) {
-		return new ModelResourceLocation(mod_id() + ":" + name, loc);
+		return new ModelResourceLocation(metadata.modId + ":" + name, loc);
 	}
 }

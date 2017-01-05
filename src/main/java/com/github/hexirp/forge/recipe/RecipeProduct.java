@@ -19,16 +19,14 @@ public class RecipeProduct {
 	private final int size;
 	
 	/**
-	 * Getter
-	 *
-	 * @return 内部の値
+	 * @return 保存されていたItemStack
 	 */
 	public ItemStack get() {
 		return new ItemStack(output.get(), size);
 	}
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
 	 * @param output レシピの結果となるアイテム
 	 * @param size アイテムのスタック数

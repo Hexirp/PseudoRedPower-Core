@@ -9,16 +9,18 @@ import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
 
 /** 対応関係の定義の段階の表現 */
 public class MapPhase {
-	/** 対応関係 */
+	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
-	/** 並び */
+	/** 並び. */
 	private final ShapedRecipeAbstractOrder order;
 	
 	/** レシピの結果. */
 	private final RecipeProduct product;
 	
 	/**
+	 * Setter.
+	 *
 	 * @param product 返り値
 	 * @param order 並び
 	 */
@@ -28,7 +30,7 @@ public class MapPhase {
 	}
 	
 	/**
-	 * 追加
+	 * 追加.
 	 *
 	 * @param key 文字
 	 * @param value ItemかBlock
@@ -40,7 +42,7 @@ public class MapPhase {
 	}
 	
 	/**
-	 * レシピ生成
+	 * レシピ生成.
 	 *
 	 * @return 完成したレシピ
 	 */

@@ -3,16 +3,16 @@ package com.github.hexirp.forge.recipe.builder;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
-/** 並びの定義の段階の表現 */
+/** 並びの定義の段階の表現. */
 public class ShapedOrderPhase {
-	/** 並び */
+	/** 並び. */
 	private final ShapedRecipeAbstractOrder order = new ShapedRecipeAbstractOrder();
 	
 	/** レシピの結果. */
 	private final RecipeProduct product;
 	
 	/**
-	 * コントストラクタ
+	 * Setter.
 	 *
 	 * @param product 返り値
 	 */
@@ -21,7 +21,7 @@ public class ShapedOrderPhase {
 	}
 	
 	/**
-	 * 行の追加
+	 * 行の追加.
 	 *
 	 * @param str 行
 	 * @return 自分自身
@@ -33,7 +33,7 @@ public class ShapedOrderPhase {
 	}
 	
 	/**
-	 * 対応関係の定義の段階への移行
+	 * 対応関係の定義の段階への移行.
 	 *
 	 * @return 対応関係の定義の段階
 	 */

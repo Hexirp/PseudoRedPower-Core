@@ -6,24 +6,24 @@ package com.github.hexirp.annotation;
  * @author Hexirp
  */
 public enum DefaultLocation {
-    /** 引数 */
+    /** 引数. */
 	PARAMETER,
 	
-	/** 返り値 */
+	/** 返り値. */
 	RETURN_TYPE,
 	
-	/** フィールド */
+	/** フィールド. */
 	FIELD,
 	
-	/** 型引数 */
+	/** 型引数. */
 	TYPE_PARAMETER,
 	
-	/** 型制限 */
+	/** 型制限. */
 	TYPE_BOUND,
 	
-	/** 型変数 */
+	/** 型変数. */
 	TYPE_ARGUMENT,
 	
-	/** 配列の要素 */
+	/** 配列の要素. */
 	ARRAY_CONTENTS
 }

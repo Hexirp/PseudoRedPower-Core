@@ -12,7 +12,7 @@ public class MinecraftItem {
 	private final net.minecraft.item.Item obj;
 	
 	/**
-	 * コントストラクタ
+	 * Setter.
 	 *
 	 * @param item アイテム
 	 */
@@ -21,7 +21,7 @@ public class MinecraftItem {
 	}
 	
 	/**
-	 * コントストラクタ
+	 * ブロックを受け取りそれをアイテムに変換する.
 	 *
 	 * @param block ブロック
 	 */
@@ -30,9 +30,7 @@ public class MinecraftItem {
 	}
 	
 	/**
-	 * Getter.
-	 * 
-	 * @return 保持していた値
+	 * @return 保持していた値.
 	 */
 	public net.minecraft.item.Item get() {
 		return obj;

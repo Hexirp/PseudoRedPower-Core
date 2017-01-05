@@ -13,7 +13,7 @@ public class ProductPhase {
 	private final RecipeProduct product;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
 	 * @param output 結果
 	 * @param size 生成数

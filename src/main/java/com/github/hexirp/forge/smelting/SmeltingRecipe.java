@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Hexirp
  */
 public class SmeltingRecipe implements Recipe {
-	/** 原因と結果 */
+	/** 原因と結果. */
 	private final SmeltingRecipeInga inga;
 	
 	/** 経験値が得られる確率. */

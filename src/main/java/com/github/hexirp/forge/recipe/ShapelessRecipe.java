@@ -17,7 +17,7 @@ public class ShapelessRecipe implements Recipe {
 	private final ShapelessRecipeMaterial order;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
 	 * @param item レシピの結果
 	 * @param input レシピの材料
