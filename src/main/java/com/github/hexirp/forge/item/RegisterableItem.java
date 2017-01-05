@@ -15,7 +15,7 @@ public class RegisterableItem implements Registerable {
 	private final Environment env;
 	
 	/** 保持するアイテム */
-	private final Item item;
+	private final ModItem item;
 	
 	/**
 	 * コントストラクタ.
@@ -23,7 +23,7 @@ public class RegisterableItem implements Registerable {
 	 * @param env 自分自身が登録される環境の情報
 	 * @param item 保持するアイテム
 	 */
-	public RegisterableItem(Environment env, Item item) {
+	public RegisterableItem(Environment env, ModItem item) {
 		this.env = env;
 		this.item = item;
 	}

@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.item;
 
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -39,5 +40,16 @@ public class Environment {
 	 */
 	public String mod_id() {
 		return metadata.modId;
+	}
+	
+	/**
+	 * モデルのリソース保存場所を返す.
+	 *
+	 * @param name リソースの名前
+	 * @param loc 不明
+	 * @return 保存場所
+	 */
+	public ModelResourceLocation location(String name, String loc) {
+		return new ModelResourceLocation(mod_id() + ":" + name, loc);
 	}
 }

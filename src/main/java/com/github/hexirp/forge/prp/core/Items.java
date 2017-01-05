@@ -2,9 +2,10 @@ package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.Registerable;
 import com.github.hexirp.forge.item.Environment;
-import com.github.hexirp.forge.item.Item;
-import com.github.hexirp.forge.item.RegisterableItem;
+import com.github.hexirp.forge.item.ModItem;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -32,8 +33,8 @@ public class Items implements Registerable {
 	 */
 	@Override
 	public void register() {
-		new RegisterableItem(
-		    env,
-		    new Item("sample_item")).register();
+		new ModItem("sample_item",
+		    new Item()
+		        .setCreativeTab(CreativeTabs.tabMaterials)).load(env);
 	}
 }
