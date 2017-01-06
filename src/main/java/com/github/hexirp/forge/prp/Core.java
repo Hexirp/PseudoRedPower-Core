@@ -1,6 +1,7 @@
 package com.github.hexirp.forge.prp;
 
 import com.github.hexirp.annotation.Nullable;
+import com.github.hexirp.forge.item.Environment;
 import com.github.hexirp.forge.prp.core.Items;
 import com.github.hexirp.forge.prp.core.Metadata;
 import com.github.hexirp.forge.prp.core.Recipes;
@@ -18,9 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Metadata.MOD_ID, name = Metadata.NAME, version = Metadata.VERSION, // 最小限の定義
     useMetadata = true)
 public final class Core {
-	/**
-	 * MODの情報. Forgeにより初期化されるため、自分では初期化しない.
-	 */
+	/** MODの情報. Forgeにより初期化されるため、自分では初期化しない. */
 	@Mod.Metadata
 	@Nullable
 	public static ModMetadata metadata;
@@ -36,7 +35,7 @@ public final class Core {
 		
 		Metadata.set(metadata);
 		
-		new Items(metadata, event).register();
+		new Items().load(new Environment(metadata, event));
 		
 		new Recipes().register();
 		

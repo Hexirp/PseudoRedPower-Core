@@ -4,11 +4,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * MOD内で追加されるレシピやアイテムを定義するクラスの抽象化.
+ * MOD内で追加されるレシピを定義するクラスの抽象化.
  *
  * @author Hexirp
  */
-public abstract class Library implements Registerable {
+public abstract class RegisterableLibrary implements Registerable {
 	/**
 	 * 保持する辞書.
 	 */
@@ -18,7 +18,7 @@ public abstract class Library implements Registerable {
 	protected abstract void add();
 	
 	/** コントストラクタ. 設定を受け取れるようにする予定. */
-	public Library() {
+	public RegisterableLibrary() {
 		add();
 	}
 	

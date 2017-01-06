@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.item;
 
+import com.github.hexirp.forge.Loadable;
+
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -10,7 +12,7 @@ import net.minecraftforge.fml.relauncher.Side;
  *
  * @author Hexirp
  */
-public class ModItem {
+public class ModItem implements Loadable {
 	/** アイテムの名前を保持する. */
 	private final String name;
 	
@@ -18,7 +20,7 @@ public class ModItem {
 	private final net.minecraft.item.Item item;
 	
 	/**
-	 * コントストラクタ. こちら側でするので呼び出し側で名前を設定する必要はない. 別途リソースを{@code resources}フォルダに置く必要がある.
+	 * コントストラクタ. こちら側で名前を設定するので呼び出し側でする必要はない. 別途リソースを{@code resources}フォルダに置く必要がある.
 	 *
 	 * @param name スネークケースでの内部名を指定する. 例:{@code sample_item}
 	 * @param item アイテム
@@ -28,11 +30,7 @@ public class ModItem {
 		this.item = item.setUnlocalizedName(name);
 	};
 	
-	/**
-	 * 自分自身を読み込む.
-	 *
-	 * @param env アイテムが登録される環境
-	 */
+	@Override
 	public void load(Environment env) {
 		GameRegistry.registerItem(item, name);
 		

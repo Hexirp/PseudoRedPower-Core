@@ -3,6 +3,7 @@
  */
 package com.github.hexirp.forge.item;
 
+import com.github.hexirp.forge.Loadable;
 import com.github.hexirp.forge.Registerable;
 
 /**
@@ -15,21 +16,21 @@ public class RegisterableItem implements Registerable {
 	private final Environment env;
 	
 	/** 保持するアイテム */
-	private final ModItem item;
+	private final Loadable loader;
 	
 	/**
 	 * Setter.
 	 *
 	 * @param env 自分自身が登録される環境の情報
-	 * @param item 保持するアイテム
+	 * @param loader 保持するアイテム
 	 */
-	public RegisterableItem(Environment env, ModItem item) {
+	public RegisterableItem(Environment env, Loadable loader) {
 		this.env = env;
-		this.item = item;
+		this.loader = loader;
 	}
 	
 	@Override
 	public void register() {
-		item.load(env);
+		loader.load(env);
 	}
 }
