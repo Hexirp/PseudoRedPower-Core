@@ -1,6 +1,6 @@
 package com.github.hexirp.forge.recipe;
 
-import com.github.hexirp.forge.Recipe;
+import com.github.hexirp.forge.Registerable;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  *
  * @author Hexirp
  */
-public class ShapedRecipe implements Recipe {
+public class ShapedRecipe implements Registerable {
 	/** レシピの結果. */
 	private final RecipeProduct product;
 	

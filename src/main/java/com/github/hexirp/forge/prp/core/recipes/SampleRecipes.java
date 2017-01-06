@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.prp.core.recipes;
 
-import com.github.hexirp.forge.Library;
-import com.github.hexirp.forge.Recipe;
+import com.github.hexirp.forge.Registerable;
+import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.builder.ProductPhase;
 
@@ -13,7 +13,7 @@ import net.minecraft.init.Items;
  *
  * @author Hexirp
  */
-public class SampleRecipes extends Library implements Recipe {
+public class SampleRecipes extends RegisterableLibrary implements Registerable {
 	@Override
 	protected void add() {
 		library.add(new ProductPhase(new MinecraftItem(Blocks.bedrock), 1).order()

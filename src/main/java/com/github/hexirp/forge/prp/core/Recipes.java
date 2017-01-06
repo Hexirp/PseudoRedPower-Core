@@ -1,7 +1,6 @@
 package com.github.hexirp.forge.prp.core;
 
-import com.github.hexirp.forge.Library;
-import com.github.hexirp.forge.Recipe;
+import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.prp.core.recipes.SampleRecipes;
 
 /**
@@ -9,7 +8,7 @@ import com.github.hexirp.forge.prp.core.recipes.SampleRecipes;
  *
  * @author Hexirp
  */
-public class Recipes extends Library implements Recipe {
+public class Recipes extends RegisterableLibrary {
 	@Override
 	protected void add() {
 		library.add(new SampleRecipes());
