@@ -1,15 +1,46 @@
-// 依存するパッケージの定義
-dependencies {
-	testCompile "junit:junit:4.12"
+// とりあえずコピペ
+buildscript {
+	repositories {
+		jcenter()
+		maven {
+			name = "forge"
+			url = "http://files.minecraftforge.net/maven"
+		}
+	}
+
+	dependencies {
+		classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+	}
 }
 
-// MODのバージョンの定義
-version = "0.0.0.0"
+// とりあえずコピペ
+apply plugin: 'net.minecraftforge.gradle.forge'
 
-// ソースファイルの定義
-sourceSets.main {
-	java.srcDirs project.projectDir.name
-	resources.srcDirs project.projectDir.name
+// サンプルに従い変更
+version = "0.0.0.0"
+group= "com.github.hexirp.forge.prp.core"
+archivesBaseName = project.projectDir.name
+
+// とりあえずコピペ
+minecraft {
+	version = "1.8.9-11.15.1.1722"
+	runDir = "run"
+
+	mappings = "stable_22"
+}
+
+repositories {
+	mavenCentral()
+}
+
+// 独自に依存するパッケージの定義
+dependencies {
+	testCompile 'junit:junit:4.12'
+}
+
+// javadocの設定
+javadoc {
+	options.encoding = "UTF-8"
 }
 
 // ソースコードのバージョンの定義
