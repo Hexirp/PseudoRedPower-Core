@@ -17,7 +17,7 @@ public class ModItem implements Loadable {
 	private final String name;
 	
 	/** アイテムを保持する. */
-	private final net.minecraft.item.Item item;
+	private final Item item;
 	
 	/**
 	 * コントストラクタ. こちら側で名前を設定するので呼び出し側でする必要はない. 別途リソースを{@code resources}フォルダに置く必要がある.
@@ -28,7 +28,7 @@ public class ModItem implements Loadable {
 	public ModItem(String name, Item item) {
 		this.name = name;
 		this.item = item.setUnlocalizedName(name);
-	};
+	}
 	
 	@Override
 	public void load(Environment env) {

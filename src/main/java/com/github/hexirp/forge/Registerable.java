@@ -7,8 +7,6 @@ package com.github.hexirp.forge;
  */
 public interface Registerable {
 	
-	/**
-	 * 自分自身をゲームに登録する.
-	 */
-	void register();
+	/** 自分自身をゲームに登録する. */
+	public void register();
 }

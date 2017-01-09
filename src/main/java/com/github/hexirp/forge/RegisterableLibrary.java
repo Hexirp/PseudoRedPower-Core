@@ -9,9 +9,7 @@ import java.util.List;
  * @author Hexirp
  */
 public abstract class RegisterableLibrary implements Registerable {
-	/**
-	 * 保持する辞書.
-	 */
+	/** 保持する辞書. */
 	protected final List<Registerable> library = new LinkedList<>();
 	
 	/** 自分自身のライブラリに追加する. */
