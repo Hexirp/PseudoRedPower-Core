@@ -15,11 +15,11 @@ import net.minecraft.init.Items;
 public class Smeltings extends RegisterableLibrary {
 	@Override
 	protected void add() {
-		library.add(
-		    new SmeltingRecipe(
-		        new SmeltingRecipeInga(
-		            Items.carrot,
-		            Items.coal),
-		        new SmeltingRecipeExp(10, 1)));
+		new SmeltingRecipe(
+		    new SmeltingRecipeInga(
+		        Items.carrot,
+		        Items.coal),
+		    new SmeltingRecipeExp(10, 1))
+		        .add(library);
 	}
 }

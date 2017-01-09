@@ -24,5 +24,4 @@ public abstract class RegisterableLibrary implements Registerable {
 	public void register() {
 		library.forEach(recipe -> recipe.register());
 	}
-	
 }

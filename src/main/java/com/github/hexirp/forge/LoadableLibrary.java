@@ -27,5 +27,4 @@ public abstract class LoadableLibrary implements Loadable {
 	public void load(Environment env) {
 		library.forEach(item -> item.load(env));
 	}
-	
 }

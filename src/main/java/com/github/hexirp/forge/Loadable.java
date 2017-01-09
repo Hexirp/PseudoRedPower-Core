@@ -1,5 +1,7 @@
 package com.github.hexirp.forge;
 
+import java.util.List;
+
 import com.github.hexirp.forge.item.Environment;
 
 /**
@@ -15,4 +17,12 @@ public interface Loadable {
 	 */
 	void load(Environment env);
 	
+	/**
+	 * 自分自身をリストに追加する
+	 *
+	 * @param library リスト
+	 */
+	public default void add(List<Loadable> library) {
+		library.add(this);
+	}
 }

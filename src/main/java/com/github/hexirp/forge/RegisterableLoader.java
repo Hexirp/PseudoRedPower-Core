@@ -7,7 +7,7 @@ import com.github.hexirp.forge.item.Environment;
  *
  * @author Hexirp
  */
-public class RegisterableLoader implements Loadable, Registerable {
+public class RegisterableLoader implements Registerable {
 	/** 自分自身が登録される環境の情報. */
 	private final Environment env;
 	
@@ -27,11 +27,6 @@ public class RegisterableLoader implements Loadable, Registerable {
 	
 	@Override
 	public void register() {
-		loader.load(env);
-	}
-	
-	@Override
-	public void load(Environment env) {
 		loader.load(env);
 	}
 }
