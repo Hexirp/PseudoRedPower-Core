@@ -5,7 +5,6 @@ import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.builder.ProductPhase;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 
 /**
@@ -13,15 +12,9 @@ import net.minecraft.init.Items;
  *
  * @author Hexirp
  */
-public class SampleRecipes extends RegisterableLibrary implements Registerable {
+public class ChainMailRecipes extends RegisterableLibrary implements Registerable {
 	@Override
 	protected void add() {
-		library.add(new ProductPhase(new MinecraftItem(Blocks.bedrock), 1).order()
-		    .add("AAA")
-		    .add("AAA")
-		    .add("AAA").map().put('A', new MinecraftItem(Blocks.bedrock))
-		    .toRecipe());
-		
 		library.add(new ProductPhase(new MinecraftItem(Items.chainmail_helmet), 1).order()
 		    .add(" A ")
 		    .add("A A").map().put('A', new MinecraftItem(Items.iron_ingot))
