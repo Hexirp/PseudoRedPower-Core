@@ -22,5 +22,7 @@ public class Recipes extends RegisterableLibrary {
 		    .toRecipe());
 		
 		library.add(new ChainMailRecipes());
+		
+		library.add(new Smeltings());
 	}
 }

@@ -5,7 +5,6 @@ import com.github.hexirp.forge.item.Environment;
 import com.github.hexirp.forge.prp.core.Items;
 import com.github.hexirp.forge.prp.core.Metadata;
 import com.github.hexirp.forge.prp.core.Recipes;
-import com.github.hexirp.forge.prp.core.Smeltings;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModMetadata;
@@ -35,10 +34,10 @@ public final class Core {
 		
 		Metadata.set(metadata);
 		
-		new Items().load(new Environment(metadata, event));
+		Environment env = new Environment(metadata, event);
+		
+		new Items().load(env);
 		
 		new Recipes().register();
-		
-		new Smeltings().register();
 	}
 }

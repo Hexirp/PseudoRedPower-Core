@@ -11,7 +11,7 @@ public class RegisterableLoader implements Loadable, Registerable {
 	/** 自分自身が登録される環境の情報. */
 	private final Environment env;
 	
-	/** 保持するアイテム */
+	/** 保持するアイテム. */
 	private final Loadable loader;
 	
 	/**

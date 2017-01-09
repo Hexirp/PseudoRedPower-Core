@@ -19,8 +19,6 @@ import java.lang.annotation.Target;
 public @interface NonNullByDefault {
 	/**
 	 * 対象を指定する.
-	 *
-	 * @return 対象リスト
 	 */
 	DefaultLocation[] value() default {
 	    DefaultLocation.PARAMETER, DefaultLocation.RETURN_TYPE,

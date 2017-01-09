@@ -15,7 +15,7 @@ public class RecipeProduct {
 	/** 結果. */
 	private final MinecraftItem output;
 	
-	/** 生成数 */
+	/** 生成数. */
 	private final int size;
 	
 	/**

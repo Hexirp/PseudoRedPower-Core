@@ -15,7 +15,7 @@ public class SmeltingRecipeExp {
 	private final int times;
 	
 	/**
-	 * コントストラクタ
+	 * コントストラクタ.
 	 *
 	 * @param exp 経験値
 	 * @param times 回数

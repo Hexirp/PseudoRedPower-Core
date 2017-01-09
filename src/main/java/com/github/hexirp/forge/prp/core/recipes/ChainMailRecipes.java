@@ -8,7 +8,7 @@ import com.github.hexirp.forge.recipe.builder.ProductPhase;
 import net.minecraft.init.Items;
 
 /**
- * サンプルで追加されるレシピ.
+ * チェーンメイルのレシピ.
  *
  * @author Hexirp
  */
@@ -19,7 +19,7 @@ public class ChainMailRecipes extends RegisterableLibrary implements Registerabl
 		lower();
 	}
 	
-	/** 上半身 */
+	/** 上半身. */
 	private void lower() {
 		library.add(new ProductPhase(new MinecraftItem(Items.chainmail_leggings), 1).order()
 		    .add(" A ")
@@ -31,7 +31,7 @@ public class ChainMailRecipes extends RegisterableLibrary implements Registerabl
 		    .add("  A").map().put('A', new MinecraftItem(Items.iron_ingot)).toRecipe());
 	}
 	
-	/** 下半身 */
+	/** 下半身. */
 	private void upper() {
 		library.add(new ProductPhase(new MinecraftItem(Items.chainmail_helmet), 1).order()
 		    .add(" A ")

@@ -11,10 +11,10 @@ import net.minecraftforge.fml.relauncher.Side;
  * @author Hexirp
  */
 public class Environment {
-	/** MODの環境 */
+	/** MODの環境. */
 	private final ModMetadata metadata;
 	
-	/** 現在イベントの環境 */
+	/** 現在イベントの環境. */
 	private final FMLPreInitializationEvent event;
 	
 	/**

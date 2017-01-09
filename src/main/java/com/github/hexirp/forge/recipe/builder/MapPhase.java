@@ -7,7 +7,7 @@ import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
 import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
 
-/** 対応関係の定義の段階の表現 */
+/** 対応関係の定義の段階の表現. */
 public class MapPhase {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();

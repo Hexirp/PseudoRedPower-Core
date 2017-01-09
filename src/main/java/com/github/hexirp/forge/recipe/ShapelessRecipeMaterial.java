@@ -13,11 +13,11 @@ import com.github.hexirp.forge.item.MinecraftItem;
  * @author Hexirp
  */
 public class ShapelessRecipeMaterial {
-	/** 不定形レシピの材料 */
+	/** 不定形レシピの材料. */
 	private final List<Object> list = new LinkedList<>();
 	
 	/**
-	 * 不定形レシピの材料を配列に変換する
+	 * 不定形レシピの材料を配列に変換する.
 	 *
 	 * @return 材料の配列での表
 	 */

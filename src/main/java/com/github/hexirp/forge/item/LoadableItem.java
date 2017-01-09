@@ -23,7 +23,8 @@ public class LoadableItem implements Loadable {
 	/**
 	 * コントストラクタ. 名前はスネークケースで記述する事.
 	 *
-	 * @param item 名前付きアイテム
+	 * @param <NamedItem> 名前付きアイテムを表現する
+	 * @param item NamedItem
 	 */
 	public <NamedItem extends Item & Named> LoadableItem(NamedItem item) {
 		this.name = item.name();

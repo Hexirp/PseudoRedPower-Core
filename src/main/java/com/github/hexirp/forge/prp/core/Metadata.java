@@ -24,7 +24,7 @@ public final class Metadata {
 	 */
 	public static final String VERSION = "0.0.0.0";
 	
-	/** MODの解説 */
+	/** MODの解説. */
 	private static final String DESCRIPTION = "PseudoRedPower-Core is the copied RedPower2 to 1.8.9 or later. So, if you think that this MOD is interesting, respect the author of RedPower2.";
 	
 	/** MODのソースコードのリポジトリ. */
