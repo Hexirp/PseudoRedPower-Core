@@ -15,11 +15,12 @@ import net.minecraft.init.Blocks;
 public class Recipes extends RegisterableLibrary {
 	@Override
 	protected void add() {
-		library.add(new ProductPhase(new MinecraftItem(Blocks.bedrock), 1).order()
-		    .add("AAA")
-		    .add("AAA")
-		    .add("AAA").map().put('A', new MinecraftItem(Blocks.bedrock))
-		    .toRecipe());
+		library.add(
+		    new ProductPhase(new MinecraftItem(Blocks.bedrock), 1).order()
+		        .add("AAA")
+		        .add("AAA")
+		        .add("AAA").map()
+		        .put('A', new MinecraftItem(Blocks.bedrock)).to());
 		
 		library.add(new ChainMailRecipes());
 		

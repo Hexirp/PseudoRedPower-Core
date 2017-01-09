@@ -1,9 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.forge.item.MinecraftItem;
-import com.github.hexirp.forge.recipe.RecipeProduct;
 import com.github.hexirp.forge.recipe.ShapedRecipe;
-import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
 import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
 
@@ -13,19 +11,14 @@ public class MapPhase {
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
 	/** 並び. */
-	private final ShapedRecipeAbstractOrder order;
-	
-	/** レシピの結果. */
-	private final RecipeProduct product;
+	final ShapedOrderPhase order;
 	
 	/**
 	 * Setter.
 	 *
-	 * @param product 返り値
 	 * @param order 並び
 	 */
-	MapPhase(RecipeProduct product, ShapedRecipeAbstractOrder order) {
-		this.product = product;
+	MapPhase(ShapedOrderPhase order) {
 		this.order = order;
 	}
 	
@@ -46,7 +39,7 @@ public class MapPhase {
 	 *
 	 * @return 完成したレシピ
 	 */
-	public ShapedRecipe toRecipe() {
-		return new ShapedRecipe(product, new ShapedRecipeOrder(order, map));
+	public ShapedRecipe to() {
+		return new ShapedRecipe(order.product.product, new ShapedRecipeOrder(order.order, map));
 	}
 }

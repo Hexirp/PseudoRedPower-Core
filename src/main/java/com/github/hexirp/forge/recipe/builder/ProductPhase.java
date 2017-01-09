@@ -10,7 +10,7 @@ import com.github.hexirp.forge.recipe.RecipeProduct;
  */
 public class ProductPhase {
 	/** レシピの結果. */
-	private final RecipeProduct product;
+	final RecipeProduct product;
 	
 	/**
 	 * Setter.
@@ -28,7 +28,7 @@ public class ProductPhase {
 	 * @return 並びの定義の段階
 	 */
 	public ShapedOrderPhase order() {
-		return new ShapedOrderPhase(product);
+		return new ShapedOrderPhase(this);
 	}
 	
 	/**
@@ -37,6 +37,6 @@ public class ProductPhase {
 	 * @return 並びの定義の段階
 	 */
 	public ShapelessOrderPhase material() {
-		return new ShapelessOrderPhase(product);
+		return new ShapelessOrderPhase(this);
 	}
 }
