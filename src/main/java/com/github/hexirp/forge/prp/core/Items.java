@@ -1,10 +1,8 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.LoadableLibrary;
-import com.github.hexirp.forge.item.ModItem;
-
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import com.github.hexirp.forge.item.LoadableItem;
+import com.github.hexirp.forge.prp.core.items.SampleItem;
 
 /**
  * このクラスは、PRP-Coreで追加されるアイテム群を定義する.
@@ -14,9 +12,8 @@ import net.minecraft.item.Item;
 public class Items extends LoadableLibrary {
 	@Override
 	protected void add() {
-		library.add(new ModItem(
-		    "sample_item",
-		    new Item()
-		        .setCreativeTab(CreativeTabs.tabMaterials)));
+		library.add(
+		    new LoadableItem(
+		        new SampleItem()));
 	}
 }
