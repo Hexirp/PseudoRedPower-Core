@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.Side;
  *
  * @author Hexirp
  */
-public class LoadableItem implements Loadable {
+public class LoadableItem implements Loadable, Named {
 	/** アイテムの名前を保持する. */
 	private final String name;
 	
@@ -39,5 +39,10 @@ public class LoadableItem implements Loadable {
 		GameRegistry.registerItem(item, name);
 		
 		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(item, 0, env.location(name, "inventory"));
+	}
+	
+	@Override
+	public String name() {
+		return name;
 	}
 }

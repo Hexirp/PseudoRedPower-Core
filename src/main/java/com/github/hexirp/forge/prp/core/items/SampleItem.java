@@ -15,7 +15,7 @@ public class SampleItem extends Item implements Named {
 	public SampleItem() {
 		super();
 		this
-		    .setUnlocalizedName(name())
+		    .setUnlocalizedName(this.name())
 		    .setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	
