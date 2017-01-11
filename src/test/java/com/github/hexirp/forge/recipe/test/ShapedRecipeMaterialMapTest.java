@@ -7,10 +7,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
-
-import net.minecraft.init.Items;
 
 /**
  * @author Hexirp
@@ -46,20 +43,19 @@ public class ShapedRecipeMaterialMapTest {
 	 */
 	@Test
 	public void testPut() {
-		ShapedRecipeMaterialMap testee = new ShapedRecipeMaterialMap();
-		List<Object> ret1 = testee
-		    .put('A', new MinecraftItem(Items.acacia_door))
-		    .put('B', new MinecraftItem(Items.apple))
-		    .put('C', new MinecraftItem(Items.arrow))
+		List<Object> ret1 = new ShapedRecipeMaterialMap()
+		    .put('A', new MinecraftItemMock("acacia_door"))
+		    .put('B', new MinecraftItemMock("apple"))
+		    .put('C', new MinecraftItemMock("arrow"))
 		    .toList();
 		
 		List<Object> ret2 = new LinkedList<>();
 		ret2.add('A');
-		ret2.add(new MinecraftItem(Items.acacia_door));
+		ret2.add(new ItemMock("acacia_door"));
 		ret2.add('B');
-		ret2.add(new MinecraftItem(Items.apple));
+		ret2.add(new ItemMock("apple"));
 		ret2.add('C');
-		ret2.add(new MinecraftItem(Items.arrow));
+		ret2.add(new ItemMock("arrow"));
 		
 		assertEquals(ret1, ret2);
 	}
