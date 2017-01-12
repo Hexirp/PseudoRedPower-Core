@@ -1,11 +1,10 @@
 /bin/
 /run/
-.classpath
-.project
 /ref/
 /doc/
 /build/
-/.*/
 /logs/
-/PseudoRedPower-Core_Client.launch
-/PseudoRedPower-Core_Server.launch
+/.*/
+.classpath
+.project
+*.launch
