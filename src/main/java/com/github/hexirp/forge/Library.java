@@ -14,12 +14,25 @@ public class Library<E> {
 	private final List<E> library = new LinkedList<>();
 	
 	/**
+	 * 値を追加する.
+	 *
 	 * @param element 追加される要素
-	 * @param <E2> 共変に従う
 	 * @return メソッドチェーン用
 	 */
-	public <E2 extends E> Library<E> add(E2 element) {
+	public Library<E> add(E element) {
 		library.add(element);
+		
+		return this;
+	}
+	
+	/**
+	 * ライブラリを結合する.
+	 *
+	 * @param lib {@code java.util.Collection<E>.addAll(Collection<E>)}
+	 * @return メソッドチェーン用
+	 */
+	public Library<E> merge(Library<? extends E> lib) {
+		lib.forEach(e -> library.add(e));
 		
 		return this;
 	}
