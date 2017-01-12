@@ -40,6 +40,6 @@ public class ShapelessOrderPhase {
 	 * @return 完成したレシピ
 	 */
 	public ShapelessRecipe to() {
-		return new ShapelessRecipe(product.product, material);
+		return new ShapelessRecipe(product.product(), material);
 	}
 }

@@ -40,6 +40,6 @@ public class MapPhase {
 	 * @return 完成したレシピ
 	 */
 	public ShapedRecipe to() {
-		return new ShapedRecipe(order.product.product, new ShapedRecipeOrder(order.order, map));
+		return new ShapedRecipe(order.product(), new ShapedRecipeOrder(order.order(), map));
 	}
 }

@@ -10,7 +10,12 @@ import com.github.hexirp.forge.recipe.RecipeProduct;
  */
 public class ProductPhase {
 	/** レシピの結果. */
-	final RecipeProduct product;
+	private final RecipeProduct product;
+	
+	/** @return 結果 */
+	RecipeProduct product() {
+		return product;
+	}
 	
 	/**
 	 * Setter.
@@ -18,7 +23,7 @@ public class ProductPhase {
 	 * @param output 結果
 	 * @param size 生成数
 	 */
-	public ProductPhase(MinecraftItem output, int size) {
+	ProductPhase(MinecraftItem output, int size) {
 		product = new RecipeProduct(output, size);
 	}
 	

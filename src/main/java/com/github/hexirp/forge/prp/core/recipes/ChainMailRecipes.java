@@ -3,7 +3,7 @@ package com.github.hexirp.forge.prp.core.recipes;
 import com.github.hexirp.forge.Registerable;
 import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.item.MinecraftItem;
-import com.github.hexirp.forge.recipe.builder.ProductPhase;
+import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Items;
 
@@ -23,7 +23,8 @@ public class ChainMailRecipes extends RegisterableLibrary implements Registerabl
 	private void lower() {
 		library
 		    .add(
-		        new ProductPhase(new MinecraftItem(Items.chainmail_leggings), 1)
+		        new RecipeBuilder()
+		            .product(new MinecraftItem(Items.chainmail_leggings), 1)
 		            .order()
 		            .add(" A ")
 		            .add("A A")
@@ -32,7 +33,8 @@ public class ChainMailRecipes extends RegisterableLibrary implements Registerabl
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to())
 		    .add(
-		        new ProductPhase(new MinecraftItem(Items.chainmail_boots), 1)
+		        new RecipeBuilder()
+		            .product(new MinecraftItem(Items.chainmail_boots), 1)
 		            .order()
 		            .add("A  ")
 		            .add("  A")
@@ -43,16 +45,19 @@ public class ChainMailRecipes extends RegisterableLibrary implements Registerabl
 	
 	/** 下半身. */
 	private void upper() {
-		library.add(
-		    new ProductPhase(new MinecraftItem(Items.chainmail_helmet), 1)
-		        .order()
-		        .add(" A ")
-		        .add("A A")
-		        .map()
-		        .put('A', new MinecraftItem(Items.iron_ingot))
-		        .to())
+		library
 		    .add(
-		        new ProductPhase(new MinecraftItem(Items.chainmail_chestplate), 1)
+		        new RecipeBuilder()
+		            .product(new MinecraftItem(Items.chainmail_helmet), 1)
+		            .order()
+		            .add(" A ")
+		            .add("A A")
+		            .map()
+		            .put('A', new MinecraftItem(Items.iron_ingot))
+		            .to())
+		    .add(
+		        new RecipeBuilder()
+		            .product(new MinecraftItem(Items.chainmail_chestplate), 1)
 		            .order()
 		            .add("A A")
 		            .add(" A ")
