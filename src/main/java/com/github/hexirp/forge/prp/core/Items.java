@@ -12,7 +12,7 @@ import com.github.hexirp.forge.prp.core.items.SampleItem;
 public class Items extends LoadableLibrary {
 	@Override
 	protected void add() {
-		new LoadableItem(
-		    new SampleItem()).add(library);
+		library.add(new LoadableItem(
+		    new SampleItem()));
 	}
 }

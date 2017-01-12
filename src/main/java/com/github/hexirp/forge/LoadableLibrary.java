@@ -1,8 +1,5 @@
 package com.github.hexirp.forge;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import com.github.hexirp.forge.item.Environment;
 
 /**
@@ -11,9 +8,8 @@ import com.github.hexirp.forge.item.Environment;
  * @author Hexirp
  */
 public abstract class LoadableLibrary implements Loadable {
-	
 	/** MODに追加されるアイテムの辞書. */
-	protected final List<Loadable> library = new LinkedList<>();
+	protected final Library<Loadable> library = new Library<>();
 	
 	/** 辞書にアイテムを追加する. */
 	protected abstract void add();

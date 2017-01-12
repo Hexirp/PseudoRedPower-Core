@@ -1,8 +1,5 @@
 package com.github.hexirp.forge;
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * MOD内で追加されるレシピを定義するクラスの抽象化.
  *
@@ -10,7 +7,7 @@ import java.util.List;
  */
 public abstract class RegisterableLibrary implements Registerable {
 	/** 保持する辞書. */
-	protected final List<Registerable> library = new LinkedList<>();
+	protected final Library<Registerable> library = new Library<>();
 	
 	/** 自分自身のライブラリに追加する. */
 	protected abstract void add();
