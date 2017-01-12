@@ -15,6 +15,7 @@ public class Library<E> {
 	
 	/**
 	 * @param element 追加される要素
+	 * @param <E2> 共変に従う
 	 * @return メソッドチェーン用
 	 */
 	public <E2 extends E> Library<E> add(E2 element) {

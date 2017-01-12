@@ -20,10 +20,7 @@ public class ShapedRecipeMaterialMapTest {
 	 */
 	@Test
 	public void testShapedRecipeMaterialMap() {
-		ShapedRecipeMaterialMap testee1 = new ShapedRecipeMaterialMap();
-		ShapedRecipeMaterialMap testee2 = new ShapedRecipeMaterialMap();
-		
-		assertEquals(testee1.toList(), testee2.toList());
+		assertEquals(new ShapedRecipeMaterialMap().toList(), new ShapedRecipeMaterialMap().toList());
 	}
 	
 	/**
@@ -31,8 +28,7 @@ public class ShapedRecipeMaterialMapTest {
 	 */
 	@Test
 	public void testToList() {
-		ShapedRecipeMaterialMap testee = new ShapedRecipeMaterialMap();
-		List<Object> ret1 = testee.toList();
+		List<Object> ret1 = new ShapedRecipeMaterialMap().toList();
 		List<Object> ret2 = new LinkedList<>();
 		
 		assertEquals(ret1, ret2);

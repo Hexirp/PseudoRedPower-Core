@@ -18,7 +18,7 @@ public interface Loadable {
 	void load(Environment env);
 	
 	/**
-	 * 自分自身をリストに追加する
+	 * 自分自身をリストに追加する.
 	 *
 	 * @param library リスト
 	 */

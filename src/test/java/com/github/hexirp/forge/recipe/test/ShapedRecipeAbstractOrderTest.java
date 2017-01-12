@@ -19,10 +19,7 @@ public class ShapedRecipeAbstractOrderTest {
 	 */
 	@Test
 	public void testShapedRecipeAbstractOrder() {
-		ShapedRecipeAbstractOrder testee1 = new ShapedRecipeAbstractOrder();
-		ShapedRecipeAbstractOrder testee2 = new ShapedRecipeAbstractOrder();
-		
-		assertEquals(testee1.order(), testee2.order());
+		assertEquals(new ShapedRecipeAbstractOrder().order(), new ShapedRecipeAbstractOrder().order());
 	}
 	
 	/**
@@ -30,8 +27,7 @@ public class ShapedRecipeAbstractOrderTest {
 	 */
 	@Test
 	public void testOrder() {
-		ShapedRecipeAbstractOrder testee = new ShapedRecipeAbstractOrder();
-		List<String> ret1 = testee.order();
+		List<String> ret1 = new ShapedRecipeAbstractOrder().order();
 		List<String> ret2 = new LinkedList<>();
 		
 		assertEquals(ret1, ret2);
@@ -42,8 +38,7 @@ public class ShapedRecipeAbstractOrderTest {
 	 */
 	@Test
 	public void testAdd() {
-		ShapedRecipeAbstractOrder testee = new ShapedRecipeAbstractOrder();
-		List<String> ret1 = testee
+		List<String> ret1 = new ShapedRecipeAbstractOrder()
 		    .add("AAA")
 		    .add("BBB")
 		    .add("CCC")

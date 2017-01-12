@@ -12,8 +12,8 @@ public interface Registerable {
 	public void register();
 	
 	/**
-	 * 自分自身をリストに追加する
-	 * 
+	 * 自分自身をリストに追加する.
+	 *
 	 * @param library リスト
 	 */
 	public default void add(List<Registerable> library) {

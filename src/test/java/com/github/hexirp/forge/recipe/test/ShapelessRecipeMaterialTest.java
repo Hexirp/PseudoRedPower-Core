@@ -19,10 +19,7 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testShapelessRecipeMaterial() {
-		ShapelessRecipeMaterial testee1 = new ShapelessRecipeMaterial();
-		ShapelessRecipeMaterial testee2 = new ShapelessRecipeMaterial();
-		
-		assertEquals(testee1.calc(), testee2.calc());
+		assertEquals(new ShapelessRecipeMaterial().calc(), new ShapelessRecipeMaterial().calc());
 	}
 	
 	/**
@@ -31,8 +28,7 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalc() {
-		ShapelessRecipeMaterial testee = new ShapelessRecipeMaterial();
-		Object[] ret1 = testee.calc();
+		Object[] ret1 = new ShapelessRecipeMaterial().calc();
 		Object[] ret2 = new Object[] {};
 		
 		assertEquals(ret1, ret2);
@@ -47,8 +43,7 @@ public class ShapelessRecipeMaterialTest {
 		final MinecraftItem A = new MinecraftItemMock("acacia_door");
 		final MinecraftItem E = new MinecraftItemMock("emerald");
 		
-		ShapelessRecipeMaterial testee = new ShapelessRecipeMaterial();
-		Object[] ret1 = testee
+		Object[] ret1 = new ShapelessRecipeMaterial()
 		    .add(A, 4)
 		    .add(E, 1)
 		    .calc();

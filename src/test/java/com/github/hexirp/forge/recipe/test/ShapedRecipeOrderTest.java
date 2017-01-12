@@ -19,15 +19,14 @@ public class ShapedRecipeOrderTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalc() {
-		ShapedRecipeOrder testee = new ShapedRecipeOrder(
+		Object[] ret1 = new ShapedRecipeOrder(
 		    new ShapedRecipeAbstractOrder()
 		        .add("ABA")
 		        .add("CCC"),
 		    new ShapedRecipeMaterialMap()
 		        .put('A', new MinecraftItemMock("sugar"))
 		        .put('B', new MinecraftItemMock("egg"))
-		        .put('C', new MinecraftItemMock("bread")));
-		Object[] ret1 = testee.calc();
+		        .put('C', new MinecraftItemMock("bread"))).calc();
 		
 		Object[] ret2 = new Object[] {
 		    "ABA",
