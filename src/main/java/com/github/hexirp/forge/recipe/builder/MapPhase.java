@@ -6,7 +6,7 @@ import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
 import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
 
 /** 対応関係の定義の段階の表現. */
-public class MapPhase {
+public class MapPhase implements FinalPhase<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
@@ -34,11 +34,7 @@ public class MapPhase {
 		return this;
 	}
 	
-	/**
-	 * レシピ生成.
-	 *
-	 * @return 完成したレシピ
-	 */
+	@Override
 	public ShapedRecipe to() {
 		return new ShapedRecipe(order.product(), new ShapedRecipeOrder(order.order(), map));
 	}
