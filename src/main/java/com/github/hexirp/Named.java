@@ -7,5 +7,5 @@ package com.github.hexirp;
  */
 public interface Named {
 	/** @return 名前 */
-	String name();
+	public String name();
 }
