@@ -1,18 +1,24 @@
 package com.github.hexirp.forge;
 
 /**
- * MOD内で追加されるレシピを定義するクラスの抽象化.
+ * 要素一つ一つを登録することが出来る{@link Library}を表現する.
+ *
+ * レシピを追加するクラスを抽象化することにより作成された。
  *
  * @author Hexirp
  */
 public abstract class RegisterableLibrary implements Registerable {
-	/** 保持する辞書. */
+	/** 辞書. */
 	protected final Library<Registerable> library = new Library<>();
 	
-	/** 自分自身のライブラリに追加する. */
+	/** 辞書に要素を追加する. */
 	protected abstract void add();
 	
-	/** コントストラクタ. 設定を受け取れるようにする予定. */
+	/**
+	 * コントストラクタ.
+	 *
+	 * @future 設定を受け取れるようにする
+	 */
 	public RegisterableLibrary() {
 		add();
 	}

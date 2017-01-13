@@ -3,18 +3,24 @@ package com.github.hexirp.forge;
 import com.github.hexirp.forge.item.Environment;
 
 /**
- * アイテムを追加するクラスの抽象化.
+ * 要素一つ一つを読み込ませることが出来る{@link Library}を表現する.
+ *
+ * アイテムを追加するクラスを抽象化することにより作成された。
  *
  * @author Hexirp
  */
 public abstract class LoadableLibrary implements Loadable {
-	/** MODに追加されるアイテムの辞書. */
+	/** 辞書. */
 	protected final Library<Loadable> library = new Library<>();
 	
-	/** 辞書にアイテムを追加する. */
+	/** 辞書に要素を追加する. */
 	protected abstract void add();
 	
-	/** コントストラクタ. 設定を受け取れるようにする予定. */
+	/**
+	 * コントストラクタ.
+	 *
+	 * @future 設定を受け取れるようにする
+	 */
 	public LoadableLibrary() {
 		add();
 	}
