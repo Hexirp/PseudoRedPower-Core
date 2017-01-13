@@ -15,36 +15,6 @@ import net.minecraft.init.Items;
 public class ChainMailRecipes extends RegisterableLibrary implements Registerable {
 	@Override
 	protected void add() {
-		upper();
-		lower();
-	}
-	
-	/** 上半身. */
-	private void lower() {
-		library
-		    .add(
-		        new RecipeBuilder()
-		            .product(new MinecraftItem(Items.chainmail_leggings), 1)
-		            .order()
-		            .add(" A ")
-		            .add("A A")
-		            .add("A A")
-		            .map()
-		            .put('A', new MinecraftItem(Items.iron_ingot))
-		            .to())
-		    .add(
-		        new RecipeBuilder()
-		            .product(new MinecraftItem(Items.chainmail_boots), 1)
-		            .order()
-		            .add("A  ")
-		            .add("  A")
-		            .map()
-		            .put('A', new MinecraftItem(Items.iron_ingot))
-		            .to());
-	}
-	
-	/** 下半身. */
-	private void upper() {
 		library
 		    .add(
 		        new RecipeBuilder()
@@ -62,6 +32,25 @@ public class ChainMailRecipes extends RegisterableLibrary implements Registerabl
 		            .add("A A")
 		            .add(" A ")
 		            .add("AAA")
+		            .map()
+		            .put('A', new MinecraftItem(Items.iron_ingot))
+		            .to())
+		    .add(
+		        new RecipeBuilder()
+		            .product(new MinecraftItem(Items.chainmail_leggings), 1)
+		            .order()
+		            .add(" A ")
+		            .add("A A")
+		            .add("A A")
+		            .map()
+		            .put('A', new MinecraftItem(Items.iron_ingot))
+		            .to())
+		    .add(
+		        new RecipeBuilder()
+		            .product(new MinecraftItem(Items.chainmail_boots), 1)
+		            .order()
+		            .add("A  ")
+		            .add("  A")
 		            .map()
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to());
