@@ -1,7 +1,7 @@
 package com.github.hexirp.annotation;
 
 /**
- * NonNullByDefaultにおいて、NonNullが付けられていると見なされる範囲を指定するための列挙型.
+ * {@link NonNullByDefault}において、{@link NonNull}が付けられていると見なされる要素を指定するための列挙型.
  *
  * @author Hexirp
  */
@@ -25,5 +25,5 @@ public enum DefaultLocation {
 	TYPE_ARGUMENT,
 	
 	/** 配列の要素. */
-	ARRAY_CONTENTS
+	ARRAY_CONTENTS;
 }

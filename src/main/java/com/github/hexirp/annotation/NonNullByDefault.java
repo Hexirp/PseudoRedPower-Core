@@ -7,7 +7,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * パッケージに対して付けられた場合、そのパッケージの全ての要素においてデフォルトでNonNullが付けられていると見なされる.
+ * 注釈された対象の要素全てに{@link NonNull}が付けられていると見なされる.
+ *
+ * パッケージに対して付けられた場合、そのパッケージの全ての要素においてデフォルトでNonNullが付けられていると見なされる。
  *
  * @author Hexirp
  */
