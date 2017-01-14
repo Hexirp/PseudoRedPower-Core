@@ -54,9 +54,9 @@ public class ShapedOrderPhase {
 	/**
 	 * 対応関係の定義の段階に移行する.
 	 *
-	 * @return {@link MapPhase}
+	 * @return {@link ShapedMaterialPhase}
 	 */
-	public MapPhase map() {
-		return new MapPhase(this);
+	public ShapedMaterialPhase map() {
+		return new ShapedMaterialPhase(this);
 	}
 }

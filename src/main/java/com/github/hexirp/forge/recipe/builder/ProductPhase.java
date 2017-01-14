@@ -43,9 +43,9 @@ public class ProductPhase {
 	/**
 	 * 材料の定義の段階に移行する.
 	 *
-	 * @return {@link ShapelessOrderPhase}
+	 * @return {@link ShapelessMaterialPhase}
 	 */
-	public ShapelessOrderPhase material() {
-		return new ShapelessOrderPhase(this);
+	public ShapelessMaterialPhase material() {
+		return new ShapelessMaterialPhase(this);
 	}
 }

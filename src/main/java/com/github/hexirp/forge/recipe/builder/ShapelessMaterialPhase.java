@@ -5,7 +5,7 @@ import com.github.hexirp.forge.recipe.ShapelessRecipe;
 import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 
 /** 材料の定義の段階を表現する. */
-public class ShapelessOrderPhase implements FinalPhase<ShapelessRecipe> {
+public class ShapelessMaterialPhase implements FinalPhase<ShapelessRecipe> {
 	/** 材料. */
 	private final ShapelessRecipeMaterial material = new ShapelessRecipeMaterial();
 	
@@ -17,7 +17,7 @@ public class ShapelessOrderPhase implements FinalPhase<ShapelessRecipe> {
 	 *
 	 * @param product 結果
 	 */
-	ShapelessOrderPhase(ProductPhase product) {
+	ShapelessMaterialPhase(ProductPhase product) {
 		this.product = product;
 	}
 	
@@ -29,7 +29,7 @@ public class ShapelessOrderPhase implements FinalPhase<ShapelessRecipe> {
 	 * @return メソッドチェーン用
 	 * @see ShapelessRecipeMaterial#add(MinecraftItem, int)
 	 */
-	public ShapelessOrderPhase add(MinecraftItem item, int n) {
+	public ShapelessMaterialPhase add(MinecraftItem item, int n) {
 		material.add(item, n);
 		
 		return this;

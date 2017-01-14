@@ -10,7 +10,7 @@ import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MapPhase implements FinalPhase<ShapedRecipe> {
+public class ShapedMaterialPhase implements FinalPhase<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
@@ -22,7 +22,7 @@ public class MapPhase implements FinalPhase<ShapedRecipe> {
 	 *
 	 * @param order {@link #order}
 	 */
-	MapPhase(ShapedOrderPhase order) {
+	ShapedMaterialPhase(ShapedOrderPhase order) {
 		this.order = order;
 	}
 	
@@ -34,7 +34,7 @@ public class MapPhase implements FinalPhase<ShapedRecipe> {
 	 * @return メソッドチェーン用
 	 * @see ShapedRecipeMaterialMap#put(Character, MinecraftItem)
 	 */
-	public MapPhase put(Character key, MinecraftItem value) {
+	public ShapedMaterialPhase put(Character key, MinecraftItem value) {
 		map.put(key, value);
 		return this;
 	}
