@@ -1,9 +1,10 @@
 package com.github.hexirp.forge.recipe.builder;
 
+import com.github.hexirp.builder.PreviousPhase;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
 /** 抽象的なレシピの並べ方の定義の段階を表現する. */
-public class ShapedOrderPhase extends PreviousProductPhase {
+public class ShapedOrderPhase extends PreviousPhase<ProductPhase> {
 	/** 抽象的なレシピの並べ方. */
 	private final ShapedRecipeAbstractOrder order = new ShapedRecipeAbstractOrder();
 	
