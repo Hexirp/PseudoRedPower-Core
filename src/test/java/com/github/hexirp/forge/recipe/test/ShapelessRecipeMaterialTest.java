@@ -7,6 +7,8 @@ import org.junit.Test;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 
+import net.minecraft.item.Item;
+
 /**
  * @author Hexirp
  * @see com.github.hexirp.forge.recipe.ShapelessRecipeMaterial
@@ -40,15 +42,17 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testAdd() {
-		final MinecraftItem A = new MinecraftItemMock("acacia_door");
-		final MinecraftItem E = new MinecraftItemMock("emerald");
+		MinecraftItem A = new MinecraftItemMock("acacia_door");
+		Item a = A.get();
+		MinecraftItem E = new MinecraftItemMock("emerald");
+		Item e = E.get();
 		
 		Object[] ret1 = new ShapelessRecipeMaterial()
 		    .add(A, 4)
 		    .add(E, 1)
 		    .calc();
 		
-		Object[] ret2 = new Object[] { A, A, A, A, E };
+		Object[] ret2 = new Object[] { a, a, a, a, e };
 		
 		assertEquals(ret1, ret2);
 	}
