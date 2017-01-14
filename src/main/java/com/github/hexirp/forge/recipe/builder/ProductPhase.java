@@ -24,8 +24,8 @@ public class ProductPhase {
 	/**
 	 * Setter.
 	 *
-	 * @param output {@link RecipeProduct#output}
-	 * @param size {@link RecipeProduct#size}
+	 * @param output 結果の種類
+	 * @param size 結果の数
 	 */
 	ProductPhase(MinecraftItem output, int size) {
 		product = new RecipeProduct(output, size);

@@ -5,17 +5,17 @@ import java.util.List;
 
 import com.github.hexirp.forge.item.MinecraftItem;
 
+import net.minecraft.item.Item;
+
 /**
  * 不定形レシピの材料を表現する.
  *
  * @author Hexirp
  */
 public class ShapelessRecipeMaterial {
-	// TODO: List<Object>をList<MinecraftItem>に変更する
 	/** 不定形レシピの材料. */
-	private final List<Object> list = new LinkedList<>();
+	private final List<Item> list = new LinkedList<>();
 	
-	// FIXME: MinecraftItem.get()が行われないミスが存在
 	/**
 	 * 配列に変換する.
 	 *
@@ -35,9 +35,9 @@ public class ShapelessRecipeMaterial {
 	public ShapelessRecipeMaterial add(MinecraftItem obj, int n) {
 		if (false == 0 <= n) throw new IllegalArgumentException();
 		
-		for (int counter = 0; counter < n; counter++) {
-			list.add(obj);
-		}
+		Item item = obj.get();
+		for (int i = 0; i < n; i++)
+			list.add(item);
 		
 		return this;
 	}
