@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.recipe.builder;
+package com.github.hexirp.builder;
 
 /**
  * Builderにおいて最終段階を表現する.

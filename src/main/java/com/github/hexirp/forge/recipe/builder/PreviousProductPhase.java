@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
+import com.github.hexirp.builder.PreviousPhase;
+
 /**
  * {@link ProductPhase}を前段階とする段階を表現する.
  *

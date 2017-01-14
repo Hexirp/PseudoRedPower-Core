@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.recipe.builder;
 
+import com.github.hexirp.builder.FinalPhase;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapedRecipe;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;

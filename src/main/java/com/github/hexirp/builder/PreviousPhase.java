@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.recipe.builder;
+package com.github.hexirp.builder;
 
 /**
  * 前段階を持つ段階を表現する.
