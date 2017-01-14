@@ -7,16 +7,24 @@ import java.util.List;
 import com.github.hexirp.forge.item.MinecraftItem;
 
 /**
- * このクラスは文字とアイテムとの対応関係を表現する.
+ * {@link ShapedRecipeAbstractOrder}における文字とアイテムとの対応関係を表現する.
  *
  * @author Hexirp
  */
 public class ShapedRecipeMaterialMap {
 	/** 文字とアイテムとの対応関係. */
-	private final LinkedHashMap<Character, MinecraftItem> material = new LinkedHashMap<Character, MinecraftItem>();
+	private final LinkedHashMap<Character, MinecraftItem> material =
+	    new LinkedHashMap<Character, MinecraftItem>();
 	
 	/**
-	 * 文字とアイテムとの対応関係を{@code List<Object>}に変換する.
+	 * 文字とアイテムとの対応関係を{@link List}に変換する.
+	 *
+	 * <h2>使用例</h2>
+	 * 
+	 * <pre>
+	 * new ShapedRecipeMaterialMap().put('A',foo).put('B',baa).toList()
+	 * > {'A', foo, 'B', baa}
+	 * </pre>
 	 *
 	 * @return 対応関係がリストで表現されたもの
 	 */
@@ -34,9 +42,9 @@ public class ShapedRecipeMaterialMap {
 	/**
 	 * 対応関係を追加する.
 	 *
-	 * @param key 単一文字
-	 * @param value ItemクラスとBlockクラスのみが渡されるべきである
-	 * @return 自分自身
+	 * @param key アルファベット大文字
+	 * @param value アイテム
+	 * @return メソッドチェーン用
 	 */
 	public ShapedRecipeMaterialMap put(Character key, MinecraftItem value) {
 		material.put(key, value);

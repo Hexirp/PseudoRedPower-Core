@@ -5,7 +5,7 @@ import com.github.hexirp.forge.Registerable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * このクラスは定型レシピを表現する.
+ * 定型レシピを表現する.
  *
  * @author Hexirp
  */
@@ -19,8 +19,8 @@ public class ShapedRecipe implements Registerable {
 	/**
 	 * Setter.
 	 *
-	 * @param item レシピの結果
-	 * @param input レシピの並べ方
+	 * @param item {@link #product}
+	 * @param input {@link #order}
 	 */
 	public ShapedRecipe(RecipeProduct item, ShapedRecipeOrder input) {
 		product = item;

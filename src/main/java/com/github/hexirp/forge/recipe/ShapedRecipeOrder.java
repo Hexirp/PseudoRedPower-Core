@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * このクラスは文字で抽象的に表現された並べ方とその文字とアイテムとの対応関係を合わせてレシピの並べ方を表現する.
+ * {@link ShapedRecipeAbstractOrder}と{@link ShapedRecipeMaterialMap}を合わせてレシピの並べ方を表現する.
  *
  * @author Hexirp
  */
@@ -16,10 +16,10 @@ public class ShapedRecipeOrder {
 	private final ShapedRecipeMaterialMap input;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
-	 * @param order 文字で抽象的に表現された並べ方
-	 * @param input 文字とアイテムとの対応関係
+	 * @param order {@link #order}
+	 * @param input {@link #input}
 	 */
 	public ShapedRecipeOrder(ShapedRecipeAbstractOrder order, ShapedRecipeMaterialMap input) {
 		this.order = order;
@@ -27,9 +27,9 @@ public class ShapedRecipeOrder {
 	}
 	
 	/**
-	 * レシピの並べ方を配列へ変換する.
+	 * 配列へ変換する.
 	 *
-	 * @return レシピの並べ方の配列での表現
+	 * @return 配列での表現
 	 */
 	public Object[] calc() {
 		List<Object> ret = new LinkedList<>();

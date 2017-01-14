@@ -6,34 +6,34 @@ import java.util.List;
 import com.github.hexirp.forge.item.MinecraftItem;
 
 /**
- * このクラスは不定形レシピの材料を表現する.
- *
- * 実際にはメソッドチェーンを使用するために{@code List<Object>}を包むクラスである。
+ * 不定形レシピの材料を表現する.
  *
  * @author Hexirp
  */
 public class ShapelessRecipeMaterial {
+	// TODO: List<Object>をList<MinecraftItem>に変更する
 	/** 不定形レシピの材料. */
 	private final List<Object> list = new LinkedList<>();
 	
+	// FIXME: MinecraftItem.get()が行われないミスが存在
 	/**
-	 * 不定形レシピの材料を配列に変換する.
+	 * 配列に変換する.
 	 *
-	 * @return 材料の配列での表
+	 * @return 材料の配列
 	 */
 	public Object[] calc() {
 		return list.toArray();
 	}
 	
 	/**
-	 * 不定形レシピの材料リストに追加する.
+	 * 材料を追加する.
 	 *
-	 * @param obj アイテム
-	 * @param n 個数
-	 * @return 自分自身
+	 * @param obj 材料の種類
+	 * @param n 材料の個数。0以上でなければならない
+	 * @return メソッドチェーン用
 	 */
 	public ShapelessRecipeMaterial add(MinecraftItem obj, int n) {
-		if (0 <= n == false) throw new IllegalArgumentException();
+		if (false == 0 <= n) throw new IllegalArgumentException();
 		
 		for (int counter = 0; counter < n; counter++) {
 			list.add(obj);
