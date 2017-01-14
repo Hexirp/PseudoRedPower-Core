@@ -5,25 +5,13 @@ package com.github.hexirp.forge.recipe.builder;
  *
  * @author Hexirp
  */
-public class PreviousShapedOrderPhase {
-	/** 前段階. */
-	final ShapedOrderPhase previous;
-	
-	/**
-	 * レシピの結果を取得する.
-	 *
-	 * @return {@link #previous}
-	 */
-	ShapedOrderPhase previous() {
-		return previous;
-	}
-	
+public class PreviousShapedOrderPhase extends PreviousPhase<ShapedOrderPhase> {
 	/**
 	 * Setter.
 	 *
 	 * @param previous {@link #previous}
 	 */
 	PreviousShapedOrderPhase(ShapedOrderPhase previous) {
-		this.previous = previous;
+		super(previous);
 	}
 }
