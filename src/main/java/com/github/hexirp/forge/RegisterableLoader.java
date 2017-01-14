@@ -8,14 +8,14 @@ import com.github.hexirp.forge.item.Environment;
  * @author Hexirp
  */
 public class RegisterableLoader implements Registerable {
-	/** 登録される環境. */
+	/** 環境. */
 	private final Environment env;
 	
-	/** 登録する{@link Loadable}. */
+	/** 読み込ませる{@link Loadable}. */
 	private final Loadable loader;
 	
 	/**
-	 * 設定するコントストラクタ.
+	 * Setter.
 	 *
 	 * @param env {@link #env}
 	 * @param loader {@link #loader}

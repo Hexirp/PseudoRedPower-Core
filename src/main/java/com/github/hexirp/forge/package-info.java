@@ -1,5 +1,5 @@
 /**
- * MinecraftForgeに関するAPIの内、根源的な物を定義するパッケージ.
+ * MinecraftForgeに関するAPIの内、根源的な物を定義する.
  *
  * @author Hexirp
  */

@@ -6,22 +6,22 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
 /**
- * アイテムを登録する際の環境を表現する.
+ * アイテムが登録される環境を表現する.
  *
  * @author Hexirp
  */
 public class Environment {
-	/** MODの環境. */
+	/** アイテムが登録されるMODの情報. */
 	private final ModMetadata metadata;
 	
-	/** 現在イベントの環境. */
+	/** アイテムが登録されるイベントの情報. */
 	private final FMLPreInitializationEvent event;
 	
 	/**
 	 * Setter.
 	 *
-	 * @param metadata MOD
-	 * @param event Forge
+	 * @param metadata {@link #metadata}
+	 * @param event {@link #event}
 	 */
 	public Environment(ModMetadata metadata, FMLPreInitializationEvent event) {
 		this.metadata = metadata;
@@ -29,16 +29,20 @@ public class Environment {
 	}
 	
 	/**
-	 * @return イベントが行われている場所.
+	 * イベントがどこで発生しているかを取得する.
+	 *
+	 * @return イベントが行われている場所
 	 */
 	public Side side() {
 		return event.getSide();
 	}
 	
 	/**
-	 * @return モデルのリソース保存場所.
-	 * @param name リソースの名前
-	 * @param loc 意味がまだ分からない
+	 * アイテムのモデルを登録するためにリソース箇所の情報を生成する.
+	 *
+	 * @param name アイテムの名前
+	 * @param loc TODO: まだ意味が分からない。アイテムを登録する際には"inventory"とする。
+	 * @return モデルリソース箇所の情報
 	 */
 	public ModelResourceLocation location(String name, String loc) {
 		return new ModelResourceLocation(metadata.modId + ":" + name, loc);

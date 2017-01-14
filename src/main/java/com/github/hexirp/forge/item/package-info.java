@@ -1,5 +1,5 @@
 /**
- * Itemを登録するためのAPIのパッケージである.
+ * Itemを登録するためのAPIを記述する.
  *
  * @author Hexirp
  */
