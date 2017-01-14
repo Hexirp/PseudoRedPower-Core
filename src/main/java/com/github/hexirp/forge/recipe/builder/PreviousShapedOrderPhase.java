@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
 /**
- * {@link ShapedOrderPhase}を前段階とする段階の表現
+ * {@link ShapedOrderPhase}を前段階とする段階を表現する.
  *
  * @author Hexirp
  */

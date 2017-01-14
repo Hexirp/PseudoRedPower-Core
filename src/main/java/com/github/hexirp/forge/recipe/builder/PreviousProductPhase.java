@@ -3,7 +3,7 @@ package com.github.hexirp.forge.recipe.builder;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 
 /**
- * {@link ProductPhase}を前段階とする段階の表現
+ * {@link ProductPhase}を前段階とする段階を表現する.
  *
  * @author Hexirp
  */
