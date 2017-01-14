@@ -8,7 +8,7 @@ import com.github.hexirp.forge.smelting.SmeltingRecipeInga;
 import net.minecraft.init.Items;
 
 /**
- * このクラスは、PRP-Coreで追加される製錬レシピを定義する.
+ * PRP-Coreで追加される製錬レシピを定義する.
  *
  * @author Hexirp
  */

@@ -5,7 +5,7 @@ import com.github.hexirp.forge.item.LoadableItem;
 import com.github.hexirp.forge.prp.core.items.SampleItem;
 
 /**
- * このクラスは、PRP-Coreで追加されるアイテム群を定義する.
+ * PRP-Coreで追加されるアイテム群を定義する.
  *
  * @author Hexirp
  */

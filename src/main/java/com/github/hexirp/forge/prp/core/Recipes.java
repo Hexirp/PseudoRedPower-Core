@@ -8,7 +8,7 @@ import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 import net.minecraft.init.Blocks;
 
 /**
- * このクラスは、PRP-Coreにより追加されるレシピ群を定義する.
+ * PRP-Coreにより追加されるレシピ群を定義する.
  *
  * @author Hexirp
  */
