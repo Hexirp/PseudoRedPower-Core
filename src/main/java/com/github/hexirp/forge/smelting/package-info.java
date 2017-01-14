@@ -3,4 +3,7 @@
  *
  * @author Hexirp
  */
+@NonNullByDefault
 package com.github.hexirp.forge.smelting;
+
+import com.github.hexirp.annotation.NonNullByDefault;
