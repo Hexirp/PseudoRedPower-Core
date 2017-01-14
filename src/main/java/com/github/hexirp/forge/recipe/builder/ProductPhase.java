@@ -4,7 +4,7 @@ import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 
 /**
- * レシピを定義するための補助クラス.
+ * レシピの結果を定義する段階を表現する.
  *
  * @author Hexirp
  */
@@ -12,7 +12,11 @@ public class ProductPhase {
 	/** レシピの結果. */
 	private final RecipeProduct product;
 	
-	/** @return 結果 */
+	/**
+	 * レシピの結果を取得する.
+	 *
+	 * @return {@link #product}
+	 */
 	RecipeProduct product() {
 		return product;
 	}
@@ -20,26 +24,26 @@ public class ProductPhase {
 	/**
 	 * Setter.
 	 *
-	 * @param output 結果
-	 * @param size 生成数
+	 * @param output {@link RecipeProduct#output}
+	 * @param size {@link RecipeProduct#size}
 	 */
 	ProductPhase(MinecraftItem output, int size) {
 		product = new RecipeProduct(output, size);
 	}
 	
 	/**
-	 * 並びの定義の段階への移行.
+	 * 並びの定義の段階に移行する.
 	 *
-	 * @return 並びの定義の段階
+	 * @return {@link ShapedOrderPhase}
 	 */
 	public ShapedOrderPhase order() {
 		return new ShapedOrderPhase(this);
 	}
 	
 	/**
-	 * 材料の定義の段階への移行.
+	 * 材料の定義の段階に移行する.
 	 *
-	 * @return 並びの定義の段階
+	 * @return {@link ShapelessOrderPhase}
 	 */
 	public ShapelessOrderPhase material() {
 		return new ShapelessOrderPhase(this);

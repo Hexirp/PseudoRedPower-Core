@@ -5,29 +5,34 @@ import com.github.hexirp.forge.recipe.ShapedRecipe;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
 import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
 
-/** 対応関係の定義の段階の表現. */
+/**
+ * 対応関係の定義の段階を表現する.
+ *
+ * @author Hexirp
+ */
 public class MapPhase implements FinalPhase<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
-	/** 並び. */
-	final ShapedOrderPhase order;
+	/** 前段階. */
+	private final ShapedOrderPhase order;
 	
 	/**
 	 * Setter.
 	 *
-	 * @param order 並び
+	 * @param order {@link #order}
 	 */
 	MapPhase(ShapedOrderPhase order) {
 		this.order = order;
 	}
 	
 	/**
-	 * 追加.
+	 * 対応関係を追加する.
 	 *
-	 * @param key 文字
-	 * @param value ItemかBlock
-	 * @return 自分自身
+	 * @param key アルファベット大文字
+	 * @param value 材料
+	 * @return メソッドチェーン用
+	 * @see ShapedRecipeMaterialMap#put(Character, MinecraftItem)
 	 */
 	public MapPhase put(Character key, MinecraftItem value) {
 		map.put(key, value);
