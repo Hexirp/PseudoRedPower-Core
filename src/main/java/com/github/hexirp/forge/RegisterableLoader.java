@@ -3,22 +3,22 @@ package com.github.hexirp.forge;
 import com.github.hexirp.forge.item.Environment;
 
 /**
- * このクラスはLoadableを自分自身を登録できるようにしたものを表現する.
+ * このクラスは{@link Loadable}を{@link Registerable}に変換した物を表現する.
  *
  * @author Hexirp
  */
 public class RegisterableLoader implements Registerable {
-	/** 自分自身が登録される環境の情報. */
+	/** 環境. */
 	private final Environment env;
 	
-	/** 保持するアイテム. */
+	/** 読み込ませる{@link Loadable}. */
 	private final Loadable loader;
 	
 	/**
 	 * Setter.
 	 *
-	 * @param env 自分自身が登録される環境の情報
-	 * @param loader 保持するアイテム
+	 * @param env {@link #env}
+	 * @param loader {@link #loader}
 	 */
 	public RegisterableLoader(Environment env, Loadable loader) {
 		this.env = env;

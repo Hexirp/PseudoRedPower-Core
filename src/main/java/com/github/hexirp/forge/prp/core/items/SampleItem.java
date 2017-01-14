@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 /**
- * 無機能アイテムのサンプル.
+ * サンプルアイテムを定義する.
  *
  * @author Hexirp
  */

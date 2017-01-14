@@ -8,7 +8,7 @@ import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 import net.minecraft.init.Items;
 
 /**
- * チェーンメイルのレシピ.
+ * チェーンメイルを作成するためのレシピを定義する.
  *
  * @author Hexirp
  */

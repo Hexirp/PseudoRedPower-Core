@@ -1,5 +1,5 @@
 /**
- * Recipeを登録するためのAPIのパッケージである.
+ * Recipeを登録するためのAPIを記述する.
  *
  * @author Hexirp
  */

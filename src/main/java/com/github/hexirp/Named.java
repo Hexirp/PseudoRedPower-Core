@@ -6,6 +6,10 @@ package com.github.hexirp;
  * @author Hexirp
  */
 public interface Named {
-	/** @return 名前 */
+	/**
+	 * 名前を取得する.
+	 *
+	 * @return 名前
+	 */
 	public String name();
 }

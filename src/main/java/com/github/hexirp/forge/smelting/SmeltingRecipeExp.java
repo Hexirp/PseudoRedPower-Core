@@ -15,10 +15,10 @@ public class SmeltingRecipeExp {
 	private final int times;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
-	 * @param exp 経験値
-	 * @param times 回数
+	 * @param exp {@link #exp}
+	 * @param times {@link #times}
 	 */
 	public SmeltingRecipeExp(int exp, int times) {
 		this.exp = exp;
@@ -26,7 +26,7 @@ public class SmeltingRecipeExp {
 	}
 	
 	/**
-	 * 少数への変換.
+	 * 少数に変換する.
 	 *
 	 * @return 少数に変換された経験値
 	 */

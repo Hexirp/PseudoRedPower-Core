@@ -1,5 +1,5 @@
 /**
- * PRP-Coreの実体を定義するパッケージである.
+ * PRP-Coreの実体を定義する.
  *
  * @author Hexirp
  */

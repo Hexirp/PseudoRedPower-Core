@@ -3,20 +3,28 @@ package com.github.hexirp.forge.recipe.builder;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
-/** 並びの定義の段階の表現. */
+/** 抽象的なレシピの並べ方の定義の段階を表現する. */
 public class ShapedOrderPhase {
-	/** 並び. */
+	/** 抽象的なレシピの並べ方. */
 	private final ShapedRecipeAbstractOrder order = new ShapedRecipeAbstractOrder();
 	
-	/** @return order */
+	/**
+	 * 抽象的なレシピの並べ方を取得する.
+	 *
+	 * @return {@link #order}
+	 */
 	ShapedRecipeAbstractOrder order() {
 		return order;
 	}
 	
-	/** レシピの結果. */
+	/** 前段階. */
 	private final ProductPhase product;
 	
-	/** @return product */
+	/**
+	 * レシピの結果を取得する.
+	 *
+	 * @return {@link #product}
+	 */
 	RecipeProduct product() {
 		return product.product();
 	}
@@ -24,17 +32,18 @@ public class ShapedOrderPhase {
 	/**
 	 * Setter.
 	 *
-	 * @param product 返り値
+	 * @param product {@link #product}
 	 */
 	ShapedOrderPhase(ProductPhase product) {
 		this.product = product;
 	}
 	
 	/**
-	 * 行の追加.
+	 * 行を追加する.
 	 *
 	 * @param str 行
-	 * @return 自分自身
+	 * @return メソッドチェーン用
+	 * @see ShapedRecipeAbstractOrder#add(String)
 	 */
 	public ShapedOrderPhase add(String str) {
 		order.add(str);
@@ -42,7 +51,11 @@ public class ShapedOrderPhase {
 		return this;
 	}
 	
-	/** @return 対応関係の定義の段階への移行 */
+	/**
+	 * 対応関係の定義の段階に移行する.
+	 *
+	 * @return {@link MapPhase}
+	 */
 	public MapPhase map() {
 		return new MapPhase(this);
 	}

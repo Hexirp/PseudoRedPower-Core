@@ -1,5 +1,5 @@
 /**
- * PRP全体に渡るパッケージ.
+ * PseudoRedPowerのMOD全ての中心クラスを記述する.
  *
  * @author Hexirp
  */

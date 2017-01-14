@@ -3,15 +3,15 @@ package com.github.hexirp.forge;
 import com.github.hexirp.forge.item.Environment;
 
 /**
- * 自分自身を読み込むことが出来ることを表現する.
+ * 自分自身を読み込ませられる事を表現する.
  *
  * @author Hexirp
  */
 public interface Loadable {
 	/**
-	 * 自分自身を読み込む.
+	 * 自分自身を読み込ませる.
 	 *
-	 * @param env アイテムが登録される環境
+	 * @param env 読み込ませる環境
 	 */
 	void load(Environment env);
 }

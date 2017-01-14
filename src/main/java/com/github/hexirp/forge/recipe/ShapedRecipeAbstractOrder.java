@@ -4,9 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * このクラスはレシピの並べ方を文字で抽象的に表現する.
+ * レシピの並べ方を文字で抽象的に表現する.
  *
- * 実際にはメソッドチェーンを使用するために{@code List<String>}を包むクラスである。
+ * <h2>使用例</h2>
  *
  * <pre>
  * new ShapedRecipeAbstractOrder()
@@ -22,9 +22,9 @@ public class ShapedRecipeAbstractOrder {
 	private final List<String> order = new LinkedList<String>();
 	
 	/**
-	 * 文字で表現されたレシピの並べ方を返す.
+	 * レシピの並べ方を取得する.
 	 *
-	 * @return 内部の値
+	 * @return {@link #order}
 	 */
 	public List<String> order() {
 		return order;
@@ -33,8 +33,8 @@ public class ShapedRecipeAbstractOrder {
 	/**
 	 * レシピの下側に行を追加する.
 	 *
-	 * @param string 追加される文字列
-	 * @return 自分自身
+	 * @param string アルファベットの大文字と空白のみで構成される文字列
+	 * @return メソッドチェーン用
 	 */
 	public ShapedRecipeAbstractOrder add(String string) {
 		order.add(string);

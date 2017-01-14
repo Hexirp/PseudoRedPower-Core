@@ -5,12 +5,15 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /**
- * @author Hexirp
+ * MODにおいて追加される要素を保持する辞書を表現する.
  *
- * @param <E> 要素
+ * 何かを追加するクラスを抽象化したクラス群の共通部分を取り出すことにより作成された。
+ *
+ * @author Hexirp
+ * @param <E> 要素の型
  */
 public class Library<E> {
-	/** 保持するリスト. */
+	/** 内部に保持され、辞書として扱われるリスト. */
 	private final List<E> library = new LinkedList<>();
 	
 	/**
@@ -18,6 +21,7 @@ public class Library<E> {
 	 *
 	 * @param element 追加される要素
 	 * @return メソッドチェーン用
+	 * @see java.util.Collection#add(Object)
 	 */
 	public Library<E> add(E element) {
 		library.add(element);
@@ -26,10 +30,11 @@ public class Library<E> {
 	}
 	
 	/**
-	 * ライブラリを結合する.
+	 * 別の辞書を結合する.
 	 *
-	 * @param lib {@code java.util.Collection<E>.addAll(Collection<E>)}
+	 * @param lib 別の辞書
 	 * @return メソッドチェーン用
+	 * @see java.util.Collection#addAll(java.util.Collection)
 	 */
 	public Library<E> merge(Library<? extends E> lib) {
 		lib.forEach(e -> library.add(e));
@@ -37,7 +42,12 @@ public class Library<E> {
 		return this;
 	}
 	
-	/** @param action {@link java.lang.Iterable}を参照せよ */
+	/**
+	 * 全ての要素に操作を適用する.
+	 *
+	 * @param action 一つの引数を取り、結果を返さない操作
+	 * @see java.lang.Iterable#forEach(Consumer)
+	 */
 	public void forEach(Consumer<? super E> action) {
 		library.forEach(action);
 	}

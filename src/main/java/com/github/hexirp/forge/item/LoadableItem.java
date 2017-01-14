@@ -9,19 +9,22 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
 /**
- * このクラスは、Itemを表現する. 実際にはMinecraftのItemクラスをラップしている.
+ * {@link Loadable}である{@link Item}を表現する.
+ *
+ * 実際は{@link Item}を包み、簡単に登録する事が出来るようにした物である。
+ * このクラスを使用してアイテムを登録するには、また別にリソースを追加しなければならない。
  *
  * @author Hexirp
  */
 public class LoadableItem implements Loadable, Named {
-	/** アイテムの名前を保持する. */
+	/** アイテムの名前. */
 	private final String name;
 	
-	/** アイテムを保持する. */
+	/** アイテム. */
 	private final Item item;
 	
 	/**
-	 * コントストラクタ. 名前はスネークケースで記述する事.
+	 * コントストラクタ. 名前はスネークケースで記述しなければならない。
 	 *
 	 * @param <NamedItem> 名前付きアイテムを表現する
 	 * @param item NamedItem
@@ -31,14 +34,15 @@ public class LoadableItem implements Loadable, Named {
 		this.item = item;
 	}
 	
-	/**
-	 * 別途リソースを追加する事.
-	 */
 	@Override
 	public void load(Environment env) {
 		GameRegistry.registerItem(item, name);
 		
-		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(item, 0, env.location(name, "inventory"));
+		if (env.side() == Side.CLIENT)
+		    ModelLoader.setCustomModelResourceLocation(
+		        item,
+		        0,
+		        env.location(name, "inventory")); // TODO: この部分が大きすぎるため、分離する
 	}
 	
 	@Override
