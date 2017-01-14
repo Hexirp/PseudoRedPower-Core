@@ -4,7 +4,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**
- * 材料と結果の対応を表現する. 原因と結果を結び付ける因果から名前を取っている。
+ * 材料と結果の対応を表現する.
+ *
+ * 原因と結果の結びつきを意味する因果から名前を取っている。
  *
  * @author Hexirp
  */
@@ -16,10 +18,10 @@ public class SmeltingRecipeInga {
 	private final Item material;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
-	 * @param product 結果
-	 * @param material 材料
+	 * @param product {@link #product}
+	 * @param material {@link #material}
 	 */
 	public SmeltingRecipeInga(Item product, Item material) {
 		this.product = product;
@@ -37,7 +39,7 @@ public class SmeltingRecipeInga {
 	
 	/**
 	 * 材料を取り出す.
-	 * 
+	 *
 	 * @return 材料
 	 */
 	public ItemStack getMaterial() {

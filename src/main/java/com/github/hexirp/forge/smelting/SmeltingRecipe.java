@@ -5,22 +5,22 @@ import com.github.hexirp.forge.Registerable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * 製錬レシピそのものを表現する.
+ * 製錬レシピを表現する.
  *
  * @author Hexirp
  */
 public class SmeltingRecipe implements Registerable {
-	/** 原因と結果. */
+	/** 材料と結果. */
 	private final SmeltingRecipeInga inga;
 	
 	/** 経験値が得られる確率. */
 	private SmeltingRecipeExp exp;
 	
 	/**
-	 * コントストラクタ.
+	 * Setter.
 	 *
-	 * @param inga 材料と結果
-	 * @param exp 経験値が得られる確率. 0以上1以下でなければならない
+	 * @param inga {@link #inga}
+	 * @param exp {@link #exp}
 	 */
 	public SmeltingRecipe(SmeltingRecipeInga inga, SmeltingRecipeExp exp) {
 		this.inga = inga;

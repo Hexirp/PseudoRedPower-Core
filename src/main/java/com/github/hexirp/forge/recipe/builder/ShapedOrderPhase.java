@@ -52,8 +52,8 @@ public class ShapedOrderPhase {
 	}
 	
 	/**
-	 * 対応関係の定義の段階に移行する
-	 * 
+	 * 対応関係の定義の段階に移行する.
+	 *
 	 * @return {@link MapPhase}
 	 */
 	public MapPhase map() {
