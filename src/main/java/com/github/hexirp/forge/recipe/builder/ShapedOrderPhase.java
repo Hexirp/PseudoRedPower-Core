@@ -19,7 +19,7 @@ public class ShapedOrderPhase extends PreviousProductPhase {
 	/**
 	 * Setter.
 	 *
-	 * @param product {@link #product}
+	 * @param product {@link #previous}
 	 */
 	ShapedOrderPhase(ProductPhase product) {
 		super(product);

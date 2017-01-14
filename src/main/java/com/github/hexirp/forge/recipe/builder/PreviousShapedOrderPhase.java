@@ -7,23 +7,23 @@ package com.github.hexirp.forge.recipe.builder;
  */
 public class PreviousShapedOrderPhase {
 	/** 前段階. */
-	final ShapedOrderPhase order;
+	final ShapedOrderPhase previous;
 	
 	/**
 	 * レシピの結果を取得する.
 	 *
-	 * @return {@link #order}
+	 * @return {@link #previous}
 	 */
-	ShapedOrderPhase order() {
-		return order;
+	ShapedOrderPhase previous() {
+		return previous;
 	}
 	
 	/**
 	 * Setter.
 	 *
-	 * @param order {@link #order}
+	 * @param previous {@link #previous}
 	 */
-	PreviousShapedOrderPhase(ShapedOrderPhase order) {
-		this.order = order;
+	PreviousShapedOrderPhase(ShapedOrderPhase previous) {
+		this.previous = previous;
 	}
 }

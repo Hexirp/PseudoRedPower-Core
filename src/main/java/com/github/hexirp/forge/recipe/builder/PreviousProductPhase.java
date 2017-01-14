@@ -9,24 +9,24 @@ import com.github.hexirp.forge.recipe.RecipeProduct;
  */
 public class PreviousProductPhase {
 	/** 前段階. */
-	final ProductPhase product;
+	final ProductPhase previous;
 	
 	/**
 	 * レシピの結果を取得する.
 	 *
-	 * @return {@link #product}
+	 * @return {@link #previous}
 	 */
-	RecipeProduct product() {
-		return product.product();
+	RecipeProduct previous() {
+		return previous.product();
 	}
 	
 	/**
 	 * Setter.
 	 *
-	 * @param product {@link #product}
+	 * @param previous {@link #previous}
 	 */
-	PreviousProductPhase(ProductPhase product) {
-		this.product = product;
+	PreviousProductPhase(ProductPhase previous) {
+		this.previous = previous;
 	}
 	
 }

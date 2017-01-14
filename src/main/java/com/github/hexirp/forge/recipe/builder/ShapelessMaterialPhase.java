@@ -35,6 +35,6 @@ public class ShapelessMaterialPhase extends PreviousProductPhase implements
 	
 	@Override
 	public ShapelessRecipe to() {
-		return new ShapelessRecipe(product.product(), material);
+		return new ShapelessRecipe(previous.product(), material);
 	}
 }

@@ -18,7 +18,7 @@ public class ShapedMaterialPhase extends PreviousShapedOrderPhase implements
 	/**
 	 * Setter.
 	 *
-	 * @param order {@link #order}
+	 * @param order {@link #previous}
 	 */
 	ShapedMaterialPhase(ShapedOrderPhase order) {
 		super(order);
@@ -39,6 +39,6 @@ public class ShapedMaterialPhase extends PreviousShapedOrderPhase implements
 	
 	@Override
 	public ShapedRecipe to() {
-		return new ShapedRecipe(order.product(), new ShapedRecipeOrder(order.order(), map));
+		return new ShapedRecipe(previous.previous(), new ShapedRecipeOrder(previous.order(), map));
 	}
 }
