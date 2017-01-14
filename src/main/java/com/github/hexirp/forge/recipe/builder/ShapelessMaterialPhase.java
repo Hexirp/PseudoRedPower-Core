@@ -17,7 +17,7 @@ public class ShapelessMaterialPhase extends PreviousPhase<ProductPhase> implemen
 	 *
 	 * @param product 結果
 	 */
-	ShapelessMaterialPhase(ProductPhase product) {
+	public ShapelessMaterialPhase(ProductPhase product) {
 		super(product);
 	}
 	

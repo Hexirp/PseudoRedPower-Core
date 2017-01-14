@@ -22,7 +22,7 @@ public class ShapedMaterialPhase extends PreviousPhase<ShapedOrderPhase> impleme
 	 *
 	 * @param order {@link #previous}
 	 */
-	ShapedMaterialPhase(ShapedOrderPhase order) {
+	public ShapedMaterialPhase(ShapedOrderPhase order) {
 		super(order);
 	}
 	

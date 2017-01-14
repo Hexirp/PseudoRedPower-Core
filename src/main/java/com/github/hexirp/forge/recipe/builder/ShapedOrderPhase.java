@@ -13,7 +13,7 @@ public class ShapedOrderPhase extends PreviousPhase<ProductPhase> {
 	 *
 	 * @return {@link #order}
 	 */
-	ShapedRecipeAbstractOrder order() {
+	public ShapedRecipeAbstractOrder order() {
 		return order;
 	}
 	
@@ -22,7 +22,7 @@ public class ShapedOrderPhase extends PreviousPhase<ProductPhase> {
 	 *
 	 * @param product {@link #previous}
 	 */
-	ShapedOrderPhase(ProductPhase product) {
+	public ShapedOrderPhase(ProductPhase product) {
 		super(product);
 	}
 	
