@@ -3,7 +3,7 @@ package com.github.hexirp.forge.prp.core;
 import net.minecraftforge.fml.common.ModMetadata;
 
 /**
- * MODの情報を表現する. このクラスは設定そのものであるため、設定を受け取って動的に変化したりはしない。
+ * PRP-Coreの情報を表現する. このクラスは設定そのものであるため、設定を受け取って動的に変化したりはしない。
  *
  * @author Hexirp
  */
