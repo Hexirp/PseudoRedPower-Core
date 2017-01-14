@@ -10,12 +10,10 @@ import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class ShapedMaterialPhase implements FinalPhase<ShapedRecipe> {
+public class ShapedMaterialPhase extends PreviousShapedOrderPhase implements
+    FinalPhase<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
-	
-	/** 前段階. */
-	private final ShapedOrderPhase order;
 	
 	/**
 	 * Setter.
@@ -23,7 +21,7 @@ public class ShapedMaterialPhase implements FinalPhase<ShapedRecipe> {
 	 * @param order {@link #order}
 	 */
 	ShapedMaterialPhase(ShapedOrderPhase order) {
-		this.order = order;
+		super(order);
 	}
 	
 	/**
