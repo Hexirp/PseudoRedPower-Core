@@ -24,9 +24,7 @@ public class LoadableItem implements Loadable, Named {
 	private final Item item;
 	
 	/**
-	 * コントストラクタ.
-	 *
-	 * 名前はスネークケースで記述しなければならない。
+	 * コントストラクタ. 名前はスネークケースで記述しなければならない。
 	 *
 	 * @param <NamedItem> 名前付きアイテムを表現する
 	 * @param item NamedItem
