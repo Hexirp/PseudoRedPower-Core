@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.prp.core.metadata.Subdata;
+
 import net.minecraftforge.fml.common.ModMetadata;
 
 /**

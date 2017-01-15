@@ -1,4 +1,6 @@
-package com.github.hexirp.forge.prp.core;
+package com.github.hexirp.forge.prp.core.metadata;
+
+import com.github.hexirp.forge.prp.core.DateSetter;
 
 import net.minecraftforge.fml.common.ModMetadata;
 
