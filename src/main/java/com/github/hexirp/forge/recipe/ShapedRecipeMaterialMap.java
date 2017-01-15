@@ -19,13 +19,6 @@ public class ShapedRecipeMaterialMap {
 	/**
 	 * 文字とアイテムとの対応関係を{@link List}に変換する.
 	 *
-	 * <h2>使用例</h2>
-	 * 
-	 * <pre>
-	 * new ShapedRecipeMaterialMap().put('A',foo).put('B',baa).toList()
-	 * > {'A', foo, 'B', baa}
-	 * </pre>
-	 *
 	 * @return 対応関係がリストで表現されたもの
 	 */
 	public final List<Object> toList() {

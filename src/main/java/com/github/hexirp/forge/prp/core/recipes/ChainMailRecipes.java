@@ -1,6 +1,5 @@
 package com.github.hexirp.forge.prp.core.recipes;
 
-import com.github.hexirp.forge.Registerable;
 import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
@@ -12,7 +11,7 @@ import net.minecraft.init.Items;
  *
  * @author Hexirp
  */
-public class ChainMailRecipes extends RegisterableLibrary implements Registerable {
+public class ChainMailRecipes extends RegisterableLibrary {
 	@Override
 	protected void add() {
 		library

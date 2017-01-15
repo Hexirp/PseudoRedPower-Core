@@ -17,7 +17,7 @@ public class ProductPhase {
 	 *
 	 * @return {@link #product}
 	 */
-	public RecipeProduct product() {
+	RecipeProduct product() {
 		return product;
 	}
 	
@@ -27,7 +27,7 @@ public class ProductPhase {
 	 * @param output 結果の種類
 	 * @param size 結果の数
 	 */
-	public ProductPhase(MinecraftItem output, int size) {
+	ProductPhase(MinecraftItem output, int size) {
 		product = new RecipeProduct(output, size);
 	}
 	

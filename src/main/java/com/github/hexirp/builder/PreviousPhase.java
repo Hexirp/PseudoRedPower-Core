@@ -11,11 +11,11 @@ public class PreviousPhase<Previous> {
 	protected final Previous previous;
 	
 	/**
-	 * レシピの結果を取得する.
+	 * 前段階を取得する.
 	 *
 	 * @return {@link #previous}
 	 */
-	public Previous previous() {
+	protected Previous previous() {
 		return previous;
 	}
 	
