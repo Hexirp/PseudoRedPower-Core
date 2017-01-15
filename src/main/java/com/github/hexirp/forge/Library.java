@@ -25,7 +25,6 @@ public class Library<Element> {
 	 */
 	public Library<Element> add(Element element) {
 		library.add(element);
-		
 		return this;
 	}
 	

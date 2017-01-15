@@ -18,15 +18,18 @@ public class Recipes extends RegisterableLibrary {
 		library
 		    .add(
 		        new RecipeBuilder()
-		            .product(new MinecraftItem(Blocks.bedrock), 1)
+		            .product(
+		                new MinecraftItem(
+		                    Blocks.bedrock), 1)
 		            .order()
 		            .add("AAA")
 		            .add("AAA")
 		            .add("AAA")
 		            .map()
-		            .put('A', new MinecraftItem(Blocks.bedrock))
+		            .put('A', new MinecraftItem(
+		                index.get("sample_item")))
 		            .to())
-		    .add(new ChainMail())
-		    .add(new Smeltings());
+		    .add(new ChainMail().setIndex(index).setRecipe())
+		    .add(new Smeltings().setIndex(index).setRecipe());
 	}
 }

@@ -1,9 +1,11 @@
 package com.github.hexirp.forge.item;
 
 import com.github.hexirp.Named;
+import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.Loadable;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -34,10 +36,15 @@ public class LoadableItem implements Loadable, Named {
 	}
 	
 	@Override
-	public void load(Environment env) {
+	public ItemIndex load(Environment env) {
 		GameRegistry.registerItem(item, name);
 		
-		if (env.side() == Side.CLIENT) new ItemResource(name, item).load(env);
+		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
+		    item,
+		    0,
+		    env.location(name, "inventory"));
+		
+		return new ItemIndex().put(name, item);
 	}
 	
 	@Override
