@@ -7,11 +7,11 @@ import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 import net.minecraft.init.Items;
 
 /**
- * チェーンメイルを作成するためのレシピを定義する.
+ * チェーンメイルの上半身を作成するためのレシピを定義する.
  *
  * @author Hexirp
  */
-public class ChainMailRecipes extends RegisterableLibrary {
+public class UpperBody extends RegisterableLibrary {
 	@Override
 	protected void add() {
 		library
@@ -31,25 +31,6 @@ public class ChainMailRecipes extends RegisterableLibrary {
 		            .add("A A")
 		            .add(" A ")
 		            .add("AAA")
-		            .map()
-		            .put('A', new MinecraftItem(Items.iron_ingot))
-		            .to())
-		    .add(
-		        new RecipeBuilder()
-		            .product(new MinecraftItem(Items.chainmail_leggings), 1)
-		            .order()
-		            .add(" A ")
-		            .add("A A")
-		            .add("A A")
-		            .map()
-		            .put('A', new MinecraftItem(Items.iron_ingot))
-		            .to())
-		    .add(
-		        new RecipeBuilder()
-		            .product(new MinecraftItem(Items.chainmail_boots), 1)
-		            .order()
-		            .add("A  ")
-		            .add("  A")
 		            .map()
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to());

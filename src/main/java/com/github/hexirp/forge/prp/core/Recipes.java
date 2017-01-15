@@ -2,7 +2,7 @@ package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.item.MinecraftItem;
-import com.github.hexirp.forge.prp.core.recipes.ChainMailRecipes;
+import com.github.hexirp.forge.prp.core.recipes.ChainMail;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Blocks;
@@ -26,7 +26,7 @@ public class Recipes extends RegisterableLibrary {
 		            .map()
 		            .put('A', new MinecraftItem(Blocks.bedrock))
 		            .to())
-		    .add(new ChainMailRecipes())
+		    .add(new ChainMail())
 		    .add(new Smeltings());
 	}
 }
