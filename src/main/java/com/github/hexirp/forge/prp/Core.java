@@ -36,7 +36,7 @@ public final class Core {
 	public void preInit(FMLPreInitializationEvent event) {
 		// Forgeによるmetadataへの代入
 		
-		Metadata.set(metadata);
+		new Metadata().set(metadata);
 		
 		Environment env = new Environment(metadata, event);
 		
