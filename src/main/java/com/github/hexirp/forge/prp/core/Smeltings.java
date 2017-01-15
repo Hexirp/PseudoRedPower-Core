@@ -14,7 +14,7 @@ import net.minecraft.init.Items;
  */
 public class Smeltings extends RegisterableLibrary {
 	@Override
-	public RegisterableLibrary add() {
+	protected void add() {
 		library
 		    .add(
 		        new SmeltingRecipe(
@@ -22,6 +22,5 @@ public class Smeltings extends RegisterableLibrary {
 		                Items.carrot,
 		                Items.coal),
 		            new SmeltingRecipeExp(10, 1)));
-		return this;
 	}
 }

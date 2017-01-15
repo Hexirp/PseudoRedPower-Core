@@ -14,7 +14,7 @@ import net.minecraft.init.Blocks;
  */
 public class Recipes extends RegisterableLibrary {
 	@Override
-	public RegisterableLibrary add() {
+	protected void add() {
 		library
 		    .add(
 		        new RecipeBuilder()
@@ -29,8 +29,7 @@ public class Recipes extends RegisterableLibrary {
 		            .put('A', new MinecraftItem(
 		                index.get("sample_item")))
 		            .to())
-		    .add(new ChainMail().set(index).add())
-		    .add(new Smeltings().set(index).add());
-		return this;
+		    .add(new ChainMail().setIndex(index).setRecipe())
+		    .add(new Smeltings().setIndex(index).setRecipe());
 	}
 }

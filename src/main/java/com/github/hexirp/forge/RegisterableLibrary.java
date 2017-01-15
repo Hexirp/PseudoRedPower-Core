@@ -16,10 +16,17 @@ public abstract class RegisterableLibrary implements Registerable {
 	
 	/**
 	 * 辞書に要素を追加する.
-	 * 
+	 *
+	 */
+	protected abstract void add();
+	
+	/**
+	 * 辞書に要素を追加する.
+	 *
 	 * @return メソッドチェーン用
 	 */
-	public RegisterableLibrary add() {
+	public RegisterableLibrary setRecipe() {
+		add();
 		return this;
 	}
 	
@@ -29,7 +36,7 @@ public abstract class RegisterableLibrary implements Registerable {
 	 * @param items {@link #index}
 	 * @return メソッドチェーン用
 	 */
-	public RegisterableLibrary set(ItemIndex items) {
+	public RegisterableLibrary setIndex(ItemIndex items) {
 		index = items;
 		return this;
 	}

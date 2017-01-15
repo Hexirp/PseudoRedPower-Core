@@ -13,7 +13,7 @@ import net.minecraft.init.Items;
  */
 public class ChainMail extends RegisterableLibrary {
 	@Override
-	public RegisterableLibrary add() {
+	protected void add() {
 		library
 		    .add(
 		        new RecipeBuilder()
@@ -53,6 +53,5 @@ public class ChainMail extends RegisterableLibrary {
 		            .map()
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to());
-		return this;
 	}
 }
