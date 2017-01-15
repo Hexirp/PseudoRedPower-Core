@@ -26,7 +26,11 @@ public abstract class LoadableLibrary implements Loadable {
 	}
 	
 	@Override
-	public void load(Environment env) {
-		library.forEach(item -> item.load(env));
+	public ItemIndex load(Environment env) {
+		ItemIndex ret = new ItemIndex();
+		
+		library.forEach(item -> ret.merge(item.load(env)));
+		
+		return ret;
 	}
 }

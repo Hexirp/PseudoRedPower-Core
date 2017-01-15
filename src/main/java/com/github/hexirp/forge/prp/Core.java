@@ -1,6 +1,7 @@
 package com.github.hexirp.forge.prp;
 
 import com.github.hexirp.annotation.Nullable;
+import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.item.Environment;
 import com.github.hexirp.forge.prp.core.Items;
 import com.github.hexirp.forge.prp.core.Metadata;
@@ -40,7 +41,9 @@ public final class Core {
 		
 		Environment env = new Environment(metadata, event);
 		
-		new Items().load(env);
+		ItemIndex items = new Items().load(env);
+		
+		System.out.print(items); // debug
 		
 		new Recipes().register();
 	}

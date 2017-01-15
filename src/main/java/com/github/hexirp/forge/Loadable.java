@@ -12,6 +12,7 @@ public interface Loadable {
 	 * 自分自身を読み込ませる.
 	 *
 	 * @param env 読み込ませる環境
+	 * @return 辞書
 	 */
-	void load(Environment env);
+	public ItemIndex load(Environment env);
 }
