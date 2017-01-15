@@ -14,19 +14,23 @@ import net.minecraft.init.Blocks;
  */
 public class Recipes extends RegisterableLibrary {
 	@Override
-	protected void add() {
+	public RegisterableLibrary add() {
 		library
 		    .add(
 		        new RecipeBuilder()
-		            .product(new MinecraftItem(Blocks.bedrock), 1)
+		            .product(
+		                new MinecraftItem(
+		                    Blocks.bedrock), 1)
 		            .order()
 		            .add("AAA")
 		            .add("AAA")
 		            .add("AAA")
 		            .map()
-		            .put('A', new MinecraftItem(Blocks.bedrock))
+		            .put('A', new MinecraftItem(
+		                index.get("sample_item")))
 		            .to())
-		    .add(new ChainMail())
-		    .add(new Smeltings());
+		    .add(new ChainMail().set(index).add())
+		    .add(new Smeltings().set(index).add());
+		return this;
 	}
 }

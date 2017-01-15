@@ -11,16 +11,27 @@ public abstract class RegisterableLibrary implements Registerable {
 	/** 辞書. */
 	protected final Library<Registerable> library = new Library<>();
 	
-	/** 辞書に要素を追加する. */
-	protected abstract void add();
+	/** アイテムの索引. */
+	protected ItemIndex index;
 	
 	/**
-	 * コントストラクタ.
-	 *
-	 * @future 設定を受け取れるようにする
+	 * 辞書に要素を追加する.
+	 * 
+	 * @return メソッドチェーン用
 	 */
-	public RegisterableLibrary() {
-		add();
+	public RegisterableLibrary add() {
+		return this;
+	}
+	
+	/**
+	 * Setter.
+	 *
+	 * @param items {@link #index}
+	 * @return メソッドチェーン用
+	 */
+	public RegisterableLibrary set(ItemIndex items) {
+		index = items;
+		return this;
 	}
 	
 	@Override

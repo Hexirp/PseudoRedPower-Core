@@ -37,8 +37,13 @@ public class ItemIndex {
 		return this;
 	}
 	
-	@Override
-	public String toString() {
-		return index.toString();
+	/**
+	 * 索引を引く.
+	 *
+	 * @param string 索引の見出し
+	 * @return 索引の本文
+	 */
+	public Item get(String string) {
+		return index.get(string);
 	}
 }
