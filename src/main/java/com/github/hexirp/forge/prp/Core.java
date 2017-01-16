@@ -43,6 +43,6 @@ public final class Core {
 		
 		ItemIndex items = new Items().load(env);
 		
-		new Recipes().setIndex(items).setRecipe().register();
+		new Recipes(items).register();
 	}
 }

@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.prp.core.recipes.ChainMail;
@@ -15,25 +16,34 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Hexirp
  */
 public class Recipes extends RegisterableLibrary {
+	/**
+	 * 初期化する.
+	 *
+	 * @param items アイテムの索引
+	 */
+	public Recipes(ItemIndex items) {
+		super(items);
+	}
+	
 	@Override
-	protected void add() {
+	protected void add(ItemIndex index) {
 		library
 		    .add(
 		        new RecipeBuilder()
-		            .product(
-		                new MinecraftItem(
-		                    Blocks.bedrock), 1)
+		            .product(new MinecraftItem(Blocks.bedrock), 1)
 		            .order()
 		            .add("AAA")
 		            .add("AAA")
 		            .add("AAA")
 		            .map()
-		            .put('A', new MinecraftItem(
-		                index.get("sample_item")))
+		            .put('A', new MinecraftItem(index.get("sample_item")))
 		            .to())
-		    .add(new ChainMail().setIndex(index).setRecipe())
-		    .add(new Smeltings().setIndex(index).setRecipe())
-		    .add(() -> GameRegistry.addRecipe(new ItemStack(Blocks.bedrock), "A", 'A',
+		    .add(new ChainMail(index))
+		    .add(new Smeltings(index))
+		    .add(() -> GameRegistry.addRecipe(
+		        new ItemStack(Blocks.bedrock),
+		        "A",
+		        'A',
 		        Blocks.bedrock)); //test
 	}
 }
