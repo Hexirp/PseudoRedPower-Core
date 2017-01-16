@@ -6,6 +6,8 @@ import com.github.hexirp.forge.prp.core.recipes.ChainMail;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * PRP-Coreにより追加されるレシピ群を定義する.
@@ -30,6 +32,8 @@ public class Recipes extends RegisterableLibrary {
 		                index.get("sample_item")))
 		            .to())
 		    .add(new ChainMail().setIndex(index).setRecipe())
-		    .add(new Smeltings().setIndex(index).setRecipe());
+		    .add(new Smeltings().setIndex(index).setRecipe())
+		    .add(() -> GameRegistry.addRecipe(new ItemStack(Blocks.bedrock), "A", 'A',
+		        Blocks.bedrock)); //test
 	}
 }

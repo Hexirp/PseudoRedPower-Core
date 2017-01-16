@@ -7,6 +7,7 @@ import com.github.hexirp.forge.item.Environment;
  *
  * @author Hexirp
  */
+@FunctionalInterface
 public interface Loadable {
 	/**
 	 * 自分自身を読み込ませる.

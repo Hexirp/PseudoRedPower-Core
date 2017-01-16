@@ -5,6 +5,7 @@ package com.github.hexirp.forge;
  *
  * @author Hexirp
  */
+@FunctionalInterface
 public interface Registerable {
 	/** 自分自身をゲームに登録する. */
 	public void register();
