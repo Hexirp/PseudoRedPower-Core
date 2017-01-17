@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.ModData;
 import com.github.hexirp.forge.prp.core.metadata.Subdata;
 
 import net.minecraftforge.fml.common.ModMetadata;
@@ -9,7 +10,7 @@ import net.minecraftforge.fml.common.ModMetadata;
  *
  * @author Hexirp
  */
-public final class Metadata implements DateSetter {
+public final class Metadata implements ModData {
 	/** MODの短縮名. それぞれのMODを区別する絶対的な文字列。 */
 	public static final String MOD_ID = "prp_core";
 	

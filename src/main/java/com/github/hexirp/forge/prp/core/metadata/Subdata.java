@@ -1,6 +1,6 @@
 package com.github.hexirp.forge.prp.core.metadata;
 
-import com.github.hexirp.forge.prp.core.DateSetter;
+import com.github.hexirp.forge.ModData;
 
 import net.minecraftforge.fml.common.ModMetadata;
 
@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.ModMetadata;
  *
  * @author Hexirp
  */
-public class Subdata implements DateSetter {
+public class Subdata implements ModData {
 	/** MODの解説. */
 	private static final String DESCRIPTION =
 	    "PseudoRedPower-Core is the salvaged RedPower2 to 1.8.9 or later. So, respect the author of RedPower2 if you think that this MOD is interesting.";

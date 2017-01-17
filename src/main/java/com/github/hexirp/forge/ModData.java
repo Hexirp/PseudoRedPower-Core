@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.prp.core;
+package com.github.hexirp.forge;
 
 import net.minecraftforge.fml.common.ModMetadata;
 
@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.ModMetadata;
  * @author Hexirp
  *
  */
-public interface DateSetter {
+public interface ModData {
 	/**
 	 * MODの情報を設定する.
 	 *
