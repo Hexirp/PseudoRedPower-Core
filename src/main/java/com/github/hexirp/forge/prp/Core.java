@@ -1,11 +1,9 @@
 package com.github.hexirp.forge.prp;
 
 import com.github.hexirp.annotation.Nullable;
-import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.item.Environment;
-import com.github.hexirp.forge.prp.core.Items;
+import com.github.hexirp.forge.prp.core.Mechanism;
 import com.github.hexirp.forge.prp.core.Metadata;
-import com.github.hexirp.forge.prp.core.Recipes;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModMetadata;
@@ -41,8 +39,6 @@ public final class Core {
 		
 		Environment env = new Environment(metadata, event);
 		
-		ItemIndex items = new Items().load(env);
-		
-		new Recipes(items).register();
+		new Mechanism().add(env);
 	}
 }
