@@ -11,11 +11,11 @@ import net.minecraftforge.fml.common.ModMetadata;
  */
 public class Subdata implements DateSetter {
 	/** MODの解説. */
-	public static final String DESCRIPTION =
+	private static final String DESCRIPTION =
 	    "PseudoRedPower-Core is the salvaged RedPower2 to 1.8.9 or later. So, respect the author of RedPower2 if you think that this MOD is interesting.";
 	
 	/** MODのホームページ. */
-	public static final String URL = "https://github.com/Hexirp/PseudoRedPower-Core";
+	private static final String URL = "https://github.com/Hexirp/PseudoRedPower-Core";
 	
 	/**
 	 * @param metadata 設定する対象
