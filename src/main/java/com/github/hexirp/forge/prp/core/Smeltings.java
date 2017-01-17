@@ -17,14 +17,9 @@ public class Smeltings extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
-	 * @param items アイテムの索引
+	 * @param index アイテムの索引
 	 */
-	public Smeltings(ItemIndex items) {
-		super(items);
-	}
-	
-	@Override
-	protected void add(ItemIndex index) {
+	public Smeltings(ItemIndex index) {
 		library
 		    .add(
 		        new SmeltingRecipe(

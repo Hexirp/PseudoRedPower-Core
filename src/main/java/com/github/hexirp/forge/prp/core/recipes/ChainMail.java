@@ -16,14 +16,9 @@ public class ChainMail extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
-	 * @param items アイテムの索引
+	 * @param index アイテムの索引
 	 */
-	public ChainMail(ItemIndex items) {
-		super(items);
-	}
-	
-	@Override
-	protected void add(ItemIndex index) {
+	public ChainMail(ItemIndex index) {
 		library
 		    .add(
 		        new RecipeBuilder()

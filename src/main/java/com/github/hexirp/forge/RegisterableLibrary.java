@@ -11,22 +11,6 @@ public abstract class RegisterableLibrary implements Registerable {
 	/** 辞書. */
 	protected final Library<Registerable> library = new Library<>();
 	
-	/**
-	 * 辞書に要素を追加する.
-	 *
-	 * @param index アイテムの索引
-	 */
-	protected abstract void add(ItemIndex index);
-	
-	/**
-	 * 初期化する.
-	 *
-	 * @param items アイテムの索引
-	 */
-	public RegisterableLibrary(ItemIndex items) {
-		add(items);
-	}
-	
 	@Override
 	public void register() {
 		library.forEach(recipe -> recipe.register());

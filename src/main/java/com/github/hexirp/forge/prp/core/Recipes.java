@@ -19,14 +19,9 @@ public class Recipes extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
-	 * @param items アイテムの索引
+	 * @param index アイテムの索引
 	 */
-	public Recipes(ItemIndex items) {
-		super(items);
-	}
-	
-	@Override
-	protected void add(ItemIndex index) {
+	public Recipes(ItemIndex index) {
 		library
 		    .add(
 		        new RecipeBuilder()
