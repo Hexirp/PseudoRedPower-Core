@@ -1,6 +1,5 @@
 package com.github.hexirp.forge.prp.core;
 
-import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.smelting.SmeltingRecipe;
 import com.github.hexirp.forge.smelting.SmeltingRecipeExp;
@@ -14,12 +13,8 @@ import net.minecraft.init.Items;
  * @author Hexirp
  */
 public class Smeltings extends RegisterableLibrary {
-	/**
-	 * 初期化する.
-	 *
-	 * @param index アイテムの索引
-	 */
-	public Smeltings(ItemIndex index) {
+	/** 初期化する. */
+	public Smeltings() {
 		library
 		    .add(
 		        new SmeltingRecipe(

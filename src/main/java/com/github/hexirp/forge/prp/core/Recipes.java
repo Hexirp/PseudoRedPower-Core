@@ -33,8 +33,8 @@ public class Recipes extends RegisterableLibrary {
 		            .map()
 		            .put('A', new MinecraftItem(index.get("sample_item")))
 		            .to())
-		    .add(new ChainMail(index))
-		    .add(new Smeltings(index))
+		    .add(new ChainMail())
+		    .add(new Smeltings())
 		    .add(() -> GameRegistry.addRecipe(
 		        new ItemStack(Blocks.bedrock),
 		        "A",

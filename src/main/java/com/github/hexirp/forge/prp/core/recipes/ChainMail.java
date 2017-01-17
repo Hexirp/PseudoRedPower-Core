@@ -1,6 +1,5 @@
 package com.github.hexirp.forge.prp.core.recipes;
 
-import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
@@ -13,12 +12,8 @@ import net.minecraft.init.Items;
  * @author Hexirp
  */
 public class ChainMail extends RegisterableLibrary {
-	/**
-	 * 初期化する.
-	 *
-	 * @param index アイテムの索引
-	 */
-	public ChainMail(ItemIndex index) {
+	/** 初期化する. */
+	public ChainMail() {
 		library
 		    .add(
 		        new RecipeBuilder()
