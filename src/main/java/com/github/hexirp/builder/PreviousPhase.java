@@ -15,7 +15,7 @@ public class PreviousPhase<Previous> {
 	 *
 	 * @return {@link #previous}
 	 */
-	protected Previous previous() {
+	public Previous previous() {
 		return previous;
 	}
 	

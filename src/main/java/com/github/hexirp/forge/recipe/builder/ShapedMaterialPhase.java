@@ -41,7 +41,7 @@ public class ShapedMaterialPhase extends PreviousPhase<ShapedOrderPhase> impleme
 	
 	@Override
 	public ShapedRecipe to() {
-		return new ShapedRecipe(previous.product(), new ShapedRecipeOrder(previous
+		return new ShapedRecipe(previous.previous().product(), new ShapedRecipeOrder(previous
 		    .order(), map));
 	}
 }

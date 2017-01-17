@@ -4,13 +4,13 @@ package com.github.hexirp.builder;
  * Builderにおいて最終段階を表現する.
  *
  * @author Hexirp
- * @param <T> 生成物の型
+ * @param <Product> 生成物の型
  */
-public interface FinalPhase<T> {
+public interface FinalPhase<Product> {
 	/**
 	 * 生成する.
 	 *
 	 * @return 生成物
 	 */
-	public T to();
+	public Product to();
 }
