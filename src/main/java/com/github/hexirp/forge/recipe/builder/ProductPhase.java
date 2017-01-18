@@ -1,5 +1,6 @@
 package com.github.hexirp.forge.recipe.builder;
 
+import com.github.hexirp.builder.DependencyPhase;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 
@@ -8,27 +9,15 @@ import com.github.hexirp.forge.recipe.RecipeProduct;
  *
  * @author Hexirp
  */
-public class ProductPhase {
-	/** レシピの結果. */
-	private final RecipeProduct product;
-	
-	/**
-	 * レシピの結果を取得する.
-	 *
-	 * @return {@link #product}
-	 */
-	RecipeProduct product() {
-		return product;
-	}
-	
+public class ProductPhase extends DependencyPhase<RecipeProduct> {
 	/**
 	 * Setter.
 	 *
 	 * @param output 結果の種類
 	 * @param size 結果の数
 	 */
-	ProductPhase(MinecraftItem output, int size) {
-		product = new RecipeProduct(output, size);
+	public ProductPhase(MinecraftItem output, int size) {
+		super(new RecipeProduct(output, size));
 	}
 	
 	/**

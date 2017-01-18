@@ -1,14 +1,14 @@
 package com.github.hexirp.builder;
 
 /**
- * 前段階を持つ段階を表現する.
+ * 前段階に依存する段階を表現する.
  *
  * @author Hexirp
  * @param <Previous> 前段階の型
  */
-public class PreviousPhase<Previous> {
+public class DependencyPhase<Previous> {
 	/** 前段階. */
-	protected final Previous previous;
+	private final Previous previous;
 	
 	/**
 	 * 前段階を取得する.
@@ -24,7 +24,7 @@ public class PreviousPhase<Previous> {
 	 *
 	 * @param previous {@link #previous}
 	 */
-	public PreviousPhase(Previous previous) {
+	public DependencyPhase(Previous previous) {
 		this.previous = previous;
 	}
 }

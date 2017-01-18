@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.builder.FinalPhase;
-import com.github.hexirp.builder.PreviousPhase;
+import com.github.hexirp.builder.DependencyPhase;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapedRecipe;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
@@ -12,7 +12,7 @@ import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class ShapedMaterialPhase extends PreviousPhase<ShapedOrderPhase> implements
+public class ShapedMaterialPhase extends DependencyPhase<ShapedOrderPhase> implements
     FinalPhase<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
@@ -22,7 +22,7 @@ public class ShapedMaterialPhase extends PreviousPhase<ShapedOrderPhase> impleme
 	 *
 	 * @param order {@link #previous}
 	 */
-	ShapedMaterialPhase(ShapedOrderPhase order) {
+	public ShapedMaterialPhase(ShapedOrderPhase order) {
 		super(order);
 	}
 	
@@ -41,7 +41,8 @@ public class ShapedMaterialPhase extends PreviousPhase<ShapedOrderPhase> impleme
 	
 	@Override
 	public ShapedRecipe to() {
-		return new ShapedRecipe(previous.previous().product(), new ShapedRecipeOrder(previous
-		    .order(), map));
+		return new ShapedRecipe(
+		    previous().previous().previous(),
+		    new ShapedRecipeOrder(previous().order(), map));
 	}
 }
