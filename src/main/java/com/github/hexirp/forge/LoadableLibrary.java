@@ -16,11 +16,7 @@ public abstract class LoadableLibrary implements Loadable {
 	/** 辞書に要素を追加する. */
 	protected abstract void add();
 	
-	/**
-	 * コントストラクタ.
-	 *
-	 * @future 設定を受け取れるようにする
-	 */
+	/** コントストラクタ. */
 	public LoadableLibrary() {
 		add();
 	}
