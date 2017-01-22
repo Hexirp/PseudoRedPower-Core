@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
-import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.item.Environment;
+import com.github.hexirp.forge.item.ItemIndex;
 
 /**
  * PRP-Coreにより追加されるメカニズム群、つまりアイテムやレシピなどを表現する.

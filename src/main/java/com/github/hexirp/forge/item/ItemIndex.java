@@ -1,4 +1,4 @@
-package com.github.hexirp.forge;
+package com.github.hexirp.forge.item;
 
 import java.util.HashMap;
 import java.util.Map;

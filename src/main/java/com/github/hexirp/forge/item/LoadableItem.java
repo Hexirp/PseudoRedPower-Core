@@ -1,7 +1,6 @@
 package com.github.hexirp.forge.item;
 
 import com.github.hexirp.Named;
-import com.github.hexirp.forge.ItemIndex;
 import com.github.hexirp.forge.Loadable;
 
 import net.minecraft.item.Item;

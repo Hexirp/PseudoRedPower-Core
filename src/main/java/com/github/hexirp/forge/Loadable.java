@@ -1,6 +1,7 @@
 package com.github.hexirp.forge;
 
 import com.github.hexirp.forge.item.Environment;
+import com.github.hexirp.forge.item.ItemIndex;
 
 /**
  * 自分自身を読み込ませられる事を表現する.
