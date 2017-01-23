@@ -10,9 +10,8 @@ import com.github.hexirp.forge.prp.core.items.SampleItem;
  * @author Hexirp
  */
 public class Items extends LoadableLibrary {
-	@Override
-	protected void add() {
-		library.add(new LoadableItem(
-		    new SampleItem()));
+	/** コントストラクタ. */
+	public Items() {
+		library.add(new LoadableItem(new SampleItem()));
 	}
 }

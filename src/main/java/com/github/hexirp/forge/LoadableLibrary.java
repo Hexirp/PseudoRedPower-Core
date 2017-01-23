@@ -14,14 +14,6 @@ public abstract class LoadableLibrary implements Loadable {
 	/** 辞書. */
 	protected final Library<Loadable> library = new Library<>();
 	
-	/** 辞書に要素を追加する. */
-	protected abstract void add();
-	
-	/** コントストラクタ. */
-	public LoadableLibrary() {
-		add();
-	}
-	
 	@Override
 	public ItemIndex load(Environment env) {
 		ItemIndex ret = new ItemIndex();
