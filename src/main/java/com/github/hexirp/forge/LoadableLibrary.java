@@ -1,6 +1,7 @@
 package com.github.hexirp.forge;
 
 import com.github.hexirp.forge.item.Environment;
+import com.github.hexirp.forge.item.Index;
 import com.github.hexirp.forge.item.ItemIndex;
 
 /**
@@ -16,10 +17,10 @@ public abstract class LoadableLibrary implements Loadable {
 	
 	@Override
 	public ItemIndex load(Environment env) {
-		ItemIndex ret = new ItemIndex();
+		Index ret = new ItemIndex();
 		
 		library.forEach(item -> ret.merge(item.load(env)));
 		
-		return ret;
+		return (ItemIndex) ret;
 	}
 }

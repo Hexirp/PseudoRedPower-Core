@@ -43,7 +43,7 @@ public class LoadableItem implements Loadable, Named {
 		    0,
 		    env.location(name, "inventory"));
 		
-		return new ItemIndex().put(name, item);
+		return (ItemIndex) new ItemIndex().put(name, item);
 	}
 	
 	@Override
