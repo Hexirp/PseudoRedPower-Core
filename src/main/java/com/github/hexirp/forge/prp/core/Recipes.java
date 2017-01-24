@@ -1,12 +1,13 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.RegisterableLibrary;
-import com.github.hexirp.forge.item.ItemIndex;
+import com.github.hexirp.forge.item.Index;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.prp.core.recipes.ChainMail;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -21,7 +22,7 @@ public class Recipes extends RegisterableLibrary {
 	 *
 	 * @param index アイテムの索引
 	 */
-	public Recipes(ItemIndex index) {
+	public Recipes(Index<Item> index) {
 		library
 		    .add(
 		        new RecipeBuilder()

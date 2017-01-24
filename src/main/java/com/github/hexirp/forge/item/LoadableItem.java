@@ -35,7 +35,7 @@ public class LoadableItem implements Loadable, Named {
 	}
 	
 	@Override
-	public ItemIndex load(Environment env) {
+	public Index<Item> load(Environment env) {
 		GameRegistry.registerItem(item, name);
 		
 		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
@@ -43,7 +43,7 @@ public class LoadableItem implements Loadable, Named {
 		    0,
 		    env.location(name, "inventory"));
 		
-		return (ItemIndex) new ItemIndex().put(name, item);
+		return new Index<Item>().put(name, item);
 	}
 	
 	@Override

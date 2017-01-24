@@ -1,7 +1,9 @@
 package com.github.hexirp.forge;
 
 import com.github.hexirp.forge.item.Environment;
-import com.github.hexirp.forge.item.ItemIndex;
+import com.github.hexirp.forge.item.Index;
+
+import net.minecraft.item.Item;
 
 /**
  * 自分自身を読み込ませられる事を表現する.
@@ -16,5 +18,5 @@ public interface Loadable {
 	 * @param env 読み込ませる環境
 	 * @return 辞書
 	 */
-	public ItemIndex load(Environment env);
+	public Index<Item> load(Environment env);
 }

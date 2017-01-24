@@ -2,7 +2,6 @@ package com.github.hexirp.forge;
 
 import com.github.hexirp.forge.item.Environment;
 import com.github.hexirp.forge.item.Index;
-import com.github.hexirp.forge.item.ItemIndex;
 
 import net.minecraft.item.Item;
 
@@ -18,11 +17,11 @@ public abstract class LoadableLibrary implements Loadable {
 	protected final Library<Loadable> library = new Library<>();
 	
 	@Override
-	public ItemIndex load(Environment env) {
-		Index<Item> ret = new ItemIndex();
+	public Index<Item> load(Environment env) {
+		Index<Item> ret = new Index<Item>();
 		
 		library.forEach(item -> ret.merge(item.load(env)));
 		
-		return (ItemIndex) ret;
+		return ret;
 	}
 }
