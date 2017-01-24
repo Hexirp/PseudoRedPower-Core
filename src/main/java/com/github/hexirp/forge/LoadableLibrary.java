@@ -4,6 +4,8 @@ import com.github.hexirp.forge.item.Environment;
 import com.github.hexirp.forge.item.Index;
 import com.github.hexirp.forge.item.ItemIndex;
 
+import net.minecraft.item.Item;
+
 /**
  * 要素一つ一つを読み込ませることが出来る{@link Library}を表現する.
  *
@@ -17,7 +19,7 @@ public abstract class LoadableLibrary implements Loadable {
 	
 	@Override
 	public ItemIndex load(Environment env) {
-		Index ret = new ItemIndex();
+		Index<Item> ret = new ItemIndex();
 		
 		library.forEach(item -> ret.merge(item.load(env)));
 		

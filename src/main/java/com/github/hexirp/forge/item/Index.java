@@ -3,14 +3,13 @@ package com.github.hexirp.forge.item;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.minecraft.item.Item;
-
 /**
  * アイテムの索引を表す.
  *
  * @author Hexirp
+ * @param <Item> 項目
  */
-public class Index {
+public class Index<Item> {
 	/** 索引. */
 	private final Map<String, Item> index = new HashMap<>();
 	
@@ -20,7 +19,7 @@ public class Index {
 	 * @param i 索引
 	 * @return メソッドチェーン用
 	 */
-	public Index merge(Index i) {
+	public Index<Item> merge(Index<Item> i) {
 		index.putAll(i.index);
 		return this;
 	}
@@ -32,7 +31,7 @@ public class Index {
 	 * @param i 索引の本文
 	 * @return メソッドチェーン用
 	 */
-	public Index put(String s, Item i) {
+	public Index<Item> put(String s, Item i) {
 		index.put(s, i);
 		return this;
 	}
