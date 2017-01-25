@@ -1,8 +1,7 @@
 package com.github.hexirp.forge;
 
 import com.github.hexirp.forge.item.Environment;
-
-import net.minecraft.item.Item;
+import com.github.hexirp.forge.item.MinecraftItem;
 
 /**
  * 要素一つ一つを読み込ませることが出来る{@link Library}を表現する.
@@ -16,8 +15,8 @@ public abstract class LoadableLibrary implements Loadable {
 	protected final Library<Loadable> library = new Library<>();
 	
 	@Override
-	public Index<Item> load(Environment env) {
-		Index<Item> ret = new Index<Item>();
+	public Index<MinecraftItem> load(Environment env) {
+		Index<MinecraftItem> ret = new Index<>();
 		
 		library.forEach(item -> ret.merge(item.load(env)));
 		

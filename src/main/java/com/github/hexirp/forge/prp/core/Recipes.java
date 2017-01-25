@@ -7,7 +7,6 @@ import com.github.hexirp.forge.prp.core.recipes.ChainMail;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -20,9 +19,9 @@ public class Recipes extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
-	 * @param index アイテムの索引
+	 * @param items アイテムの索引
 	 */
-	public Recipes(Index<Item> index) {
+	public Recipes(Index<MinecraftItem> items) {
 		library
 		    .add(
 		        new RecipeBuilder()
@@ -32,7 +31,7 @@ public class Recipes extends RegisterableLibrary {
 		            .add("AAA")
 		            .add("AAA")
 		            .map()
-		            .put('A', new MinecraftItem(index.get("sample_item")))
+		            .put('A', items.get("sample_item"))
 		            .to())
 		    .add(new ChainMail())
 		    .add(new Smeltings())
