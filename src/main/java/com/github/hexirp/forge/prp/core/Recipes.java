@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.RegisterableLibrary;
-import com.github.hexirp.forge.item.Index;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.prp.core.recipes.ChainMail;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;

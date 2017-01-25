@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
+import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.item.Environment;
-import com.github.hexirp.forge.item.Index;
 
 import net.minecraft.item.Item;
 
