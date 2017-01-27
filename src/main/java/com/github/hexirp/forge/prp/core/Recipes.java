@@ -39,6 +39,6 @@ public class Recipes extends RegisterableLibrary {
 		        new ItemStack(Blocks.bedrock),
 		        "A",
 		        'A',
-		        Blocks.bedrock)); //test
+		        Blocks.bedrock)); // TODO: 試験的コード
 	}
 }

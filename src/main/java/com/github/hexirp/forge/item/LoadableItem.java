@@ -39,6 +39,7 @@ public class LoadableItem implements Loadable, Named {
 	public Index<MinecraftItem> load(Environment env) {
 		GameRegistry.registerItem(item, name);
 		
+		// TODO: 綺麗にする
 		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
 		    item,
 		    0,

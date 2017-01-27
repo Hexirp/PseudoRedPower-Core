@@ -42,11 +42,6 @@ public class ShapedOrderPhase
 		return this;
 	}
 	
-	/**
-	 * 対応関係の定義の段階に移行する.
-	 *
-	 * @return {@link ShapedMaterialPhase}
-	 */
 	@Override
 	public ShapedMaterialPhase to() {
 		return new ShapedMaterialPhase(this);

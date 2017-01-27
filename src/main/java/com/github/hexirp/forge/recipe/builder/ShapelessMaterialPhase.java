@@ -1,14 +1,15 @@
 package com.github.hexirp.forge.recipe.builder;
 
-import com.github.hexirp.builder.FinalPhase;
 import com.github.hexirp.builder.DependencyPhase;
+import com.github.hexirp.builder.FinalPhase;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapelessRecipe;
 import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 
 /** 材料の定義の段階を表現する. */
-public class ShapelessMaterialPhase extends DependencyPhase<ProductPhase> implements
-    FinalPhase<ShapelessRecipe> {
+public class ShapelessMaterialPhase
+    extends DependencyPhase<ProductPhase>
+    implements FinalPhase<ShapelessRecipe> {
 	/** 材料. */
 	private final ShapelessRecipeMaterial material = new ShapelessRecipeMaterial();
 	
