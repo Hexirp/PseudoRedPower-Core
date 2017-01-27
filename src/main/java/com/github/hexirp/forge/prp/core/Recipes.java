@@ -30,7 +30,7 @@ public class Recipes extends RegisterableLibrary {
 		            .add("AAA")
 		            .add("AAA")
 		            .add("AAA")
-		            .map()
+		            .to()
 		            .put('A', items.get("sample_item"))
 		            .to())
 		    .add(new ChainMail())

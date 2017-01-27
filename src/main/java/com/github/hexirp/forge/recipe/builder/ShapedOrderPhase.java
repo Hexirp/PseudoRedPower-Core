@@ -1,10 +1,13 @@
 package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.builder.DependencyPhase;
+import com.github.hexirp.builder.FinalPhase;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
 /** 抽象的なレシピの並べ方の定義の段階を表現する. */
-public class ShapedOrderPhase extends DependencyPhase<ProductPhase> {
+public class ShapedOrderPhase
+    extends DependencyPhase<ProductPhase>
+    implements FinalPhase<ShapedMaterialPhase> {
 	/** 抽象的なレシピの並べ方. */
 	private final ShapedRecipeAbstractOrder order = new ShapedRecipeAbstractOrder();
 	
@@ -44,7 +47,8 @@ public class ShapedOrderPhase extends DependencyPhase<ProductPhase> {
 	 *
 	 * @return {@link ShapedMaterialPhase}
 	 */
-	public ShapedMaterialPhase map() {
+	@Override
+	public ShapedMaterialPhase to() {
 		return new ShapedMaterialPhase(this);
 	}
 }

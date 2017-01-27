@@ -21,7 +21,7 @@ public class ChainMail extends RegisterableLibrary {
 		            .order()
 		            .add(" A ")
 		            .add("A A")
-		            .map()
+		            .to()
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to())
 		    .add(
@@ -31,7 +31,7 @@ public class ChainMail extends RegisterableLibrary {
 		            .add("A A")
 		            .add(" A ")
 		            .add("AAA")
-		            .map()
+		            .to()
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to())
 		    .add(
@@ -41,7 +41,7 @@ public class ChainMail extends RegisterableLibrary {
 		            .add(" A ")
 		            .add("A A")
 		            .add("A A")
-		            .map()
+		            .to()
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to())
 		    .add(
@@ -50,7 +50,7 @@ public class ChainMail extends RegisterableLibrary {
 		            .order()
 		            .add("A  ")
 		            .add("  A")
-		            .map()
+		            .to()
 		            .put('A', new MinecraftItem(Items.iron_ingot))
 		            .to());
 	}
