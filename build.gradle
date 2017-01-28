@@ -49,5 +49,4 @@ targetCompatibility = '1.8'
 
 // 日本語を使用するための設定
 tasks.withType(Jar) {compileJava.options.encoding = 'UTF-8'}
-//tasks.withType(Jar) {compileApiJava.options.encoding = 'UTF-8'}
 tasks.withType(Jar) {compileTestJava.options.encoding = 'UTF-8'}
