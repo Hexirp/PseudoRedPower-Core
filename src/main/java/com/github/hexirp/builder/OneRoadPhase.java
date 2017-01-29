@@ -1,14 +1,14 @@
 package com.github.hexirp.builder;
 
 /**
- * Builderにおいて最終段階を表現する.
+ * 次の段階が一つしかない段階を表現する.
  *
  * @author Hexirp
  * @param <Product> 生成物の型
  */
-public interface FinalPhase<Product> {
+public interface OneRoadPhase<Product> {
 	/**
-	 * 生成する.
+	 * 次の段階に進む.
 	 *
 	 * @return 生成物
 	 */

@@ -1,5 +1,5 @@
 /**
- * {@link com.github.hexirp.forge.recipe}をテストするためのパッケージ.
+ * {@link com.github.hexirp.forge.recipe}のテストを記述する.
  *
  * @author Hexirp
  */

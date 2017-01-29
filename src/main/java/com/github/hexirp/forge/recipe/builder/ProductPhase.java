@@ -1,6 +1,6 @@
 package com.github.hexirp.forge.recipe.builder;
 
-import com.github.hexirp.builder.DependencyPhase;
+import com.github.hexirp.builder.StackedPhase;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 
@@ -9,7 +9,7 @@ import com.github.hexirp.forge.recipe.RecipeProduct;
  *
  * @author Hexirp
  */
-public class ProductPhase extends DependencyPhase<RecipeProduct> {
+public class ProductPhase extends StackedPhase<RecipeProduct> {
 	/**
 	 * Setter.
 	 *
