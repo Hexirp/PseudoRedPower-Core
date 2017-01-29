@@ -13,8 +13,7 @@ import com.github.hexirp.forge.item.MinecraftItem;
  */
 public class ShapedRecipeMaterialMap {
 	/** 文字とアイテムとの対応関係. */
-	private final LinkedHashMap<Character, MinecraftItem> material =
-	    new LinkedHashMap<Character, MinecraftItem>();
+	private final LinkedHashMap<Character, MinecraftItem> material = new LinkedHashMap<Character, MinecraftItem>();
 	
 	/**
 	 * 文字とアイテムとの対応関係を{@link List}に変換する.

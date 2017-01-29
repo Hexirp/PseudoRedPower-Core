@@ -16,8 +16,7 @@ public class OneRoadPhaseLaw {
 	 *
 	 * @param phase 試験対象
 	 */
-	public static <Product extends StackedPhase<Previous>, Previous extends OneRoadPhase<Product>>
-	    void law(OneRoadPhase<Product> phase) {
+	public static <Product extends StackedPhase<Previous>, Previous extends OneRoadPhase<Product>> void law(OneRoadPhase<Product> phase) {
 		assertEquals(phase, phase.to().previous());
 	}
 }

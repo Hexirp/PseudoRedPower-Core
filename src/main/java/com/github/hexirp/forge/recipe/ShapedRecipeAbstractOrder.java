@@ -9,10 +9,7 @@ import java.util.List;
  * <h2>使用例</h2>
  *
  * <pre>
- * new ShapedRecipeAbstractOrder()
- *     .add("AAA")
- *     .add("AAA")
- *     .add("AAA")
+ * new ShapedRecipeAbstractOrder().add("AAA").add("AAA").add("AAA")
  * </pre>
  *
  * @author Hexirp
