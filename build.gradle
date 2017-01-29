@@ -29,6 +29,7 @@ minecraft {
 	mappings = "stable_22"
 }
 
+// #### ここから独自設定 ####
 repositories {
 	mavenCentral()
 }

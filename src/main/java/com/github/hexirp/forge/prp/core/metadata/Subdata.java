@@ -17,9 +17,6 @@ public class Subdata implements ModData {
 	/** MODのホームページ. */
 	private static final String URL = "https://github.com/Hexirp/PseudoRedPower-Core";
 	
-	/**
-	 * @param metadata 設定する対象
-	 */
 	@Override
 	public void set(ModMetadata metadata) {
 		metadata.description = DESCRIPTION;
