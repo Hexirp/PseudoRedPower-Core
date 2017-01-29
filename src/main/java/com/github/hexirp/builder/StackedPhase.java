@@ -6,7 +6,7 @@ package com.github.hexirp.builder;
  * @author Hexirp
  * @param <Previous> 前段階の型
  */
-public class StackedPhase<Previous> {
+public class StackedPhase<Previous extends OneRoadPhase<? extends StackedPhase<Previous>>> {
 	/** 前段階. */
 	private final Previous previous;
 	
