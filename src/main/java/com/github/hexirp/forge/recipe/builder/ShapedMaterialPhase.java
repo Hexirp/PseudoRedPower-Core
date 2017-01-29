@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.builder.StackedPhase;
-import com.github.hexirp.builder.FinalPhase;
+import com.github.hexirp.builder.OneRoadPhase;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapedRecipe;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
@@ -14,7 +14,7 @@ import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
  */
 public class ShapedMaterialPhase
     extends StackedPhase<ShapedOrderPhase>
-    implements FinalPhase<ShapedRecipe> {
+    implements OneRoadPhase<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
