@@ -1,6 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.RegisterableLibrary;
+import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Items;
@@ -16,7 +17,7 @@ public class Smeltings extends RegisterableLibrary {
 		library
 		    .add(
 		        new RecipeBuilder()
-		            .inga(Items.carrot, Items.coal)
+		            .inga(new MinecraftItem(Items.carrot), new MinecraftItem(Items.coal))
 		            .exp(10, 1)
 		            .to());
 	}

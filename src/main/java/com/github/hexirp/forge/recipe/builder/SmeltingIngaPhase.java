@@ -1,10 +1,9 @@
 package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.builder.StackedPhase;
+import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.smelting.SmeltingRecipeExp;
 import com.github.hexirp.forge.smelting.SmeltingRecipeInga;
-
-import net.minecraft.item.Item;
 
 /**
  * 製錬レシピの因果関係を定義する段階を表現する.
@@ -17,9 +16,9 @@ public class SmeltingIngaPhase extends StackedPhase<SmeltingRecipeInga> {
 	 *
 	 * @param product 結果
 	 * @param material 材料
-	 * @see SmeltingRecipeInga#SmeltingRecipeInga(Item, Item)
+	 * @see SmeltingRecipeInga#SmeltingRecipeInga(MinecraftItem, MinecraftItem)
 	 */
-	public SmeltingIngaPhase(Item product, Item material) {
+	public SmeltingIngaPhase(MinecraftItem product, MinecraftItem material) {
 		super(new SmeltingRecipeInga(product, material));
 	}
 	
