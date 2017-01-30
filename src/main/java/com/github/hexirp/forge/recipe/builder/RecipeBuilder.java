@@ -2,8 +2,6 @@ package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.forge.item.MinecraftItem;
 
-import net.minecraft.item.Item;
-
 /**
  * レシピを定義するための補助クラスを表現する.
  *
@@ -28,9 +26,9 @@ public class RecipeBuilder {
 	 * @param product 結果
 	 * @param material 材料
 	 * @return 次の段階
-	 * @see SmeltingIngaPhase#SmeltingIngaPhase(Item, Item)
+	 * @see SmeltingIngaPhase#SmeltingIngaPhase(MinecraftItem, MinecraftItem)
 	 */
-	public SmeltingIngaPhase inga(Item product, Item material) {
+	public SmeltingIngaPhase inga(MinecraftItem product, MinecraftItem material) {
 		return new SmeltingIngaPhase(product, material);
 	}
 }
