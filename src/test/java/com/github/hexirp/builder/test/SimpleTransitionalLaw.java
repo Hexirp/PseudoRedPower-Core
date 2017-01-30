@@ -10,7 +10,7 @@ import com.github.hexirp.builder.StackedPhase;
  *
  * @author Hexirp
  */
-public class OneRoadPhaseLaw {
+public class SimpleTransitionalLaw {
 	/**
 	 * 前後の法則.
 	 *
