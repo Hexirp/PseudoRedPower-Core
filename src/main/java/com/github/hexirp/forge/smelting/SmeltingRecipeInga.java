@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.smelting;
 
+import com.github.hexirp.forge.item.MinecraftItem;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -12,10 +14,10 @@ import net.minecraft.item.ItemStack;
  */
 public class SmeltingRecipeInga {
 	/** 結果. */
-	private final Item product;
+	private final MinecraftItem product;
 	
 	/** 材料. */
-	private final Item material;
+	private final MinecraftItem material;
 	
 	/**
 	 * Setter.
@@ -23,7 +25,7 @@ public class SmeltingRecipeInga {
 	 * @param product {@link #product}
 	 * @param material {@link #material}
 	 */
-	public SmeltingRecipeInga(Item product, Item material) {
+	public SmeltingRecipeInga(MinecraftItem product, MinecraftItem material) {
 		this.product = product;
 		this.material = material;
 	}
@@ -34,7 +36,7 @@ public class SmeltingRecipeInga {
 	 * @return 結果
 	 */
 	public Item getProduct() {
-		return product;
+		return product.get();
 	}
 	
 	/**
@@ -43,6 +45,6 @@ public class SmeltingRecipeInga {
 	 * @return 材料
 	 */
 	public ItemStack getMaterial() {
-		return new ItemStack(material);
+		return new ItemStack(material.get());
 	}
 }
