@@ -23,9 +23,12 @@ public class RecipeBuilder {
 	}
 	
 	/**
+	 * 製錬レシピの因果関係を定義する段階に移行する.
+	 *
 	 * @param product 結果
 	 * @param material 材料
 	 * @return 次の段階
+	 * @see SmeltingIngaPhase#SmeltingIngaPhase(Item, Item)
 	 */
 	public SmeltingIngaPhase inga(Item product, Item material) {
 		return new SmeltingIngaPhase(product, material);
