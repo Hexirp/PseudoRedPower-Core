@@ -15,6 +15,12 @@ import net.minecraft.init.Items;
 public class Smeltings extends RegisterableLibrary {
 	/** 初期化する. */
 	public Smeltings() {
-		library.add(new SmeltingRecipe(new SmeltingRecipeInga(Items.carrot, Items.coal), new SmeltingRecipeExp(10, 1)));
+		library
+		    .add(
+		        new SmeltingRecipe(
+		            new SmeltingRecipeInga(
+		                Items.carrot,
+		                Items.coal),
+		            new SmeltingRecipeExp(10, 1)));
 	}
 }

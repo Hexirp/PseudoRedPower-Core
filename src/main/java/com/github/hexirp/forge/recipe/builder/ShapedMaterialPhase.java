@@ -12,7 +12,9 @@ import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class ShapedMaterialPhase extends StackedPhase<ShapedOrderPhase> implements OneRoadPhase<ShapedRecipe> {
+public class ShapedMaterialPhase
+    extends StackedPhase<ShapedOrderPhase>
+    implements OneRoadPhase<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
@@ -40,6 +42,8 @@ public class ShapedMaterialPhase extends StackedPhase<ShapedOrderPhase> implemen
 	
 	@Override
 	public ShapedRecipe to() {
-		return new ShapedRecipe(previous().previous().previous(), new ShapedRecipeOrder(previous().order(), map));
+		return new ShapedRecipe(
+		    previous().previous().previous(),
+		    new ShapedRecipeOrder(previous().order(), map));
 	}
 }

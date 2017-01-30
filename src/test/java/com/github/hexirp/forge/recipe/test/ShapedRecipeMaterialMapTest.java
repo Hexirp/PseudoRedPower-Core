@@ -39,12 +39,11 @@ public class ShapedRecipeMaterialMapTest {
 	 */
 	@Test
 	public void testPut() {
-		List<Object> ret1 =
-		    new ShapedRecipeMaterialMap()
-		        .put('A', new MinecraftItemMock("acacia_door"))
-		        .put('B', new MinecraftItemMock("apple"))
-		        .put('C', new MinecraftItemMock("arrow"))
-		        .toList();
+		List<Object> ret1 = new ShapedRecipeMaterialMap()
+		    .put('A', new MinecraftItemMock("acacia_door"))
+		    .put('B', new MinecraftItemMock("apple"))
+		    .put('C', new MinecraftItemMock("arrow"))
+		    .toList();
 		
 		List<Object> ret2 = new LinkedList<>();
 		ret2.add('A');

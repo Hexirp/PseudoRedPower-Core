@@ -40,7 +40,10 @@ public class LoadableItem implements Loadable, Named {
 		GameRegistry.registerItem(item, name);
 		
 		// TODO: 綺麗にする
-		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(item, 0, env.location(name, "inventory"));
+		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
+		    item,
+		    0,
+		    env.location(name, "inventory"));
 		
 		return new Index<MinecraftItem>().put(name, new MinecraftItem(item));
 	}

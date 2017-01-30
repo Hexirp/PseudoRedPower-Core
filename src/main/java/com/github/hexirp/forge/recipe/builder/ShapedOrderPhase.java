@@ -5,7 +5,9 @@ import com.github.hexirp.builder.OneRoadPhase;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
 /** 抽象的なレシピの並べ方の定義の段階を表現する. */
-public class ShapedOrderPhase extends StackedPhase<ProductPhase> implements OneRoadPhase<ShapedMaterialPhase> {
+public class ShapedOrderPhase
+    extends StackedPhase<ProductPhase>
+    implements OneRoadPhase<ShapedMaterialPhase> {
 	/** 抽象的なレシピの並べ方. */
 	private final ShapedRecipeAbstractOrder order = new ShapedRecipeAbstractOrder();
 	

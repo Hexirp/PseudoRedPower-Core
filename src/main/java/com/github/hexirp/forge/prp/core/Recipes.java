@@ -35,6 +35,10 @@ public class Recipes extends RegisterableLibrary {
 		            .to())
 		    .add(new ChainMail())
 		    .add(new Smeltings())
-		    .add(() -> GameRegistry.addRecipe(new ItemStack(Blocks.bedrock), "A", 'A', Blocks.bedrock)); // TODO: 試験的コード
+		    .add(() -> GameRegistry.addRecipe(
+		        new ItemStack(Blocks.bedrock),
+		        "A",
+		        'A',
+		        Blocks.bedrock)); // TODO: 試験的コード
 	}
 }

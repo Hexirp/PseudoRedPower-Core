@@ -16,10 +16,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  *
  * @author Hexirp
  */
-@Mod(
-    modid = Metadata.MOD_ID,
-    name = Metadata.NAME,
-    version = Metadata.VERSION, // 最小限の定義
+@Mod(modid = Metadata.MOD_ID, name = Metadata.NAME, version = Metadata.VERSION, // 最小限の定義
     useMetadata = true)
 public final class Core {
 	/** MODの情報. Forgeにより初期化されるため、自分では初期化しない。 */

@@ -38,7 +38,11 @@ public class ShapedRecipeAbstractOrderTest {
 	 */
 	@Test
 	public void testAdd() {
-		List<String> ret1 = new ShapedRecipeAbstractOrder().add("AAA").add("BBB").add("CCC").order();
+		List<String> ret1 = new ShapedRecipeAbstractOrder()
+		    .add("AAA")
+		    .add("BBB")
+		    .add("CCC")
+		    .order();
 		
 		List<String> ret2 = new LinkedList<>();
 		ret2.add("AAA");

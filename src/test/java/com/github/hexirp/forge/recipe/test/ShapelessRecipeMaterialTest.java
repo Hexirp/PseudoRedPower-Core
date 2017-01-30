@@ -47,7 +47,10 @@ public class ShapelessRecipeMaterialTest {
 		MinecraftItem E = new MinecraftItemMock("emerald");
 		Item e = E.get();
 		
-		Object[] ret1 = new ShapelessRecipeMaterial().add(A, 4).add(E, 1).calc();
+		Object[] ret1 = new ShapelessRecipeMaterial()
+		    .add(A, 4)
+		    .add(E, 1)
+		    .calc();
 		
 		Object[] ret2 = new Object[] { a, a, a, a, e };
 		
