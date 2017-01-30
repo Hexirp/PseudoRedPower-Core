@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.builder.StackedPhase;
-import com.github.hexirp.builder.OneRoadPhase;
+import com.github.hexirp.builder.SimpleTransitional;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapelessRecipe;
 import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
@@ -9,7 +9,7 @@ import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 /** 材料の定義の段階を表現する. */
 public class ShapelessMaterialPhase
     extends StackedPhase<ProductPhase>
-    implements OneRoadPhase<ShapelessRecipe> {
+    implements SimpleTransitional<ShapelessRecipe> {
 	/** 材料. */
 	private final ShapelessRecipeMaterial material = new ShapelessRecipeMaterial();
 	

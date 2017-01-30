@@ -2,7 +2,7 @@ package com.github.hexirp.recipe.builder.test;
 
 import org.junit.Test;
 
-import com.github.hexirp.builder.test.OneRoadPhaseLaw;
+import com.github.hexirp.builder.test.SimpleTransitionalLaw;
 import com.github.hexirp.forge.recipe.builder.ShapedOrderPhase;
 
 /**
@@ -16,6 +16,6 @@ public class ShapedOrderPhaseTest {
 	 */
 	@Test
 	public void testLaw() {
-		OneRoadPhaseLaw.law(new ShapedOrderPhase(null));
+		SimpleTransitionalLaw.law(new ShapedOrderPhase(null));
 	}
 }
