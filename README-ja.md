@@ -8,5 +8,6 @@
 * 気送管による輸送
 
 ## リンク
-1. [Minecraft Forge](https://github.com/MinecraftForge/MinecraftForge) - このMODはMinecraftForgeを使用している。
-1. [A blog by Eloraam: the author of RedPower2](http://www.eloraam.com/ "Eloraams Blog")
+1. [MinecraftForge](https://github.com/MinecraftForge/MinecraftForge) - このMODはMinecraftForgeを使用している。
+1. [RedPower2の作者、Eloraamのブログ](http://www.eloraam.com/ "Eloraams Blog")
+1. [MinecraftForumでのRedPower2のスレッド](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1274287-eloraams-mods-redpower-2-prerelease-6 "Eloraam's Mods (RedPower 2 Prerelease 6)")
