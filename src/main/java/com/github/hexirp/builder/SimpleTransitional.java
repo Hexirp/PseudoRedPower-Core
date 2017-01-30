@@ -6,7 +6,7 @@ package com.github.hexirp.builder;
  * @author Hexirp
  * @param <Product> 生成物の型
  */
-public interface OneRoadPhase<Product> {
+public interface SimpleTransitional<Product> {
 	/**
 	 * 次の段階に進む.
 	 *
