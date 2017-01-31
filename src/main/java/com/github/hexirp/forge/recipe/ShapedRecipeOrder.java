@@ -1,7 +1,6 @@
 package com.github.hexirp.forge.recipe;
 
 import java.util.LinkedList;
-import java.util.List;
 
 import com.github.hexirp.ConvertToArray;
 
@@ -13,10 +12,10 @@ import com.github.hexirp.ConvertToArray;
 public class ShapedRecipeOrder {
 	/** 文字で抽象的に表現された並べ方. */
 	private final ShapedRecipeAbstractOrder order;
-
+	
 	/** 文字とアイテムとの対応関係. */
 	private final ShapedRecipeMaterialMap input;
-
+	
 	/**
 	 * Setter.
 	 *
@@ -27,17 +26,16 @@ public class ShapedRecipeOrder {
 		this.order = order;
 		this.input = input;
 	}
-
+	
 	/**
 	 * 配列へ変換する.
 	 *
 	 * @return 配列での表現
 	 */
 	public Object[] calc() {
-		final List<Object> ret = new LinkedList<>();
-		ret.addAll(order.order());
-		ret.addAll(input.toList());
-
-		return new ConvertToArray<>(ret).to();
+		return new ConvertToArray<>(new LinkedList<>())
+		    .merge(order.order())
+		    .merge(input.toList())
+		    .to();
 	}
 }

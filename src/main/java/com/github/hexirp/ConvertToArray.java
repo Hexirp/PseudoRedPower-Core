@@ -1,5 +1,7 @@
 package com.github.hexirp;
 
+import java.util.Collection;
+
 /**
  * 配列への変換を表現する.
  *
@@ -28,5 +30,17 @@ public class ConvertToArray<Element> {
 		final Object[] ret = list.toArray();
 		if (null == ret) throw new NullPointerException();
 		else return ret;
+	}
+	
+	/**
+	 * リストを結合する.
+	 * .
+	 * 
+	 * @param col コレクション
+	 * @return 自分自身
+	 */
+	public ConvertToArray<Element> merge(final Collection<? extends Element> col) {
+		list.addAll(col);
+		return this;
 	}
 }
