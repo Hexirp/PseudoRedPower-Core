@@ -8,7 +8,7 @@ import java.util.Collection;
  * @author Hexirp
  * @param <Element> 要素
  */
-public class ConvertToArray<Element> {
+public class ListUtil<Element> {
 	/** 内部に保持するリスト. */
 	private final java.util.List<Element> list;
 	
@@ -17,7 +17,7 @@ public class ConvertToArray<Element> {
 	 *
 	 * @param list リスト
 	 */
-	public ConvertToArray(final java.util.List<Element> list) {
+	public ListUtil(final java.util.List<Element> list) {
 		this.list = list;
 	}
 	
@@ -39,7 +39,7 @@ public class ConvertToArray<Element> {
 	 * @param col コレクション
 	 * @return 自分自身
 	 */
-	public ConvertToArray<Element> merge(final Collection<? extends Element> col) {
+	public ListUtil<Element> merge(final Collection<? extends Element> col) {
 		list.addAll(col);
 		return this;
 	}
