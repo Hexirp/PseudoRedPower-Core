@@ -19,7 +19,7 @@ public class Index<Item> {
 	 * @param i 索引
 	 * @return メソッドチェーン用
 	 */
-	public Index<Item> merge(Index<Item> i) {
+	public Index<Item> merge(final Index<? extends Item> i) {
 		index.putAll(i.index);
 		return this;
 	}
@@ -31,7 +31,7 @@ public class Index<Item> {
 	 * @param i 索引の本文
 	 * @return メソッドチェーン用
 	 */
-	public Index<Item> put(String s, Item i) {
+	public Index<Item> put(final String s, final Item i) {
 		index.put(s, i);
 		return this;
 	}
@@ -42,7 +42,7 @@ public class Index<Item> {
 	 * @param string 索引の見出し
 	 * @return 索引の本文
 	 */
-	public Item get(String string) {
+	public Item get(final String string) {
 		return index.get(string);
 	}
 }
