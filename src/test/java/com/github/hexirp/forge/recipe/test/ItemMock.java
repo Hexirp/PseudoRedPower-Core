@@ -32,4 +32,9 @@ public class ItemMock extends Item implements Named {
 		if (false == o instanceof ItemMock) return false;
 		return name == ((ItemMock) o).name;
 	}
+	
+	@Override
+	public int hashCode() {
+		return name.hashCode();
+	}
 }
