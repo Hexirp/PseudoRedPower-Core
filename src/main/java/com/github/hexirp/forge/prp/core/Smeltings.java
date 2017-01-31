@@ -13,7 +13,6 @@ import net.minecraft.init.Items;
  */
 public class Smeltings extends RegisterableLibrary {
 	/** 初期化する. */
-	@SuppressWarnings("null")
 	public Smeltings() {
 		library
 		    .add(

@@ -13,7 +13,6 @@ import net.minecraft.init.Items;
  */
 public class ChainMail extends RegisterableLibrary {
 	/** 初期化する. */
-	@SuppressWarnings("null")
 	public ChainMail() {
 		library
 		    .add(
