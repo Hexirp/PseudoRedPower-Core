@@ -1,4 +1,3 @@
-// TODO: Smeltingに対するBuilder
 /**
  * レシピを美しく作成するためのAPIを記述する.
  *

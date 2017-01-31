@@ -1,13 +1,15 @@
 package com.github.hexirp.forge.recipe.builder;
 
-import com.github.hexirp.builder.StackedPhase;
 import com.github.hexirp.builder.SimpleTransitional;
+import com.github.hexirp.builder.StackedPhase;
 import com.github.hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
 /** 抽象的なレシピの並べ方の定義の段階を表現する. */
 public class ShapedOrderPhase
-    extends StackedPhase<ProductPhase>
-    implements SimpleTransitional<ShapedMaterialPhase> {
+    extends
+        StackedPhase<ProductPhase>
+    implements
+        SimpleTransitional<ShapedMaterialPhase> {
 	/** 抽象的なレシピの並べ方. */
 	private final ShapedRecipeAbstractOrder order = new ShapedRecipeAbstractOrder();
 	
@@ -25,7 +27,7 @@ public class ShapedOrderPhase
 	 *
 	 * @param product {@link #previous}
 	 */
-	public ShapedOrderPhase(ProductPhase product) {
+	public ShapedOrderPhase(final ProductPhase product) {
 		super(product);
 	}
 	
@@ -36,7 +38,7 @@ public class ShapedOrderPhase
 	 * @return メソッドチェーン用
 	 * @see ShapedRecipeAbstractOrder#add(String)
 	 */
-	public ShapedOrderPhase add(String str) {
+	public ShapedOrderPhase add(final String str) {
 		order.add(str);
 		
 		return this;

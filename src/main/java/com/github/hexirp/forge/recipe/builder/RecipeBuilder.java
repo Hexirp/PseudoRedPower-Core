@@ -16,7 +16,7 @@ public class RecipeBuilder {
 	 * @return 結果を定義する段階
 	 * @see ProductPhase#ProductPhase(MinecraftItem, int)
 	 */
-	public ProductPhase product(MinecraftItem output, int size) {
+	public ProductPhase product(final MinecraftItem output, final int size) {
 		return new ProductPhase(output, size);
 	}
 	
@@ -28,7 +28,7 @@ public class RecipeBuilder {
 	 * @return 次の段階
 	 * @see SmeltingIngaPhase#SmeltingIngaPhase(MinecraftItem, MinecraftItem)
 	 */
-	public SmeltingIngaPhase inga(MinecraftItem product, MinecraftItem material) {
+	public SmeltingIngaPhase inga(final MinecraftItem product, final MinecraftItem material) {
 		return new SmeltingIngaPhase(product, material);
 	}
 }

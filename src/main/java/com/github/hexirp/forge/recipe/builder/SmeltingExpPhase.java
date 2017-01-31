@@ -24,7 +24,7 @@ public class SmeltingExpPhase
 	 * @param phase 前段階
 	 * @param exp 経験値
 	 */
-	public SmeltingExpPhase(SmeltingIngaPhase phase, SmeltingRecipeExp exp) {
+	public SmeltingExpPhase(final SmeltingIngaPhase phase, final SmeltingRecipeExp exp) {
 		super(phase);
 		this.exp = exp;
 	}

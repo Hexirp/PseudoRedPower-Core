@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
-import com.github.hexirp.builder.StackedPhase;
 import com.github.hexirp.builder.SimpleTransitional;
+import com.github.hexirp.builder.StackedPhase;
 import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapedRecipe;
 import com.github.hexirp.forge.recipe.ShapedRecipeMaterialMap;
@@ -13,8 +13,10 @@ import com.github.hexirp.forge.recipe.ShapedRecipeOrder;
  * @author Hexirp
  */
 public class ShapedMaterialPhase
-    extends StackedPhase<ShapedOrderPhase>
-    implements SimpleTransitional<ShapedRecipe> {
+    extends
+        StackedPhase<ShapedOrderPhase>
+    implements
+        SimpleTransitional<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 	
@@ -23,7 +25,7 @@ public class ShapedMaterialPhase
 	 *
 	 * @param order {@link #previous}
 	 */
-	public ShapedMaterialPhase(ShapedOrderPhase order) {
+	public ShapedMaterialPhase(final ShapedOrderPhase order) {
 		super(order);
 	}
 	
@@ -35,7 +37,7 @@ public class ShapedMaterialPhase
 	 * @return メソッドチェーン用
 	 * @see ShapedRecipeMaterialMap#put(Character, MinecraftItem)
 	 */
-	public ShapedMaterialPhase put(Character key, MinecraftItem value) {
+	public ShapedMaterialPhase put(final Character key, final MinecraftItem value) {
 		map.put(key, value);
 		return this;
 	}

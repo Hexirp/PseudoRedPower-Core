@@ -16,7 +16,7 @@ public class ProductPhase extends StackedPhase<RecipeProduct> {
 	 * @param output 結果の種類
 	 * @param size 結果の数
 	 */
-	public ProductPhase(MinecraftItem output, int size) {
+	public ProductPhase(final MinecraftItem output, final int size) {
 		super(new RecipeProduct(output, size));
 	}
 	

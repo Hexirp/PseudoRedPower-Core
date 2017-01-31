@@ -18,7 +18,7 @@ public class SmeltingIngaPhase extends StackedPhase<SmeltingRecipeInga> {
 	 * @param material 材料
 	 * @see SmeltingRecipeInga#SmeltingRecipeInga(MinecraftItem, MinecraftItem)
 	 */
-	public SmeltingIngaPhase(MinecraftItem product, MinecraftItem material) {
+	public SmeltingIngaPhase(final MinecraftItem product, final MinecraftItem material) {
 		super(new SmeltingRecipeInga(product, material));
 	}
 	
@@ -30,7 +30,7 @@ public class SmeltingIngaPhase extends StackedPhase<SmeltingRecipeInga> {
 	 * @return 製錬レシピの経験値を定義する段階
 	 * @see SmeltingExpPhase#SmeltingExpPhase(SmeltingIngaPhase, SmeltingRecipeExp)
 	 */
-	public SmeltingExpPhase exp(int exp, int times) {
+	public SmeltingExpPhase exp(final int exp, final int times) {
 		return new SmeltingExpPhase(this, new SmeltingRecipeExp(exp, times));
 	}
 }
