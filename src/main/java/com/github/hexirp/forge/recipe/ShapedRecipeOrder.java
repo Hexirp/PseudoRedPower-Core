@@ -3,6 +3,8 @@ package com.github.hexirp.forge.recipe;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.github.hexirp.ConvertToArray;
+
 /**
  * {@link ShapedRecipeAbstractOrder}と{@link ShapedRecipeMaterialMap}を合わせてレシピの並べ方を表現する.
  *
@@ -11,10 +13,10 @@ import java.util.List;
 public class ShapedRecipeOrder {
 	/** 文字で抽象的に表現された並べ方. */
 	private final ShapedRecipeAbstractOrder order;
-	
+
 	/** 文字とアイテムとの対応関係. */
 	private final ShapedRecipeMaterialMap input;
-	
+
 	/**
 	 * Setter.
 	 *
@@ -25,7 +27,7 @@ public class ShapedRecipeOrder {
 		this.order = order;
 		this.input = input;
 	}
-	
+
 	/**
 	 * 配列へ変換する.
 	 *
@@ -33,11 +35,9 @@ public class ShapedRecipeOrder {
 	 */
 	public Object[] calc() {
 		final List<Object> ret = new LinkedList<>();
-		order.order().forEach(ret::add);
-		input.toList().forEach(ret::add);
-		
-		final Object[] ret2 = ret.toArray();
-		if (null == ret2) throw new NullPointerException();
-		return ret2;
+		ret.addAll(order.order());
+		ret.addAll(input.toList());
+
+		return new ConvertToArray<>(ret).to();
 	}
 }
