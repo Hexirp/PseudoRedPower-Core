@@ -33,8 +33,6 @@ public class ShapelessRecipeMaterial {
 	 * @return メソッドチェーン用
 	 */
 	public ShapelessRecipeMaterial add(MinecraftItem obj, int n) {
-		if (false == 0 <= n) throw new IllegalArgumentException();
-		
 		Item item = obj.get();
 		for (int i = 0; i < n; i++)
 			list.add(item);

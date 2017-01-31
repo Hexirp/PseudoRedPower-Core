@@ -56,20 +56,4 @@ public class ShapelessRecipeMaterialTest {
 		
 		assertEquals(ret1, ret2);
 	}
-	
-	/**
-	 * addのtimesは0以上でなければならない.
-	 */
-	@Test(expected = IllegalArgumentException.class)
-	public void testAddInException() {
-		new ShapelessRecipeMaterial().add(new MinecraftItemMock("bed"), -1);
-	}
-	
-	/**
-	 * addのtimesは0以上ではなければならない.
-	 */
-	@Test
-	public void testAddInNonException() {
-		new ShapelessRecipeMaterial().add(new MinecraftItemMock("bed"), 0);
-	}
 }
