@@ -23,7 +23,7 @@ public class Environment {
 	 * @param metadata {@link #metadata}
 	 * @param event {@link #event}
 	 */
-	public Environment(ModMetadata metadata, FMLPreInitializationEvent event) {
+	public Environment(final ModMetadata metadata, final FMLPreInitializationEvent event) {
 		this.metadata = metadata;
 		this.event = event;
 	}
@@ -33,6 +33,7 @@ public class Environment {
 	 *
 	 * @return イベントが行われている場所
 	 */
+	@SuppressWarnings("null")
 	public Side side() {
 		return event.getSide();
 	}
@@ -44,7 +45,7 @@ public class Environment {
 	 * @param loc TODO: まだ意味が分からない。アイテムを登録する際には"inventory"とする。
 	 * @return モデルリソース箇所の情報
 	 */
-	public ModelResourceLocation location(String name, String loc) {
+	public ModelResourceLocation location(final String name, final String loc) {
 		return new ModelResourceLocation(metadata.modId + ":" + name, loc);
 	}
 }

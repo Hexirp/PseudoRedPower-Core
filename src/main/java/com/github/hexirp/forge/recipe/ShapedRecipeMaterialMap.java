@@ -13,8 +13,7 @@ import com.github.hexirp.forge.item.MinecraftItem;
  */
 public class ShapedRecipeMaterialMap {
 	/** 文字とアイテムとの対応関係. */
-	private final LinkedHashMap<Character, MinecraftItem> material =
-	    new LinkedHashMap<Character, MinecraftItem>();
+	private final LinkedHashMap<Character, MinecraftItem> material = new LinkedHashMap<Character, MinecraftItem>();
 	
 	/**
 	 * 文字とアイテムとの対応関係を{@link List}に変換する.
@@ -22,9 +21,10 @@ public class ShapedRecipeMaterialMap {
 	 * @return 対応関係がリストで表現されたもの
 	 */
 	public final List<Object> toList() {
-		List<Object> ret = new LinkedList<Object>();
+		final List<Object> ret = new LinkedList<Object>();
 		
-		material.forEach((Character key, MinecraftItem value) -> {
+		material.forEach((final Character key, final MinecraftItem value) -> {
+			if (null == key) throw new NullPointerException();
 			ret.add(key);
 			ret.add(value.get());
 		});
@@ -39,7 +39,7 @@ public class ShapedRecipeMaterialMap {
 	 * @param value アイテム
 	 * @return メソッドチェーン用
 	 */
-	public ShapedRecipeMaterialMap put(Character key, MinecraftItem value) {
+	public ShapedRecipeMaterialMap put(final Character key, final MinecraftItem value) {
 		material.put(key, value);
 		
 		return this;

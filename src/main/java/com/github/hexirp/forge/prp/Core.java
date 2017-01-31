@@ -34,10 +34,9 @@ public class Core {
 	 *
 	 * @param event イベントモデルによる初期化前処理イベント
 	 */
+	@SuppressWarnings("null")
 	@Mod.EventHandler
 	public void preInit(final FMLPreInitializationEvent event) {
-		// Forgeによるmetadataへの代入
-		
 		new Metadata().set(metadata);
 		
 		final Environment env = new Environment(metadata, event);

@@ -3,8 +3,9 @@ package com.github.hexirp.recipe.builder.test;
 import org.junit.Test;
 
 import com.github.hexirp.builder.test.StackedPhaseLaw;
+import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 import com.github.hexirp.forge.recipe.builder.ShapedMaterialPhase;
-import com.github.hexirp.forge.recipe.builder.ShapedOrderPhase;
+import com.github.hexirp.forge.recipe.test.MinecraftItemMock;
 
 /**
  * {@link ShapedMaterialPhase}のテストを表現する.
@@ -17,6 +18,10 @@ public class ShapedMaterialPhaseTest {
 	 */
 	@Test
 	public void testLaw() {
-		StackedPhaseLaw.law(new ShapedMaterialPhase(new ShapedOrderPhase(null)));
+		StackedPhaseLaw.law(
+		    new RecipeBuilder()
+		        .product(new MinecraftItemMock(""), 0)
+		        .order()
+		        .to());
 	}
 }

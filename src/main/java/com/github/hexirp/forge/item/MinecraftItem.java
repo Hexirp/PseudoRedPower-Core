@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.item;
 
+import com.github.hexirp.annotation.Nullable;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
@@ -19,8 +21,9 @@ public class MinecraftItem {
 	 *
 	 * @param item {@link #obj}
 	 */
-	public MinecraftItem(Item item) {
-		obj = item;
+	public MinecraftItem(@Nullable final Item item) {
+		if (null == item) throw new NullPointerException();
+		else obj = item;
 	}
 	
 	/**
@@ -28,8 +31,8 @@ public class MinecraftItem {
 	 *
 	 * @param block {@link #obj}
 	 */
-	public MinecraftItem(Block block) {
-		obj = Item.getItemFromBlock(block);
+	public MinecraftItem(@Nullable final Block block) {
+		this(Item.getItemFromBlock(block));
 	}
 	
 	/**
