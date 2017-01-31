@@ -21,7 +21,7 @@ public class ShapedRecipeOrder {
 	 * @param order {@link #order}
 	 * @param input {@link #input}
 	 */
-	public ShapedRecipeOrder(ShapedRecipeAbstractOrder order, ShapedRecipeMaterialMap input) {
+	public ShapedRecipeOrder(final ShapedRecipeAbstractOrder order, final ShapedRecipeMaterialMap input) {
 		this.order = order;
 		this.input = input;
 	}
@@ -32,12 +32,12 @@ public class ShapedRecipeOrder {
 	 * @return 配列での表現
 	 */
 	public Object[] calc() {
-		List<Object> ret = new LinkedList<>();
-		
+		final List<Object> ret = new LinkedList<>();
 		order.order().forEach(ret::add);
-		
 		input.toList().forEach(ret::add);
 		
-		return ret.toArray();
+		final Object[] ret2 = ret.toArray();
+		if (null == ret2) throw new NullPointerException();
+		return ret2;
 	}
 }

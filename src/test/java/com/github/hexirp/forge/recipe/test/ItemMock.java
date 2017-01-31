@@ -1,6 +1,7 @@
 package com.github.hexirp.forge.recipe.test;
 
 import com.github.hexirp.Named;
+import com.github.hexirp.annotation.Nullable;
 
 import net.minecraft.item.Item;
 
@@ -18,7 +19,7 @@ public class ItemMock extends Item implements Named {
 	 *
 	 * @param s 名前
 	 */
-	public ItemMock(String s) {
+	public ItemMock(final String s) {
 		this.name = s;
 	}
 	
@@ -28,7 +29,7 @@ public class ItemMock extends Item implements Named {
 	}
 	
 	@Override
-	public boolean equals(Object o) {
+	public boolean equals(@Nullable final Object o) {
 		return o instanceof ItemMock ? name == ((ItemMock) o).name : false;
 	}
 	

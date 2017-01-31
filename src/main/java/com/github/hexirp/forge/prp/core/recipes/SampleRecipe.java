@@ -21,6 +21,7 @@ public class SampleRecipe extends RegisterableLibrary {
 	 *
 	 * @param index アイテムの索引
 	 */
+	@SuppressWarnings("null")
 	public SampleRecipe(final Index<MinecraftItem> index) {
 		library
 		    .add(

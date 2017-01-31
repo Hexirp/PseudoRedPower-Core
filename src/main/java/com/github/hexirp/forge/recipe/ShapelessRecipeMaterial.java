@@ -22,7 +22,10 @@ public class ShapelessRecipeMaterial {
 	 * @return 材料の配列
 	 */
 	public Object[] calc() {
-		return list.toArray();
+		final Object[] ret = list.toArray();
+		
+		if (null == ret) throw new NullPointerException();
+		else return ret;
 	}
 	
 	/**
@@ -32,8 +35,8 @@ public class ShapelessRecipeMaterial {
 	 * @param n 材料の個数。0以上でなければならない
 	 * @return メソッドチェーン用
 	 */
-	public ShapelessRecipeMaterial add(MinecraftItem obj, int n) {
-		Item item = obj.get();
+	public ShapelessRecipeMaterial add(final MinecraftItem obj, final int n) {
+		final Item item = obj.get();
 		for (int i = 0; i < n; i++)
 			list.add(item);
 		

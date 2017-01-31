@@ -19,7 +19,7 @@ public class MinecraftItem {
 	 *
 	 * @param item {@link #obj}
 	 */
-	public MinecraftItem(Item item) {
+	public MinecraftItem(final Item item) {
 		obj = item;
 	}
 	
@@ -28,8 +28,9 @@ public class MinecraftItem {
 	 *
 	 * @param block {@link #obj}
 	 */
-	public MinecraftItem(Block block) {
-		obj = Item.getItemFromBlock(block);
+	@SuppressWarnings("null")
+	public MinecraftItem(final Block block) {
+		this(Item.getItemFromBlock(block));
 	}
 	
 	/**
