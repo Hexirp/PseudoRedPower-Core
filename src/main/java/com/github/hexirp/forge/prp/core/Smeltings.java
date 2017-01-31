@@ -17,7 +17,9 @@ public class Smeltings extends RegisterableLibrary {
 		library
 		    .add(
 		        new RecipeBuilder()
-		            .inga(new MinecraftItem(Items.carrot), new MinecraftItem(Items.coal))
+		            .inga(
+		                new MinecraftItem(Items.carrot),
+		                new MinecraftItem(Items.coal))
 		            .exp(10, 1)
 		            .to());
 	}

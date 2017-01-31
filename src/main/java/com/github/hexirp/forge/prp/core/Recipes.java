@@ -21,7 +21,7 @@ public class Recipes extends RegisterableLibrary {
 	 *
 	 * @param items アイテムの索引
 	 */
-	public Recipes(Index<MinecraftItem> items) {
+	public Recipes(final Index<MinecraftItem> items) {
 		library
 		    .add(
 		        new RecipeBuilder()

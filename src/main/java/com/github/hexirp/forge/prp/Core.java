@@ -16,9 +16,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  *
  * @author Hexirp
  */
-@Mod(modid = Metadata.MOD_ID, name = Metadata.NAME, version = Metadata.VERSION, // 最小限の定義
+@Mod(
+    modid = Metadata.MOD_ID,
+    name = Metadata.NAME,
+    version = Metadata.VERSION,
     useMetadata = true)
-public final class Core {
+public class Core {
 	/** MODの情報. Forgeにより初期化されるため、自分では初期化しない。 */
 	@Mod.Metadata
 	@Nullable
@@ -32,12 +35,12 @@ public final class Core {
 	 * @param event イベントモデルによる初期化前処理イベント
 	 */
 	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
+	public void preInit(final FMLPreInitializationEvent event) {
 		// Forgeによるmetadataへの代入
 		
 		new Metadata().set(metadata);
 		
-		Environment env = new Environment(metadata, event);
+		final Environment env = new Environment(metadata, event);
 		
 		new Mechanism().add(env);
 	}
