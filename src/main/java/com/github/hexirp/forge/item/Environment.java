@@ -33,9 +33,10 @@ public class Environment {
 	 *
 	 * @return イベントが行われている場所
 	 */
-	@SuppressWarnings("null")
 	public Side side() {
-		return event.getSide();
+		final Side side = event.getSide();
+		if (null == side) throw new NullPointerException();
+		else return side;
 	}
 	
 	/**
