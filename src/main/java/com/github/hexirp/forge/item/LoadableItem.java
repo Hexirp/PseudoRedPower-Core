@@ -35,7 +35,7 @@ public class LoadableItem implements Loadable {
 	public Index<MinecraftItem> load(final Environment env) {
 		GameRegistry.registerItem(i.get(), i.name());
 		
-		new ItemResourceLocation(env).register(i.get(), i.name());
+		new ItemResourceLocation(env).register(i);
 		
 		return new Index<MinecraftItem>().put(i.name(), new MinecraftItem(i.get()));
 	}
