@@ -1,6 +1,8 @@
 package com.github.hexirp.forge.item;
 
 import com.github.hexirp.Named;
+import com.github.hexirp.NamedItem;
+import com.github.hexirp.annotation.NonNull;
 import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.Loadable;
 
@@ -16,29 +18,25 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Hexirp
  */
 public class LoadableItem implements Loadable {
-	/** アイテムの名前. */
-	private final String name;
-	
 	/** アイテム. */
-	private final Item item;
+	private final NamedItem<@NonNull ?> i;
 	
 	/**
 	 * コントストラクタ.
 	 *
-	 * @param <NamedItem> 名前付きアイテムを表現する
 	 * @param item スネークケースでの名前が付いたアイテム
+	 * @param <T> 名前付きアイテム
 	 */
-	public <NamedItem extends Item & Named> LoadableItem(NamedItem item) {
-		this.name = item.name();
-		this.item = item;
+	public <T extends Item & Named> LoadableItem(final T item) {
+		i = new NamedItem<>(item);
 	}
 	
 	@Override
-	public Index<MinecraftItem> load(Environment env) {
-		GameRegistry.registerItem(item, name);
+	public Index<MinecraftItem> load(final Environment env) {
+		GameRegistry.registerItem(i.get(), i.name());
 		
-		new ItemResourceLocation(env).register(item, name);
+		new ItemResourceLocation(env).register(i.get(), i.name());
 		
-		return new Index<MinecraftItem>().put(name, new MinecraftItem(item));
+		return new Index<MinecraftItem>().put(i.name(), new MinecraftItem(i.get()));
 	}
 }

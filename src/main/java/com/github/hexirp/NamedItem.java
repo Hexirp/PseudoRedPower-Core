@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
  * @author Hexirp
  * @param <Type> 保存する型
  */
-public class NamedItem<Type extends Item & Named> {
+public class NamedItem<Type extends Item & Named> implements Named {
 	/** 保存する値. */
 	private final Type t;
 	
@@ -26,7 +26,12 @@ public class NamedItem<Type extends Item & Named> {
 	 *
 	 * @return {@link #t}
 	 */
-	public Type get() {
+	public Item get() {
 		return t;
+	}
+	
+	@Override
+	public String name() {
+		return t.name();
 	}
 }
