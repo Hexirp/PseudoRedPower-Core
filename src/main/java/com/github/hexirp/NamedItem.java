@@ -1,12 +1,14 @@
 package com.github.hexirp;
 
+import net.minecraft.item.Item;
+
 /**
- * ジェネリックスでしか表現できない型の情報を保存するコンテナを表現する.
+ * 名前付きアイテムを表現する.
  *
  * @author Hexirp
  * @param <Type> 保存する型
  */
-public class Mixin<Type> {
+public class NamedItem<Type extends Item & Named> {
 	/** 保存する値. */
 	private final Type t;
 	
@@ -15,7 +17,7 @@ public class Mixin<Type> {
 	 *
 	 * @param t {@link #t}
 	 */
-	public Mixin(final Type t) {
+	public NamedItem(final Type t) {
 		this.t = t;
 	}
 	
