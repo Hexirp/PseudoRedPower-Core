@@ -1,6 +1,8 @@
 package com.github.hexirp.forge.item;
 
-import net.minecraft.item.Item;
+import com.github.hexirp.NamedItem;
+import com.github.hexirp.annotation.NonNull;
+
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -18,21 +20,20 @@ public class ItemResourceLocation {
 	 *
 	 * @param env {@link #env}
 	 */
-	public ItemResourceLocation(Environment env) {
+	public ItemResourceLocation(final Environment env) {
 		this.env = env;
 	}
 	
 	/**
 	 * アイテムのリソースの箇所を登録する.
 	 *
-	 * @param item アイテム
-	 * @param name アイテムの名前
+	 * @param i 名前付きアイテム
 	 */
-	public void register(Item item, String name) {
+	public void register(final NamedItem<@NonNull ?> i) {
 		if (env.side() == Side.CLIENT)
 		    ModelLoader.setCustomModelResourceLocation(
-		        item,
+		        i.get(),
 		        0,
-		        env.location(name, "inventory"));
+		        env.location(i.name(), "inventory"));
 	}
 }
