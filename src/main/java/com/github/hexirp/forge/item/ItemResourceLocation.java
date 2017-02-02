@@ -1,6 +1,5 @@
 package com.github.hexirp.forge.item;
 
-import com.github.hexirp.NamedItem;
 import com.github.hexirp.annotation.NonNull;
 
 import net.minecraftforge.client.model.ModelLoader;

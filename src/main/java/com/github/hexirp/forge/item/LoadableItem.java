@@ -1,7 +1,6 @@
 package com.github.hexirp.forge.item;
 
 import com.github.hexirp.Named;
-import com.github.hexirp.NamedItem;
 import com.github.hexirp.annotation.NonNull;
 import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.Loadable;

@@ -1,4 +1,6 @@
-package com.github.hexirp;
+package com.github.hexirp.forge.item;
+
+import com.github.hexirp.Named;
 
 import net.minecraft.item.Item;
 
