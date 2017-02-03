@@ -1,7 +1,6 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.LoadableLibrary;
-import com.github.hexirp.forge.item.LoadableItem;
 import com.github.hexirp.forge.prp.core.items.SampleItem;
 
 /**
@@ -12,6 +11,6 @@ import com.github.hexirp.forge.prp.core.items.SampleItem;
 public class Items extends LoadableLibrary {
 	/** コントストラクタ. */
 	public Items() {
-		library.add(new LoadableItem(new SampleItem()));
+		library.add(new SampleItem().toLoadable());
 	}
 }
