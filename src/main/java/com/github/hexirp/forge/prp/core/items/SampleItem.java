@@ -14,9 +14,8 @@ public class SampleItem extends Item implements Named {
 	/** コントストラクタ. */
 	public SampleItem() {
 		super();
-		this
-		    .setUnlocalizedName(this.name())
-		    .setCreativeTab(CreativeTabs.tabMaterials);
+		setUnlocalizedName(this.name());
+		setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	
 	@Override
