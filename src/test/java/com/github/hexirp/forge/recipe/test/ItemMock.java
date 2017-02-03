@@ -30,7 +30,7 @@ public class ItemMock extends Item implements Named {
 	
 	@Override
 	public boolean equals(@Nullable final Object o) {
-		return null == o && o instanceof ItemMock ? name == ((ItemMock) o).name : false;
+		return (o != null && o instanceof ItemMock) ? name == ((ItemMock) o).name : false;
 	}
 	
 	@Override
