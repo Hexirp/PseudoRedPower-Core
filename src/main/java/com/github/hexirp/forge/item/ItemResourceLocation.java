@@ -28,7 +28,7 @@ public class ItemResourceLocation {
 	 *
 	 * @param i 名前付きアイテム
 	 */
-	public void register(final NamedItem<@NonNull ?> i) {
+	public void set(final NamedItem<@NonNull ?> i) {
 		if (env.side() == Side.CLIENT)
 		    ModelLoader.setCustomModelResourceLocation(
 		        i.get(),
