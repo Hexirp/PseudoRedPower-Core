@@ -22,7 +22,7 @@ public class SilverIngot extends Item implements Named {
 	
 	@Override
 	public String name() {
-		return "sample_item";
+		return "silver_ingot";
 	}
 	
 	/**
