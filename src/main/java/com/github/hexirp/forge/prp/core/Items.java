@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.LoadableLibrary;
-import com.github.hexirp.forge.prp.core.items.SampleItem;
+import com.github.hexirp.forge.prp.core.items.SilverIngot;
 
 /**
  * PRP-Coreで追加されるアイテム群を定義する.
@@ -11,6 +11,6 @@ import com.github.hexirp.forge.prp.core.items.SampleItem;
 public class Items extends LoadableLibrary {
 	/** コントストラクタ. */
 	public Items() {
-		library.add(new SampleItem().toLoadable());
+		library.add(new SilverIngot().toLoadable());
 	}
 }

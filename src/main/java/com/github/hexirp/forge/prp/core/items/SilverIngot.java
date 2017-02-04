@@ -8,13 +8,13 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 /**
- * サンプルアイテムを定義する.
+ * 銀インゴットを表現する.
  *
  * @author Hexirp
  */
-public class SampleItem extends Item implements Named {
+public class SilverIngot extends Item implements Named {
 	/** コントストラクタ. */
-	public SampleItem() {
+	public SilverIngot() {
 		super();
 		setUnlocalizedName(this.name());
 		setCreativeTab(CreativeTabs.tabMaterials);
