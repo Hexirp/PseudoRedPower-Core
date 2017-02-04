@@ -31,7 +31,7 @@ public class SampleRecipe extends RegisterableLibrary {
 		            .add("AAA")
 		            .add("AAA")
 		            .to()
-		            .put('A', index.get("sample_item"))
+		            .put('A', index.get("silver_ingot"))
 		            .to())
 		    .add(() -> GameRegistry.addRecipe(
 		        new ItemStack(Blocks.bedrock),
