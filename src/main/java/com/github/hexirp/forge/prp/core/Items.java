@@ -11,6 +11,6 @@ import com.github.hexirp.forge.prp.core.items.SilverIngot;
 public class Items extends LoadableLibrary {
 	/** コントストラクタ. */
 	public Items() {
-		library.add(new SilverIngot().toLoadable());
+		library.add(new SilverIngot().to());
 	}
 }
