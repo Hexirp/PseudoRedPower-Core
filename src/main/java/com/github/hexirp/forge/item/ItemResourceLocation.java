@@ -11,28 +11,28 @@ import net.minecraftforge.fml.relauncher.Side;
  * @author Hexirp
  */
 public class ItemResourceLocation {
-	/** リソースが登録される環境. */
-	private final Environment env;
+	/** リソースが表現するアイテム. */
+	private final NamedItem<@NonNull ?> item;
 	
 	/**
 	 * Setter.
 	 *
-	 * @param env {@link #env}
+	 * @param i {@link #item}
 	 */
-	public ItemResourceLocation(final Environment env) {
-		this.env = env;
+	public ItemResourceLocation(final NamedItem<@NonNull ?> i) {
+		this.item = i;
 	}
 	
 	/**
 	 * アイテムのリソースの箇所を登録する.
 	 *
-	 * @param i 名前付きアイテム
+	 * @param env 登録する環境
 	 */
-	public void set(final NamedItem<@NonNull ?> i) {
+	public void set(final Environment env) {
 		if (env.side() == Side.CLIENT)
 		    ModelLoader.setCustomModelResourceLocation(
-		        i.get(),
+		        item.get(),
 		        0,
-		        env.location(i.name(), "inventory"));
+		        env.location(item.name(), "inventory"));
 	}
 }
