@@ -9,6 +9,7 @@ import com.github.hexirp.forge.prp.core.blocks.SilverOre;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 /**
  * PRP-Coreにより追加されるメカニズム群、つまりアイテムやレシピなどを表現する.
@@ -33,7 +34,7 @@ public class Mechanism {
 		
 		silver_ore = new SilverOre();
 		GameRegistry.registerBlock(silver_ore, silver_ore.name());
-		ModelLoader.setCustomModelResourceLocation(
+		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
 		    Item.getItemFromBlock(silver_ore),
 		    0,
 		    env.location(silver_ore.name(), "inventory"));
