@@ -1,2 +1,4 @@
 # ja_JP (Japanese) - The localization file of PseudoRedPower-Core by Hexirp
 item.silver_ingot.name=銀インゴット
+
+tile.silver_ore.name=銀鉱石

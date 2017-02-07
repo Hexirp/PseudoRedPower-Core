@@ -1,2 +1,4 @@
 # en_US (English) - The localization file of PseudoRedPower-Core by Hexirp
 item.silver_ingot.name=Silver Ingot
+
+tile.silver_ore.name=Silver Ore
