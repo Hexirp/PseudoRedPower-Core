@@ -1,7 +1,6 @@
 package com.github.hexirp.forge.prp.core.items;
 
 import com.github.hexirp.Named;
-import com.github.hexirp.builder.SimpleTransitional;
 import com.github.hexirp.forge.Loadable;
 import com.github.hexirp.forge.item.LoadableItem;
 
@@ -13,7 +12,7 @@ import net.minecraft.item.Item;
  *
  * @author Hexirp
  */
-public class SilverIngot extends Item implements Named, SimpleTransitional<Loadable> {
+public class SilverIngot extends Item implements Named {
 	/** コントストラクタ. */
 	public SilverIngot() {
 		super();
@@ -26,8 +25,12 @@ public class SilverIngot extends Item implements Named, SimpleTransitional<Loada
 		return "silver_ingot";
 	}
 	
-	@Override
-	public Loadable to() {
+	/**
+	 * ロードが可能であるようにする.
+	 *
+	 * @return ロード可能なアイテム
+	 */
+	public Loadable toLoadable() {
 		return new LoadableItem(this);
 	}
 }
