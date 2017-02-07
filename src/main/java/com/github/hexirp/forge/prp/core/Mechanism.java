@@ -7,7 +7,6 @@ import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.prp.core.blocks.SilverOre;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -37,6 +36,6 @@ public class Mechanism {
 		ModelLoader.setCustomModelResourceLocation(
 		    Item.getItemFromBlock(silver_ore),
 		    0,
-		    new ModelResourceLocation(Metadata.MOD_ID + ":" + "silver_ore", "inventory"));
+		    env.location("silver_ore", "inventory"));
 	}
 }
