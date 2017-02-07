@@ -1,5 +1,7 @@
 package com.github.hexirp.forge.prp.core.blocks;
 
+import com.github.hexirp.Named;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -8,10 +10,15 @@ import net.minecraft.block.material.Material;
  *
  * @author Hexirp
  */
-public class SilverOre extends Block {
+public class SilverOre extends Block implements Named {
 	/** コントストラクタ. */
 	public SilverOre() {
 		super(Material.rock);
-		setUnlocalizedName("silver_ore");
+		setUnlocalizedName(name());
+	}
+	
+	@Override
+	public String name() {
+		return "silver_ore";
 	}
 }
