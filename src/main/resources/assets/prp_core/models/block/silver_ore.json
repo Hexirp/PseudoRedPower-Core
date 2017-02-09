@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "prp_core:blocks/silver_ore"
+    }
+}
