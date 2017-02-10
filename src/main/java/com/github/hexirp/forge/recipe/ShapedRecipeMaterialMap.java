@@ -1,8 +1,9 @@
 package com.github.hexirp.forge.recipe;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import com.github.hexirp.forge.item.MinecraftItem;
 
@@ -13,7 +14,7 @@ import com.github.hexirp.forge.item.MinecraftItem;
  */
 public class ShapedRecipeMaterialMap {
 	/** 文字とアイテムとの対応関係. */
-	private final LinkedHashMap<Character, MinecraftItem> material = new LinkedHashMap<Character, MinecraftItem>();
+	private final Map<Character, MinecraftItem> material = new HashMap<Character, MinecraftItem>();
 	
 	/**
 	 * 文字とアイテムとの対応関係を{@link List}に変換する.
@@ -24,7 +25,7 @@ public class ShapedRecipeMaterialMap {
 		final List<Object> ret = new LinkedList<Object>();
 		
 		material.forEach((final Character key, final MinecraftItem value) -> {
-			if (null == key) throw new NullPointerException();
+			if (null == key || null == value) throw new NullPointerException();
 			ret.add(key);
 			ret.add(value.get());
 		});
