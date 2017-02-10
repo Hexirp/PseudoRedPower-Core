@@ -17,9 +17,8 @@ public class Mechanism {
 	 */
 	public void add(final Environment env) {
 		final Index<MinecraftItem> items = new Items().load(env);
-		
-		new Recipes(items).register();
-		
 		final Index<MinecraftItem> blocks = new Blocks().load(env);
+		
+		new Recipes(items.merge(blocks)).register();
 	}
 }
