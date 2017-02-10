@@ -1,6 +1,7 @@
 package com.github.hexirp.forge.prp.core;
 
 import com.github.hexirp.forge.LoadableLibrary;
+import com.github.hexirp.forge.block.LoadableBlock;
 import com.github.hexirp.forge.prp.core.blocks.SilverOre;
 
 /**

@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.prp.core;
+package com.github.hexirp.forge.block;
 
 import com.github.hexirp.Named;
 import com.github.hexirp.forge.Index;
