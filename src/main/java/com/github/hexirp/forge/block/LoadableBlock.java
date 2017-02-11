@@ -25,7 +25,7 @@ public class LoadableBlock implements Loadable {
 	 * @param block 名前付きブロック
 	 */
 	public <Type extends Block & Named> LoadableBlock(final Type block) {
-		this.block = new NamedBlock<@NonNull ?>(block);
+		this.block = new NamedBlock<>(block);
 	}
 	
 	@Override
