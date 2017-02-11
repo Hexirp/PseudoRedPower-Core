@@ -44,8 +44,6 @@ public class ShapedMaterialPhase
 	
 	@Override
 	public ShapedRecipe to() {
-		return new ShapedRecipe(
-		    previous().previous().previous(),
-		    new ShapedRecipeOrder(previous().order(), map));
+		return new ShapedRecipe(previous().previous().previous(), new ShapedRecipeOrder(previous().order(), map));
 	}
 }

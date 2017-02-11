@@ -36,7 +36,6 @@ public class ShapedOrderPhase
 	 *
 	 * @param str 行
 	 * @return メソッドチェーン用
-	 * @see ShapedRecipeAbstractOrder#add(String)
 	 */
 	public ShapedOrderPhase add(final String str) {
 		order.add(str);
