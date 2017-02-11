@@ -1,16 +1,14 @@
 package com.github.hexirp.forge.block;
 
 import com.github.hexirp.Named;
+import com.github.hexirp.annotation.NonNull;
 import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.Loadable;
 import com.github.hexirp.forge.item.Environment;
 import com.github.hexirp.forge.item.MinecraftItem;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
 
 /**
  * ロード可能なブロックを表現する.
@@ -19,29 +17,23 @@ import net.minecraftforge.fml.relauncher.Side;
  */
 public class LoadableBlock implements Loadable {
 	/** ブロック. */
-	private final Block block;
-	
-	/** ブロックの名前. */
-	private final String name;
+	private final NamedBlock<@NonNull ?> block;
 	
 	/**
 	 * Setter.
 	 *
 	 * @param block 名前付きブロック
 	 */
-	public <NamedBlock extends Block & Named> LoadableBlock(final NamedBlock block) {
-		this.block = block;
-		this.name = block.name();
+	public <Type extends Block & Named> LoadableBlock(final Type block) {
+		this.block = new NamedBlock<@NonNull ?>(block);
 	}
 	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerBlock(block, name);
-		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
-		    Item.getItemFromBlock(block),
-		    0,
-		    env.location(name, "inventory"));
+		GameRegistry.registerBlock(block.get(), block.get().name());
 		
-		return new Index<MinecraftItem>().put(name, new MinecraftItem(block));
+		new BlockResourceLocation(block).set(env);;
+		
+		return new Index<MinecraftItem>().put(block.get().name(), new MinecraftItem(block.get()));
 	}
 }
