@@ -32,10 +32,10 @@ public class LoadableItem implements Loadable {
 	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerItem(i.get(), i.name());
+		GameRegistry.registerItem(i.get(), i.get().name());
 		
 		new ItemResourceLocation(i).set(env);
 		
-		return new Index<MinecraftItem>().put(i.name(), new MinecraftItem(i.get()));
+		return new Index<MinecraftItem>().put(i.get().name(), new MinecraftItem(i.get()));
 	}
 }
