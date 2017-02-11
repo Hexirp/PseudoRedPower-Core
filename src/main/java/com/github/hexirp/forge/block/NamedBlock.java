@@ -1,16 +1,16 @@
-package com.github.hexirp.forge.item;
+package com.github.hexirp.forge.block;
 
 import com.github.hexirp.Named;
 
-import net.minecraft.item.Item;
+import net.minecraft.block.Block;
 
 /**
- * 名前付きアイテムを表現する.
+ * 名前付きブロックを表現する.
  *
  * @author Hexirp
- * @param <Type> 保存する型
+ * @param <Type> 名前付きブロック
  */
-public class NamedItem<Type extends Item & Named> {
+public class NamedBlock<Type extends Block & Named> {
 	/** 保存する値. */
 	private final Type t;
 	
@@ -19,7 +19,7 @@ public class NamedItem<Type extends Item & Named> {
 	 *
 	 * @param t {@link #t}
 	 */
-	public NamedItem(final Type t) {
+	public NamedBlock(final Type t) {
 		this.t = t;
 	}
 	
