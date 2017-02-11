@@ -25,7 +25,7 @@ public class ShapedRecipeMaterialMap {
 		final List<Object> ret = new LinkedList<Object>();
 		
 		material.forEach((final Character key, final MinecraftItem value) -> {
-			if (null == key || null == value) throw new NullPointerException();
+			if (null == key || null == value) throw null;
 			ret.add(key);
 			ret.add(value.get());
 		});

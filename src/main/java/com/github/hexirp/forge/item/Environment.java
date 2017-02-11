@@ -35,8 +35,8 @@ public class Environment {
 	 */
 	public Side side() {
 		final Side side = event.getSide();
-		if (null == side) throw new NullPointerException();
-		else return side;
+		if (null == side) throw null;
+		return side;
 	}
 	
 	/**

@@ -28,14 +28,14 @@ public class ListUtil<Element> {
 	 */
 	public Object[] to() {
 		final Object[] ret = list.toArray();
-		if (null == ret) throw new NullPointerException();
-		else return ret;
+		if (null == ret) throw null;
+		return ret;
 	}
 	
 	/**
 	 * リストを結合する.
 	 * .
-	 * 
+	 *
 	 * @param col コレクション
 	 * @return 自分自身
 	 */

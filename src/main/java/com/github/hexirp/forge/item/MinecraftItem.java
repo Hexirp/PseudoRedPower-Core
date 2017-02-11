@@ -22,8 +22,8 @@ public class MinecraftItem {
 	 * @param item {@link #obj}
 	 */
 	public MinecraftItem(@Nullable final Item item) {
-		if (null == item) throw new NullPointerException();
-		else obj = item;
+		if (null == item) throw null;
+		obj = item;
 	}
 	
 	/**
