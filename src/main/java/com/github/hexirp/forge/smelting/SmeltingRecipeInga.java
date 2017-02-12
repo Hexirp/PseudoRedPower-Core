@@ -25,7 +25,7 @@ public class SmeltingRecipeInga {
 	 * @param product {@link #product}
 	 * @param material {@link #material}
 	 */
-	public SmeltingRecipeInga(MinecraftItem product, MinecraftItem material) {
+	public SmeltingRecipeInga(final MinecraftItem product, final MinecraftItem material) {
 		this.product = product;
 		this.material = material;
 	}

@@ -20,7 +20,7 @@ public class SmeltingRecipeExp {
 	 * @param exp {@link #exp}
 	 * @param times {@link #times}
 	 */
-	public SmeltingRecipeExp(int exp, int times) {
+	public SmeltingRecipeExp(final int exp, final int times) {
 		this.exp = exp;
 		this.times = times;
 	}

@@ -14,7 +14,7 @@ public class SmeltingRecipe implements Registerable {
 	private final SmeltingRecipeInga inga;
 	
 	/** 経験値が得られる確率. */
-	private SmeltingRecipeExp exp;
+	private final SmeltingRecipeExp exp;
 	
 	/**
 	 * Setter.
@@ -22,7 +22,7 @@ public class SmeltingRecipe implements Registerable {
 	 * @param inga {@link #inga}
 	 * @param exp {@link #exp}
 	 */
-	public SmeltingRecipe(SmeltingRecipeInga inga, SmeltingRecipeExp exp) {
+	public SmeltingRecipe(final SmeltingRecipeInga inga, final SmeltingRecipeExp exp) {
 		this.inga = inga;
 		this.exp = exp;
 	}
