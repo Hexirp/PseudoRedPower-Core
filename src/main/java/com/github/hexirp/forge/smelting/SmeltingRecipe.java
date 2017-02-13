@@ -29,6 +29,6 @@ public class SmeltingRecipe implements Registerable {
 	
 	@Override
 	public void register() {
-		GameRegistry.addSmelting(inga.getProduct(), inga.getMaterial(), exp.calc());
+		GameRegistry.addSmelting(inga.getMaterial(), inga.getProduct(), exp.calc());
 	}
 }

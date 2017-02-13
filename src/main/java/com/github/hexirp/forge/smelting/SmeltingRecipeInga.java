@@ -2,7 +2,6 @@ package com.github.hexirp.forge.smelting;
 
 import com.github.hexirp.forge.item.MinecraftItem;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -35,8 +34,8 @@ public class SmeltingRecipeInga {
 	 *
 	 * @return 結果
 	 */
-	public Item getProduct() {
-		return product.get();
+	public ItemStack getProduct() {
+		return new ItemStack(product.get());
 	}
 	
 	/**
