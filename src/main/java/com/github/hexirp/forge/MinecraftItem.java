@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.item;
+package com.github.hexirp.forge;
 
 import com.github.hexirp.annotation.Nullable;
 

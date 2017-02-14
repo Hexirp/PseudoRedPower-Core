@@ -1,6 +1,6 @@
 package com.github.hexirp.forge.recipe.builder;
 
-import com.github.hexirp.forge.item.MinecraftItem;
+import com.github.hexirp.forge.MinecraftItem;
 
 /**
  * レシピを定義するための補助クラスを表現する.

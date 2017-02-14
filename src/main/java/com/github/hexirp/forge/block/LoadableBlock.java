@@ -4,8 +4,8 @@ import com.github.hexirp.Named;
 import com.github.hexirp.annotation.NonNull;
 import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.Loadable;
+import com.github.hexirp.forge.MinecraftItem;
 import com.github.hexirp.forge.item.Environment;
-import com.github.hexirp.forge.item.MinecraftItem;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;

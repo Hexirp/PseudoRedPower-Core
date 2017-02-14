@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.github.hexirp.forge.item.MinecraftItem;
+import com.github.hexirp.forge.MinecraftItem;
 import com.github.hexirp.forge.recipe.ShapelessRecipeMaterial;
 
 import net.minecraft.item.Item;

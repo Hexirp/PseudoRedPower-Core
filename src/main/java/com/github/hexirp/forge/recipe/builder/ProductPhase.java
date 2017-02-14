@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.recipe.builder;
 
 import com.github.hexirp.builder.StackedPhase;
-import com.github.hexirp.forge.item.MinecraftItem;
+import com.github.hexirp.forge.MinecraftItem;
 import com.github.hexirp.forge.recipe.RecipeProduct;
 
 /**

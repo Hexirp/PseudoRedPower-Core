@@ -4,6 +4,7 @@ import com.github.hexirp.Named;
 import com.github.hexirp.annotation.NonNull;
 import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.Loadable;
+import com.github.hexirp.forge.MinecraftItem;
 
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;

@@ -1,6 +1,6 @@
 package com.github.hexirp.forge.recipe;
 
-import com.github.hexirp.forge.item.MinecraftItem;
+import com.github.hexirp.forge.MinecraftItem;
 
 import net.minecraft.item.ItemStack;
 

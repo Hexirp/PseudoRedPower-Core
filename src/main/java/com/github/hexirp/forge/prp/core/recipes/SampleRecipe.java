@@ -1,8 +1,8 @@
 package com.github.hexirp.forge.prp.core.recipes;
 
 import com.github.hexirp.forge.Index;
+import com.github.hexirp.forge.MinecraftItem;
 import com.github.hexirp.forge.RegisterableLibrary;
-import com.github.hexirp.forge.item.MinecraftItem;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Blocks;

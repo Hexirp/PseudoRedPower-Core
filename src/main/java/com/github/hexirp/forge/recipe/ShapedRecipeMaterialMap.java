@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import com.github.hexirp.forge.item.MinecraftItem;
+import com.github.hexirp.forge.MinecraftItem;
 
 /**
  * {@link ShapedRecipeAbstractOrder}における文字とアイテムとの対応関係を表現する.

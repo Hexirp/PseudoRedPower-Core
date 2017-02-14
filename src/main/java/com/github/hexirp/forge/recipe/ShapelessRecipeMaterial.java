@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.github.hexirp.ListUtil;
-import com.github.hexirp.forge.item.MinecraftItem;
+import com.github.hexirp.forge.MinecraftItem;
 
 import net.minecraft.item.Item;
 
