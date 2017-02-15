@@ -18,22 +18,23 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class LoadableBlock implements Loadable {
 	/** ブロック. */
 	private final NamedBlock<@NonNull ?> block;
-
+	
 	/**
 	 * Setter.
 	 *
 	 * @param block 名前付きブロック
+	 * @param <Type> 名前付きブロック
 	 */
 	public <Type extends Block & Named> LoadableBlock(final Type block) {
 		this.block = new NamedBlock<>(block);
 	}
-
+	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
 		GameRegistry.registerBlock(block.get(), block.get().name());
-
+		
 		new BlockResourceLocation(block).set(env);
-
+		
 		return new Index<MinecraftItem>().put(block.get().name(), new MinecraftItem(block.get()));
 	}
 }
