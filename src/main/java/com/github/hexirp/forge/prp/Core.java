@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.prp;
 
 import com.github.hexirp.annotation.Nullable;
-import com.github.hexirp.forge.loadable.item.Environment;
+import com.github.hexirp.forge.loadable.Environment;
 import com.github.hexirp.forge.prp.core.Mechanism;
 import com.github.hexirp.forge.prp.core.Metadata;
 
