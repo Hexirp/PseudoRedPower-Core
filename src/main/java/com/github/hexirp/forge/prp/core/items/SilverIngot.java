@@ -1,7 +1,7 @@
 package com.github.hexirp.forge.prp.core.items;
 
 import com.github.hexirp.Named;
-import com.github.hexirp.forge.item.LoadableItem;
+import com.github.hexirp.forge.loadable.item.LoadableItem;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

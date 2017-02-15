@@ -1,19 +1,16 @@
-package com.github.hexirp.forge.item;
+package com.github.hexirp.forge.loadable.item;
 
 import com.github.hexirp.Named;
 import com.github.hexirp.annotation.NonNull;
 import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.Loadable;
 import com.github.hexirp.forge.MinecraftItem;
+import com.github.hexirp.forge.loadable.Environment;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * {@link Loadable}である{@link Item}を表現する.
- *
- * 実際は{@link Item}を包み、簡単に登録する事が出来るようにした物である。
- * このクラスを使用してアイテムを登録するには、また別にリソースを追加しなければならない。
  *
  * @author Hexirp
  */
@@ -33,10 +30,12 @@ public class LoadableItem implements Loadable {
 	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerItem(i.get(), i.get().name());
+		i.register();
 		
 		new ItemResourceLocation(i).set(env);
 		
-		return new Index<MinecraftItem>().put(i.get().name(), new MinecraftItem(i.get()));
+		return new Index<MinecraftItem>().put(
+		    i.get().name(),
+		    new MinecraftItem(i.get()));
 	}
 }

@@ -1,6 +1,7 @@
-package com.github.hexirp.forge.item;
+package com.github.hexirp.forge.loadable.item;
 
 import com.github.hexirp.annotation.NonNull;
+import com.github.hexirp.forge.loadable.Environment;
 
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;

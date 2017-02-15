@@ -1,6 +1,6 @@
 package com.github.hexirp.forge;
 
-import com.github.hexirp.forge.item.Environment;
+import com.github.hexirp.forge.loadable.Environment;
 
 /**
  * 要素一つ一つを読み込ませることが出来る{@link Library}を表現する.

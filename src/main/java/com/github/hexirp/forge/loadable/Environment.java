@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.item;
+package com.github.hexirp.forge.loadable;
 
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.common.ModMetadata;
