@@ -9,15 +9,12 @@ import com.github.hexirp.forge.item.Environment;
  *
  * @author Hexirp
  */
-public abstract class LoadableLibrary implements Loadable {
-	/** 辞書. */
-	protected final Library<Loadable> library = new Library<>();
-	
+public abstract class LoadableLibrary extends Library<Loadable> implements Loadable {
 	@Override
-	public Index<MinecraftItem> load(Environment env) {
-		Index<MinecraftItem> ret = new Index<>();
+	public Index<MinecraftItem> load(final Environment env) {
+		final Index<MinecraftItem> ret = new Index<>();
 		
-		library.forEach(item -> ret.merge(item.load(env)));
+		forEach(item -> ret.merge(item.load(env)));
 		
 		return ret;
 	}
