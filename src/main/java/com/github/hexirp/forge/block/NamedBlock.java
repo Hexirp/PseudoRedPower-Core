@@ -14,28 +14,28 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class NamedBlock<Type extends Block & Named> implements Registerable {
 	/** 保存する値. */
-	private final Type t;
+	private final Type value;
 	
 	/**
 	 * Setter.
 	 *
-	 * @param t {@link #t}
+	 * @param value {@link #value}
 	 */
-	public NamedBlock(final Type t) {
-		this.t = t;
+	public NamedBlock(final Type value) {
+		this.value = value;
 	}
 	
 	/**
 	 * Getter.
 	 *
-	 * @return {@link #t}
+	 * @return {@link #value}
 	 */
 	public Type get() {
-		return t;
+		return value;
 	}
 	
 	@Override
 	public void register() {
-		GameRegistry.registerBlock(t, t.name());
+		GameRegistry.registerBlock(value, value.name());
 	}
 }
