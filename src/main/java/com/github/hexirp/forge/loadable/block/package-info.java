@@ -4,6 +4,6 @@
  * @author Hexirp
  */
 @NonNullByDefault
-package com.github.hexirp.forge.block;
+package com.github.hexirp.forge.loadable.block;
 
 import com.github.hexirp.annotation.NonNullByDefault;

@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.block;
+package com.github.hexirp.forge.loadable.block;
 
 import com.github.hexirp.Named;
 import com.github.hexirp.annotation.NonNull;
