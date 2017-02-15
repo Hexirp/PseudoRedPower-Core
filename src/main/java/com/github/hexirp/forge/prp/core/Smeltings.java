@@ -17,11 +17,10 @@ public class Smeltings extends RegisterableLibrary {
 	 * @param items アイテムのリスト
 	 */
 	public Smeltings(final Index<MinecraftItem> items) {
-		library
-		    .add(
-		        new RecipeBuilder()
-		            .inga(items.get("silver_ingot"), items.get("silver_ore"))
-		            .exp(1, 1)
-		            .to());
+		add(
+		    new RecipeBuilder()
+		        .inga(items.get("silver_ingot"), items.get("silver_ore"))
+		        .exp(1, 1)
+		        .to());
 	}
 }

@@ -20,16 +20,15 @@ public class SampleRecipe extends RegisterableLibrary {
 	 * @param index アイテムの索引
 	 */
 	public SampleRecipe(final Index<MinecraftItem> index) {
-		library
-		    .add(
-		        new RecipeBuilder()
-		            .product(new MinecraftItem(Blocks.bedrock), 1)
-		            .order()
-		            .add("AAA")
-		            .add("AAA")
-		            .add("AAA")
-		            .to()
-		            .put('A', index.get("silver_ingot"))
-		            .to());
+		add(
+		    new RecipeBuilder()
+		        .product(new MinecraftItem(Blocks.bedrock), 1)
+		        .order()
+		        .add("AAA")
+		        .add("AAA")
+		        .add("AAA")
+		        .to()
+		        .put('A', index.get("silver_ingot"))
+		        .to());
 	}
 }

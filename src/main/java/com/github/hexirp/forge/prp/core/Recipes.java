@@ -18,9 +18,8 @@ public class Recipes extends RegisterableLibrary {
 	 * @param items アイテムの索引
 	 */
 	public Recipes(final Index<MinecraftItem> items) {
-		library
-		    .add(new SampleRecipe(items))
-		    .add(new ChainMail())
-		    .add(new Smeltings(items));
+		add(new SampleRecipe(items));
+		add(new ChainMail());
+		add(new Smeltings(items));
 	}
 }
