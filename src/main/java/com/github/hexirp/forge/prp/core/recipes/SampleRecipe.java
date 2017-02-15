@@ -6,8 +6,6 @@ import com.github.hexirp.forge.RegisterableLibrary;
 import com.github.hexirp.forge.recipe.builder.RecipeBuilder;
 
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 // TODO:試験的コード
 /**
@@ -32,11 +30,6 @@ public class SampleRecipe extends RegisterableLibrary {
 		            .add("AAA")
 		            .to()
 		            .put('A', index.get("silver_ingot"))
-		            .to())
-		    .add(() -> GameRegistry.addRecipe(
-		        new ItemStack(Blocks.bedrock),
-		        "A",
-		        'A',
-		        Blocks.bedrock));
+		            .to());
 	}
 }
