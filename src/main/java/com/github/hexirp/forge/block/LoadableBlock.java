@@ -8,7 +8,6 @@ import com.github.hexirp.forge.MinecraftItem;
 import com.github.hexirp.forge.item.Environment;
 
 import net.minecraft.block.Block;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * ロード可能なブロックを表現する.
@@ -31,10 +30,12 @@ public class LoadableBlock implements Loadable {
 	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerBlock(block.get(), block.get().name());
+		block.register();
 		
 		new BlockResourceLocation(block).set(env);
 		
-		return new Index<MinecraftItem>().put(block.get().name(), new MinecraftItem(block.get()));
+		return new Index<MinecraftItem>().put(
+		    block.get().name(),
+		    new MinecraftItem(block.get()));
 	}
 }
