@@ -7,12 +7,9 @@ package com.github.hexirp.forge;
  *
  * @author Hexirp
  */
-public abstract class RegisterableLibrary implements Registerable {
-	/** 辞書. */
-	protected final Library<Registerable> library = new Library<>();
-	
+public abstract class RegisterableLibrary extends Library<Registerable> implements Registerable {
 	@Override
 	public void register() {
-		library.forEach(recipe -> recipe.register());
+		forEach(recipe -> recipe.register());
 	}
 }
