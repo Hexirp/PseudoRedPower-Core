@@ -1,4 +1,4 @@
-package com.github.hexirp.forge.item;
+package com.github.hexirp.forge.loadable.item;
 
 import com.github.hexirp.Named;
 

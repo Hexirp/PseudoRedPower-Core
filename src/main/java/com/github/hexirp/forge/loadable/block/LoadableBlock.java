@@ -5,7 +5,7 @@ import com.github.hexirp.annotation.NonNull;
 import com.github.hexirp.forge.Index;
 import com.github.hexirp.forge.Loadable;
 import com.github.hexirp.forge.MinecraftItem;
-import com.github.hexirp.forge.item.Environment;
+import com.github.hexirp.forge.loadable.item.Environment;
 
 import net.minecraft.block.Block;
 
