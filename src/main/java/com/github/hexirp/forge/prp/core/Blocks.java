@@ -12,6 +12,6 @@ import com.github.hexirp.forge.prp.core.blocks.SilverOre;
 public class Blocks extends LoadableLibrary {
 	/** コントストラクタ. */
 	public Blocks() {
-		library.add(new LoadableBlock(new SilverOre()));
+		add(new LoadableBlock(new SilverOre()));
 	}
 }
