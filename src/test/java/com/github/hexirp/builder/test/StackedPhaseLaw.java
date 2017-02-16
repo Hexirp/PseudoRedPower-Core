@@ -15,9 +15,11 @@ public class StackedPhaseLaw {
 	 * 前後の法則.
 	 *
 	 * @param phase 試験対象
+	 * @param <Product> 生産物
+	 * @param <Previous> 前段階
 	 */
-	public static <Product extends StackedPhase<Previous>, Previous extends SimpleTransitional<Product>>
-	    void law(StackedPhase<Previous> phase) {
+	public static <Product extends StackedPhase<Previous>, Previous extends SimpleTransitional<Product>> void law(
+	    final StackedPhase<Previous> phase) {
 		assertEquals(phase, phase.previous().to());
 	}
 }
