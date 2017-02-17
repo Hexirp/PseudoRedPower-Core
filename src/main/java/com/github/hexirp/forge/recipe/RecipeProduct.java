@@ -21,7 +21,7 @@ public class RecipeProduct {
 	 *
 	 * @return 結果
 	 */
-	public ItemStack get() {
+	public ItemStack product() {
 		return new ItemStack(output.get(), size);
 	}
 	

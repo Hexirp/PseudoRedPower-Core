@@ -29,6 +29,6 @@ public class ShapedRecipe implements Registerable {
 	
 	@Override
 	public final void register() {
-		GameRegistry.addRecipe(product.get(), order.calc());
+		GameRegistry.addRecipe(product.product(), order.calc());
 	}
 }
