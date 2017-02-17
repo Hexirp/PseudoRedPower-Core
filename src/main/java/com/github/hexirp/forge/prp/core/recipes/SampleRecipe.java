@@ -28,7 +28,7 @@ public class SampleRecipe extends RegisterableLibrary {
 		        .add("AAA")
 		        .add("AAA")
 		        .to()
-		        .put('A', index.get("silver_ingot"))
+		        .put('A', index.lookup("silver_ingot"))
 		        .to());
 	}
 }

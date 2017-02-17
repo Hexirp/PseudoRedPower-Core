@@ -42,7 +42,7 @@ public class Index<Item> {
 	 * @param string 索引の見出し
 	 * @return 索引の本文
 	 */
-	public Item get(final String string) {
+	public Item lookup(final String string) {
 		return index.get(string);
 	}
 }

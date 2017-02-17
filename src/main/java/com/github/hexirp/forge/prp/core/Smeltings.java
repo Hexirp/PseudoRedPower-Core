@@ -19,7 +19,7 @@ public class Smeltings extends RegisterableLibrary {
 	public Smeltings(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
-		        .inga(items.get("silver_ingot"), items.get("silver_ore"))
+		        .inga(items.lookup("silver_ingot"), items.lookup("silver_ore"))
 		        .exp(1, 1)
 		        .to());
 	}
