@@ -22,7 +22,7 @@ public class RecipeProduct {
 	 * @return 結果
 	 */
 	public ItemStack product() {
-		return new ItemStack(output.get(), size);
+		return new ItemStack(output.item(), size);
 	}
 	
 	/**

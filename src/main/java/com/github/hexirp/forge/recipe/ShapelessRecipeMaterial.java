@@ -35,7 +35,7 @@ public class ShapelessRecipeMaterial {
 	 */
 	public ShapelessRecipeMaterial add(final MinecraftItem obj, final int n) {
 		for (int india = 0; india < n; india++)
-			list.add(obj.get());
+			list.add(obj.item());
 		
 		return this;
 	}

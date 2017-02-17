@@ -40,7 +40,7 @@ public class MinecraftItem {
 	 *
 	 * @return {@link #obj}
 	 */
-	public Item get() {
+	public Item item() {
 		return obj;
 	}
 }

@@ -43,9 +43,9 @@ public class ShapelessRecipeMaterialTest {
 	@Test
 	public void testAdd() {
 		MinecraftItem A = new MinecraftItemMock("acacia_door");
-		Item a = A.get();
+		Item a = A.item();
 		MinecraftItem E = new MinecraftItemMock("emerald");
-		Item e = E.get();
+		Item e = E.item();
 		
 		Object[] ret1 = new ShapelessRecipeMaterial()
 		    .add(A, 4)
