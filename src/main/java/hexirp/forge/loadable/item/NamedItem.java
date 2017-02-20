@@ -1,6 +1,7 @@
 package hexirp.forge.loadable.item;
 
 import hexirp.forge.loadable.Named;
+import hexirp.forge.loadable.NamedType;
 import net.minecraft.item.Item;
 
 /**
@@ -9,25 +10,13 @@ import net.minecraft.item.Item;
  * @author Hexirp
  * @param <Type> 保存する型
  */
-public class NamedItem<Type extends Item & Named> {
-	/** 保存する値. */
-	private final Type t;
-
+public class NamedItem<Type extends Item & Named> extends NamedType<Type> {
 	/**
 	 * Setter.
 	 *
-	 * @param t {@link #t}
+	 * @param value {@link NamedType}
 	 */
-	public NamedItem(final Type t) {
-		this.t = t;
-	}
-
-	/**
-	 * Getter.
-	 *
-	 * @return {@link #t}
-	 */
-	public Type get() {
-		return t;
+	public NamedItem(final Type value) {
+		super(value);
 	}
 }
