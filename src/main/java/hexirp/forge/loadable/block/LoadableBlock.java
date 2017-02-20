@@ -7,6 +7,7 @@ import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.loadable.Environment;
 import net.minecraft.block.Block;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * ロード可能なブロックを表現する.
@@ -29,7 +30,7 @@ public class LoadableBlock implements Loadable {
 	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
-		block.register();
+		GameRegistry.registerBlock(block.get(), block.get().name());
 		
 		new BlockResourceLocation(block).set(env);
 		
