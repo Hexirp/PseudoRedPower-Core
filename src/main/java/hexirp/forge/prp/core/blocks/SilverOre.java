@@ -1,6 +1,6 @@
 package hexirp.forge.prp.core.blocks;
 
-import hexirp.Named;
+import hexirp.forge.loadable.Named;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;

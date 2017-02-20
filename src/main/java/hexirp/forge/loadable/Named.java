@@ -1,4 +1,4 @@
-package hexirp;
+package hexirp.forge.loadable;
 
 /**
  * 名前を持つことを表す.

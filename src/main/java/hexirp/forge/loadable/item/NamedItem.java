@@ -1,9 +1,8 @@
 package hexirp.forge.loadable.item;
 
-import hexirp.Named;
-import hexirp.forge.Registerable;
+import hexirp.forge.loadable.Named;
+import hexirp.forge.loadable.NamedType;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * 名前付きアイテムを表現する.
@@ -11,30 +10,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Hexirp
  * @param <Type> 保存する型
  */
-public class NamedItem<Type extends Item & Named> implements Registerable {
-	/** 保存する値. */
-	private final Type t;
-	
+public class NamedItem<Type extends Item & Named> extends NamedType<Type> {
 	/**
 	 * Setter.
 	 *
-	 * @param t {@link #t}
+	 * @param value {@link NamedType}
 	 */
-	public NamedItem(final Type t) {
-		this.t = t;
-	}
-	
-	/**
-	 * Getter.
-	 *
-	 * @return {@link #t}
-	 */
-	public Type get() {
-		return t;
-	}
-	
-	@Override
-	public void register() {
-		GameRegistry.registerItem(t, t.name());
+	public NamedItem(final Type value) {
+		super(value);
 	}
 }

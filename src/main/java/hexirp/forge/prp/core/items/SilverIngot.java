@@ -1,7 +1,6 @@
 package hexirp.forge.prp.core.items;
 
-import hexirp.Named;
-import hexirp.forge.loadable.item.LoadableItem;
+import hexirp.forge.loadable.Named;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -21,14 +20,5 @@ public class SilverIngot extends Item implements Named {
 	@Override
 	public String name() {
 		return "silver_ingot";
-	}
-	
-	/**
-	 * ロードが可能であるようにする.
-	 *
-	 * @return ロード可能なアイテム
-	 */
-	public LoadableItem toLoadable() {
-		return new LoadableItem(this);
 	}
 }

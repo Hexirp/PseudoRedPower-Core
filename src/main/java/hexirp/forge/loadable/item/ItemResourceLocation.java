@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.Side;
 public class ItemResourceLocation {
 	/** リソースが表現するアイテム. */
 	private final NamedItem<@NonNull ?> item;
-
+	
 	/**
 	 * Setter.
 	 *
@@ -22,7 +22,7 @@ public class ItemResourceLocation {
 	public ItemResourceLocation(final NamedItem<@NonNull ?> i) {
 		this.item = i;
 	}
-
+	
 	/**
 	 * アイテムのリソースの箇所を登録する.
 	 *
@@ -31,8 +31,8 @@ public class ItemResourceLocation {
 	public void set(final Environment env) {
 		if (env.side() == Side.CLIENT)
 		    ModelLoader.setCustomModelResourceLocation(
-		        item.get(),
+		        item.value(),
 		        0,
-		        env.location(item.get().name(), "inventory"));
+		        env.location(item.name(), "inventory"));
 	}
 }

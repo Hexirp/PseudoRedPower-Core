@@ -14,7 +14,7 @@ import net.minecraftforge.fml.relauncher.Side;
 public class BlockResourceLocation {
 	/** リソースが表現するブロック. */
 	private final NamedBlock<@NonNull ?> block;
-	
+
 	/**
 	 * Setter.
 	 *
@@ -23,7 +23,7 @@ public class BlockResourceLocation {
 	public BlockResourceLocation(final NamedBlock<@NonNull ?> block) {
 		this.block = block;
 	}
-	
+
 	/**
 	 * ブロックのリソースの箇所を登録する.
 	 *
@@ -31,8 +31,8 @@ public class BlockResourceLocation {
 	 */
 	public void set(final Environment env) {
 		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
-		    Item.getItemFromBlock(block.get()),
+		    Item.getItemFromBlock(block.value()),
 		    0,
-		    env.location(block.get().name(), "inventory"));
+		    env.location(block.name(), "inventory"));
 	}
 }
