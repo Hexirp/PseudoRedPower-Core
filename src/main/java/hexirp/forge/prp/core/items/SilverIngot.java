@@ -1,6 +1,6 @@
 package hexirp.forge.prp.core.items;
 
-import hexirp.Named;
+import hexirp.forge.loadable.Named;
 import hexirp.forge.loadable.item.LoadableItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

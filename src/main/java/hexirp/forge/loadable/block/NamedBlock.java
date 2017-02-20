@@ -1,6 +1,6 @@
 package hexirp.forge.loadable.block;
 
-import hexirp.Named;
+import hexirp.forge.loadable.Named;
 import net.minecraft.block.Block;
 
 /**

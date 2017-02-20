@@ -1,6 +1,6 @@
 package hexirp.forge.loadable.item;
 
-import hexirp.Named;
+import hexirp.forge.loadable.Named;
 import net.minecraft.item.Item;
 
 /**

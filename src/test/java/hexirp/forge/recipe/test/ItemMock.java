@@ -1,7 +1,7 @@
 package hexirp.forge.recipe.test;
 
-import hexirp.Named;
 import hexirp.annotation.Nullable;
+import hexirp.forge.loadable.Named;
 import net.minecraft.item.Item;
 
 /**
