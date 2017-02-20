@@ -5,8 +5,6 @@ import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.loadable.Environment;
-import hexirp.forge.loadable.Named;
-import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -22,10 +20,9 @@ public class LoadableBlock implements Loadable {
 	 * Setter.
 	 *
 	 * @param block 名前付きブロック
-	 * @param <Type> 名前付きブロック
 	 */
-	public <Type extends Block & Named> LoadableBlock(final Type block) {
-		this.block = new NamedBlock<>(block);
+	public LoadableBlock(final NamedBlock<@NonNull ?> block) {
+		this.block = block;
 	}
 	
 	@Override

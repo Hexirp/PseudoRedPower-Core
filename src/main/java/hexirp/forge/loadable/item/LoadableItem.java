@@ -5,7 +5,6 @@ import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.loadable.Environment;
-import hexirp.forge.loadable.Named;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -22,10 +21,9 @@ public class LoadableItem implements Loadable {
 	 * コントストラクタ.
 	 *
 	 * @param item スネークケースでの名前が付いたアイテム
-	 * @param <T> 名前付きアイテム
 	 */
-	public <T extends Item & Named> LoadableItem(final T item) {
-		i = new NamedItem<>(item);
+	public LoadableItem(final NamedItem<@NonNull ?> item) {
+		i = item;
 	}
 	
 	@Override

@@ -1,6 +1,8 @@
 package hexirp.forge.prp.core;
 
 import hexirp.forge.LoadableLibrary;
+import hexirp.forge.loadable.item.LoadableItem;
+import hexirp.forge.loadable.item.NamedItem;
 import hexirp.forge.prp.core.items.SilverIngot;
 
 /**
@@ -11,6 +13,6 @@ import hexirp.forge.prp.core.items.SilverIngot;
 public class Items extends LoadableLibrary {
 	/** コントストラクタ. */
 	public Items() {
-		add(new SilverIngot().toLoadable());
+		add(new LoadableItem(new NamedItem<>(new SilverIngot())));
 	}
 }
