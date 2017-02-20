@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class LoadableItem implements Loadable {
 	/** アイテム. */
 	private final NamedItem<@NonNull ?> i;
-	
+
 	/**
 	 * コントストラクタ.
 	 *
@@ -25,15 +25,15 @@ public class LoadableItem implements Loadable {
 	public LoadableItem(final NamedItem<@NonNull ?> item) {
 		i = item;
 	}
-	
+
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerItem(i.get(), i.get().name());
-		
+		GameRegistry.registerItem(i.value(), i.name());
+
 		new ItemResourceLocation(i).set(env);
-		
+
 		return new Index<MinecraftItem>().put(
-		    i.get().name(),
-		    new MinecraftItem(i.get()));
+		    i.name(),
+		    new MinecraftItem(i.value()));
 	}
 }

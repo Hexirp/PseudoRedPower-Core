@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class LoadableBlock implements Loadable {
 	/** ブロック. */
 	private final NamedBlock<@NonNull ?> block;
-	
+
 	/**
 	 * Setter.
 	 *
@@ -24,15 +24,15 @@ public class LoadableBlock implements Loadable {
 	public LoadableBlock(final NamedBlock<@NonNull ?> block) {
 		this.block = block;
 	}
-	
+
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerBlock(block.get(), block.get().name());
-		
+		GameRegistry.registerBlock(block.value(), block.name());
+
 		new BlockResourceLocation(block).set(env);
-		
+
 		return new Index<MinecraftItem>().put(
-		    block.get().name(),
-		    new MinecraftItem(block.get()));
+		    block.name(),
+		    new MinecraftItem(block.value()));
 	}
 }
