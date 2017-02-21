@@ -33,7 +33,7 @@ public class SmeltingRecipeInga {
 	 *
 	 * @return 結果
 	 */
-	public ItemStack getProduct() {
+	public ItemStack product() {
 		return new ItemStack(product.item());
 	}
 	
@@ -42,7 +42,7 @@ public class SmeltingRecipeInga {
 	 *
 	 * @return 材料
 	 */
-	public ItemStack getMaterial() {
+	public ItemStack material() {
 		return new ItemStack(material.item());
 	}
 }
