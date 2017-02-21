@@ -1,9 +1,9 @@
 /**
- * Hexirpの作成物全ての根源的な要素を記述する.
+ * コレクションに関するクラスを記述する.
  *
  * @author Hexirp
  */
 @NonNullByDefault
-package hexirp;
+package hexirp.collection;
 
 import hexirp.annotation.NonNullByDefault;

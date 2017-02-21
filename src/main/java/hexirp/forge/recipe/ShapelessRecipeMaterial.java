@@ -3,7 +3,7 @@ package hexirp.forge.recipe;
 import java.util.LinkedList;
 import java.util.List;
 
-import hexirp.ListUtil;
+import hexirp.collection.ListUtil;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.Item;
 
