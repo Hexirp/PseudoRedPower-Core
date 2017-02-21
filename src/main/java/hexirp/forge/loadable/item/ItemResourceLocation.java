@@ -1,7 +1,9 @@
 package hexirp.forge.loadable.item;
 
-import hexirp.annotation.NonNull;
 import hexirp.forge.loadable.Environment;
+import hexirp.forge.loadable.Named;
+import hexirp.forge.loadable.NamedType;
+import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -9,18 +11,16 @@ import net.minecraftforge.fml.relauncher.Side;
  * アイテムのリソースの箇所を表現する.
  *
  * @author Hexirp
+ * @param <Type> 名前付きアイテム
  */
-public class ItemResourceLocation {
-	/** リソースが表現するアイテム. */
-	private final NamedItem<@NonNull ?> item;
-	
+public class ItemResourceLocation<Type extends Item & Named> extends NamedType<Type> {
 	/**
 	 * Setter.
 	 *
-	 * @param i {@link #item}
+	 * @param item 名前付きアイテム
 	 */
-	public ItemResourceLocation(final NamedItem<@NonNull ?> i) {
-		this.item = i;
+	public ItemResourceLocation(final Type item) {
+		super(item);
 	}
 	
 	/**
@@ -31,8 +31,8 @@ public class ItemResourceLocation {
 	public void set(final Environment env) {
 		if (env.side() == Side.CLIENT)
 		    ModelLoader.setCustomModelResourceLocation(
-		        item.value(),
+		        this.value(),
 		        0,
-		        env.location(item.name(), "inventory"));
+		        env.location(this.name(), "inventory"));
 	}
 }

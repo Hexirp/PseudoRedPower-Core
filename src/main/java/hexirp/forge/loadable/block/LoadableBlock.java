@@ -24,13 +24,13 @@ public class LoadableBlock<Type extends Block & Named> extends NamedType<Type> i
 	public LoadableBlock(final Type block) {
 		super(block);
 	}
-	
+
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
 		GameRegistry.registerBlock(this.value(), this.name());
-		
-		new BlockResourceLocation(this).set(env);
-		
+
+		new BlockResourceLocation<>(this.value()).set(env);
+
 		return new Index<MinecraftItem>().put(
 		    this.name(),
 		    new MinecraftItem(this.value()));
