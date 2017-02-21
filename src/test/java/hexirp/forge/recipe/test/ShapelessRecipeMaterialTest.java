@@ -13,7 +13,6 @@ import net.minecraft.item.Item;
  * @see hexirp.forge.recipe.ShapelessRecipeMaterial
  */
 public class ShapelessRecipeMaterialTest {
-	
 	/**
 	 * コントストラクタは一定の内容を生成する.
 	 */
@@ -29,10 +28,7 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalc() {
-		Object[] ret1 = new ShapelessRecipeMaterial().calc();
-		Object[] ret2 = new Object[] {};
-		
-		assertEquals(ret1, ret2);
+		assertEquals(new ShapelessRecipeMaterial().calc(), new Object[] {});
 	}
 	
 	/**
@@ -41,18 +37,13 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testAdd() {
-		MinecraftItem A = new MinecraftItemMock("acacia_door");
-		Item a = A.item();
-		MinecraftItem E = new MinecraftItemMock("emerald");
-		Item e = E.item();
+		final MinecraftItem A = new MinecraftItemMock("acacia_door");
+		final Item a = A.item();
+		final MinecraftItem E = new MinecraftItemMock("emerald");
+		final Item e = E.item();
 		
-		Object[] ret1 = new ShapelessRecipeMaterial()
-		    .add(A, 4)
-		    .add(E, 1)
-		    .calc();
-		
-		Object[] ret2 = new Object[] { a, a, a, a, e };
-		
-		assertEquals(ret1, ret2);
+		assertEquals(
+		    new ShapelessRecipeMaterial().add(A, 4).add(E, 1).calc(),
+		    new Object[] { a, a, a, a, e });
 	}
 }
