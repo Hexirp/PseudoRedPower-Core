@@ -26,7 +26,7 @@ public class ListUtil<Element> {
 	 *
 	 * @return 配列に変換されたリスト
 	 */
-	public Object[] to() {
+	public Object[] array() {
 		final Object[] ret = list.toArray();
 		if (null == ret) throw null;
 		return ret;

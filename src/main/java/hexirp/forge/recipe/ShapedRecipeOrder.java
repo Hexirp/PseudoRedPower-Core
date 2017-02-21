@@ -36,6 +36,6 @@ public class ShapedRecipeOrder {
 		return new ListUtil<>(new LinkedList<>())
 		    .merge(order.order())
 		    .merge(input.list())
-		    .to();
+		    .array();
 	}
 }

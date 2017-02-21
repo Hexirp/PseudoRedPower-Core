@@ -22,7 +22,7 @@ public class ShapelessRecipeMaterial {
 	 * @return 材料の配列
 	 */
 	public Object[] calc() {
-		return new ListUtil<>(list).to();
+		return new ListUtil<>(list).array();
 	}
 	
 	/**
