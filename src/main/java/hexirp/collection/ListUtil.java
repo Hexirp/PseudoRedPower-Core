@@ -1,4 +1,4 @@
-package hexirp;
+package hexirp.collection;
 
 import java.util.Collection;
 

@@ -2,7 +2,7 @@ package hexirp.forge.recipe;
 
 import java.util.LinkedList;
 
-import hexirp.ListUtil;
+import hexirp.collection.ListUtil;
 
 /**
  * {@link ShapedRecipeAbstractOrder}と{@link ShapedRecipeMaterialMap}を合わせてレシピの並べ方を表現する.
