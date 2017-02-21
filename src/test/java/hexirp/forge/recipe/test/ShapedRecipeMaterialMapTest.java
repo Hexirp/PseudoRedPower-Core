@@ -18,7 +18,7 @@ public class ShapedRecipeMaterialMapTest {
 	 */
 	@Test
 	public void testShapedRecipeMaterialMap() {
-		assertEquals(new ShapedRecipeMaterialMap().toList(), new ShapedRecipeMaterialMap().toList());
+		assertEquals(new ShapedRecipeMaterialMap().list(), new ShapedRecipeMaterialMap().list());
 	}
 	
 	/**
@@ -26,7 +26,7 @@ public class ShapedRecipeMaterialMapTest {
 	 */
 	@Test
 	public void testToList() {
-		assertEquals(new ShapedRecipeMaterialMap().toList(), new LinkedList<>());
+		assertEquals(new ShapedRecipeMaterialMap().list(), new LinkedList<>());
 	}
 	
 	/**
@@ -38,7 +38,7 @@ public class ShapedRecipeMaterialMapTest {
 		assertEquals(
 		    new ShapedRecipeMaterialMap()
 		        .put('A', new MinecraftItemMock("acacia_door"))
-		        .toList(),
+		        .list(),
 		    new LinkedList<Object>() {
 			    {
 				    add('A');

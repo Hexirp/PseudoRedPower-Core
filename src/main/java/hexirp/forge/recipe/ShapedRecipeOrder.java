@@ -35,7 +35,7 @@ public class ShapedRecipeOrder {
 	public Object[] calc() {
 		return new ListUtil<>(new LinkedList<>())
 		    .merge(order.order())
-		    .merge(input.toList())
+		    .merge(input.list())
 		    .to();
 	}
 }

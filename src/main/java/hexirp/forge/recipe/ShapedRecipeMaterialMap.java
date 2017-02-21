@@ -21,7 +21,7 @@ public class ShapedRecipeMaterialMap {
 	 *
 	 * @return 対応関係がリストで表現されたもの
 	 */
-	public final List<Object> toList() {
+	public final List<Object> list() {
 		final List<Object> ret = new LinkedList<Object>();
 		
 		material.forEach((final Character key, final MinecraftItem value) -> {
