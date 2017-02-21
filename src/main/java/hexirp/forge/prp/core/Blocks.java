@@ -2,7 +2,6 @@ package hexirp.forge.prp.core;
 
 import hexirp.forge.LoadableLibrary;
 import hexirp.forge.loadable.block.LoadableBlock;
-import hexirp.forge.loadable.block.NamedBlock;
 import hexirp.forge.prp.core.blocks.SilverOre;
 
 /**
@@ -13,6 +12,6 @@ import hexirp.forge.prp.core.blocks.SilverOre;
 public class Blocks extends LoadableLibrary {
 	/** コントストラクタ. */
 	public Blocks() {
-		add(new LoadableBlock(new NamedBlock<>(new SilverOre())));
+		add(new LoadableBlock<>(new SilverOre()));
 	}
 }
