@@ -1,7 +1,6 @@
 package hexirp.forge.prp.core;
 
 import hexirp.forge.RegisterableLibrary;
-import hexirp.forge.prp.core.recipes.ChainMail;
 
 /**
  * PRP-Coreにより追加されるレシピ群を定義する.

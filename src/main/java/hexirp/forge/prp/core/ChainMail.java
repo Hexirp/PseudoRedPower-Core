@@ -1,4 +1,4 @@
-package hexirp.forge.prp.core.recipes;
+package hexirp.forge.prp.core;
 
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
