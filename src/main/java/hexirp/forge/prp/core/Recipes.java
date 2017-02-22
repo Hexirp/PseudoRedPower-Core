@@ -4,7 +4,6 @@ import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
 import hexirp.forge.prp.core.recipes.ChainMail;
-import hexirp.forge.prp.core.recipes.SampleRecipe;
 
 /**
  * PRP-Coreにより追加されるレシピ群を定義する.
@@ -18,7 +17,6 @@ public class Recipes extends RegisterableLibrary {
 	 * @param items アイテムの索引
 	 */
 	public Recipes(final Index<MinecraftItem> items) {
-		add(new SampleRecipe(items));
 		add(new ChainMail());
 		add(new Smeltings(items));
 	}
