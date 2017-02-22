@@ -1,4 +1,4 @@
-package hexirp.forge.prp.core.items;
+package hexirp.forge.prp.core.ores;
 
 import hexirp.forge.loadable.Named;
 import net.minecraft.creativetab.CreativeTabs;

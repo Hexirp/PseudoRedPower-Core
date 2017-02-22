@@ -3,8 +3,8 @@ package hexirp.forge.prp.core;
 import hexirp.forge.LoadableLibrary;
 import hexirp.forge.loadable.block.LoadableBlock;
 import hexirp.forge.loadable.item.LoadableItem;
-import hexirp.forge.prp.core.blocks.SilverOre;
-import hexirp.forge.prp.core.items.SilverIngot;
+import hexirp.forge.prp.core.ores.SilverIngot;
+import hexirp.forge.prp.core.ores.SilverOre;
 
 /**
  * PRP-Coreで追加されるブロック群を定義する.

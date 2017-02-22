@@ -1,4 +1,4 @@
-package hexirp.forge.prp.core.blocks;
+package hexirp.forge.prp.core.ores;
 
 import hexirp.forge.loadable.Named;
 import net.minecraft.block.Block;
