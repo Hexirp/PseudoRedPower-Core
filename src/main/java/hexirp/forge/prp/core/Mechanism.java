@@ -19,6 +19,6 @@ public class Mechanism {
 		final Index<MinecraftItem> ores = new Ores().load(env);
 
 		new Recipes().register();
-		new Smeltings(ores).register();
+		new OresRecipes(ores).register();
 	}
 }

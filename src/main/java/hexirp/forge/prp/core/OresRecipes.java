@@ -10,13 +10,13 @@ import hexirp.forge.recipe.builder.RecipeBuilder;
  *
  * @author Hexirp
  */
-public class Smeltings extends RegisterableLibrary {
+public class OresRecipes extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
 	 * @param items アイテムのリスト
 	 */
-	public Smeltings(final Index<MinecraftItem> items) {
+	public OresRecipes(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
 		        .inga(items.lookup("silver_ingot"), items.lookup("silver_ore"))
