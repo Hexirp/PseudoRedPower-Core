@@ -2,7 +2,7 @@ package hexirp.forge.prp.core;
 
 import hexirp.forge.LoadableLibrary;
 import hexirp.forge.loadable.item.LoadableItem;
-import hexirp.forge.prp.core.items.SilverIngot;
+import hexirp.forge.prp.core.ores.SilverIngot;
 
 /**
  * PRP-Coreで追加されるアイテム群を定義する.
