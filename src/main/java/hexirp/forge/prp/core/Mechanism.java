@@ -18,6 +18,7 @@ public class Mechanism {
 	public void add(final Environment env) {
 		final Index<MinecraftItem> ores = new Ores().load(env);
 
-		new Recipes(ores).register();
+		new Recipes().register();
+		new Smeltings(ores).register();
 	}
 }
