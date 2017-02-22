@@ -1,7 +1,6 @@
 package hexirp.forge.prp.core;
 
 import hexirp.forge.ModData;
-import hexirp.forge.prp.core.metadata.Subdata;
 import net.minecraftforge.fml.common.ModMetadata;
 
 /**
