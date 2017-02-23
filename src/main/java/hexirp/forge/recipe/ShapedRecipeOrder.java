@@ -32,7 +32,7 @@ public class ShapedRecipeOrder {
 	 *
 	 * @return 配列での表現
 	 */
-	public Object[] calc() {
+	public Object[] array() {
 		return new ListUtil<>(new LinkedList<>())
 		    .merge(order.order())
 		    .merge(input.list())

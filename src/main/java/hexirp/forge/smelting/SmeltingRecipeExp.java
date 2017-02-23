@@ -30,7 +30,7 @@ public class SmeltingRecipeExp {
 	 *
 	 * @return 少数に変換された経験値
 	 */
-	public float calc() {
+	public float value() {
 		return (float) exp / (float) times;
 	}
 }

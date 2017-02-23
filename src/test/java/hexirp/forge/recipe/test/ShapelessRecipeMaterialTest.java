@@ -19,7 +19,7 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testShapelessRecipeMaterial() {
-		assertEquals(new ShapelessRecipeMaterial().calc(), new ShapelessRecipeMaterial().calc());
+		assertEquals(new ShapelessRecipeMaterial().array(), new ShapelessRecipeMaterial().array());
 	}
 	
 	/**
@@ -28,7 +28,7 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalc() {
-		assertEquals(new ShapelessRecipeMaterial().calc(), new Object[] {});
+		assertEquals(new ShapelessRecipeMaterial().array(), new Object[] {});
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class ShapelessRecipeMaterialTest {
 		final Item e = E.item();
 		
 		assertEquals(
-		    new ShapelessRecipeMaterial().add(A, 4).add(E, 1).calc(),
+		    new ShapelessRecipeMaterial().add(A, 4).add(E, 1).array(),
 		    new Object[] { a, a, a, a, e });
 	}
 }

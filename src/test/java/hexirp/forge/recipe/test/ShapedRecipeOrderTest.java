@@ -23,7 +23,7 @@ public class ShapedRecipeOrderTest {
 		    new ShapedRecipeOrder(
 		        new ShapedRecipeAbstractOrder().add("ABA"),
 		        new ShapedRecipeMaterialMap().put('A', new MinecraftItemMock("sugar")))
-		            .calc(),
+		            .array(),
 		    new Object[] { "ABA", 'A', new ItemMock("sugar"), });
 	}
 }
