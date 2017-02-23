@@ -7,6 +7,8 @@ import org.junit.Test;
 import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 import hexirp.forge.recipe.ShapedRecipeMaterialMap;
 import hexirp.forge.recipe.ShapedRecipeOrder;
+import hexirp.forge.test.ItemMock;
+import hexirp.forge.test.MinecraftItemMock;
 
 /**
  * @author Hexirp

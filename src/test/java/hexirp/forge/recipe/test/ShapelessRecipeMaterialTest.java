@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.ShapelessRecipeMaterial;
+import hexirp.forge.test.MinecraftItemMock;
 import net.minecraft.item.Item;
 
 /**

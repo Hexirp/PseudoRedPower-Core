@@ -5,7 +5,7 @@ import org.junit.Test;
 import hexirp.builder.test.StackedPhaseLaw;
 import hexirp.forge.recipe.builder.RecipeBuilder;
 import hexirp.forge.recipe.builder.ShapedMaterialPhase;
-import hexirp.forge.recipe.test.MinecraftItemMock;
+import hexirp.forge.test.MinecraftItemMock;
 
 /**
  * {@link ShapedMaterialPhase}のテストを表現する.

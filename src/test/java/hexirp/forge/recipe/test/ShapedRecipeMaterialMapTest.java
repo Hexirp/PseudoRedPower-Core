@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import org.junit.Test;
 
 import hexirp.forge.recipe.ShapedRecipeMaterialMap;
+import hexirp.forge.test.ItemMock;
+import hexirp.forge.test.MinecraftItemMock;
 
 /**
  * @author Hexirp

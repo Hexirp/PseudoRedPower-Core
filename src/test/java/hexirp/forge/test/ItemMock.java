@@ -1,4 +1,4 @@
-package hexirp.forge.recipe.test;
+package hexirp.forge.test;
 
 import hexirp.annotation.Nullable;
 import hexirp.forge.loadable.Named;
