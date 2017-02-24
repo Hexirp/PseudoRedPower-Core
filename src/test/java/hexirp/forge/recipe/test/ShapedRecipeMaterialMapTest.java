@@ -1,6 +1,6 @@
 package hexirp.forge.recipe.test;
 
-import static hexirp.test.TestUtil.*;
+import static hexirp.test.MethodChainTest.*;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
