@@ -3,6 +3,7 @@ package hexirp.forge.recipe.test;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -19,33 +20,47 @@ public class ShapedRecipeMaterialMapTest {
 	 * コントストラクタは一定の内容を生成する.
 	 */
 	@Test
-	public void testShapedRecipeMaterialMap() {
-		assertEquals(new ShapedRecipeMaterialMap().list(), new ShapedRecipeMaterialMap().list());
+	public void test_ShapedRecipeMaterialMap() {
+		assertEquals(
+		    new ShapedRecipeMaterialMap().list(),
+		    new ShapedRecipeMaterialMap().list());
 	}
 	
 	/**
 	 * コントストラクタで生成される内容は空のマップである.
 	 */
 	@Test
-	public void testToList() {
-		assertEquals(new ShapedRecipeMaterialMap().list(), new LinkedList<>());
+	public void test_toList() {
+		assertEquals(
+		    new ShapedRecipeMaterialMap().list(),
+		    new LinkedList<>());
+	}
+	
+	/**
+	 * putは副作用を持つ.
+	 */
+	@Test
+	public void test_put_effect() {
+		final ShapedRecipeMaterialMap testee1 = new ShapedRecipeMaterialMap();
+		final ShapedRecipeMaterialMap testee2 = testee1.put('A', new MinecraftItemMock("acacia_door"));
+		
+		assertEquals(testee1, testee2);
 	}
 	
 	/**
 	 * putは内部のマップに値を追加する.
 	 */
-	@SuppressWarnings("serial")
 	@Test
-	public void testPut() {
-		assertEquals(
-		    new ShapedRecipeMaterialMap()
-		        .put('A', new MinecraftItemMock("acacia_door"))
-		        .list(),
-		    new LinkedList<Object>() {
-			    {
-				    add('A');
-				    add(new ItemMock("acacia_door"));
-			    }
-		    });
+	public void test_put() {
+		final List<Object> testee1 = new ShapedRecipeMaterialMap()
+		    .put('A', new MinecraftItemMock("acacia_door"))
+		    .list();
+		
+		final LinkedList<Object> testee2 = new LinkedList<>();
+		
+		testee2.add('A');
+		testee2.add(new ItemMock("acacia_door"));
+		
+		assertEquals(testee1, testee2);
 	}
 }
