@@ -3,6 +3,7 @@ package hexirp.forge.recipe.test;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.function.Supplier;
 
 import org.junit.Test;
@@ -36,15 +37,12 @@ public final class ShapedRecipeAbstractOrderTest {
 	/**
 	 * addは内部のリストに値を追加する.
 	 */
-	@SuppressWarnings("serial")
 	@Test
 	public static final void testAdd() {
-		assertEquals(
-		    testee.get().add("AAA").order(),
-		    new LinkedList<String>() {
-			    {
-				    add("AAA");
-			    }
-		    });
+		final List<String> testee1 = testee.get().add("AAA").order();
+		final LinkedList<String> testee2 = new LinkedList<String>();
+		testee2.add("AAA");
+		
+		assertEquals(testee1, testee2);
 	}
 }
