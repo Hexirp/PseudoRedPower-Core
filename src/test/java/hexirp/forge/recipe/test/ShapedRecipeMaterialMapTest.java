@@ -1,8 +1,11 @@
 package hexirp.forge.recipe.test;
 
+import static hexirp.test.MethodChainTest.*;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
+import java.util.List;
+import java.util.function.Supplier;
 
 import org.junit.Test;
 
@@ -14,38 +17,37 @@ import hexirp.forge.test.MinecraftItemMock;
  * @author Hexirp
  * @see hexirp.forge.recipe.ShapedRecipeMaterialMap
  */
-public class ShapedRecipeMaterialMapTest {
-	/**
-	 * コントストラクタは一定の内容を生成する.
-	 */
+public final class ShapedRecipeMaterialMapTest {
+	/** インスタンス生成機. */
+	private static final Supplier<ShapedRecipeMaterialMap> testee = ShapedRecipeMaterialMap::new;
+	
+	/** コントストラクタは一定の内容を生成する. */
 	@Test
-	public void testShapedRecipeMaterialMap() {
-		assertEquals(new ShapedRecipeMaterialMap().list(), new ShapedRecipeMaterialMap().list());
+	public static final void test_ShapedRecipeMaterialMap() {
+		assertEquals(testee.get().list(), testee.get().list());
 	}
 	
-	/**
-	 * コントストラクタで生成される内容は空のマップである.
-	 */
+	/** コントストラクタで生成される内容は空のマップである. */
 	@Test
-	public void testToList() {
-		assertEquals(new ShapedRecipeMaterialMap().list(), new LinkedList<>());
+	public static final void test_toList() {
+		assertEquals(testee.get().list(), new LinkedList<>());
 	}
 	
-	/**
-	 * putは内部のマップに値を追加する.
-	 */
-	@SuppressWarnings("serial")
+	/** putは副作用を持つ. */
 	@Test
-	public void testPut() {
-		assertEquals(
-		    new ShapedRecipeMaterialMap()
-		        .put('A', new MinecraftItemMock("acacia_door"))
-		        .list(),
-		    new LinkedList<Object>() {
-			    {
-				    add('A');
-				    add(new ItemMock("acacia_door"));
-			    }
-		    });
+	public static final void test_put_effect() {
+		assertSideEffect(testee.get(), t -> t.put('A', new MinecraftItemMock("acacia_door")));
+	}
+	
+	/** putは内部のマップに値を追加する. */
+	@Test
+	public static final void test_put() {
+		final List<Object> testee1 = testee.get().put('A', new MinecraftItemMock("acacia_door")).list();
+		
+		final LinkedList<Object> testee2 = new LinkedList<>();
+		testee2.add('A');
+		testee2.add(new ItemMock("acacia_door"));
+		
+		assertEquals(testee1, testee2);
 	}
 }

@@ -2,6 +2,8 @@ package hexirp.forge.recipe.test;
 
 import static org.junit.Assert.*;
 
+import java.util.function.Supplier;
+
 import org.junit.Test;
 
 import hexirp.forge.MinecraftItem;
@@ -14,28 +16,22 @@ import net.minecraft.item.Item;
  * @see hexirp.forge.recipe.ShapelessRecipeMaterial
  */
 public class ShapelessRecipeMaterialTest {
-	/**
-	 * コントストラクタは一定の内容を生成する.
-	 */
-	@SuppressWarnings("deprecation")
+	/** インスタンス生成機. */
+	private static final Supplier<ShapelessRecipeMaterial> testee = ShapelessRecipeMaterial::new;
+	
+	/** コントストラクタは一定の内容を生成する. */
 	@Test
 	public void testShapelessRecipeMaterial() {
-		assertEquals(new ShapelessRecipeMaterial().array(), new ShapelessRecipeMaterial().array());
+		assertArrayEquals(testee.get().array(), testee.get().array());
 	}
 	
-	/**
-	 * コントストラクタで生成される内容は空のリストである.
-	 */
-	@SuppressWarnings("deprecation")
+	/** コントストラクタで生成される内容は空のリストである. */
 	@Test
 	public void testCalc() {
-		assertEquals(new ShapelessRecipeMaterial().array(), new Object[] {});
+		assertArrayEquals(testee.get().array(), new Object[] {});
 	}
 	
-	/**
-	 * addは内部のリストに値を追加する.
-	 */
-	@SuppressWarnings("deprecation")
+	/** addは内部のリストに値を追加する. */
 	@Test
 	public void testAdd() {
 		final MinecraftItem A = new MinecraftItemMock("acacia_door");
@@ -43,8 +39,8 @@ public class ShapelessRecipeMaterialTest {
 		final MinecraftItem E = new MinecraftItemMock("emerald");
 		final Item e = E.item();
 		
-		assertEquals(
-		    new ShapelessRecipeMaterial().add(A, 4).add(E, 1).array(),
+		assertArrayEquals(
+		    testee.get().add(A, 4).add(E, 1).array(),
 		    new Object[] { a, a, a, a, e });
 	}
 }

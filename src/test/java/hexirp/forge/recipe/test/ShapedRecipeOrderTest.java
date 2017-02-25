@@ -14,18 +14,14 @@ import hexirp.forge.test.MinecraftItemMock;
  * @author Hexirp
  * @see hexirp.forge.recipe.ShapedRecipeMaterialMap
  */
-public class ShapedRecipeOrderTest {
-	/**
-	 * 結果の定義.
-	 */
-	@SuppressWarnings("deprecation")
+public final class ShapedRecipeOrderTest {
+	/** 結果の定義. */
 	@Test
-	public void testCalc() {
-		assertEquals(
+	public static final void testCalc() {
+		assertArrayEquals(
 		    new ShapedRecipeOrder(
-		        new ShapedRecipeAbstractOrder().add("ABA"),
-		        new ShapedRecipeMaterialMap().put('A', new MinecraftItemMock("sugar")))
-		            .array(),
-		    new Object[] { "ABA", 'A', new ItemMock("sugar"), });
+		        new ShapedRecipeAbstractOrder().add("AAA"),
+		        new ShapedRecipeMaterialMap().put('A', new MinecraftItemMock("sugar"))).array(),
+		    new Object[] { "AAA", 'A', new ItemMock("sugar"), });
 	}
 }
