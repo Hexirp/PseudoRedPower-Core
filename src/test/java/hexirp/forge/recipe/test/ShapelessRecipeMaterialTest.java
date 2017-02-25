@@ -22,25 +22,24 @@ public class ShapelessRecipeMaterialTest {
 	/**
 	 * コントストラクタは一定の内容を生成する.
 	 */
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void testShapelessRecipeMaterial() {
-		assertEquals(testee.get().array(), testee.get().array());
+		assertArrayEquals(testee.get().array(), testee.get().array());
 	}
 	
 	/**
 	 * コントストラクタで生成される内容は空のリストである.
 	 */
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void testCalc() {
-		assertEquals(testee.get().array(), new Object[] {});
+		assertArrayEquals(testee.get().array(), new Object[] {});
 	}
 	
 	/**
 	 * addは内部のリストに値を追加する.
 	 */
-	@SuppressWarnings("deprecation")
 	@Test
 	public void testAdd() {
 		final MinecraftItem A = new MinecraftItemMock("acacia_door");
@@ -48,7 +47,7 @@ public class ShapelessRecipeMaterialTest {
 		final MinecraftItem E = new MinecraftItemMock("emerald");
 		final Item e = E.item();
 		
-		assertEquals(
+		assertArrayEquals(
 		    testee.get().add(A, 4).add(E, 1).array(),
 		    new Object[] { a, a, a, a, e });
 	}
