@@ -20,9 +20,8 @@ public final class ShapedRecipeOrderTest {
 	public static final void testCalc() {
 		assertArrayEquals(
 		    new ShapedRecipeOrder(
-		        new ShapedRecipeAbstractOrder().add("ABA"),
-		        new ShapedRecipeMaterialMap().put('A', new MinecraftItemMock("sugar")))
-		            .array(),
-		    new Object[] { "ABA", 'A', new ItemMock("sugar"), });
+		        new ShapedRecipeAbstractOrder().add("AAA"),
+		        new ShapedRecipeMaterialMap().put('A', new MinecraftItemMock("sugar"))).array(),
+		    new Object[] { "AAA", 'A', new ItemMock("sugar"), });
 	}
 }
