@@ -2,6 +2,8 @@ package hexirp.forge.recipe.test;
 
 import static org.junit.Assert.*;
 
+import java.util.function.Supplier;
+
 import org.junit.Test;
 
 import hexirp.forge.MinecraftItem;
@@ -14,13 +16,16 @@ import net.minecraft.item.Item;
  * @see hexirp.forge.recipe.ShapelessRecipeMaterial
  */
 public class ShapelessRecipeMaterialTest {
+	/** インスタンス生成機. */
+	private static final Supplier<ShapelessRecipeMaterial> testee = ShapelessRecipeMaterial::new;
+	
 	/**
 	 * コントストラクタは一定の内容を生成する.
 	 */
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testShapelessRecipeMaterial() {
-		assertEquals(new ShapelessRecipeMaterial().array(), new ShapelessRecipeMaterial().array());
+		assertEquals(testee.get().array(), testee.get().array());
 	}
 	
 	/**
@@ -29,7 +34,7 @@ public class ShapelessRecipeMaterialTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalc() {
-		assertEquals(new ShapelessRecipeMaterial().array(), new Object[] {});
+		assertEquals(testee.get().array(), new Object[] {});
 	}
 	
 	/**
@@ -44,7 +49,7 @@ public class ShapelessRecipeMaterialTest {
 		final Item e = E.item();
 		
 		assertEquals(
-		    new ShapelessRecipeMaterial().add(A, 4).add(E, 1).array(),
+		    testee.get().add(A, 4).add(E, 1).array(),
 		    new Object[] { a, a, a, a, e });
 	}
 }
