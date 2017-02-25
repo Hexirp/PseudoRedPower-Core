@@ -30,6 +30,10 @@ minecraft {
 }
 
 // #### ここから独自設定 ####
+// checkstyleを使用する
+apply plugin: 'checkstyle'
+
+// MavenCentralをパッケージリポジトリに使用する
 repositories {
 	mavenCentral()
 }
