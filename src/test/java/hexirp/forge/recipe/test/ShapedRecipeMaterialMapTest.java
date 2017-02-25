@@ -36,7 +36,7 @@ public final class ShapedRecipeMaterialMapTest {
 	/** putは副作用を持つ. */
 	@Test
 	public static final void test_put_effect() {
-		method_chain_with_side_effects(testee.get(), t -> t.put('A', new MinecraftItemMock("acacia_door")));
+		assertSideEffect(testee.get(), t -> t.put('A', new MinecraftItemMock("acacia_door")));
 	}
 	
 	/** putは内部のマップに値を追加する. */

@@ -17,9 +17,9 @@ public class MethodChainTest {
 	 * @param method メソッドチェーン
 	 * @param <A> 任意のクラス
 	 */
-	public static <A> void method_chain_with_side_effects(final A data, final Function<A, A> method) {
-		final A data2 = method.apply(data);
+	public static <A> void assertSideEffect(final A data, final Function<A, A> method) {
+		final A new_data = method.apply(data);
 		
-		assertEquals(data, data2);
+		assertEquals(data, new_data);
 	}
 }

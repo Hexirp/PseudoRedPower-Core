@@ -40,7 +40,7 @@ public class ListUtilTest {
 	/** 副作用がある. */
 	@Test
 	public void test_merge() {
-		method_chain_with_side_effects(
+		assertSideEffect(
 		    new ListUtil<String>(new LinkedList<String>()),
 		    t -> t.merge(new LinkedList<String>()));
 	}
