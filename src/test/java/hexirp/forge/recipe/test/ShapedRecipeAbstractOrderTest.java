@@ -3,6 +3,7 @@ package hexirp.forge.recipe.test;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
+import java.util.function.Supplier;
 
 import org.junit.Test;
 
@@ -12,21 +13,24 @@ import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
  * @author Hexirp
  * @see hexirp.forge.recipe.ShapedRecipeAbstractOrder
  */
-public class ShapedRecipeAbstractOrderTest {
+public final class ShapedRecipeAbstractOrderTest {
+	/** インスタンス生成機. */
+	private static final Supplier<ShapedRecipeAbstractOrder> testee = ShapedRecipeAbstractOrder::new;
+	
 	/**
 	 * コントストラクタは一定の内容を生成する.
 	 */
 	@Test
-	public void testShapedRecipeAbstractOrder() {
-		assertEquals(new ShapedRecipeAbstractOrder().order(), new ShapedRecipeAbstractOrder().order());
+	public static final void testShapedRecipeAbstractOrder() {
+		assertEquals(testee.get().order(), testee.get().order());
 	}
 	
 	/**
 	 * コントストラクタで生成される内容は空のリストである.
 	 */
 	@Test
-	public void testOrder() {
-		assertEquals(new ShapedRecipeAbstractOrder().order(), new LinkedList<>());
+	public static final void testOrder() {
+		assertEquals(testee.get().order(), new LinkedList<>());
 	}
 	
 	/**
@@ -34,10 +38,10 @@ public class ShapedRecipeAbstractOrderTest {
 	 */
 	@SuppressWarnings("serial")
 	@Test
-	public void testAdd() {
-		assertEquals(new ShapedRecipeAbstractOrder()
-		    .add("AAA")
-		    .order(), new LinkedList<String>() {
+	public static final void testAdd() {
+		assertEquals(
+		    testee.get().add("AAA").order(),
+		    new LinkedList<String>() {
 			    {
 				    add("AAA");
 			    }
