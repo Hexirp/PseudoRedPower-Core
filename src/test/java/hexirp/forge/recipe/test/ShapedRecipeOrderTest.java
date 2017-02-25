@@ -15,9 +15,7 @@ import hexirp.forge.test.MinecraftItemMock;
  * @see hexirp.forge.recipe.ShapedRecipeMaterialMap
  */
 public final class ShapedRecipeOrderTest {
-	/**
-	 * 結果の定義.
-	 */
+	/** 結果の定義. */
 	@Test
 	public static final void testCalc() {
 		assertArrayEquals(

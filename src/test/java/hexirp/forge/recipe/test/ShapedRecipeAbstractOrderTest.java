@@ -18,25 +18,19 @@ public final class ShapedRecipeAbstractOrderTest {
 	/** インスタンス生成機. */
 	private static final Supplier<ShapedRecipeAbstractOrder> testee = ShapedRecipeAbstractOrder::new;
 	
-	/**
-	 * コントストラクタは一定の内容を生成する.
-	 */
+	/** コントストラクタは一定の内容を生成する. */
 	@Test
 	public static final void testShapedRecipeAbstractOrder() {
 		assertEquals(testee.get().order(), testee.get().order());
 	}
 	
-	/**
-	 * コントストラクタで生成される内容は空のリストである.
-	 */
+	/** コントストラクタで生成される内容は空のリストである. */
 	@Test
 	public static final void testOrder() {
 		assertEquals(testee.get().order(), new LinkedList<>());
 	}
 	
-	/**
-	 * addは内部のリストに値を追加する.
-	 */
+	/** addは内部のリストに値を追加する. */
 	@Test
 	public static final void testAdd() {
 		final List<String> testee1 = testee.get().add("AAA").order();

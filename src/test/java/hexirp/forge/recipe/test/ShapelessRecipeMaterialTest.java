@@ -19,27 +19,19 @@ public class ShapelessRecipeMaterialTest {
 	/** インスタンス生成機. */
 	private static final Supplier<ShapelessRecipeMaterial> testee = ShapelessRecipeMaterial::new;
 	
-	/**
-	 * コントストラクタは一定の内容を生成する.
-	 */
-	
+	/** コントストラクタは一定の内容を生成する. */
 	@Test
 	public void testShapelessRecipeMaterial() {
 		assertArrayEquals(testee.get().array(), testee.get().array());
 	}
 	
-	/**
-	 * コントストラクタで生成される内容は空のリストである.
-	 */
-	
+	/** コントストラクタで生成される内容は空のリストである. */
 	@Test
 	public void testCalc() {
 		assertArrayEquals(testee.get().array(), new Object[] {});
 	}
 	
-	/**
-	 * addは内部のリストに値を追加する.
-	 */
+	/** addは内部のリストに値を追加する. */
 	@Test
 	public void testAdd() {
 		final MinecraftItem A = new MinecraftItemMock("acacia_door");

@@ -21,33 +21,25 @@ public final class ShapedRecipeMaterialMapTest {
 	/** インスタンス生成機. */
 	private static final Supplier<ShapedRecipeMaterialMap> testee = ShapedRecipeMaterialMap::new;
 	
-	/**
-	 * コントストラクタは一定の内容を生成する.
-	 */
+	/** コントストラクタは一定の内容を生成する. */
 	@Test
 	public static final void test_ShapedRecipeMaterialMap() {
 		assertEquals(testee.get().list(), testee.get().list());
 	}
 	
-	/**
-	 * コントストラクタで生成される内容は空のマップである.
-	 */
+	/** コントストラクタで生成される内容は空のマップである. */
 	@Test
 	public static final void test_toList() {
 		assertEquals(testee.get().list(), new LinkedList<>());
 	}
 	
-	/**
-	 * putは副作用を持つ.
-	 */
+	/** putは副作用を持つ. */
 	@Test
 	public static final void test_put_effect() {
 		method_chain_with_side_effects(testee.get(), t -> t.put('A', new MinecraftItemMock("acacia_door")));
 	}
 	
-	/**
-	 * putは内部のマップに値を追加する.
-	 */
+	/** putは内部のマップに値を追加する. */
 	@Test
 	public static final void test_put() {
 		final List<Object> testee1 = testee.get().put('A', new MinecraftItemMock("acacia_door")).list();
