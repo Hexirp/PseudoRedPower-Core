@@ -14,21 +14,18 @@ import hexirp.forge.smelting.SmeltingRecipeInga;
  */
 public class RecipeBuilder {
 	/**
-	 * 結果を定義する段階に移行する.
+	 * レシピのBuilderを返す.
 	 *
-	 * @param output 作成物の種類
-	 * @param size 作成物の数
-	 * @return 結果を定義する段階
-	 * @see ProductPhase#ProductPhase(MinecraftItem, int)
+	 * @return レシピのBuilder
 	 */
-	public ProductPhase product(final MinecraftItem output, final int size) {
-		return new ProductPhase(output, size);
+	public Function<MinecraftItem, Function<Integer, ProductPhase>> product() {
+		return t0 -> t1 -> new ProductPhase(t0, t1);
 	}
 	
 	/**
-	 * {@link SmeltingRecipe}のBuilderを返す.
+	 * 精錬レシピのBuilderを返す.
 	 *
-	 * @return SmeltingRecipeBuilder
+	 * @return 精錬レシピのBuilder
 	 */
 	public Function<MinecraftItem, Function<MinecraftItem, Function<Integer, Function<Integer, SmeltingRecipe>>>> smelting() {
 		return t0 -> t1 -> t2 -> t3 -> new SmeltingRecipe(new SmeltingRecipeInga(t0, t1), new SmeltingRecipeExp(t2, t3));
