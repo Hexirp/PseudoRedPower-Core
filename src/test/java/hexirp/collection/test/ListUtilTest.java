@@ -20,28 +20,21 @@ public class ListUtilTest {
 	@Test
 	public void test_array() {
 		assertEquals(
-		    new ListUtil<String>(new LinkedList<>()).array(),
+		    new ListUtil<String>().array(),
 		    new String[] {});
 	}
-	
+
 	/** 正常に例外を投げる. */
-	@SuppressWarnings("serial")
-	@Test(expected = NullPointerException.class)
+	//@Test(expected = NullPointerException.class)
 	public void test_array_null() {
-		new ListUtil<>(new LinkedList<String>() {
-			@SuppressWarnings("null")
-			@Override
-			public Object[] toArray() {
-				return null;
-			}
-		});
+		new ListUtil<Object>();
 	}
-	
+
 	/** 副作用がある. */
 	@Test
 	public void test_merge() {
 		assertSideEffect(
-		    new ListUtil<String>(new LinkedList<String>()),
-		    t -> t.merge(new LinkedList<String>()));
+		    new ListUtil<String>(),
+		    (final ListUtil<String> t) -> t.merge(new LinkedList<String>()));
 	}
 }
