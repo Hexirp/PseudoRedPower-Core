@@ -24,11 +24,11 @@ public class RecipeBuilder {
 	public ProductPhase product(final MinecraftItem output, final int size) {
 		return new ProductPhase(output, size);
 	}
-
+	
 	/**
-	 * TODO: ラムダを使用するBuilderのテスト.
+	 * {@link SmeltingRecipe}のBuilderを返す.
 	 *
-	 * @return ラムダを使用したBuilder
+	 * @return SmeltingRecipeBuilder
 	 */
 	public Function<MinecraftItem, Function<MinecraftItem, Function<Integer, Function<Integer, SmeltingRecipe>>>> smelting() {
 		return t0 -> t1 -> t2 -> t3 -> new SmeltingRecipe(new SmeltingRecipeInga(t0, t1), new SmeltingRecipeExp(t2, t3));
