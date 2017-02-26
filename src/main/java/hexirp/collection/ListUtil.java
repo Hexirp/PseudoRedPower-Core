@@ -1,6 +1,8 @@
 package hexirp.collection;
 
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 配列への変換を表現する.
@@ -10,16 +12,7 @@ import java.util.Collection;
  */
 public class ListUtil<Element> {
 	/** 内部に保持するリスト. */
-	private final java.util.List<Element> list;
-	
-	/**
-	 * Setter.
-	 *
-	 * @param list リスト
-	 */
-	public ListUtil(final java.util.List<Element> list) {
-		this.list = list;
-	}
+	private final List<Element> list = new LinkedList<>();
 	
 	/**
 	 * 配列に変換する.
@@ -34,7 +27,6 @@ public class ListUtil<Element> {
 	
 	/**
 	 * リストを結合する.
-	 * .
 	 *
 	 * @param col コレクション
 	 * @return 自分自身
