@@ -1,7 +1,5 @@
 package hexirp.forge.recipe;
 
-import java.util.LinkedList;
-
 import hexirp.collection.ListUtil;
 
 /**
@@ -33,7 +31,7 @@ public class ShapedRecipeOrder {
 	 * @return 配列での表現
 	 */
 	public Object[] array() {
-		return new ListUtil<>(new LinkedList<>())
+		return new ListUtil<>()
 		    .merge(order.order())
 		    .merge(input.list())
 		    .array();
