@@ -1,5 +1,7 @@
 package hexirp.forge.recipe.builder;
 
+import java.util.function.Function;
+
 import hexirp.forge.MinecraftItem;
 
 /**
@@ -19,7 +21,7 @@ public class RecipeBuilder {
 	public ProductPhase product(final MinecraftItem output, final int size) {
 		return new ProductPhase(output, size);
 	}
-	
+
 	/**
 	 * 製錬レシピの因果関係を定義する段階に移行する.
 	 *
@@ -30,5 +32,14 @@ public class RecipeBuilder {
 	 */
 	public SmeltingIngaPhase inga(final MinecraftItem product, final MinecraftItem material) {
 		return new SmeltingIngaPhase(product, material);
+	}
+
+	/**
+	 * TODO: ラムダを使用するBuilderのテスト.
+	 *
+	 * @return ラムダを使用したBuilder
+	 */
+	public Function<MinecraftItem, Function<Integer, ProductPhase>> lambda() {
+		return (final MinecraftItem t0) -> (final Integer t1) -> new ProductPhase(t0, t1);
 	}
 }
