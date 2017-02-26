@@ -1,7 +1,6 @@
 package hexirp.forge.test;
 
 import hexirp.annotation.Nullable;
-import hexirp.forge.loadable.Named;
 import net.minecraft.item.Item;
 
 /**
@@ -9,7 +8,7 @@ import net.minecraft.item.Item;
  *
  * @author Hexirp
  */
-public class ItemMock extends Item implements Named {
+public class ItemMock extends Item {
 	/** 名前を表す. */
 	private final String name;
 	
@@ -20,11 +19,6 @@ public class ItemMock extends Item implements Named {
 	 */
 	public ItemMock(final String s) {
 		this.name = s;
-	}
-	
-	@Override
-	public String name() {
-		return name;
 	}
 	
 	@Override
