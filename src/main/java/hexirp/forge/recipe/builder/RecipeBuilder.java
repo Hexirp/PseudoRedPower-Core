@@ -26,23 +26,11 @@ public class RecipeBuilder {
 	}
 	
 	/**
-	 * 製錬レシピの因果関係を定義する段階に移行する.
-	 *
-	 * @param product 結果
-	 * @param material 材料
-	 * @return 次の段階
-	 * @see SmeltingIngaPhase#SmeltingIngaPhase(MinecraftItem, MinecraftItem)
-	 */
-	public SmeltingIngaPhase inga(final MinecraftItem product, final MinecraftItem material) {
-		return new SmeltingIngaPhase(product, material);
-	}
-	
-	/**
 	 * TODO: ラムダを使用するBuilderのテスト.
 	 *
 	 * @return ラムダを使用したBuilder
 	 */
-	public Function<MinecraftItem, Function<MinecraftItem, Function<Integer, Function<Integer, SmeltingRecipe>>>> lambda() {
+	public Function<MinecraftItem, Function<MinecraftItem, Function<Integer, Function<Integer, SmeltingRecipe>>>> smelting() {
 		return t0 -> t1 -> t2 -> t3 -> new SmeltingRecipe(new SmeltingRecipeInga(t0, t1), new SmeltingRecipeExp(t2, t3));
 	}
 }
