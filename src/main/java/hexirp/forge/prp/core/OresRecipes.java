@@ -19,8 +19,10 @@ public class OresRecipes extends RegisterableLibrary {
 	public OresRecipes(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
-		        .inga(items.lookup("silver_ingot"), items.lookup("silver_ore"))
-		        .exp(1, 1)
-		        .to());
+		        .smelting()
+		        .apply(items.lookup("silver_ingot"))
+		        .apply(items.lookup("silver_ore"))
+		        .apply(1)
+		        .apply(1));
 	}
 }

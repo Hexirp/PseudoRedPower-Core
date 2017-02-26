@@ -24,7 +24,7 @@ public class RecipeBuilder {
 	public ProductPhase product(final MinecraftItem output, final int size) {
 		return new ProductPhase(output, size);
 	}
-	
+
 	/**
 	 * TODO: ラムダを使用するBuilderのテスト.
 	 *
