@@ -17,7 +17,7 @@ import hexirp.forge.test.MinecraftItemMock;
 public final class ShapedRecipeOrderTest {
 	/** 結果の定義. */
 	@Test
-	public static final void testCalc() {
+	public final void testCalc() {
 		assertArrayEquals(
 		    new ShapedRecipeOrder(
 		        new ShapedRecipeAbstractOrder().add("AAA"),
