@@ -15,7 +15,9 @@ public class ChainMail extends RegisterableLibrary {
 	public ChainMail() {
 		add(
 		    new RecipeBuilder()
-		        .product(new MinecraftItem(Items.chainmail_helmet), 1)
+		        .product()
+		        .apply(new MinecraftItem(Items.chainmail_helmet))
+		        .apply(1)
 		        .order()
 		        .add(" A ")
 		        .add("A A")
@@ -24,7 +26,9 @@ public class ChainMail extends RegisterableLibrary {
 		        .to());
 		add(
 		    new RecipeBuilder()
-		        .product(new MinecraftItem(Items.chainmail_chestplate), 1)
+		        .product()
+		        .apply(new MinecraftItem(Items.chainmail_chestplate))
+		        .apply(1)
 		        .order()
 		        .add("A A")
 		        .add(" A ")
@@ -34,7 +38,9 @@ public class ChainMail extends RegisterableLibrary {
 		        .to());
 		add(
 		    new RecipeBuilder()
-		        .product(new MinecraftItem(Items.chainmail_leggings), 1)
+		        .product()
+		        .apply(new MinecraftItem(Items.chainmail_leggings))
+		        .apply(1)
 		        .order()
 		        .add(" A ")
 		        .add("A A")
@@ -44,7 +50,9 @@ public class ChainMail extends RegisterableLibrary {
 		        .to());
 		add(
 		    new RecipeBuilder()
-		        .product(new MinecraftItem(Items.chainmail_boots), 1)
+		        .product()
+		        .apply(new MinecraftItem(Items.chainmail_boots))
+		        .apply(1)
 		        .order()
 		        .add("A  ")
 		        .add("  A")

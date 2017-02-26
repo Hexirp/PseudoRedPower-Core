@@ -20,7 +20,9 @@ public class ShapedMaterialPhaseTest {
 	public void testLaw() {
 		StackedPhaseLaw.law(
 		    new RecipeBuilder()
-		        .product(new MinecraftItemMock(""), 0)
+		        .product()
+		        .apply(new MinecraftItemMock(""))
+		        .apply(0)
 		        .order()
 		        .to());
 	}
