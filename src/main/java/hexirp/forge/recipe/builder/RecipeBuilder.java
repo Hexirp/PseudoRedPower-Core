@@ -25,12 +25,8 @@ public class RecipeBuilder {
 		return new ProductPhase(output, size);
 	}
 	
-	/**
-	 * {@link SmeltingRecipe}のBuilderを返す.
-	 *
-	 * @return SmeltingRecipeBuilder
-	 */
-	public Function<MinecraftItem, Function<MinecraftItem, Function<Integer, Function<Integer, SmeltingRecipe>>>> smelting() {
-		return t0 -> t1 -> t2 -> t3 -> new SmeltingRecipe(new SmeltingRecipeInga(t0, t1), new SmeltingRecipeExp(t2, t3));
-	}
+	/** 精錬レシピのBuilder. */
+	public static final Function<MinecraftItem, Function<MinecraftItem, Function<Integer, Function<Integer, SmeltingRecipe>>>> smelting = t0 -> t1 -> t2 -> t3 -> new SmeltingRecipe(
+	    new SmeltingRecipeInga(t0, t1),
+	    new SmeltingRecipeExp(t2, t3));
 }
