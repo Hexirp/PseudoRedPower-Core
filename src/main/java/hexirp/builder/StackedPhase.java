@@ -15,7 +15,7 @@ public class StackedPhase<Previous> {
 	 *
 	 * @return {@link #previous}
 	 */
-	public Previous previous() {
+	public final Previous previous() {
 		return previous;
 	}
 	
@@ -24,7 +24,7 @@ public class StackedPhase<Previous> {
 	 *
 	 * @param previous {@link #previous}
 	 */
-	public StackedPhase(Previous previous) {
+	public StackedPhase(final Previous previous) {
 		this.previous = previous;
 	}
 }
