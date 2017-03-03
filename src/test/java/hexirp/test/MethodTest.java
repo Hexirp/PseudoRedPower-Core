@@ -11,13 +11,13 @@ import java.util.function.Function;
  */
 public class MethodTest {
 	/**
-	 * メソッドチェーンに副作用がある.
+	 * メソッドが自分自身を返す.
 	 *
 	 * @param data データ
-	 * @param method メソッドチェーン
+	 * @param method メソッドを表すラムダ式
 	 * @param <A> 任意のクラス
 	 */
-	public static <A> void assertSideEffect(final A data, final Function<A, A> method) {
+	public static <A> void assertChaining(final A data, final Function<A, A> method) {
 		final A new_data = method.apply(data);
 		
 		assertEquals(data, new_data);
