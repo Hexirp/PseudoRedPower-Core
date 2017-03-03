@@ -1,6 +1,6 @@
 package hexirp.collection.test;
 
-import static hexirp.test.MethodChainTest.*;
+import static hexirp.test.MethodTest.*;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
@@ -33,7 +33,7 @@ public class ListUtilTest {
 	/** 副作用がある. */
 	@Test
 	public void test_merge() {
-		assertSideEffect(
+		assertChaining(
 		    new ListUtil<String>(),
 		    (final ListUtil<String> t) -> t.merge(new LinkedList<String>()));
 	}
