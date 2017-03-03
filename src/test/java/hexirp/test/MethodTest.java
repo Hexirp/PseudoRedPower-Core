@@ -5,11 +5,11 @@ import static org.junit.Assert.*;
 import java.util.function.Function;
 
 /**
- * メソッドチェーンに関するテストの為の関数を記述する.
+ * メソッドをテストする為の関数を記述する.
  *
  * @author Hexirp
  */
-public class MethodChainTest {
+public class MethodTest {
 	/**
 	 * メソッドチェーンに副作用がある.
 	 *
