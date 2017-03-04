@@ -1,5 +1,7 @@
 package hexirp.forge.recipe;
 
+import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.ItemStack;
 
@@ -20,6 +22,7 @@ public class RecipeProduct {
 	 *
 	 * @return 結果
 	 */
+	@Getting
 	public ItemStack product() {
 		return new ItemStack(output.item(), size);
 	}
@@ -30,7 +33,8 @@ public class RecipeProduct {
 	 * @param output {@link #output}
 	 * @param size {@link #size}
 	 */
-	public RecipeProduct(MinecraftItem output, int size) {
+	@Setting
+	public RecipeProduct(final MinecraftItem output, final int size) {
 		this.output = output;
 		this.size = size;
 	}

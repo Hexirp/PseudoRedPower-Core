@@ -1,5 +1,6 @@
 package hexirp.forge.prp.core;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
 import hexirp.forge.recipe.builder.RecipeBuilder;
@@ -12,6 +13,7 @@ import net.minecraft.init.Items;
  */
 public class ChainMail extends RegisterableLibrary {
 	/** 初期化する. */
+	@Setting
 	public ChainMail() {
 		add(
 		    new RecipeBuilder()

@@ -12,5 +12,6 @@ public interface SimpleTransitional<Next> {
 	 *
 	 * @return 生成物
 	 */
+	@Getter
 	public Next to();
 }

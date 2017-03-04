@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 
+import hexirp.annotation.Method.Chaining;
+
 /**
  * MODにおいて追加される要素を保持する辞書を表現する.
  *
@@ -23,7 +25,8 @@ public class Library<Element> {
 	 * @return メソッドチェーン用
 	 * @see java.util.Collection#add(Object)
 	 */
-	public Library<Element> add(Element element) {
+	@Chaining
+	public Library<Element> add(final Element element) {
 		library.add(element);
 		return this;
 	}
@@ -34,7 +37,7 @@ public class Library<Element> {
 	 * @param action 一つの引数を取り、結果を返さない操作
 	 * @see java.lang.Iterable#forEach(Consumer)
 	 */
-	public void forEach(Consumer<? super Element> action) {
+	public void forEach(final Consumer<? super Element> action) {
 		library.forEach(action);
 	}
 }

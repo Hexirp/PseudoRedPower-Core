@@ -1,5 +1,8 @@
 package hexirp.forge.loadable;
 
+import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Method.Setting;
+
 /**
  * 名前が付いた型を表す.
  *
@@ -15,6 +18,7 @@ public class NamedType<Type extends Named> implements Named {
 	 *
 	 * @param value {@link #value}
 	 */
+	@Setting
 	public NamedType(final Type value) {
 		this.value = value;
 	}
@@ -24,11 +28,13 @@ public class NamedType<Type extends Named> implements Named {
 	 *
 	 * @return {@link #value}
 	 */
+	@Getting
 	public Type value() {
 		return value;
 	}
 	
 	@Override
+	@Getting
 	public String name() {
 		return value.name();
 	}

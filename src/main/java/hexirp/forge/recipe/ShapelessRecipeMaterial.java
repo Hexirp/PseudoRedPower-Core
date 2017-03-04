@@ -3,6 +3,8 @@ package hexirp.forge.recipe;
 import java.util.LinkedList;
 import java.util.List;
 
+import hexirp.annotation.Method.Chaining;
+import hexirp.annotation.Method.Getting;
 import hexirp.collection.ListUtil;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.Item;
@@ -15,16 +17,17 @@ import net.minecraft.item.Item;
 public class ShapelessRecipeMaterial {
 	/** 不定形レシピの材料. */
 	private final List<Item> list = new LinkedList<>();
-
+	
 	/**
 	 * 配列に変換する.
 	 *
 	 * @return 材料の配列
 	 */
+	@Getting
 	public Object[] array() {
 		return new ListUtil<Item>().merge(list).array();
 	}
-
+	
 	/**
 	 * 材料を追加する.
 	 *
@@ -32,6 +35,7 @@ public class ShapelessRecipeMaterial {
 	 * @param n 材料の個数。0以上でなければならない
 	 * @return メソッドチェーン用
 	 */
+	@Chaining
 	public ShapelessRecipeMaterial add(final MinecraftItem obj, final int n) {
 		for (int india = 0; india < n; india++)
 			list.add(obj.item());
