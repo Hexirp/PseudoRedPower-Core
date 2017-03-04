@@ -1,5 +1,6 @@
 package hexirp.forge.loadable.block;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.loadable.Environment;
 import hexirp.forge.loadable.Named;
 import hexirp.forge.loadable.NamedType;
@@ -20,10 +21,11 @@ public class BlockResourceLocation<Type extends Block & Named> extends NamedType
 	 *
 	 * @param block 名前付きブロック
 	 */
+	@Setting
 	public BlockResourceLocation(final Type block) {
 		super(block);
 	}
-	
+
 	/**
 	 * ブロックのリソースの箇所を登録する.
 	 *

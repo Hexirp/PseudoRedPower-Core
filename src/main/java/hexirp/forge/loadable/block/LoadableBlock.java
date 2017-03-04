@@ -1,5 +1,6 @@
 package hexirp.forge.loadable.block;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
@@ -21,16 +22,17 @@ public class LoadableBlock<Type extends Block & Named> extends NamedType<Type> i
 	 *
 	 * @param block 名前付きブロック
 	 */
+	@Setting
 	public LoadableBlock(final Type block) {
 		super(block);
 	}
-
+	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
 		GameRegistry.registerBlock(this.value(), this.name());
-
+		
 		new BlockResourceLocation<>(this.value()).set(env);
-
+		
 		return new Index<MinecraftItem>().put(
 		    this.name(),
 		    new MinecraftItem(this.value()));
