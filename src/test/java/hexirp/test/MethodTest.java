@@ -20,6 +20,6 @@ public class MethodTest {
 	public static <A> void assertChaining(final A data, final Function<A, A> method) {
 		final A new_data = method.apply(data);
 		
-		assertEquals(data, new_data);
+		assertTrue(data == new_data);
 	}
 }

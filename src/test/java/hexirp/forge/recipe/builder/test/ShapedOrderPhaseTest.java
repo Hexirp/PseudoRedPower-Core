@@ -1,27 +1,26 @@
-package hexirp.recipe.builder.test;
+package hexirp.forge.recipe.builder.test;
 
 import org.junit.Test;
 
-import hexirp.builder.test.StackedPhaseLaw;
+import hexirp.builder.test.SimpleTransitionalLaw;
 import hexirp.forge.recipe.builder.RecipeBuilder;
-import hexirp.forge.recipe.builder.ShapedMaterialPhase;
+import hexirp.forge.recipe.builder.ShapedOrderPhase;
 import hexirp.forge.test.MinecraftItemMock;
 
 /**
- * {@link ShapedMaterialPhase}のテストを表現する.
+ * {@link ShapedOrderPhase}のテストを表現する.
  *
  * @author Hexirp
  */
-public class ShapedMaterialPhaseTest {
+public class ShapedOrderPhaseTest {
 	/**
 	 * 法則に従っているかテストする.
 	 */
 	@Test
 	public void testLaw() {
-		StackedPhaseLaw.law(
+		SimpleTransitionalLaw.law(
 		    new RecipeBuilder()
 		        .product(new MinecraftItemMock(""), 0)
-		        .order()
-		        .to());
+		        .order());
 	}
 }

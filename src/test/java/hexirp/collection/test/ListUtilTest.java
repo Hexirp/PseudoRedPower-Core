@@ -23,13 +23,7 @@ public class ListUtilTest {
 		    new ListUtil<String>().array(),
 		    new String[] {});
 	}
-
-	/** 正常に例外を投げる. */
-	//@Test(expected = NullPointerException.class)
-	public void test_array_null() {
-		new ListUtil<Object>();
-	}
-
+	
 	/** 副作用がある. */
 	@Test
 	public void test_merge() {
