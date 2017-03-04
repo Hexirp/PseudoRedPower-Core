@@ -1,5 +1,7 @@
 package hexirp.builder;
 
+import hexirp.annotation.Method.Getting;
+
 /**
  * 次の段階が一つしかない段階を表現する.
  *
@@ -12,6 +14,6 @@ public interface SimpleTransitional<Next> {
 	 *
 	 * @return 生成物
 	 */
-	@Getter
+	@Getting
 	public Next to();
 }
