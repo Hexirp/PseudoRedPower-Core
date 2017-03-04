@@ -1,5 +1,6 @@
 package hexirp.forge.prp.core;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.LoadableLibrary;
 import hexirp.forge.loadable.item.LoadableItem;
 import hexirp.forge.prp.core.ores.SilverIngot;
@@ -11,6 +12,7 @@ import hexirp.forge.prp.core.ores.SilverIngot;
  */
 public class Items extends LoadableLibrary {
 	/** コントストラクタ. */
+	@Setting
 	public Items() {
 		add(new LoadableItem<>(new SilverIngot()));
 	}

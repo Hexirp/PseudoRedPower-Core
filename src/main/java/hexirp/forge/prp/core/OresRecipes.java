@@ -1,5 +1,6 @@
 package hexirp.forge.prp.core;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
@@ -16,6 +17,7 @@ public class OresRecipes extends RegisterableLibrary {
 	 *
 	 * @param items アイテムのリスト
 	 */
+	@Setting
 	public OresRecipes(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
