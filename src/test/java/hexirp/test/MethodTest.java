@@ -43,10 +43,10 @@ public class MethodTest {
 	 * @param <B> 取り出す情報
 	 */
 	public static <A, B> void assertGetting(final A data, final Function<A, B> method) {
-		final B data1 = method.apply(data);
-		final B data2 = method.apply(data);
+		final B value1 = method.apply(data);
+		final B value2 = method.apply(data);
 		
-		assertEquals(data1, data2);
+		assertEquals(value1, value2);
 	}
 	
 	/**
