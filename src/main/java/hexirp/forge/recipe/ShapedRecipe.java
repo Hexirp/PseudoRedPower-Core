@@ -1,5 +1,6 @@
 package hexirp.forge.recipe;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.Registerable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -11,21 +12,22 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ShapedRecipe implements Registerable {
 	/** レシピの結果. */
 	private final RecipeProduct product;
-	
+
 	/** レシピの並べ方. */
 	private final ShapedRecipeOrder order;
-	
+
 	/**
 	 * Setter.
 	 *
 	 * @param item {@link #product}
 	 * @param input {@link #order}
 	 */
-	public ShapedRecipe(RecipeProduct item, ShapedRecipeOrder input) {
+	@Setting
+	public ShapedRecipe(final RecipeProduct item, final ShapedRecipeOrder input) {
 		product = item;
 		order = input;
 	}
-	
+
 	@Override
 	public final void register() {
 		GameRegistry.addRecipe(product.product(), order.array());
