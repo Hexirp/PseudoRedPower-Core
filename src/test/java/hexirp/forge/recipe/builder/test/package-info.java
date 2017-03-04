@@ -4,6 +4,6 @@
  * @author Hexirp
  */
 @NonNullByDefault
-package hexirp.recipe.builder.test;
+package hexirp.forge.recipe.builder.test;
 
 import hexirp.annotation.NonNullByDefault;
