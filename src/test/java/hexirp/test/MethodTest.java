@@ -6,6 +6,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 import hexirp.annotation.Method.Chaining;
+import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
 
 /**
@@ -25,6 +26,19 @@ public class MethodTest {
 	 */
 	public static <A> void assertSetting(final Supplier<A> constructor) {
 		assertEquals(constructor.get(), constructor.get());
+	}
+	
+	/**
+	 * メソッドが{@link Getting}を満たす.
+	 *
+	 * @param data データ
+	 * @param method メソッドを表すラムダ式
+	 */
+	public static <A, B> void assertGetting(final A data, final Function<A, B> method) {
+		final B data1 = method.apply(data);
+		final B data2 = method.apply(data);
+		
+		assertEquals(data1, data2);
 	}
 	
 	/**
