@@ -11,7 +11,11 @@ import java.util.function.Function;
  */
 public class MethodTest {
 	/**
-	 * メソッドが自分自身を返す.
+	 * メソッドが{@link hexirp.annotation.Method.Chaining}を満たす.
+	 *
+	 * <p>
+	 * 使用例: {@code assertChaining(new Foo(), t -> t.baa());}
+	 * </p>
 	 *
 	 * @param data データ
 	 * @param method メソッドを表すラムダ式
