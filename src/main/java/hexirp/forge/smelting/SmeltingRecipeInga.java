@@ -1,5 +1,7 @@
 package hexirp.forge.smelting;
 
+import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.ItemStack;
 
@@ -13,35 +15,38 @@ import net.minecraft.item.ItemStack;
 public class SmeltingRecipeInga {
 	/** 結果. */
 	private final MinecraftItem product;
-	
+
 	/** 材料. */
 	private final MinecraftItem material;
-	
+
 	/**
 	 * Setter.
 	 *
 	 * @param product {@link #product}
 	 * @param material {@link #material}
 	 */
+	@Setting
 	public SmeltingRecipeInga(final MinecraftItem product, final MinecraftItem material) {
 		this.product = product;
 		this.material = material;
 	}
-	
+
 	/**
 	 * 結果を取り出す.
 	 *
 	 * @return 結果
 	 */
+	@Getting
 	public ItemStack product() {
 		return new ItemStack(product.item());
 	}
-	
+
 	/**
 	 * 材料を取り出す.
 	 *
 	 * @return 材料
 	 */
+	@Getting
 	public ItemStack material() {
 		return new ItemStack(material.item());
 	}

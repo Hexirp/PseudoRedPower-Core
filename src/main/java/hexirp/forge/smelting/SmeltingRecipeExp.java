@@ -1,5 +1,8 @@
 package hexirp.forge.smelting;
 
+import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Method.Setting;
+
 /**
  * 製錬レシピにおいて、経験値が得られる確率の目安を表現する.
  *
@@ -10,26 +13,28 @@ package hexirp.forge.smelting;
 public class SmeltingRecipeExp {
 	/** 基準と同じ回数製錬した時に得られる経験値. */
 	private final int exp;
-	
+
 	/** 製錬回数の基準. */
 	private final int times;
-	
+
 	/**
 	 * Setter.
 	 *
 	 * @param exp {@link #exp}
 	 * @param times {@link #times}
 	 */
+	@Setting
 	public SmeltingRecipeExp(final int exp, final int times) {
 		this.exp = exp;
 		this.times = times;
 	}
-	
+
 	/**
 	 * 少数に変換する.
 	 *
 	 * @return 少数に変換された経験値
 	 */
+	@Getting
 	public float value() {
 		return (float) exp / (float) times;
 	}
