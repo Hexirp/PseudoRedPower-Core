@@ -3,6 +3,10 @@ package hexirp.test;
 import static org.junit.Assert.*;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
+
+import hexirp.annotation.Method.Chaining;
+import hexirp.annotation.Method.Setting;
 
 /**
  * メソッドをテストする為の関数を記述する.
@@ -11,7 +15,20 @@ import java.util.function.Function;
  */
 public class MethodTest {
 	/**
-	 * メソッドが{@link hexirp.annotation.Method.Chaining}を満たす.
+	 * メソッドが{@link Setting}を満たす.
+	 *
+	 * <p>
+	 * 使用例: {@code assertSetter(() -> new Foo(2, 3)}
+	 * </p>
+	 *
+	 * @param constructor コントストラクタを表現するラムダ式
+	 */
+	public static <A> void assertSetting(final Supplier<A> constructor) {
+		assertEquals(constructor.get(), constructor.get());
+	}
+	
+	/**
+	 * メソッドが{@link Chaining}を満たす.
 	 *
 	 * <p>
 	 * 使用例: {@code assertChaining(new Foo(), t -> t.baa());}
