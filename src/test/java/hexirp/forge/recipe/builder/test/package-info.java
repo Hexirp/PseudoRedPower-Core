@@ -1,5 +1,5 @@
 /**
- * {@link hexirp.recipe.builder}のテストを記述する.
+ * {@link hexirp.forge.recipe.builder}のテストを記述する.
  *
  * @author Hexirp
  */
