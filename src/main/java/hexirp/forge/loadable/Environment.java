@@ -1,5 +1,7 @@
 package hexirp.forge.loadable;
 
+import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Method.Setting;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -23,6 +25,7 @@ public class Environment {
 	 * @param metadata {@link #metadata}
 	 * @param event {@link #event}
 	 */
+	@Setting
 	public Environment(final ModMetadata metadata, final FMLPreInitializationEvent event) {
 		this.metadata = metadata;
 		this.event = event;
@@ -33,6 +36,7 @@ public class Environment {
 	 *
 	 * @return イベントが行われている場所
 	 */
+	@Getting
 	public Side side() {
 		final Side side = event.getSide();
 		if (null == side) throw null;
@@ -46,6 +50,7 @@ public class Environment {
 	 * @param loc TODO: まだ意味が分からない。アイテムを登録する際には"inventory"とする。
 	 * @return モデルリソース箇所の情報
 	 */
+	@Getting
 	public ModelResourceLocation location(final String name, final String loc) {
 		return new ModelResourceLocation(metadata.modId + ":" + name, loc);
 	}
