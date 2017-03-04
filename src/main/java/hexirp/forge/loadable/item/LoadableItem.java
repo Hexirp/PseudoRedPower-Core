@@ -1,5 +1,6 @@
 package hexirp.forge.loadable.item;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
@@ -21,16 +22,17 @@ public class LoadableItem<Type extends Item & Named> extends NamedType<Type> imp
 	 *
 	 * @param item スネークケースでの名前が付いたアイテム
 	 */
+	@Setting
 	public LoadableItem(final Type item) {
 		super(item);
 	}
-
+	
 	@Override
 	public Index<MinecraftItem> load(final Environment env) {
 		GameRegistry.registerItem(this.value(), this.name());
-
+		
 		new ItemResourceLocation<>(this.value()).set(env);
-
+		
 		return new Index<MinecraftItem>().put(
 		    this.name(),
 		    new MinecraftItem(this.value()));

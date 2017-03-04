@@ -1,5 +1,6 @@
 package hexirp.forge.loadable.item;
 
+import hexirp.annotation.Method.Setting;
 import hexirp.forge.loadable.Environment;
 import hexirp.forge.loadable.Named;
 import hexirp.forge.loadable.NamedType;
@@ -19,10 +20,11 @@ public class ItemResourceLocation<Type extends Item & Named> extends NamedType<T
 	 *
 	 * @param item 名前付きアイテム
 	 */
+	@Setting
 	public ItemResourceLocation(final Type item) {
 		super(item);
 	}
-	
+
 	/**
 	 * アイテムのリソースの箇所を登録する.
 	 *
