@@ -1,5 +1,7 @@
 package hexirp.forge;
 
+import hexirp.annotation.Method.Command;
+
 /**
  * 要素一つ一つを登録することが出来る{@link Library}を表現する.
  *
@@ -9,6 +11,7 @@ package hexirp.forge;
  */
 public abstract class RegisterableLibrary extends Library<Registerable> implements Registerable {
 	@Override
+	@Command
 	public void register() {
 		forEach(recipe -> recipe.register());
 	}

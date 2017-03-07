@@ -1,5 +1,6 @@
 package hexirp.forge.loadable.block;
 
+import hexirp.annotation.Method.Command;
 import hexirp.annotation.Method.Setting;
 import hexirp.forge.loadable.Environment;
 import hexirp.forge.loadable.Named;
@@ -25,12 +26,13 @@ public class BlockResourceLocation<Type extends Block & Named> extends NamedType
 	public BlockResourceLocation(final Type block) {
 		super(block);
 	}
-
+	
 	/**
 	 * ブロックのリソースの箇所を登録する.
 	 *
 	 * @param env 登録する環境
 	 */
+	@Command
 	public void set(final Environment env) {
 		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
 		    Item.getItemFromBlock(this.value()),

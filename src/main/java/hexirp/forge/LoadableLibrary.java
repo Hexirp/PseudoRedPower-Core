@@ -1,5 +1,6 @@
 package hexirp.forge;
 
+import hexirp.annotation.Method.Command;
 import hexirp.forge.loadable.Environment;
 
 /**
@@ -11,6 +12,7 @@ import hexirp.forge.loadable.Environment;
  */
 public abstract class LoadableLibrary extends Library<Loadable> implements Loadable {
 	@Override
+	@Command
 	public Index<MinecraftItem> load(final Environment env) {
 		final Index<MinecraftItem> ret = new Index<>();
 		

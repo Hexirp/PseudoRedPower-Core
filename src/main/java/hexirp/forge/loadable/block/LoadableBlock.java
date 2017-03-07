@@ -1,5 +1,6 @@
 package hexirp.forge.loadable.block;
 
+import hexirp.annotation.Method.Command;
 import hexirp.annotation.Method.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.Loadable;
@@ -28,6 +29,7 @@ public class LoadableBlock<Type extends Block & Named> extends NamedType<Type> i
 	}
 	
 	@Override
+	@Command
 	public Index<MinecraftItem> load(final Environment env) {
 		GameRegistry.registerBlock(this.value(), this.name());
 		

@@ -1,5 +1,6 @@
 package hexirp.forge;
 
+import hexirp.annotation.Method.Command;
 import hexirp.forge.loadable.Environment;
 
 /**
@@ -15,5 +16,6 @@ public interface Loadable {
 	 * @param env 読み込ませる環境
 	 * @return 辞書
 	 */
+	@Command
 	public Index<MinecraftItem> load(Environment env);
 }
