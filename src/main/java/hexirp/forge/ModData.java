@@ -1,5 +1,6 @@
 package hexirp.forge;
 
+import hexirp.annotation.Method.Command;
 import net.minecraftforge.fml.common.ModMetadata;
 
 /**
@@ -14,5 +15,6 @@ public interface ModData {
 	 *
 	 * @param metadata 設定する対象
 	 */
+	@Command
 	public void set(ModMetadata metadata);
 }

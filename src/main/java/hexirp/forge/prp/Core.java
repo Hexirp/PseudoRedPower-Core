@@ -1,5 +1,6 @@
 package hexirp.forge.prp;
 
+import hexirp.annotation.Method.Command;
 import hexirp.annotation.Nullable;
 import hexirp.forge.loadable.Environment;
 import hexirp.forge.prp.core.Mechanism;
@@ -35,6 +36,7 @@ public class Core {
 	 */
 	@SuppressWarnings("null")
 	@Mod.EventHandler
+	@Command
 	public void preInit(final FMLPreInitializationEvent event) {
 		new Metadata().set(metadata);
 		

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import hexirp.annotation.Method.Chaining;
+import hexirp.annotation.Method.Command;
 
 /**
  * MODにおいて追加される要素を保持する辞書を表現する.
@@ -37,6 +38,7 @@ public class Library<Element> {
 	 * @param action 一つの引数を取り、結果を返さない操作
 	 * @see java.lang.Iterable#forEach(Consumer)
 	 */
+	@Command
 	public void forEach(final Consumer<? super Element> action) {
 		library.forEach(action);
 	}

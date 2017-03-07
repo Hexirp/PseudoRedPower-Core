@@ -1,5 +1,6 @@
 package hexirp.forge.loadable.item;
 
+import hexirp.annotation.Method.Command;
 import hexirp.annotation.Method.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.Loadable;
@@ -28,6 +29,7 @@ public class LoadableItem<Type extends Item & Named> extends NamedType<Type> imp
 	}
 	
 	@Override
+	@Command
 	public Index<MinecraftItem> load(final Environment env) {
 		GameRegistry.registerItem(this.value(), this.name());
 		
