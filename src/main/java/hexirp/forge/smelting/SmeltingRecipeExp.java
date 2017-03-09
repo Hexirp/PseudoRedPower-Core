@@ -13,13 +13,11 @@ import hexirp.annotation.Method.Setting;
 public class SmeltingRecipeExp {
 	/** 基準と同じ回数製錬した時に得られる経験値. */
 	private final int exp;
-
+	
 	/** 製錬回数の基準. */
 	private final int times;
-
+	
 	/**
-	 * Setter.
-	 *
 	 * @param exp {@link #exp}
 	 * @param times {@link #times}
 	 */
@@ -28,7 +26,7 @@ public class SmeltingRecipeExp {
 		this.exp = exp;
 		this.times = times;
 	}
-
+	
 	/**
 	 * 少数に変換する.
 	 *

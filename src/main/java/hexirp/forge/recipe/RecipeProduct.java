@@ -28,8 +28,6 @@ public class RecipeProduct {
 	}
 	
 	/**
-	 * Setter.
-	 *
 	 * @param output {@link #output}
 	 * @param size {@link #size}
 	 */

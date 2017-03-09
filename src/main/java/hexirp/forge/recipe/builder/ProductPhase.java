@@ -13,8 +13,6 @@ import hexirp.forge.recipe.RecipeProduct;
  */
 public class ProductPhase extends StackedPhase<RecipeProduct> {
 	/**
-	 * Setter.
-	 *
 	 * @param output 結果の種類
 	 * @param size 結果の数
 	 */
@@ -22,7 +20,7 @@ public class ProductPhase extends StackedPhase<RecipeProduct> {
 	public ProductPhase(final MinecraftItem output, final int size) {
 		super(new RecipeProduct(output, size));
 	}
-
+	
 	/**
 	 * 並びの定義の段階に移行する.
 	 *
@@ -32,7 +30,7 @@ public class ProductPhase extends StackedPhase<RecipeProduct> {
 	public ShapedOrderPhase order() {
 		return new ShapedOrderPhase(this);
 	}
-
+	
 	/**
 	 * 材料の定義の段階に移行する.
 	 *

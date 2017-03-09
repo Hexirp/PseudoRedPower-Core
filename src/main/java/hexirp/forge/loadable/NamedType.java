@@ -14,8 +14,6 @@ public class NamedType<Type extends Named> implements Named {
 	private final Type value;
 	
 	/**
-	 * Setter.
-	 *
 	 * @param value {@link #value}
 	 */
 	@Setting

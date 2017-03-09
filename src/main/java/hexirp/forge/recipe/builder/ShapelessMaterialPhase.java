@@ -15,8 +15,6 @@ public class ShapelessMaterialPhase extends StackedPhase<ProductPhase> implement
 	private final ShapelessRecipeMaterial material = new ShapelessRecipeMaterial();
 	
 	/**
-	 * Setter.
-	 *
 	 * @param product 結果
 	 */
 	@Setting

@@ -12,7 +12,7 @@ import hexirp.annotation.Method.Setting;
 public class StackedPhase<Previous> {
 	/** 前段階. */
 	private final Previous previous;
-	
+
 	/**
 	 * 前段階を取得する.
 	 *
@@ -22,10 +22,8 @@ public class StackedPhase<Previous> {
 	public final Previous previous() {
 		return previous;
 	}
-	
+
 	/**
-	 * Setter.
-	 *
 	 * @param previous {@link #previous}
 	 */
 	@Setting

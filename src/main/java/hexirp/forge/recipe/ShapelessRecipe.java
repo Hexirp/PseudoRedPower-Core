@@ -18,8 +18,6 @@ public class ShapelessRecipe implements Registerable {
 	private final ShapelessRecipeMaterial order;
 	
 	/**
-	 * Setter.
-	 *
 	 * @param item {@link #product}
 	 * @param input {@link #order}
 	 */

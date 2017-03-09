@@ -20,8 +20,6 @@ public class Environment {
 	private final FMLPreInitializationEvent event;
 	
 	/**
-	 * Setter.
-	 *
 	 * @param metadata {@link #metadata}
 	 * @param event {@link #event}
 	 */

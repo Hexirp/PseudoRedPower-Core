@@ -14,8 +14,6 @@ import hexirp.forge.smelting.SmeltingRecipeInga;
  */
 public class SmeltingIngaPhase extends StackedPhase<SmeltingRecipeInga> {
 	/**
-	 * Setter.
-	 *
 	 * @param product 結果
 	 * @param material 材料
 	 * @see SmeltingRecipeInga#SmeltingRecipeInga(MinecraftItem, MinecraftItem)
@@ -24,7 +22,7 @@ public class SmeltingIngaPhase extends StackedPhase<SmeltingRecipeInga> {
 	public SmeltingIngaPhase(final MinecraftItem product, final MinecraftItem material) {
 		super(new SmeltingRecipeInga(product, material));
 	}
-
+	
 	/**
 	 * 製錬レシピの経験値を定義する段階に移行する.
 	 *

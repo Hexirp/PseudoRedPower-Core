@@ -18,17 +18,15 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
 public class ShapedMaterialPhase extends StackedPhase<ShapedOrderPhase> implements SimpleTransitional<ShapedRecipe> {
 	/** 対応関係. */
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
-
+	
 	/**
-	 * Setter.
-	 *
 	 * @param order {@link #previous}
 	 */
 	@Setting
 	public ShapedMaterialPhase(final ShapedOrderPhase order) {
 		super(order);
 	}
-
+	
 	/**
 	 * 対応関係を追加する.
 	 *
@@ -42,7 +40,7 @@ public class ShapedMaterialPhase extends StackedPhase<ShapedOrderPhase> implemen
 		map.put(key, value);
 		return this;
 	}
-
+	
 	@Override
 	@Getting
 	public ShapedRecipe to() {
