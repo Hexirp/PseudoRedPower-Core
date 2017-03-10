@@ -30,6 +30,6 @@ public class ListUtilTest {
 	public void test_merge() {
 		assertChaining(
 		    new ListUtil<String>(),
-		    (final AbstractListUtil<Element> t) -> t.merge(new LinkedList<String>()));
+		    (final AbstractListUtil<String> t) -> t.merge(new LinkedList<String>()));
 	}
 }
