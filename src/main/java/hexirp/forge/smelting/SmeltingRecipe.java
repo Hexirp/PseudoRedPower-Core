@@ -18,8 +18,6 @@ public class SmeltingRecipe implements Registerable {
 	private final SmeltingRecipeExp exp;
 	
 	/**
-	 * Setter.
-	 *
 	 * @param inga {@link #inga}
 	 * @param exp {@link #exp}
 	 */

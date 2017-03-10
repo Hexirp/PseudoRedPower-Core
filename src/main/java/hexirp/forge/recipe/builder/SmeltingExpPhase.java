@@ -15,10 +15,8 @@ import hexirp.forge.smelting.SmeltingRecipeExp;
 public class SmeltingExpPhase extends StackedPhase<SmeltingIngaPhase> implements SimpleTransitional<SmeltingRecipe> {
 	/** 製錬レシピの経験値. */
 	private final SmeltingRecipeExp exp;
-
+	
 	/**
-	 * Setter.
-	 *
 	 * @param phase 前段階
 	 * @param exp 経験値
 	 */
@@ -27,7 +25,7 @@ public class SmeltingExpPhase extends StackedPhase<SmeltingIngaPhase> implements
 		super(phase);
 		this.exp = exp;
 	}
-
+	
 	@Override
 	@Getting
 	public SmeltingRecipe to() {

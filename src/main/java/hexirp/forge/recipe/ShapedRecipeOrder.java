@@ -12,13 +12,11 @@ import hexirp.collection.ListUtil;
 public class ShapedRecipeOrder {
 	/** 文字で抽象的に表現された並べ方. */
 	private final ShapedRecipeAbstractOrder order;
-
+	
 	/** 文字とアイテムとの対応関係. */
 	private final ShapedRecipeMaterialMap input;
-
+	
 	/**
-	 * Setter.
-	 *
 	 * @param order {@link #order}
 	 * @param input {@link #input}
 	 */
@@ -27,10 +25,8 @@ public class ShapedRecipeOrder {
 		this.order = order;
 		this.input = input;
 	}
-
+	
 	/**
-	 * 配列へ変換する.
-	 *
 	 * @return 配列での表現
 	 */
 	@Getting

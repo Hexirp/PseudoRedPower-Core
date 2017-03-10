@@ -16,10 +16,8 @@ import net.minecraft.item.Item;
 public class MinecraftItem {
 	/** アイテム. */
 	private final Item obj;
-
+	
 	/**
-	 * Setter.
-	 *
 	 * @param item {@link #obj}
 	 */
 	@Setting
@@ -27,7 +25,7 @@ public class MinecraftItem {
 		if (null == item) throw null;
 		obj = item;
 	}
-
+	
 	/**
 	 * ブロックもアイテムとして取り扱うことが出来るため、受け付ける.
 	 *
@@ -37,10 +35,8 @@ public class MinecraftItem {
 	public MinecraftItem(@Nullable final Block block) {
 		this(Item.getItemFromBlock(block));
 	}
-
+	
 	/**
-	 * 内部のアイテムを取得する.
-	 *
 	 * @return {@link #obj}
 	 */
 	@Getting

@@ -20,8 +20,6 @@ public class SmeltingRecipeInga {
 	private final MinecraftItem material;
 
 	/**
-	 * Setter.
-	 *
 	 * @param product {@link #product}
 	 * @param material {@link #material}
 	 */
@@ -32,8 +30,6 @@ public class SmeltingRecipeInga {
 	}
 
 	/**
-	 * 結果を取り出す.
-	 *
 	 * @return 結果
 	 */
 	@Getting
@@ -42,8 +38,6 @@ public class SmeltingRecipeInga {
 	}
 
 	/**
-	 * 材料を取り出す.
-	 *
 	 * @return 材料
 	 */
 	@Getting

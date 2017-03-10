@@ -9,8 +9,6 @@ import hexirp.annotation.Method.Getting;
  */
 public interface Named {
 	/**
-	 * 名前を取得する.
-	 *
 	 * @return 名前
 	 */
 	@Getting

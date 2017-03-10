@@ -17,8 +17,6 @@ import net.minecraftforge.fml.relauncher.Side;
  */
 public class ItemResourceLocation<Type extends Item & Named> extends NamedType<Type> {
 	/**
-	 * Setter.
-	 *
 	 * @param item 名前付きアイテム
 	 */
 	@Setting

@@ -19,8 +19,6 @@ public class ShapelessRecipeMaterial {
 	private final List<Item> list = new LinkedList<>();
 	
 	/**
-	 * 配列に変換する.
-	 *
 	 * @return 材料の配列
 	 */
 	@Getting
@@ -33,7 +31,7 @@ public class ShapelessRecipeMaterial {
 	 *
 	 * @param obj 材料の種類
 	 * @param n 材料の個数。0以上でなければならない
-	 * @return メソッドチェーン用
+	 * @return this
 	 */
 	@Chaining
 	public ShapelessRecipeMaterial add(final MinecraftItem obj, final int n) {

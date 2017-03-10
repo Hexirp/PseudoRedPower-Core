@@ -10,9 +10,7 @@ import hexirp.annotation.Method.Getting;
  */
 public interface SimpleTransitional<Next> {
 	/**
-	 * 次の段階に進む.
-	 *
-	 * @return 生成物
+	 * @return 次の段階
 	 */
 	@Getting
 	public Next to();
