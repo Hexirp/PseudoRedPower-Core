@@ -12,7 +12,7 @@ import hexirp.annotation.Method.Getting;
  * @author Hexirp
  * @param <Element> 要素
  */
-public abstract class AbstractListUtil<Element> {
+public abstract class AbstractListUtil<Element> implements UsingList<Element> {
 	/** 内部に保持するリスト. */
 	private final List<Element> list = usedList();
 	
@@ -37,10 +37,4 @@ public abstract class AbstractListUtil<Element> {
 		list.addAll(col);
 		return this;
 	}
-	
-	/**
-	 * @return 使用するリスト
-	 */
-	@Getting
-	public abstract List<Element> usedList();
 }
