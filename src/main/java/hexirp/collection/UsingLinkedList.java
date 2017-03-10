@@ -11,10 +11,8 @@ import hexirp.annotation.Method.Getting;
  * @author Hexirp
  * @param <Element> 要素
  */
-public interface UsingLinkedList<Element> {
-	/**
-	 * @return 使用するリスト
-	 */
+public interface UsingLinkedList<Element> extends UsingList<Element> {
+	@Override
 	@Getting
 	default public List<Element> usedList() {
 		return new LinkedList<>();
