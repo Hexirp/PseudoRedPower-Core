@@ -28,8 +28,6 @@ public class SmeltingRecipeExp {
 	}
 	
 	/**
-	 * 少数に変換する.
-	 *
 	 * @return 少数に変換された経験値
 	 */
 	@Getting

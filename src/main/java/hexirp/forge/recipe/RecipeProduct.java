@@ -18,9 +18,7 @@ public class RecipeProduct {
 	private final int size;
 	
 	/**
-	 * 結果を{@link ItemStack}の形式で取得する.
-	 *
-	 * @return 結果
+	 * @return ItemStackでの結果
 	 */
 	@Getting
 	public ItemStack product() {

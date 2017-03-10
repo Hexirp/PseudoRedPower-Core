@@ -22,8 +22,6 @@ public class NamedType<Type extends Named> implements Named {
 	}
 	
 	/**
-	 * Getter.
-	 *
 	 * @return {@link #value}
 	 */
 	@Getting

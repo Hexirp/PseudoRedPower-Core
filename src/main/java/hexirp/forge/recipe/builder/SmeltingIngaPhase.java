@@ -24,8 +24,6 @@ public class SmeltingIngaPhase extends StackedPhase<SmeltingRecipeInga> {
 	}
 	
 	/**
-	 * 製錬レシピの経験値を定義する段階に移行する.
-	 *
 	 * @param exp 分子
 	 * @param times 分母
 	 * @return 製錬レシピの経験値を定義する段階

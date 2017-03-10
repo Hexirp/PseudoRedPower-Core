@@ -30,8 +30,6 @@ public class Environment {
 	}
 	
 	/**
-	 * イベントがどこで発生しているかを取得する.
-	 *
 	 * @return イベントが行われている場所
 	 */
 	@Getting
@@ -42,11 +40,9 @@ public class Environment {
 	}
 	
 	/**
-	 * アイテムのモデルを登録するためにリソース箇所の情報を生成する.
-	 *
 	 * @param name アイテムの名前
 	 * @param loc TODO: まだ意味が分からない。アイテムを登録する際には"inventory"とする。
-	 * @return モデルリソース箇所の情報
+	 * @return アイテムを登録するためのモデルリソース箇所の情報
 	 */
 	@Getting
 	public ModelResourceLocation location(final String name, final String loc) {

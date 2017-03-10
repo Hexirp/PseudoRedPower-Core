@@ -27,8 +27,6 @@ public class ShapedRecipeOrder {
 	}
 	
 	/**
-	 * 配列へ変換する.
-	 *
 	 * @return 配列での表現
 	 */
 	@Getting

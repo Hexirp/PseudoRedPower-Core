@@ -18,8 +18,6 @@ public class ListUtil<Element> {
 	private final List<Element> list = new LinkedList<>();
 	
 	/**
-	 * 配列に変換する.
-	 *
 	 * @return 配列に変換されたリスト
 	 */
 	@Getting

@@ -25,8 +25,6 @@ public class ShapedRecipeAbstractOrder {
 	private final List<String> order = new LinkedList<String>();
 	
 	/**
-	 * レシピの並べ方を取得する.
-	 *
 	 * @return {@link #order}
 	 */
 	@Getting

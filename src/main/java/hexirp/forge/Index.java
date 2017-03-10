@@ -42,8 +42,6 @@ public class Index<Item> {
 	}
 	
 	/**
-	 * 索引を引く.
-	 *
 	 * @param string 索引の見出し
 	 * @return 索引の本文
 	 */

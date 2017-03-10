@@ -13,8 +13,6 @@ public class ShapedOrderPhase extends StackedPhase<ProductPhase> implements Simp
 	private final ShapedRecipeAbstractOrder order = new ShapedRecipeAbstractOrder();
 	
 	/**
-	 * 抽象的なレシピの並べ方を取得する.
-	 *
 	 * @return {@link #order}
 	 */
 	@Getting

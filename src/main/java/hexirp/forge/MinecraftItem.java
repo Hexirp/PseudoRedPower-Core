@@ -37,8 +37,6 @@ public class MinecraftItem {
 	}
 	
 	/**
-	 * 内部のアイテムを取得する.
-	 *
 	 * @return {@link #obj}
 	 */
 	@Getting

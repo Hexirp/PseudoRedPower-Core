@@ -22,8 +22,6 @@ public class ProductPhase extends StackedPhase<RecipeProduct> {
 	}
 	
 	/**
-	 * 並びの定義の段階に移行する.
-	 *
 	 * @return {@link ShapedOrderPhase}
 	 */
 	@Getting
@@ -32,8 +30,6 @@ public class ProductPhase extends StackedPhase<RecipeProduct> {
 	}
 	
 	/**
-	 * 材料の定義の段階に移行する.
-	 *
 	 * @return {@link ShapelessMaterialPhase}
 	 */
 	@Getting

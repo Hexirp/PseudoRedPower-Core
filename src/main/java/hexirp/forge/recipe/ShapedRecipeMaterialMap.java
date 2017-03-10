@@ -19,8 +19,6 @@ public class ShapedRecipeMaterialMap {
 	private final Map<Character, MinecraftItem> material = new HashMap<Character, MinecraftItem>();
 	
 	/**
-	 * 文字とアイテムとの対応関係を{@link List}に変換する.
-	 *
 	 * @return 対応関係がリストで表現されたもの
 	 */
 	@Getting
