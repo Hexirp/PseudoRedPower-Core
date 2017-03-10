@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 import org.junit.Test;
 
+import hexirp.collection.AbstractListUtil;
 import hexirp.collection.ListUtil;
 
 /**
@@ -29,6 +30,6 @@ public class ListUtilTest {
 	public void test_merge() {
 		assertChaining(
 		    new ListUtil<String>(),
-		    (final ListUtil<String> t) -> t.merge(new LinkedList<String>()));
+		    (final AbstractListUtil<String> t) -> t.merge(new LinkedList<String>()));
 	}
 }
