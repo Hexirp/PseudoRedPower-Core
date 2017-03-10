@@ -17,12 +17,20 @@ import hexirp.collection.ListUtil;
  */
 public class ListUtilTest {
 	/** 正常に変換される. */
-	@SuppressWarnings("deprecation")
 	@Test
 	public void test_array() {
-		assertEquals(
+		assertArrayEquals(
 		    new ListUtil<String>().array(),
 		    new String[] {});
+	}
+	
+	/** {@link NullPointerException}を投げる. */
+	@Test(expected = NullPointerException.class)
+	public void test_array_null() {
+		/** Mixin */
+		class ErrorListUtil extends AbstractListUtil<Object> implements UsingErrorList<Object> {}
+		
+		new ErrorListUtil().array();
 	}
 	
 	/** 副作用がある. */
