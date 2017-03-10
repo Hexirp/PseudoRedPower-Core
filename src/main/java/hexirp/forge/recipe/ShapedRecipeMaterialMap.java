@@ -17,36 +17,34 @@ import hexirp.forge.MinecraftItem;
 public class ShapedRecipeMaterialMap {
 	/** 文字とアイテムとの対応関係. */
 	private final Map<Character, MinecraftItem> material = new HashMap<Character, MinecraftItem>();
-
+	
 	/**
-	 * 文字とアイテムとの対応関係を{@link List}に変換する.
-	 *
 	 * @return 対応関係がリストで表現されたもの
 	 */
 	@Getting
 	public final List<Object> list() {
 		final List<Object> ret = new LinkedList<Object>();
-
+		
 		material.forEach((final Character key, final MinecraftItem value) -> {
 			if (null == key || null == value) throw null;
 			ret.add(key);
 			ret.add(value.item());
 		});
-
+		
 		return ret;
 	}
-
+	
 	/**
 	 * 対応関係を追加する.
 	 *
 	 * @param key アルファベット大文字
 	 * @param value アイテム
-	 * @return メソッドチェーン用
+	 * @return this
 	 */
 	@Chaining
 	public ShapedRecipeMaterialMap put(final Character key, final MinecraftItem value) {
 		material.put(key, value);
-
+		
 		return this;
 	}
 }

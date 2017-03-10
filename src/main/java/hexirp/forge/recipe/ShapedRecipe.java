@@ -18,8 +18,6 @@ public class ShapedRecipe implements Registerable {
 	private final ShapedRecipeOrder order;
 	
 	/**
-	 * Setter.
-	 *
 	 * @param item {@link #product}
 	 * @param input {@link #order}
 	 */

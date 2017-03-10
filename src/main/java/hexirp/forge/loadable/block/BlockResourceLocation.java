@@ -18,8 +18,6 @@ import net.minecraftforge.fml.relauncher.Side;
  */
 public class BlockResourceLocation<Type extends Block & Named> extends NamedType<Type> {
 	/**
-	 * Setter.
-	 *
 	 * @param block 名前付きブロック
 	 */
 	@Setting

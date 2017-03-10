@@ -14,8 +14,6 @@ public class StackedPhase<Previous> {
 	private final Previous previous;
 	
 	/**
-	 * 前段階を取得する.
-	 *
 	 * @return {@link #previous}
 	 */
 	@Getting
@@ -24,8 +22,6 @@ public class StackedPhase<Previous> {
 	}
 	
 	/**
-	 * Setter.
-	 *
 	 * @param previous {@link #previous}
 	 */
 	@Setting

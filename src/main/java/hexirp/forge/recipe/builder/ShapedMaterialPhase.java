@@ -20,8 +20,6 @@ public class ShapedMaterialPhase extends StackedPhase<ShapedOrderPhase> implemen
 	private final ShapedRecipeMaterialMap map = new ShapedRecipeMaterialMap();
 
 	/**
-	 * Setter.
-	 *
 	 * @param order {@link #previous}
 	 */
 	@Setting
@@ -34,7 +32,7 @@ public class ShapedMaterialPhase extends StackedPhase<ShapedOrderPhase> implemen
 	 *
 	 * @param key アルファベット大文字
 	 * @param value 材料
-	 * @return メソッドチェーン用
+	 * @return this
 	 * @see ShapedRecipeMaterialMap#put(Character, MinecraftItem)
 	 */
 	@Chaining

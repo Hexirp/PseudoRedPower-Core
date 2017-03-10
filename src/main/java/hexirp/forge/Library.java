@@ -18,12 +18,12 @@ import hexirp.annotation.Method.Command;
 public class Library<Element> {
 	/** 内部に保持され、辞書として扱われるリスト. */
 	private final List<Element> library = new LinkedList<>();
-	
+
 	/**
 	 * 値を追加する.
 	 *
 	 * @param element 追加される要素
-	 * @return メソッドチェーン用
+	 * @return this
 	 * @see java.util.Collection#add(Object)
 	 */
 	@Chaining
@@ -31,7 +31,7 @@ public class Library<Element> {
 		library.add(element);
 		return this;
 	}
-	
+
 	/**
 	 * 全ての要素に操作を適用する.
 	 *

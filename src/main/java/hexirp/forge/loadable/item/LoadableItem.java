@@ -19,8 +19,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class LoadableItem<Type extends Item & Named> extends NamedType<Type> implements Loadable {
 	/**
-	 * コントストラクタ.
-	 *
 	 * @param item スネークケースでの名前が付いたアイテム
 	 */
 	@Setting

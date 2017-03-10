@@ -19,8 +19,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class LoadableBlock<Type extends Block & Named> extends NamedType<Type> implements Loadable {
 	/**
-	 * Setter.
-	 *
 	 * @param block 名前付きブロック
 	 */
 	@Setting
