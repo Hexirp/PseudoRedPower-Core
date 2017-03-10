@@ -17,7 +17,7 @@ import net.minecraft.item.Item;
 public class ShapelessRecipeMaterial {
 	/** 不定形レシピの材料. */
 	private final List<Item> list = new LinkedList<>();
-	
+
 	/**
 	 * 配列に変換する.
 	 *
@@ -27,13 +27,13 @@ public class ShapelessRecipeMaterial {
 	public Object[] array() {
 		return new ListUtil<Item>().merge(list).array();
 	}
-	
+
 	/**
 	 * 材料を追加する.
 	 *
 	 * @param obj 材料の種類
 	 * @param n 材料の個数。0以上でなければならない
-	 * @return メソッドチェーン用
+	 * @return this
 	 */
 	@Chaining
 	public ShapelessRecipeMaterial add(final MinecraftItem obj, final int n) {

@@ -23,7 +23,7 @@ import hexirp.annotation.Method.Getting;
 public class ShapedRecipeAbstractOrder {
 	/** 文字で表現されたレシピの並べ方. */
 	private final List<String> order = new LinkedList<String>();
-
+	
 	/**
 	 * レシピの並べ方を取得する.
 	 *
@@ -33,17 +33,17 @@ public class ShapedRecipeAbstractOrder {
 	public List<String> order() {
 		return order;
 	}
-
+	
 	/**
 	 * レシピの下側に行を追加する.
 	 *
 	 * @param string アルファベットの大文字と空白のみで構成される文字列
-	 * @return メソッドチェーン用
+	 * @return this
 	 */
 	@Chaining
 	public ShapedRecipeAbstractOrder add(final String string) {
 		order.add(string);
-
+		
 		return this;
 	}
 }

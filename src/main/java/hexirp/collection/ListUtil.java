@@ -16,7 +16,7 @@ import hexirp.annotation.Method.Getting;
 public class ListUtil<Element> {
 	/** 内部に保持するリスト. */
 	private final List<Element> list = new LinkedList<>();
-
+	
 	/**
 	 * 配列に変換する.
 	 *
@@ -28,12 +28,12 @@ public class ListUtil<Element> {
 		if (null == ret) throw null;
 		return ret;
 	}
-
+	
 	/**
 	 * リストを結合する.
 	 *
 	 * @param col コレクション
-	 * @return 自分自身
+	 * @return this
 	 */
 	@Chaining
 	public ListUtil<Element> merge(final Collection<? extends Element> col) {
