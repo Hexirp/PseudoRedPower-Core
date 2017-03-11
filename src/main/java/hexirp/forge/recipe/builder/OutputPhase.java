@@ -10,8 +10,11 @@ import hexirp.forge.MinecraftItem;
  * @author Hexirp
  */
 public class OutputPhase {
+	/** 保存する記録. */
+	protected final Unit stack = Unit.$();
+	
 	/** 保存する値. */
-	private final MinecraftItem value;
+	protected final MinecraftItem value;
 	
 	/**
 	 * @param value {@link #value}

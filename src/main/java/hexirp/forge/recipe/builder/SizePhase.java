@@ -10,10 +10,10 @@ import hexirp.forge.MinecraftItem;
  */
 public class SizePhase {
 	/** 段階の記録. */
-	private final MinecraftItem stack;
+	protected final MinecraftItem stack;
 	
 	/** 保存する値. */
-	private final Integer value;
+	protected final Integer value;
 	
 	/**
 	 * @param stack {@link #stack}
