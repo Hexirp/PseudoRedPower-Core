@@ -2,6 +2,7 @@ package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Method.Setting;
 import hexirp.forge.MinecraftItem;
+import hexirp.forge.recipe.RecipeProduct;
 
 /**
  * 数量を定義する段階を表現する.
@@ -23,5 +24,13 @@ public class SizePhase {
 	public SizePhase(final MinecraftItem stack, final Integer value) {
 		this.stack = stack;
 		this.value = value;
+	}
+	
+	/**
+	 * @param value void
+	 * @return {@link OrderPhase}-次の段階
+	 */
+	public OrderPhase to(final Unit value) {
+		return new OrderPhase(new RecipeProduct(stack, this.value));
 	}
 }
