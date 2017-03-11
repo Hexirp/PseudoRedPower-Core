@@ -15,20 +15,13 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MaterialPhase {
-	/** 段階の記録. */
-	protected final Pair<RecipeProduct, ShapedRecipeAbstractOrder> stack;
-	
-	/** 保存する値. */
-	protected final ShapedRecipeMaterialMap value;
-	
+public class MaterialPhase extends TuplikePhase<Pair<RecipeProduct, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Unit> {
 	/**
 	 * @param stack {@lin #stack}
 	 */
 	@Setting
 	public MaterialPhase(final Pair<RecipeProduct, ShapedRecipeAbstractOrder> stack) {
-		this.stack = stack;
-		this.value = new ShapedRecipeMaterialMap();
+		super(stack, new ShapedRecipeMaterialMap());
 	}
 	
 	/**
@@ -43,10 +36,7 @@ public class MaterialPhase {
 		return this;
 	}
 	
-	/**
-	 * @param value void
-	 * @return {@link ShapedRecipe}-完成物
-	 */
+	@Override
 	@Getting
 	public ShapedRecipe to(final Unit value) {
 		return new ShapedRecipe(stack.first(), new ShapedRecipeOrder(stack.second(), this.value));
