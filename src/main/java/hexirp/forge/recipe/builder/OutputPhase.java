@@ -11,7 +11,7 @@ import hexirp.forge.MinecraftItem;
  */
 public class OutputPhase {
 	/** 保存する記録. */
-	protected final Unit stack = Unit.$();
+	protected final Unit stack;
 	
 	/** 保存する値. */
 	protected final MinecraftItem value;
@@ -21,6 +21,7 @@ public class OutputPhase {
 	 */
 	@Setting
 	public OutputPhase(final MinecraftItem value) {
+		this.stack = Unit.$();
 		this.value = value;
 	}
 	

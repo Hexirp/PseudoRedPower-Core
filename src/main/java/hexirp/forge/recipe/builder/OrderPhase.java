@@ -15,7 +15,7 @@ public class OrderPhase {
 	protected final RecipeProduct stack;
 	
 	/** 保存する値. */
-	protected final ShapedRecipeAbstractOrder value = new ShapedRecipeAbstractOrder();
+	protected final ShapedRecipeAbstractOrder value;
 	
 	/**
 	 * @param stack {@link #stack}
@@ -23,6 +23,7 @@ public class OrderPhase {
 	@Setting
 	public OrderPhase(final RecipeProduct stack) {
 		this.stack = stack;
+		this.value = new ShapedRecipeAbstractOrder();
 	}
 	
 	/**
