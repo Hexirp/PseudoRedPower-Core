@@ -17,20 +17,7 @@ public class RecipeBuilder extends BranchedPhase<Unit, Unit, OutputPhase, Minecr
 	public RecipeBuilder() {
 		super(Unit.$(), Unit.$());
 	}
-
-	/**
-	 * 製錬レシピの因果関係を定義する段階に移行する.
-	 *
-	 * @param product 結果
-	 * @param material 材料
-	 * @return 次の段階
-	 * @see SmeltingIngaPhase#SmeltingIngaPhase(MinecraftItem, MinecraftItem)
-	 */
-	@Deprecated
-	public SmeltingIngaPhase inga(final MinecraftItem product, final MinecraftItem material) {
-		return new SmeltingIngaPhase(product, material);
-	}
-
+	
 	@Override
 	@Getting
 	public OutputPhase to(final MinecraftItem value) {
