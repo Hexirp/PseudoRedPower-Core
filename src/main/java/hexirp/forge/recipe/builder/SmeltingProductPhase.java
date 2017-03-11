@@ -1,5 +1,6 @@
 package hexirp.forge.recipe.builder;
 
+import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
 import hexirp.builder.Phase;
 import hexirp.collection.Unit;
@@ -20,6 +21,7 @@ public class SmeltingProductPhase extends Phase<Unit, MinecraftItem, SmeltingMat
 	}
 	
 	@Override
+	@Getting
 	public SmeltingMaterialPhase to(final MinecraftItem value) {
 		return new SmeltingMaterialPhase(second(), value);
 	}
