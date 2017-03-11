@@ -1,6 +1,7 @@
 package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Method.Chaining;
+import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
@@ -36,5 +37,14 @@ public class OrderPhase {
 	public OrderPhase set(final String element) {
 		value.add(element);
 		return this;
+	}
+	
+	/**
+	 * @param value void
+	 * @return {@link MaterialPhase}-次の段階
+	 */
+	@Getting
+	public MaterialPhase to(final Unit value) {
+		return new MaterialPhase(new Pair<>(stack, this.value));
 	}
 }
