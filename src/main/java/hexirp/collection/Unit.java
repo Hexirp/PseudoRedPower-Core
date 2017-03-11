@@ -1,4 +1,4 @@
-package hexirp.forge.recipe.builder;
+package hexirp.collection;
 
 import hexirp.annotation.Method.Getting;
 
@@ -7,13 +7,13 @@ import hexirp.annotation.Method.Getting;
  *
  * @author Hexirp
  */
-public class Unit {
+public final class Unit {
 	/** シングルトン. */
 	private final static Unit singleton = new Unit();
-	
+
 	/** 隠蔽されたコントストラクタ. */
 	private Unit() {};
-	
+
 	/**
 	 * @return シングルトン
 	 */

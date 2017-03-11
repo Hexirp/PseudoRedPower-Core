@@ -2,6 +2,8 @@ package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
+import hexirp.builder.Phase;
+import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 
 /**
@@ -9,18 +11,18 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class OutputPhase extends TuplikePhase<Unit, MinecraftItem, SizePhase, Integer> {
+public class OutputPhase extends Phase<Unit, MinecraftItem, SizePhase, Integer> {
 	/**
-	 * @param value {@link #value}
+	 * @param value この段階で保存する値
 	 */
 	@Setting
 	public OutputPhase(final MinecraftItem value) {
 		super(Unit.$(), value);
 	}
-	
+
 	@Override
 	@Getting
 	public SizePhase to(final Integer value) {
-		return new SizePhase(this.value, value);
+		return new SizePhase(second(), value);
 	}
 }

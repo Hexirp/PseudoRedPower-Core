@@ -3,6 +3,8 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Method.Chaining;
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
+import hexirp.builder.FinalPhase;
+import hexirp.collection.Pair;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipe;
@@ -15,12 +17,12 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MaterialPhase extends TuplikePhase<Pair<RecipeProduct, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Unit> {
+public class MaterialPhase extends FinalPhase<Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
 	/**
-	 * @param stack {@lin #stack}
+	 * @param stack これまでの段階の記録
 	 */
 	@Setting
-	public MaterialPhase(final Pair<RecipeProduct, ShapedRecipeAbstractOrder> stack) {
+	public MaterialPhase(final Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
 		super(stack, new ShapedRecipeMaterialMap());
 	}
 	
@@ -32,13 +34,15 @@ public class MaterialPhase extends TuplikePhase<Pair<RecipeProduct, ShapedRecipe
 	 */
 	@Chaining
 	public MaterialPhase set(final Pair<Character, MinecraftItem> element) {
-		value.put(element.first(), element.second());
+		second().put(element.first(), element.second());
 		return this;
 	}
 	
 	@Override
 	@Getting
-	public ShapedRecipe to(final Unit value) {
-		return new ShapedRecipe(stack.first(), new ShapedRecipeOrder(stack.second(), this.value));
+	public ShapedRecipe to() {
+		return new ShapedRecipe(
+		    new RecipeProduct(first().first().first(), first().first().second()),
+		    new ShapedRecipeOrder(first().second(), second()));
 	}
 }

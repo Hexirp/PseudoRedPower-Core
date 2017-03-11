@@ -1,11 +1,11 @@
 package hexirp.forge.prp.core;
 
 import hexirp.annotation.Method.Setting;
+import hexirp.collection.Pair;
+import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
-import hexirp.forge.recipe.builder.Pair;
 import hexirp.forge.recipe.builder.RecipeBuilder;
-import hexirp.forge.recipe.builder.Unit;
 import net.minecraft.init.Items;
 
 /**

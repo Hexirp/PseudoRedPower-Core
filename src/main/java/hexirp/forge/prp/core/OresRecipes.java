@@ -1,6 +1,7 @@
 package hexirp.forge.prp.core;
 
 import hexirp.annotation.Method.Setting;
+import hexirp.collection.Unit;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
@@ -21,8 +22,10 @@ public class OresRecipes extends RegisterableLibrary {
 	public OresRecipes(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
-		        .inga(items.lookup("silver_ingot"), items.lookup("silver_ore"))
-		        .exp(1, 1)
-		        .to());
+		        .to2(items.lookup("silver_ingot"))
+		        .to(items.lookup("silver_ore"))
+		        .to(1)
+		        .to(1)
+		        .to(Unit.$()));
 	}
 }
