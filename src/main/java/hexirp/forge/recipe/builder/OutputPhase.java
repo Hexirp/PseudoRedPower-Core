@@ -9,7 +9,7 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class OutputPhase extends TuplikePhase<Unit, MinecraftItem, SizePhase, Integer> {
+public class OutputPhase extends Phase<Unit, MinecraftItem, SizePhase, Integer> {
 	/**
 	 * @param value {@link #value}
 	 */

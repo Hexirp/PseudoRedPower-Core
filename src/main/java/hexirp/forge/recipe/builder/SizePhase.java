@@ -9,7 +9,7 @@ import hexirp.forge.recipe.RecipeProduct;
  *
  * @author Hexirp
  */
-public class SizePhase extends TuplikePhase<MinecraftItem, Integer, OrderPhase, Unit> {
+public class SizePhase extends Phase<MinecraftItem, Integer, OrderPhase, Unit> {
 	/**
 	 * @param stack {@link #stack}
 	 * @param value {@link #value}

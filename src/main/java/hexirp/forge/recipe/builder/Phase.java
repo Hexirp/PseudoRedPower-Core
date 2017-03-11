@@ -12,7 +12,7 @@ import hexirp.annotation.Method.Setting;
  * @param <T3> 次の段階
  * @param <T4> 次の段階で保存される値
  */
-public abstract class TuplikePhase<T1, T2, T3, T4> {
+public abstract class Phase<T1, T2, T3, T4> {
 	/** 段階の記録. */
 	protected final T1 stack;
 	
@@ -24,7 +24,7 @@ public abstract class TuplikePhase<T1, T2, T3, T4> {
 	 * @param value {@link #value}
 	 */
 	@Setting
-	public TuplikePhase(final T1 stack, final T2 value) {
+	public Phase(final T1 stack, final T2 value) {
 		this.stack = stack;
 		this.value = value;
 	}

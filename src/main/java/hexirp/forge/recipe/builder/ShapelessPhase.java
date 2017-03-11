@@ -13,7 +13,7 @@ import hexirp.forge.recipe.ShapelessRecipeMaterial;
  *
  * @author Hexirp
  */
-public class ShapelessPhase extends TuplikePhase<RecipeProduct, ShapelessRecipeMaterial, ShapelessRecipe, Unit> {
+public class ShapelessPhase extends Phase<RecipeProduct, ShapelessRecipeMaterial, ShapelessRecipe, Unit> {
 	/**
 	 * @param stack {@link #stack}
 	 */

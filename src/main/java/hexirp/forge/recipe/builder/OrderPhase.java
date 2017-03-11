@@ -11,7 +11,7 @@ import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
  *
  * @author Hexirp
  */
-public class OrderPhase extends TuplikePhase<RecipeProduct, ShapedRecipeAbstractOrder, MaterialPhase, Unit> {
+public class OrderPhase extends Phase<RecipeProduct, ShapedRecipeAbstractOrder, MaterialPhase, Unit> {
 	/**
 	 * @param stack {@link #stack}
 	 */
