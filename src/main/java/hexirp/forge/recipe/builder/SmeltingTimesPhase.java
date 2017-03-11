@@ -2,10 +2,8 @@ package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
-import hexirp.annotation.NonNull;
-import hexirp.builder.Phase;
+import hexirp.builder.FinalPhase;
 import hexirp.collection.Pair;
-import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.smelting.SmeltingRecipe;
 import hexirp.forge.smelting.SmeltingRecipeExp;
@@ -16,7 +14,7 @@ import hexirp.forge.smelting.SmeltingRecipeInga;
  *
  * @author Hexirp
  */
-public class SmeltingTimesPhase extends Phase<Pair<Pair<MinecraftItem, MinecraftItem>, Integer>, Integer, SmeltingRecipe, Unit> {
+public class SmeltingTimesPhase extends FinalPhase<Pair<Pair<MinecraftItem, MinecraftItem>, Integer>, Integer, SmeltingRecipe> {
 	/**
 	 * @param stack これまでの値の記録
 	 * @param value この段階で保存する値
@@ -28,7 +26,7 @@ public class SmeltingTimesPhase extends Phase<Pair<Pair<MinecraftItem, Minecraft
 	
 	@Override
 	@Getting
-	public @NonNull SmeltingRecipe to(final Unit value) {
+	public SmeltingRecipe to() {
 		return new SmeltingRecipe(
 		    new SmeltingRecipeInga(first().first().first(), first().first().second()),
 		    new SmeltingRecipeExp(first().second(), second()));

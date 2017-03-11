@@ -3,9 +3,8 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Method.Chaining;
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
-import hexirp.builder.Phase;
+import hexirp.builder.FinalPhase;
 import hexirp.collection.Pair;
-import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipe;
@@ -18,7 +17,7 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MaterialPhase extends Phase<Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Unit> {
+public class MaterialPhase extends FinalPhase<Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
@@ -41,7 +40,7 @@ public class MaterialPhase extends Phase<Pair<Pair<MinecraftItem, Integer>, Shap
 	
 	@Override
 	@Getting
-	public ShapedRecipe to(final Unit value) {
+	public ShapedRecipe to() {
 		return new ShapedRecipe(
 		    new RecipeProduct(first().first().first(), first().first().second()),
 		    new ShapedRecipeOrder(first().second(), second()));
