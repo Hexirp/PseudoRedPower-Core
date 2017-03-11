@@ -16,7 +16,9 @@ public class RecipeBuilder {
 	 * @param size 作成物の数
 	 * @return 結果を定義する段階
 	 * @see ProductPhase#ProductPhase(MinecraftItem, int)
+	 * @deprecated {@link #to(MinecraftItem)}を使うべし
 	 */
+	@Deprecated
 	public ProductPhase product(final MinecraftItem output, final int size) {
 		return new ProductPhase(output, size);
 	}
