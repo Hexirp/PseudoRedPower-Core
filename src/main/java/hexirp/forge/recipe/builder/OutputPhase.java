@@ -9,26 +9,16 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class OutputPhase {
-	/** 保存する記録. */
-	protected final Unit stack;
-	
-	/** 保存する値. */
-	protected final MinecraftItem value;
-	
+public class OutputPhase extends TuplikePhase<Unit, MinecraftItem, SizePhase, Integer> {
 	/**
 	 * @param value {@link #value}
 	 */
 	@Setting
 	public OutputPhase(final MinecraftItem value) {
-		this.stack = Unit.$();
-		this.value = value;
+		super(Unit.$(), value);
 	}
 	
-	/**
-	 * @param value 数量
-	 * @return {@link SizePhase}-次の段階
-	 */
+	@Override
 	@Getting
 	public SizePhase to(final Integer value) {
 		return new SizePhase(this.value, value);

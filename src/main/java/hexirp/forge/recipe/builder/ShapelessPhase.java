@@ -13,20 +13,13 @@ import hexirp.forge.recipe.ShapelessRecipeMaterial;
  *
  * @author Hexirp
  */
-public class ShapelessPhase {
-	/** 段階の記録. */
-	protected final RecipeProduct stack;
-	
-	/** 保存する値. */
-	protected final ShapelessRecipeMaterial value;
-	
+public class ShapelessPhase extends TuplikePhase<RecipeProduct, ShapelessRecipeMaterial, ShapelessRecipe, Unit> {
 	/**
 	 * @param stack {@link #stack}
 	 */
 	@Setting
 	public ShapelessPhase(final RecipeProduct stack) {
-		this.stack = stack;
-		this.value = new ShapelessRecipeMaterial();
+		super(stack, new ShapelessRecipeMaterial());
 	}
 	
 	/**
@@ -41,10 +34,7 @@ public class ShapelessPhase {
 		return this;
 	}
 	
-	/**
-	 * @param value void
-	 * @return {@link ShapelessRecipe}-完成物
-	 */
+	@Override
 	@Getting
 	public ShapelessRecipe to(final Unit value) {
 		return new ShapelessRecipe(stack, this.value);
