@@ -20,13 +20,13 @@ public abstract class FinalPhase<T1, T2, T3> extends Phase<T1, T2, T3, Unit> {
 	public FinalPhase(final T1 stack, final T2 value) {
 		super(stack, value);
 	}
-	
+
 	@Override
 	@Getting
-	public T3 to(final Unit value) {
+	public final T3 to(final Unit value) {
 		return to();
 	}
-	
+
 	/**
 	 * @return 生成物
 	 */

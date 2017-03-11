@@ -17,14 +17,15 @@ public class RecipeBuilder extends BranchedPhase<Unit, Unit, OutputPhase, Minecr
 	public RecipeBuilder() {
 		super(Unit.$(), Unit.$());
 	}
-	
+
 	@Override
 	@Getting
 	public OutputPhase to(final MinecraftItem value) {
 		return new OutputPhase(value);
 	}
-	
+
 	@Override
+	@Getting
 	public SmeltingProductPhase to2(final MinecraftItem value) {
 		return new SmeltingProductPhase(value);
 	}

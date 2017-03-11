@@ -1,5 +1,6 @@
 package hexirp.forge.recipe.builder;
 
+import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
 import hexirp.builder.BranchedPhase;
 import hexirp.collection.Unit;
@@ -19,13 +20,15 @@ public class SizePhase extends BranchedPhase<MinecraftItem, Integer, OrderPhase,
 	public SizePhase(final MinecraftItem stack, final Integer value) {
 		super(stack, value);
 	}
-	
+
 	@Override
+	@Getting
 	public OrderPhase to(final Unit value) {
 		return new OrderPhase(this);
 	}
-	
+
 	@Override
+	@Getting
 	public ShapelessPhase to2(final Unit value) {
 		return new ShapelessPhase(this);
 	}
