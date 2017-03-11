@@ -15,13 +15,13 @@ import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
  */
 public class OrderPhase extends Phase<RecipeProduct, ShapedRecipeAbstractOrder, MaterialPhase, Unit> {
 	/**
-	 * @param stack {@link #stack}
+	 * @param stack これまでの段階の記録
 	 */
 	@Setting
 	public OrderPhase(final RecipeProduct stack) {
 		super(stack, new ShapedRecipeAbstractOrder());
 	}
-	
+
 	/**
 	 * 要素を追加する.
 	 *
@@ -30,13 +30,13 @@ public class OrderPhase extends Phase<RecipeProduct, ShapedRecipeAbstractOrder, 
 	 */
 	@Chaining
 	public OrderPhase set(final String element) {
-		value.add(element);
+		second().add(element);
 		return this;
 	}
-	
+
 	@Override
 	@Getting
 	public MaterialPhase to(final Unit value) {
-		return new MaterialPhase(new Pair<>(stack, this.value));
+		return new MaterialPhase(new Pair<>(first(), second()));
 	}
 }

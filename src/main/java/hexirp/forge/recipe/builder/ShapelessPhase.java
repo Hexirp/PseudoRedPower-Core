@@ -16,7 +16,7 @@ import hexirp.forge.recipe.ShapelessRecipeMaterial;
  */
 public class ShapelessPhase extends Phase<RecipeProduct, ShapelessRecipeMaterial, ShapelessRecipe, Unit> {
 	/**
-	 * @param stack {@link #stack}
+	 * @param stack これまでの段階で保存された値
 	 */
 	@Setting
 	public ShapelessPhase(final RecipeProduct stack) {
@@ -31,13 +31,13 @@ public class ShapelessPhase extends Phase<RecipeProduct, ShapelessRecipeMaterial
 	 */
 	@Chaining
 	public ShapelessPhase set(final MinecraftItem element) {
-		value.add(element, 1);
+		second().add(element, 1);
 		return this;
 	}
 	
 	@Override
 	@Getting
 	public ShapelessRecipe to(final Unit value) {
-		return new ShapelessRecipe(stack, this.value);
+		return new ShapelessRecipe(first(), second());
 	}
 }

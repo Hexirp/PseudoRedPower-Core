@@ -12,8 +12,8 @@ import hexirp.forge.recipe.RecipeProduct;
  */
 public class SizePhase extends Phase<MinecraftItem, Integer, OrderPhase, Unit> {
 	/**
-	 * @param stack {@link #stack}
-	 * @param value {@link #value}
+	 * @param stack これまでの段階で保存された値
+	 * @param value この段階で保存する値
 	 */
 	@Setting
 	public SizePhase(final MinecraftItem stack, final Integer value) {
@@ -22,7 +22,7 @@ public class SizePhase extends Phase<MinecraftItem, Integer, OrderPhase, Unit> {
 	
 	@Override
 	public OrderPhase to(final Unit value) {
-		return new OrderPhase(new RecipeProduct(stack, this.value));
+		return new OrderPhase(new RecipeProduct(first(), second()));
 	}
 	
 	/**
@@ -30,6 +30,6 @@ public class SizePhase extends Phase<MinecraftItem, Integer, OrderPhase, Unit> {
 	 * @return {@link ShapelessPhase}-次の段階
 	 */
 	public ShapelessPhase to2(final Unit value) {
-		return new ShapelessPhase(new RecipeProduct(stack, this.value));
+		return new ShapelessPhase(new RecipeProduct(first(), second()));
 	}
 }

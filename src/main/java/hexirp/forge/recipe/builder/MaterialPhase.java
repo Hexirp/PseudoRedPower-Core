@@ -19,7 +19,7 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  */
 public class MaterialPhase extends Phase<Pair<RecipeProduct, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Unit> {
 	/**
-	 * @param stack {@lin #stack}
+	 * @param stack これまでの段階の記録
 	 */
 	@Setting
 	public MaterialPhase(final Pair<RecipeProduct, ShapedRecipeAbstractOrder> stack) {
@@ -34,13 +34,13 @@ public class MaterialPhase extends Phase<Pair<RecipeProduct, ShapedRecipeAbstrac
 	 */
 	@Chaining
 	public MaterialPhase set(final Pair<Character, MinecraftItem> element) {
-		value.put(element.first(), element.second());
+		second().put(element.first(), element.second());
 		return this;
 	}
 	
 	@Override
 	@Getting
 	public ShapedRecipe to(final Unit value) {
-		return new ShapedRecipe(stack.first(), new ShapedRecipeOrder(stack.second(), this.value));
+		return new ShapedRecipe(first().first(), new ShapedRecipeOrder(first().second(), second()));
 	}
 }

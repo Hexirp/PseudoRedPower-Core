@@ -12,16 +12,16 @@ import hexirp.forge.MinecraftItem;
  */
 public class OutputPhase extends Phase<Unit, MinecraftItem, SizePhase, Integer> {
 	/**
-	 * @param value {@link #value}
+	 * @param value この段階で保存する値
 	 */
 	@Setting
 	public OutputPhase(final MinecraftItem value) {
 		super(Unit.$(), value);
 	}
-	
+
 	@Override
 	@Getting
 	public SizePhase to(final Integer value) {
-		return new SizePhase(this.value, value);
+		return new SizePhase(second(), value);
 	}
 }
