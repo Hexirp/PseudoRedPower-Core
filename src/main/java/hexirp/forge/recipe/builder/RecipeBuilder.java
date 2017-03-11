@@ -1,5 +1,6 @@
 package hexirp.forge.recipe.builder;
 
+import hexirp.annotation.Method.Getting;
 import hexirp.forge.MinecraftItem;
 
 /**
@@ -30,5 +31,14 @@ public class RecipeBuilder {
 	 */
 	public SmeltingIngaPhase inga(final MinecraftItem product, final MinecraftItem material) {
 		return new SmeltingIngaPhase(product, material);
+	}
+	
+	/**
+	 * @param value 数量
+	 * @return {@link OutputPhase}-次の段階
+	 */
+	@Getting
+	public OutputPhase to(final MinecraftItem value) {
+		return new OutputPhase(value);
 	}
 }
