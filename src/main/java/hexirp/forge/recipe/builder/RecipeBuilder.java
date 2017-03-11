@@ -10,20 +10,6 @@ import hexirp.forge.MinecraftItem;
  */
 public class RecipeBuilder {
 	/**
-	 * 結果を定義する段階に移行する.
-	 *
-	 * @param output 作成物の種類
-	 * @param size 作成物の数
-	 * @return 結果を定義する段階
-	 * @see ProductPhase#ProductPhase(MinecraftItem, int)
-	 * @deprecated {@link #to(MinecraftItem)}を使うべし
-	 */
-	@Deprecated
-	public ProductPhase product(final MinecraftItem output, final int size) {
-		return new ProductPhase(output, size);
-	}
-	
-	/**
 	 * 製錬レシピの因果関係を定義する段階に移行する.
 	 *
 	 * @param product 結果
