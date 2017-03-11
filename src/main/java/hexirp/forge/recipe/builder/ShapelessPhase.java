@@ -3,6 +3,7 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Method.Chaining;
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
+import hexirp.collection.Pair;
 import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
@@ -14,12 +15,12 @@ import hexirp.forge.recipe.ShapelessRecipeMaterial;
  *
  * @author Hexirp
  */
-public class ShapelessPhase extends Phase<RecipeProduct, ShapelessRecipeMaterial, ShapelessRecipe, Unit> {
+public class ShapelessPhase extends Phase<Pair<MinecraftItem, Integer>, ShapelessRecipeMaterial, ShapelessRecipe, Unit> {
 	/**
 	 * @param stack これまでの段階で保存された値
 	 */
 	@Setting
-	public ShapelessPhase(final RecipeProduct stack) {
+	public ShapelessPhase(final Pair<MinecraftItem, Integer> stack) {
 		super(stack, new ShapelessRecipeMaterial());
 	}
 	
@@ -38,6 +39,6 @@ public class ShapelessPhase extends Phase<RecipeProduct, ShapelessRecipeMaterial
 	@Override
 	@Getting
 	public ShapelessRecipe to(final Unit value) {
-		return new ShapelessRecipe(first(), second());
+		return new ShapelessRecipe(new RecipeProduct(first().first(), first().second()), second());
 	}
 }

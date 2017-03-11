@@ -17,12 +17,12 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MaterialPhase extends Phase<Pair<RecipeProduct, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Unit> {
+public class MaterialPhase extends Phase<Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Unit> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
 	@Setting
-	public MaterialPhase(final Pair<RecipeProduct, ShapedRecipeAbstractOrder> stack) {
+	public MaterialPhase(final Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
 		super(stack, new ShapedRecipeMaterialMap());
 	}
 	
@@ -41,6 +41,8 @@ public class MaterialPhase extends Phase<Pair<RecipeProduct, ShapedRecipeAbstrac
 	@Override
 	@Getting
 	public ShapedRecipe to(final Unit value) {
-		return new ShapedRecipe(first().first(), new ShapedRecipeOrder(first().second(), second()));
+		return new ShapedRecipe(
+		    new RecipeProduct(first().first().first(), first().first().second()),
+		    new ShapedRecipeOrder(first().second(), second()));
 	}
 }
