@@ -11,12 +11,12 @@ import hexirp.annotation.Method.Setting;
  * @param <T2> 型2
  */
 public class Pair<T1, T2> {
-	/** 値1 */
+	/** 値1. */
 	private final T1 first;
-	
-	/** 値2 */
+
+	/** 値2. */
 	private final T2 second;
-	
+
 	/**
 	 * @param first {@link #first}
 	 * @param second {@link #second}
@@ -26,7 +26,7 @@ public class Pair<T1, T2> {
 		this.first = first;
 		this.second = second;
 	}
-	
+
 	/**
 	 * @return {@link #first}
 	 */
@@ -34,7 +34,7 @@ public class Pair<T1, T2> {
 	public T1 first() {
 		return first;
 	}
-	
+
 	/**
 	 * @return {@link #second}
 	 */
