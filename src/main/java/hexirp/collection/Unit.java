@@ -1,4 +1,4 @@
-package hexirp.forge.recipe.builder;
+package hexirp.collection;
 
 import hexirp.annotation.Method.Getting;
 

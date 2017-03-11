@@ -1,6 +1,7 @@
 package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Method.Setting;
+import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 

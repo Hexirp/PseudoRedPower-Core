@@ -3,6 +3,8 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Method.Chaining;
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
+import hexirp.collection.Pair;
+import hexirp.collection.Unit;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
