@@ -23,4 +23,12 @@ public class SizePhase extends TuplikePhase<MinecraftItem, Integer, OrderPhase, 
 	public OrderPhase to(final Unit value) {
 		return new OrderPhase(new RecipeProduct(stack, this.value));
 	}
+	
+	/**
+	 * @param value void
+	 * @return {@link ShapelessPhase}-次の段階
+	 */
+	public ShapelessPhase to2(final Unit value) {
+		return new ShapelessPhase(new RecipeProduct(stack, this.value));
+	}
 }
