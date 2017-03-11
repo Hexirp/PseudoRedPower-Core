@@ -1,6 +1,8 @@
 package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Method.Setting;
+import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 
 /**
@@ -8,7 +10,13 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class RecipeBuilder {
+public class RecipeBuilder extends Phase<Unit, Unit, OutputPhase, MinecraftItem> {
+	/** Setting. */
+	@Setting
+	public RecipeBuilder() {
+		super(Unit.$(), Unit.$());
+	}
+	
 	/**
 	 * 製錬レシピの因果関係を定義する段階に移行する.
 	 *
@@ -21,10 +29,7 @@ public class RecipeBuilder {
 		return new SmeltingIngaPhase(product, material);
 	}
 	
-	/**
-	 * @param value 数量
-	 * @return {@link OutputPhase}-次の段階
-	 */
+	@Override
 	@Getting
 	public OutputPhase to(final MinecraftItem value) {
 		return new OutputPhase(value);

@@ -9,7 +9,7 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class SizePhase extends Phase<MinecraftItem, Integer, OrderPhase, Unit> {
+public class SizePhase extends BranchedPhase<MinecraftItem, Integer, OrderPhase, Unit, ShapelessPhase, Unit> {
 	/**
 	 * @param stack これまでの段階で保存された値
 	 * @param value この段階で保存する値
@@ -24,10 +24,7 @@ public class SizePhase extends Phase<MinecraftItem, Integer, OrderPhase, Unit> {
 		return new OrderPhase(this);
 	}
 	
-	/**
-	 * @param value void
-	 * @return {@link ShapelessPhase}-次の段階
-	 */
+	@Override
 	public ShapelessPhase to2(final Unit value) {
 		return new ShapelessPhase(this);
 	}
