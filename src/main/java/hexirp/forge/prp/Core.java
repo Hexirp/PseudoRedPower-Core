@@ -4,7 +4,6 @@ import hexirp.annotation.Method.Command;
 import hexirp.annotation.Nullable;
 import hexirp.forge.loadable.Environment;
 import hexirp.forge.prp.core.Mechanism;
-import hexirp.forge.prp.core.Metadata;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -34,13 +33,16 @@ public class Core {
 	 *
 	 * @param event イベントモデルによる初期化前処理イベント
 	 */
-	@SuppressWarnings("null")
 	@Mod.EventHandler
 	@Command
-	public void preInit(final FMLPreInitializationEvent event) {
-		new Metadata().set(metadata);
+	public void preInit(final @Nullable FMLPreInitializationEvent event) {
+		final @Nullable ModMetadata localData = metadata;
 		
-		final Environment env = new Environment(metadata, event);
+		if (null == localData || null == event) throw null;
+		
+		new Metadata().set(localData);
+		
+		final Environment env = new Environment(localData, event);
 		
 		new Mechanism().add(env);
 	}
