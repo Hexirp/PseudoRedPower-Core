@@ -3,7 +3,6 @@ package hexirp.collection.test;
 import java.util.LinkedList;
 import java.util.List;
 
-import hexirp.annotation.Nullable;
 import hexirp.collection.UsingList;
 
 /**
@@ -16,11 +15,12 @@ public interface UsingErrorList<E> extends UsingList<E> {
 	@Override
 	default public List<E> usedList() {
 		return new LinkedList<E>() {
-			/** シリアルID */
+			/** シリアルID. */
 			private static final long serialVersionUID = 1L;
 			
+			@SuppressWarnings("null")
 			@Override
-			public @Nullable Object @Nullable [] toArray() {
+			public Object[] toArray() {
 				return null;
 			}
 		};
