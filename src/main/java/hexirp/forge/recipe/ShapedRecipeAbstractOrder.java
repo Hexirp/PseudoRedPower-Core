@@ -5,18 +5,10 @@ import java.util.List;
 
 import hexirp.annotation.Method.Chaining;
 import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Nullable;
 
 /**
  * レシピの並べ方を文字で抽象的に表現する.
- *
- * <h2>使用例</h2>
- *
- * <pre>
- * new ShapedRecipeAbstractOrder()
- *     .add("AAA")
- *     .add("AAA")
- *     .add("AAA")
- * </pre>
  *
  * @author Hexirp
  */
@@ -43,5 +35,18 @@ public class ShapedRecipeAbstractOrder {
 		order.add(string);
 		
 		return this;
+	}
+	
+	@Getting
+	@Override
+	public boolean equals(@Nullable final Object obj) {
+		if (null == obj) return false;
+		return (obj instanceof ShapedRecipeAbstractOrder) ? order.equals(((ShapedRecipeAbstractOrder) obj).order) : false;
+	}
+	
+	@Getting
+	@Override
+	public int hashCode() {
+		return order.hashCode();
 	}
 }
