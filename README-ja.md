@@ -1,4 +1,6 @@
 # PseudoRedPower-Core
+[![Build Status](https://travis-ci.org/Hexirp/PseudoRedPower-Core.svg?branch=master)](https://travis-ci.org/Hexirp/PseudoRedPower-Core)
+
 これはMinecraftのMODであり、**RedPower2を1.8.9以降に移植したもの**だ。そのため、もしあなたがこのMODを面白いと思ったのなら、あなたが**RedPower2の作者を尊敬することを望む**。
 
 ## 特徴
