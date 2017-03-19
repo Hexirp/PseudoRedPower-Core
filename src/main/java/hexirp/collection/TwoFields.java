@@ -4,7 +4,7 @@ import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
 
 /**
- * ペア型を表す.
+ * 二つのフィールドを持つことを表す.
  *
  * @author Hexirp
  * @param <T1> 型1
@@ -13,10 +13,10 @@ import hexirp.annotation.Method.Setting;
 public class TwoFields<T1, T2> {
 	/** 値1. */
 	private final T1 first;
-
+	
 	/** 値2. */
 	private final T2 second;
-
+	
 	/**
 	 * @param first {@link #first}
 	 * @param second {@link #second}
@@ -26,7 +26,7 @@ public class TwoFields<T1, T2> {
 		this.first = first;
 		this.second = second;
 	}
-
+	
 	/**
 	 * @return {@link #first}
 	 */
@@ -34,7 +34,7 @@ public class TwoFields<T1, T2> {
 	public T1 first() {
 		return first;
 	}
-
+	
 	/**
 	 * @return {@link #second}
 	 */
