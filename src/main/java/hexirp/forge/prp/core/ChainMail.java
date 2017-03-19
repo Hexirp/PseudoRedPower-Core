@@ -1,7 +1,7 @@
 package hexirp.forge.prp.core;
 
 import hexirp.annotation.Method.Setting;
-import hexirp.collection.Pair;
+import hexirp.collection.TwoFields;
 import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
@@ -25,7 +25,7 @@ public class ChainMail extends RegisterableLibrary {
 		        .set(" A ")
 		        .set("A A")
 		        .to(Unit.$())
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set(new TwoFields<>('A', new MinecraftItem(Items.iron_ingot)))
 		        .to(Unit.$()));
 		add(
 		    new RecipeBuilder()
@@ -36,7 +36,7 @@ public class ChainMail extends RegisterableLibrary {
 		        .set(" A ")
 		        .set("AAA")
 		        .to(Unit.$())
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set(new TwoFields<>('A', new MinecraftItem(Items.iron_ingot)))
 		        .to(Unit.$()));
 		add(
 		    new RecipeBuilder()
@@ -47,7 +47,7 @@ public class ChainMail extends RegisterableLibrary {
 		        .set("A A")
 		        .set("A A")
 		        .to(Unit.$())
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set(new TwoFields<>('A', new MinecraftItem(Items.iron_ingot)))
 		        .to(Unit.$()));
 		add(
 		    new RecipeBuilder()
@@ -57,7 +57,7 @@ public class ChainMail extends RegisterableLibrary {
 		        .set("A  ")
 		        .set("  A")
 		        .to(Unit.$())
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set(new TwoFields<>('A', new MinecraftItem(Items.iron_ingot)))
 		        .to(Unit.$()));
 	}
 }

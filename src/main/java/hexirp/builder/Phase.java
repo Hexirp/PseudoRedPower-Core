@@ -2,7 +2,7 @@ package hexirp.builder;
 
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
-import hexirp.collection.Pair;
+import hexirp.collection.TwoFields;
 
 /**
  * ビルダーを表現する.
@@ -13,7 +13,7 @@ import hexirp.collection.Pair;
  * @param <T3> 次の段階
  * @param <T4> 次の段階が必要とする値
  */
-public abstract class Phase<T1, T2, T3, T4> extends Pair<T1, T2> {
+public abstract class Phase<T1, T2, T3, T4> extends TwoFields<T1, T2> {
 	/**
 	 * @param stack これまでの値の記録
 	 * @param value この段階で保存する値

@@ -1,45 +1,19 @@
 package hexirp.collection;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
-
 /**
  * ペア型を表す.
  *
  * @author Hexirp
- * @param <T1> 型1
- * @param <T2> 型2
+ *
+ * @param <T1> 第一要素
+ * @param <T2> 第二要素
  */
-public class Pair<T1, T2> {
-	/** 値1. */
-	private final T1 first;
-
-	/** 値2. */
-	private final T2 second;
-
+public final class Pair<T1, T2> extends TwoFields<T1, T2> {
 	/**
-	 * @param first {@link #first}
-	 * @param second {@link #second}
+	 * @param first 第一値
+	 * @param second 第二値
 	 */
-	@Setting
 	public Pair(final T1 first, final T2 second) {
-		this.first = first;
-		this.second = second;
-	}
-
-	/**
-	 * @return {@link #first}
-	 */
-	@Getting
-	public T1 first() {
-		return first;
-	}
-
-	/**
-	 * @return {@link #second}
-	 */
-	@Getting
-	public T2 second() {
-		return second;
+		super(first, second);
 	}
 }

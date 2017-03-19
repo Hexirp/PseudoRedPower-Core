@@ -3,7 +3,7 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
 import hexirp.builder.FinalPhase;
-import hexirp.collection.Pair;
+import hexirp.collection.TwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.smelting.SmeltingRecipe;
 import hexirp.forge.smelting.SmeltingRecipeExp;
@@ -14,13 +14,13 @@ import hexirp.forge.smelting.SmeltingRecipeInga;
  *
  * @author Hexirp
  */
-public class SmeltingTimesPhase extends FinalPhase<Pair<Pair<MinecraftItem, MinecraftItem>, Integer>, Integer, SmeltingRecipe> {
+public class SmeltingTimesPhase extends FinalPhase<TwoFields<TwoFields<MinecraftItem, MinecraftItem>, Integer>, Integer, SmeltingRecipe> {
 	/**
 	 * @param stack これまでの値の記録
 	 * @param value この段階で保存する値
 	 */
 	@Setting
-	public SmeltingTimesPhase(final Pair<Pair<MinecraftItem, MinecraftItem>, Integer> stack, final Integer value) {
+	public SmeltingTimesPhase(final TwoFields<TwoFields<MinecraftItem, MinecraftItem>, Integer> stack, final Integer value) {
 		super(stack, value);
 	}
 	
