@@ -3,7 +3,7 @@ package hexirp.collection;
 import java.util.LinkedList;
 import java.util.List;
 
-import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Getting;
 
 /**
  * {@link LinkedList}を使用する事を表現する.

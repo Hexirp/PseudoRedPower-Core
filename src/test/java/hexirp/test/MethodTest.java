@@ -5,13 +5,12 @@ import static org.junit.Assert.*;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import hexirp.annotation.Method;
-import hexirp.annotation.Method.Chaining;
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Chaining;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 
 /**
- * メソッドが{@link Method}を満たすかテストする為の関数を記述する.
+ * メソッドがアノテーションの制約を満たすかテストする為の関数を記述する.
  *
  * @author Hexirp
  */
@@ -29,7 +28,7 @@ public class MethodTest {
 	public static <A> void assertSetting(final Supplier<A> constructor) {
 		assertEquals(constructor.get(), constructor.get());
 	}
-	
+
 	/**
 	 * メソッドが{@link Getting}を満たす.
 	 *
@@ -45,10 +44,10 @@ public class MethodTest {
 	public static <A, B> void assertGetting(final A data, final Function<A, B> method) {
 		final B value1 = method.apply(data);
 		final B value2 = method.apply(data);
-		
+
 		assertEquals(value1, value2);
 	}
-	
+
 	/**
 	 * メソッドが{@link Chaining}を満たす.
 	 *
@@ -62,7 +61,7 @@ public class MethodTest {
 	 */
 	public static <A> void assertChaining(final A data, final Function<A, A> method) {
 		final A new_data = method.apply(data);
-		
+
 		assertTrue(data == new_data);
 	}
 }

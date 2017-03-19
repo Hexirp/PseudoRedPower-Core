@@ -1,7 +1,7 @@
 package hexirp.forge.loadable.item;
 
-import hexirp.annotation.Method.Command;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Command;
+import hexirp.annotation.Setting;
 import hexirp.forge.loadable.Environment;
 import hexirp.forge.loadable.Named;
 import hexirp.forge.loadable.NamedType;

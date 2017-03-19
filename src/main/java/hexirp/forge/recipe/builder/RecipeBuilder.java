@@ -1,7 +1,7 @@
 package hexirp.forge.recipe.builder;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 import hexirp.builder.BranchedPhase;
 import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;

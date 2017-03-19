@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import hexirp.annotation.Method.Chaining;
-import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Chaining;
+import hexirp.annotation.Getting;
 import hexirp.forge.MinecraftItem;
 
 /**

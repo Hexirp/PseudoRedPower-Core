@@ -1,7 +1,7 @@
 package hexirp.forge.loadable.item;
 
-import hexirp.annotation.Method.Command;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Command;
+import hexirp.annotation.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;

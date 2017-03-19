@@ -1,7 +1,7 @@
 package hexirp.builder;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 import hexirp.collection.Unit;
 
 /**

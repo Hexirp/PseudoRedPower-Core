@@ -1,6 +1,6 @@
 package hexirp.forge.prp.core;
 
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Setting;
 import hexirp.collection.Unit;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;

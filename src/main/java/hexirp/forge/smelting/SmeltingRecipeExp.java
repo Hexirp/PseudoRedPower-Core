@@ -1,7 +1,7 @@
 package hexirp.forge.smelting;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 
 /**
  * 製錬レシピにおいて、経験値が得られる確率の目安を表現する.

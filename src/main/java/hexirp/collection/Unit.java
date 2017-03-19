@@ -1,6 +1,6 @@
 package hexirp.collection;
 
-import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Getting;
 
 /**
  * ユニット型.

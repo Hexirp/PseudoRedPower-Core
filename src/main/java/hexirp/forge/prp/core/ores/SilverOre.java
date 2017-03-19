@@ -1,7 +1,7 @@
 package hexirp.forge.prp.core.ores;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 import hexirp.forge.loadable.Named;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

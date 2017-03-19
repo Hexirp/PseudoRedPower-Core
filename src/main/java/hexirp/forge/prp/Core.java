@@ -1,6 +1,6 @@
 package hexirp.forge.prp;
 
-import hexirp.annotation.Method.Command;
+import hexirp.annotation.Command;
 import hexirp.annotation.Nullable;
 import hexirp.forge.loadable.Environment;
 import hexirp.forge.prp.core.Mechanism;

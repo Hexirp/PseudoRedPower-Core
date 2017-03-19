@@ -3,8 +3,8 @@ package hexirp.forge.recipe;
 import java.util.LinkedList;
 import java.util.List;
 
-import hexirp.annotation.Method.Chaining;
-import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Chaining;
+import hexirp.annotation.Getting;
 import hexirp.collection.ListUtil;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.Item;

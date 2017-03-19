@@ -1,6 +1,6 @@
 package hexirp.forge.prp.core;
 
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Setting;
 import hexirp.forge.RegisterableLibrary;
 
 /**

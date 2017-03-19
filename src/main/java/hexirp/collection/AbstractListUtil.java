@@ -3,8 +3,8 @@ package hexirp.collection;
 import java.util.Collection;
 import java.util.List;
 
-import hexirp.annotation.Method.Chaining;
-import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Chaining;
+import hexirp.annotation.Getting;
 
 /**
  * 配列への変換を表現する.
