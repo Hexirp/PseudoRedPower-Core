@@ -14,6 +14,6 @@ public class Items extends LoadableLibrary {
 	/** コントストラクタ. */
 	@Setting
 	public Items() {
-		add(new LoadableItem<>(new SilverIngot()));
+		add(new LoadableItem(new SilverIngot(), new SilverIngot().name()));
 	}
 }

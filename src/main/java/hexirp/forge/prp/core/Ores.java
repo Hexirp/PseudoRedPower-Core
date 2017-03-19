@@ -16,7 +16,7 @@ public class Ores extends LoadableLibrary {
 	/** コントストラクタ. */
 	@Setting
 	public Ores() {
-		add(new LoadableItem<>(new SilverIngot()));
+		add(new LoadableItem(new SilverIngot(), new SilverIngot().name()));
 		add(new LoadableBlock<>(new SilverOre()));
 	}
 }
