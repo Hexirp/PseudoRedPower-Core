@@ -4,7 +4,7 @@ import hexirp.annotation.Method.Chaining;
 import hexirp.annotation.Method.Getting;
 import hexirp.annotation.Method.Setting;
 import hexirp.builder.FinalPhase;
-import hexirp.collection.Pair;
+import hexirp.collection.TwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipe;
@@ -17,12 +17,12 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MaterialPhase extends FinalPhase<Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
+public class MaterialPhase extends FinalPhase<TwoFields<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
 	@Setting
-	public MaterialPhase(final Pair<Pair<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
+	public MaterialPhase(final TwoFields<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
 		super(stack, new ShapedRecipeMaterialMap());
 	}
 	
@@ -33,7 +33,7 @@ public class MaterialPhase extends FinalPhase<Pair<Pair<MinecraftItem, Integer>,
 	 * @return this
 	 */
 	@Chaining
-	public MaterialPhase set(final Pair<Character, MinecraftItem> element) {
+	public MaterialPhase set(final TwoFields<Character, MinecraftItem> element) {
 		second().put(element.first(), element.second());
 		return this;
 	}
