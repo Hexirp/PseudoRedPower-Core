@@ -29,7 +29,7 @@ public class LoadableItem<Type extends Item & Named> extends NamedType<Type> imp
 	@Override
 	@Command
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerItem(this.value(), this.name());
+		GameRegistry.registerItem(this.value());
 		
 		new ItemResourceLocation<>(this.value()).set(env);
 		
