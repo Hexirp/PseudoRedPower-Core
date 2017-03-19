@@ -1,7 +1,7 @@
 package hexirp.collection;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 
 /**
  * 二つのフィールドを持つことを表す.

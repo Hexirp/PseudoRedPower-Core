@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
 
-import hexirp.annotation.Method.Chaining;
-import hexirp.annotation.Method.Command;
+import hexirp.annotation.Chaining;
+import hexirp.annotation.Command;
 
 /**
  * MODにおいて追加される要素を保持する辞書を表現する.

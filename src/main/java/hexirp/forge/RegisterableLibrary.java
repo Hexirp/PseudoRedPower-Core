@@ -1,6 +1,6 @@
 package hexirp.forge;
 
-import hexirp.annotation.Method.Command;
+import hexirp.annotation.Command;
 
 /**
  * 要素一つ一つを登録することが出来る{@link Library}を表現する.

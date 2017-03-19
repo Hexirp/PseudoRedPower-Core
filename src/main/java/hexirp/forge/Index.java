@@ -3,8 +3,8 @@ package hexirp.forge;
 import java.util.HashMap;
 import java.util.Map;
 
-import hexirp.annotation.Method.Chaining;
-import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Chaining;
+import hexirp.annotation.Getting;
 
 /**
  * アイテムの索引を表す.

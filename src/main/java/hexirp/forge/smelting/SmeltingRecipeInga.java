@@ -1,7 +1,7 @@
 package hexirp.forge.smelting;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.ItemStack;
 

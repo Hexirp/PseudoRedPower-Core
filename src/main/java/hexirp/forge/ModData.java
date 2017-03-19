@@ -1,6 +1,6 @@
 package hexirp.forge;
 
-import hexirp.annotation.Method.Command;
+import hexirp.annotation.Command;
 import net.minecraftforge.fml.common.ModMetadata;
 
 /**

@@ -1,8 +1,8 @@
 package hexirp.forge;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
 import hexirp.annotation.Nullable;
+import hexirp.annotation.Setting;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 

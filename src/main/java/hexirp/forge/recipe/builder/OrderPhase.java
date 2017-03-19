@@ -1,8 +1,8 @@
 package hexirp.forge.recipe.builder;
 
-import hexirp.annotation.Method.Chaining;
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Chaining;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 import hexirp.builder.Phase;
 import hexirp.collection.TwoFields;
 import hexirp.collection.Unit;

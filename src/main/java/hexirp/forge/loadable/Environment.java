@@ -1,7 +1,7 @@
 package hexirp.forge.loadable;
 
-import hexirp.annotation.Method.Getting;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

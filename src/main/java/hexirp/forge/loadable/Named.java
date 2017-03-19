@@ -1,6 +1,6 @@
 package hexirp.forge.loadable;
 
-import hexirp.annotation.Method.Getting;
+import hexirp.annotation.Getting;
 
 /**
  * 名前を持つことを表す.

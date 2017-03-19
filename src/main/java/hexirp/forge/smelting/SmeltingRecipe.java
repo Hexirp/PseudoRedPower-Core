@@ -1,7 +1,7 @@
 package hexirp.forge.smelting;
 
-import hexirp.annotation.Method.Command;
-import hexirp.annotation.Method.Setting;
+import hexirp.annotation.Command;
+import hexirp.annotation.Setting;
 import hexirp.forge.Registerable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
