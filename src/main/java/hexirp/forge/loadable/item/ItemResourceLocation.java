@@ -1,6 +1,7 @@
 package hexirp.forge.loadable.item;
 
 import hexirp.annotation.Command;
+import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
 import hexirp.forge.loadable.Environment;
 import net.minecraft.item.Item;
@@ -24,7 +25,8 @@ public class ItemResourceLocation {
 	 * @param name スネークケースでの名前
 	 */
 	@Setting
-	public ItemResourceLocation(final Item item, final String name) {
+	public ItemResourceLocation(final @Nullable Item item, final String name) {
+		if (null == item) throw null;
 		this.item = item;
 		this.name = name;
 	}
