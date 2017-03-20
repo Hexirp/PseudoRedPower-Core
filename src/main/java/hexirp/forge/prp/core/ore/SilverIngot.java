@@ -2,7 +2,7 @@ package hexirp.forge.prp.core.ore;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.forge.loadable.Named;
+import hexirp.forge.loadable.ExtendedItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -11,13 +11,12 @@ import net.minecraft.item.Item;
  *
  * @author Hexirp
  */
-public class SilverIngot extends Item implements Named {
+public class SilverIngot extends Item implements ExtendedItem {
 	/** コントストラクタ. */
 	@Setting
 	public SilverIngot() {
 		super();
-		setUnlocalizedName(this.name());
-		setRegistryName(this.name());
+		setName();
 		setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	
