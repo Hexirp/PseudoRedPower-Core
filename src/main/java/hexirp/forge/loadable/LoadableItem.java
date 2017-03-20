@@ -1,11 +1,10 @@
-package hexirp.forge.loadable.item;
+package hexirp.forge.loadable;
 
 import hexirp.annotation.Command;
 import hexirp.annotation.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
-import hexirp.forge.loadable.Environment;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
