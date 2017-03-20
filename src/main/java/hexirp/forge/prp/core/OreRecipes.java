@@ -4,6 +4,8 @@ import hexirp.annotation.Setting;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
+import hexirp.forge.prp.core.ore.SilverIngot;
+import hexirp.forge.prp.core.ore.SilverOre;
 import hexirp.forge.recipe.builder.RecipeBuilder;
 
 /**
@@ -21,8 +23,8 @@ public class OreRecipes extends RegisterableLibrary {
 	public OreRecipes(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
-		        .to2(items.lookup("silver_ingot"))
-		        .to(items.lookup("silver_ore"))
+		        .to2(items.lookup(new SilverIngot().name()))
+		        .to(items.lookup(new SilverOre().name()))
 		        .to(1)
 		        .to(1)
 		        .to());
