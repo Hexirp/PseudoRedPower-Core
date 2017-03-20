@@ -1,4 +1,4 @@
-package hexirp.forge.prp.core.ores;
+package hexirp.forge.prp.core.ore;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;

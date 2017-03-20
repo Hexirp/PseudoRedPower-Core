@@ -1,10 +1,11 @@
 package hexirp.forge.prp.core;
 
 import hexirp.annotation.Setting;
-import hexirp.collection.Unit;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
+import hexirp.forge.prp.core.ore.SilverIngot;
+import hexirp.forge.prp.core.ore.SilverOre;
 import hexirp.forge.recipe.builder.RecipeBuilder;
 
 /**
@@ -12,20 +13,20 @@ import hexirp.forge.recipe.builder.RecipeBuilder;
  *
  * @author Hexirp
  */
-public class OresRecipes extends RegisterableLibrary {
+public class OreRecipes extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
 	 * @param items アイテムのリスト
 	 */
 	@Setting
-	public OresRecipes(final Index<MinecraftItem> items) {
+	public OreRecipes(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
-		        .to2(items.lookup("silver_ingot"))
-		        .to(items.lookup("silver_ore"))
+		        .to2(items.lookup(new SilverIngot().name()))
+		        .to(items.lookup(new SilverOre().name()))
 		        .to(1)
 		        .to(1)
-		        .to(Unit.$()));
+		        .to());
 	}
 }

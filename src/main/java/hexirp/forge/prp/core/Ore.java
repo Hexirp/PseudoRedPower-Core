@@ -4,18 +4,18 @@ import hexirp.annotation.Setting;
 import hexirp.forge.LoadableLibrary;
 import hexirp.forge.loadable.block.LoadableBlock;
 import hexirp.forge.loadable.item.LoadableItem;
-import hexirp.forge.prp.core.ores.SilverIngot;
-import hexirp.forge.prp.core.ores.SilverOre;
+import hexirp.forge.prp.core.ore.SilverIngot;
+import hexirp.forge.prp.core.ore.SilverOre;
 
 /**
  * PRP-Coreで追加されるブロック群を定義する.
  *
  * @author Hexirp
  */
-public class Ores extends LoadableLibrary {
+public class Ore extends LoadableLibrary {
 	/** コントストラクタ. */
 	@Setting
-	public Ores() {
+	public Ore() {
 		add(new LoadableItem(new SilverIngot(), new SilverIngot().name()));
 		add(new LoadableBlock(new SilverOre(), new SilverOre().name()));
 	}

@@ -18,9 +18,9 @@ public class Mechanism {
 	 */
 	@Command
 	public void add(final Environment env) {
-		final Index<MinecraftItem> ores = new Ores().load(env);
+		final Index<MinecraftItem> ore_index = new Ore().load(env);
 		
 		new Recipes().register();
-		new OresRecipes(ores).register();
+		new OreRecipes(ore_index).register();
 	}
 }
