@@ -36,14 +36,14 @@ public class Core {
 	@Mod.EventHandler
 	@Command
 	public void preInit(final @Nullable FMLPreInitializationEvent event) {
-		final @Nullable ModMetadata localData = metadata;
+		final @Nullable ModMetadata localData = metadata; // この時点でのメタデータを確定させる
 		
 		if (null == localData || null == event) throw null;
 		
-		new Metadata().set(localData);
+		new Metadata().set(localData); // メタデータに設定する
 		
-		final Environment env = new Environment(localData, event);
+		final Environment env = new Environment(localData, event); // 環境をセットする
 		
-		new Mechanism().add(env);
+		new Mechanism().add(env); // 様々な物を追加する
 	}
 }

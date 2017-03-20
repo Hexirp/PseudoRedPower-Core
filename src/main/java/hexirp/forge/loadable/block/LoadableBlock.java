@@ -36,9 +36,9 @@ public class LoadableBlock implements Loadable {
 	@Override
 	@Command
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerBlock(block, name);
+		GameRegistry.registerBlock(block, name); // ブロックを登録する
 		
-		new ItemResourceLocation(Item.getItemFromBlock(block), name).set(env);
+		new ItemResourceLocation(Item.getItemFromBlock(block), name).set(env); // ブロックのアイテム状態のリソースを登録する
 		
 		return new Index<MinecraftItem>().put(
 		    name,
