@@ -2,8 +2,8 @@ package hexirp.forge.prp.core;
 
 import hexirp.annotation.Setting;
 import hexirp.forge.LoadableLibrary;
-import hexirp.forge.loadable.block.LoadableBlock;
-import hexirp.forge.loadable.item.LoadableItem;
+import hexirp.forge.loadable.LoadableBlock;
+import hexirp.forge.loadable.LoadableItem;
 import hexirp.forge.prp.core.ore.SilverIngot;
 import hexirp.forge.prp.core.ore.SilverOre;
 
