@@ -2,7 +2,7 @@ package hexirp.forge.prp.core.ore;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.forge.loadable.Named;
+import hexirp.forge.loadable.ExtendedBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,16 +12,15 @@ import net.minecraft.creativetab.CreativeTabs;
  *
  * @author Hexirp
  */
-public class SilverOre extends Block implements Named {
+public class SilverOre extends Block implements ExtendedBlock {
 	/** コントストラクタ. */
 	@Setting
 	public SilverOre() {
 		super(Material.rock);
-		setUnlocalizedName(this.name());
-		setRegistryName(this.name());
+		setName();
 		setCreativeTab(CreativeTabs.tabBlock);
 	}
-
+	
 	@Override
 	@Getting
 	public String name() {
