@@ -1,7 +1,6 @@
 package hexirp.forge.prp.core;
 
 import hexirp.annotation.Setting;
-import hexirp.collection.Unit;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
@@ -26,6 +25,6 @@ public class OreRecipes extends RegisterableLibrary {
 		        .to(items.lookup("silver_ore"))
 		        .to(1)
 		        .to(1)
-		        .to(Unit.$()));
+		        .to());
 	}
 }
