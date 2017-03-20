@@ -4,6 +4,6 @@
  * @author Hexirp
  */
 @NonNullByDefault
-package hexirp.forge.prp.core.ores;
+package hexirp.forge.prp.core.ore;
 
 import hexirp.annotation.NonNullByDefault;

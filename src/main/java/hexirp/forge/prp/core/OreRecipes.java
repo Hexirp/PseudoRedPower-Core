@@ -12,14 +12,14 @@ import hexirp.forge.recipe.builder.RecipeBuilder;
  *
  * @author Hexirp
  */
-public class OresRecipes extends RegisterableLibrary {
+public class OreRecipes extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
 	 * @param items アイテムのリスト
 	 */
 	@Setting
-	public OresRecipes(final Index<MinecraftItem> items) {
+	public OreRecipes(final Index<MinecraftItem> items) {
 		add(
 		    new RecipeBuilder()
 		        .to2(items.lookup("silver_ingot"))
