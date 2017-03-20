@@ -6,8 +6,6 @@ import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.loadable.Environment;
-import hexirp.forge.loadable.Named;
-import hexirp.forge.loadable.NamedType;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -15,26 +13,33 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * {@link Loadable}である{@link Item}を表現する.
  *
  * @author Hexirp
- * @param <Type> 名前付きレシピ
  */
-public class LoadableItem<Type extends Item & Named> extends NamedType<Type> implements Loadable {
+public class LoadableItem implements Loadable {
+	/** 保持するアイテム. */
+	private final Item item;
+
+	/** 保持するアイテムの名前. */
+	private final String name;
+
 	/**
-	 * @param item スネークケースでの名前が付いたアイテム
+	 * @param item アイテム
+	 * @param name スネークケースでの名前
 	 */
 	@Setting
-	public LoadableItem(final Type item) {
-		super(item);
+	public LoadableItem(final Item item, final String name) {
+		this.item = item;
+		this.name = name;
 	}
-	
+
 	@Override
 	@Command
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerItem(this.value(), this.name());
-		
-		new ItemResourceLocation<>(this.value()).set(env);
-		
+		GameRegistry.registerItem(item, name);
+
+		new ItemResourceLocation(item, name).set(env);
+
 		return new Index<MinecraftItem>().put(
-		    this.name(),
-		    new MinecraftItem(this.value()));
+		    name,
+		    new MinecraftItem(item));
 	}
 }

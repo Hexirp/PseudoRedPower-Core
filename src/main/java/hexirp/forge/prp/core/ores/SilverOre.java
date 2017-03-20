@@ -17,7 +17,8 @@ public class SilverOre extends Block implements Named {
 	@Setting
 	public SilverOre() {
 		super(Material.rock);
-		setUnlocalizedName(name());
+		setUnlocalizedName(this.name());
+		setRegistryName(this.name());
 		setCreativeTab(CreativeTabs.tabBlock);
 	}
 

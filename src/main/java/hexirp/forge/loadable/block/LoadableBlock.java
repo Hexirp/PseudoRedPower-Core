@@ -6,8 +6,6 @@ import hexirp.forge.Index;
 import hexirp.forge.Loadable;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.loadable.Environment;
-import hexirp.forge.loadable.Named;
-import hexirp.forge.loadable.NamedType;
 import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -15,26 +13,33 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * ロード可能なブロックを表現する.
  *
  * @author Hexirp
- * @param <Type> 名前つきブロック
  */
-public class LoadableBlock<Type extends Block & Named> extends NamedType<Type> implements Loadable {
+public class LoadableBlock implements Loadable {
+	/** 保持するブロック. */
+	private final Block block;
+
+	/** ブロックの名前. */
+	private final String name;
+
 	/**
 	 * @param block 名前付きブロック
+	 * @param name スネークケースでの名前
 	 */
 	@Setting
-	public LoadableBlock(final Type block) {
-		super(block);
+	public LoadableBlock(final Block block, final String name) {
+		this.block = block;
+		this.name = name;
 	}
-	
+
 	@Override
 	@Command
 	public Index<MinecraftItem> load(final Environment env) {
-		GameRegistry.registerBlock(this.value(), this.name());
-		
-		new BlockResourceLocation<>(this.value()).set(env);
-		
+		GameRegistry.registerBlock(block, name);
+
+		new BlockResourceLocation(block, name).set(env);
+
 		return new Index<MinecraftItem>().put(
-		    this.name(),
-		    new MinecraftItem(this.value()));
+		    name,
+		    new MinecraftItem(block));
 	}
 }

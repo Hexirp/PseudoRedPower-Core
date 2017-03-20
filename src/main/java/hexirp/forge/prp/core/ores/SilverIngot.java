@@ -17,9 +17,10 @@ public class SilverIngot extends Item implements Named {
 	public SilverIngot() {
 		super();
 		setUnlocalizedName(this.name());
+		setRegistryName(this.name());
 		setCreativeTab(CreativeTabs.tabMaterials);
 	}
-
+	
 	@Override
 	@Getting
 	public String name() {
