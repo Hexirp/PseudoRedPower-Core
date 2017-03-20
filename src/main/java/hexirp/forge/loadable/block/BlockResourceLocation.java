@@ -3,8 +3,6 @@ package hexirp.forge.loadable.block;
 import hexirp.annotation.Command;
 import hexirp.annotation.Setting;
 import hexirp.forge.loadable.Environment;
-import hexirp.forge.loadable.Named;
-import hexirp.forge.loadable.NamedType;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -14,15 +12,22 @@ import net.minecraftforge.fml.relauncher.Side;
  * ブロックのリソースの箇所を表現する.
  *
  * @author Hexirp
- * @param <Type> 名前付きブロック
  */
-public class BlockResourceLocation<Type extends Block & Named> extends NamedType<Type> {
+public class BlockResourceLocation {
+	/** 保持するブロック. */
+	private final Block block;
+	
+	/** ブロックの名前. */
+	private final String name;
+	
 	/**
 	 * @param block 名前付きブロック
+	 * @param name スネークケースでの名前
 	 */
 	@Setting
-	public BlockResourceLocation(final Type block) {
-		super(block);
+	public BlockResourceLocation(final Block block, final String name) {
+		this.block = block;
+		this.name = name;
 	}
 	
 	/**
@@ -33,8 +38,8 @@ public class BlockResourceLocation<Type extends Block & Named> extends NamedType
 	@Command
 	public void set(final Environment env) {
 		if (env.side() == Side.CLIENT) ModelLoader.setCustomModelResourceLocation(
-		    Item.getItemFromBlock(this.value()),
+		    Item.getItemFromBlock(block),
 		    0,
-		    env.location(this.name(), "inventory"));
+		    env.location(name, "inventory"));
 	}
 }
