@@ -2,7 +2,6 @@ package hexirp.forge.prp.core;
 
 import hexirp.annotation.Setting;
 import hexirp.forge.LoadableLibrary;
-import hexirp.forge.loadable.LoadableBlock;
 import hexirp.forge.prp.core.ore.SilverIngot;
 import hexirp.forge.prp.core.ore.SilverOre;
 
@@ -16,6 +15,6 @@ public class Ore extends LoadableLibrary {
 	@Setting
 	public Ore() {
 		add(new SilverIngot().loader());
-		add(new LoadableBlock(new SilverOre(), new SilverOre().name()));
+		add(new SilverOre().loader());
 	}
 }

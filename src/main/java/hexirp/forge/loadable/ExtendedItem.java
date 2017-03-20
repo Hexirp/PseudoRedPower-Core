@@ -6,7 +6,7 @@ import hexirp.forge.Loadable;
 import net.minecraft.item.Item;
 
 /**
- * 拡張されたアイテムを表す. このインターフェースは{@link Item}を継承したクラスで実装されなければならない。
+ * {@link Item}のメソッドを拡張するためのインターフェースを表す. このインターフェースは{@link Item}を継承したクラスで実装されなければならない。
  *
  * @author Hexirp
  */
@@ -30,7 +30,7 @@ public interface ExtendedItem extends Named {
 	}
 	
 	/**
-	 * 名前をセットする.
+	 * 名前を設定する.
 	 *
 	 * @return this
 	 */
