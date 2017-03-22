@@ -24,7 +24,6 @@ public class GettableTwoFields<T1, T2> extends TwoFields<T1, T2> {
 	/**
 	 * @return {@link #first}
 	 */
-	@Override
 	@Getting
 	public final T1 first() {
 		return first;
@@ -33,7 +32,6 @@ public class GettableTwoFields<T1, T2> extends TwoFields<T1, T2> {
 	/**
 	 * @return {@link #second}
 	 */
-	@Override
 	@Getting
 	public final T2 second() {
 		return second;
