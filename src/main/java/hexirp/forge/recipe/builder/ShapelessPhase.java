@@ -4,7 +4,7 @@ import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
 import hexirp.builder.FinalPhase;
-import hexirp.collection.TwoFields;
+import hexirp.collection.GettableTwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapelessRecipe;
@@ -15,12 +15,12 @@ import hexirp.forge.recipe.ShapelessRecipeMaterial;
  *
  * @author Hexirp
  */
-public class ShapelessPhase extends FinalPhase<TwoFields<MinecraftItem, Integer>, ShapelessRecipeMaterial, ShapelessRecipe> {
+public class ShapelessPhase extends FinalPhase<GettableTwoFields<MinecraftItem, Integer>, ShapelessRecipeMaterial, ShapelessRecipe> {
 	/**
 	 * @param stack これまでの段階で保存された値
 	 */
 	@Setting
-	public ShapelessPhase(final TwoFields<MinecraftItem, Integer> stack) {
+	public ShapelessPhase(final GettableTwoFields<MinecraftItem, Integer> stack) {
 		super(stack, new ShapelessRecipeMaterial());
 	}
 	
@@ -36,7 +36,6 @@ public class ShapelessPhase extends FinalPhase<TwoFields<MinecraftItem, Integer>
 		return this;
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Override
 	@Getting
 	public ShapelessRecipe to() {

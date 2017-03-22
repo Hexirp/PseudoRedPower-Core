@@ -4,7 +4,7 @@ import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
 import hexirp.builder.Phase;
-import hexirp.collection.TwoFields;
+import hexirp.collection.GettableTwoFields;
 import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
@@ -14,12 +14,12 @@ import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
  *
  * @author Hexirp
  */
-public class OrderPhase extends Phase<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder, MaterialPhase, Unit> {
+public class OrderPhase extends Phase<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder, MaterialPhase, Unit> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
 	@Setting
-	public OrderPhase(final TwoFields<MinecraftItem, Integer> stack) {
+	public OrderPhase(final GettableTwoFields<MinecraftItem, Integer> stack) {
 		super(stack, new ShapedRecipeAbstractOrder());
 	}
 	
