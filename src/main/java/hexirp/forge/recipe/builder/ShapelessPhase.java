@@ -32,10 +32,11 @@ public class ShapelessPhase extends FinalPhase<TwoFields<MinecraftItem, Integer>
 	 */
 	@Chaining
 	public ShapelessPhase set(final MinecraftItem element) {
-		second().add(element, 1);
+		second.add(element, 1);
 		return this;
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	@Getting
 	public ShapelessRecipe to() {

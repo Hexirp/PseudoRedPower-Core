@@ -4,6 +4,7 @@ import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
 import hexirp.builder.FinalPhase;
+import hexirp.collection.Pair;
 import hexirp.collection.TwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
@@ -17,7 +18,9 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MaterialPhase extends FinalPhase<TwoFields<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
+public class MaterialPhase
+    extends
+        FinalPhase<TwoFields<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
@@ -25,7 +28,7 @@ public class MaterialPhase extends FinalPhase<TwoFields<TwoFields<MinecraftItem,
 	public MaterialPhase(final TwoFields<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
 		super(stack, new ShapedRecipeMaterialMap());
 	}
-	
+
 	/**
 	 * 要素を追加する.
 	 *
@@ -33,11 +36,12 @@ public class MaterialPhase extends FinalPhase<TwoFields<TwoFields<MinecraftItem,
 	 * @return this
 	 */
 	@Chaining
-	public MaterialPhase set(final TwoFields<Character, MinecraftItem> element) {
-		second().put(element.first(), element.second());
+	public MaterialPhase set(final Pair<Character, MinecraftItem> element) {
+		second.put(element.first(), element.second());
 		return this;
 	}
-	
+
+	@SuppressWarnings("deprecation")
 	@Override
 	@Getting
 	public ShapedRecipe to() {

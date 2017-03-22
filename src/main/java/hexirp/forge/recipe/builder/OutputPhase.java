@@ -19,10 +19,10 @@ public class OutputPhase extends Phase<Unit, MinecraftItem, SizePhase, Integer> 
 	public OutputPhase(final MinecraftItem value) {
 		super(Unit.$(), value);
 	}
-
+	
 	@Override
 	@Getting
 	public SizePhase to(final Integer value) {
-		return new SizePhase(second(), value);
+		return new SizePhase(second, value);
 	}
 }

@@ -23,7 +23,8 @@ public class SmeltingTimesPhase extends FinalPhase<TwoFields<TwoFields<Minecraft
 	public SmeltingTimesPhase(final TwoFields<TwoFields<MinecraftItem, MinecraftItem>, Integer> stack, final Integer value) {
 		super(stack, value);
 	}
-	
+
+	@SuppressWarnings("deprecation")
 	@Override
 	@Getting
 	public SmeltingRecipe to() {
@@ -31,5 +32,5 @@ public class SmeltingTimesPhase extends FinalPhase<TwoFields<TwoFields<Minecraft
 		    new SmeltingRecipeInga(first().first().first(), first().first().second()),
 		    new SmeltingRecipeExp(first().second(), second()));
 	}
-	
+
 }

@@ -1,5 +1,7 @@
 package hexirp.collection;
 
+import hexirp.annotation.Getting;
+
 /**
  * ペア型を表す.
  *
@@ -15,5 +17,23 @@ public final class Pair<T1, T2> extends TwoFields<T1, T2> {
 	 */
 	public Pair(final T1 first, final T2 second) {
 		super(first, second);
+	}
+	
+	/**
+	 * @return {@link #first}
+	 */
+	@Override
+	@Getting
+	public final T1 first() {
+		return first;
+	}
+	
+	/**
+	 * @return {@link #second}
+	 */
+	@Override
+	@Getting
+	public final T2 second() {
+		return second;
 	}
 }

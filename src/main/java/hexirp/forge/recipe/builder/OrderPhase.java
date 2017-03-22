@@ -31,7 +31,7 @@ public class OrderPhase extends Phase<TwoFields<MinecraftItem, Integer>, ShapedR
 	 */
 	@Chaining
 	public OrderPhase set(final String element) {
-		second().add(element);
+		second.add(element);
 		return this;
 	}
 	
