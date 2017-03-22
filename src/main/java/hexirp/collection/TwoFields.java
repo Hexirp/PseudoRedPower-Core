@@ -12,10 +12,10 @@ import hexirp.annotation.Setting;
  */
 public class TwoFields<T1, T2> {
 	/** 値1. */
-	private final T1 first;
+	protected final T1 first;
 	
 	/** 値2. */
-	private final T2 second;
+	protected final T2 second;
 	
 	/**
 	 * @param first {@link #first}
@@ -31,6 +31,7 @@ public class TwoFields<T1, T2> {
 	 * @return {@link #first}
 	 */
 	@Getting
+	@Deprecated
 	public T1 first() {
 		return first;
 	}
@@ -39,6 +40,7 @@ public class TwoFields<T1, T2> {
 	 * @return {@link #second}
 	 */
 	@Getting
+	@Deprecated
 	public T2 second() {
 		return second;
 	}
