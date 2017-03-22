@@ -1,5 +1,8 @@
 package hexirp.collection;
 
+import java.util.Objects;
+
+import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
 
 /**
@@ -24,5 +27,20 @@ public class TwoFields<T1, T2> {
 	public TwoFields(final T1 first, final T2 second) {
 		this.first = first;
 		this.second = second;
+	}
+	
+	@Override
+	public boolean equals(final @Nullable Object obj) {
+		if (null == obj) return false;
+		if (this.getClass() != obj.getClass()) return false;
+		
+		final TwoFields<?, ?> that = (TwoFields<?, ?>) obj;
+		
+		return Objects.equals(this.first, that.first) && Objects.equals(this.second, that.second);
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(first, second);
 	}
 }
