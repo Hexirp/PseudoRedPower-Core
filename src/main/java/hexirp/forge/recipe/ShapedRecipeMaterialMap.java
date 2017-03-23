@@ -7,6 +7,8 @@ import java.util.Map;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
+import hexirp.collection.OneField;
 import hexirp.forge.MinecraftItem;
 
 /**
@@ -14,9 +16,12 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class ShapedRecipeMaterialMap {
-	/** 文字とアイテムとの対応関係. */
-	private final Map<Character, MinecraftItem> material = new HashMap<Character, MinecraftItem>();
+public class ShapedRecipeMaterialMap extends OneField<Map<Character, MinecraftItem>> {
+	/** Setting. */
+	@Setting
+	public ShapedRecipeMaterialMap() {
+		super(new HashMap<Character, MinecraftItem>());
+	}
 	
 	/**
 	 * @return 対応関係がリストで表現されたもの
@@ -25,7 +30,7 @@ public class ShapedRecipeMaterialMap {
 	public final List<Object> list() {
 		final List<Object> ret = new LinkedList<Object>();
 		
-		material.forEach((final Character key, final MinecraftItem value) -> {
+		value.forEach((final Character key, final MinecraftItem value) -> {
 			if (null == key || null == value) throw null;
 			ret.add(key);
 			ret.add(value.item());
@@ -37,14 +42,13 @@ public class ShapedRecipeMaterialMap {
 	/**
 	 * 対応関係を追加する.
 	 *
-	 * @param key アルファベット大文字
-	 * @param value アイテム
+	 * @param c アルファベット大文字
+	 * @param i アイテム
 	 * @return this
 	 */
 	@Chaining
-	public ShapedRecipeMaterialMap put(final Character key, final MinecraftItem value) {
-		material.put(key, value);
-		
+	public ShapedRecipeMaterialMap put(final Character c, final MinecraftItem i) {
+		value.put(c, i);
 		return this;
 	}
 }
