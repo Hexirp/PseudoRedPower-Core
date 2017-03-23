@@ -3,27 +3,21 @@ package hexirp.forge.recipe;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
 import hexirp.collection.ListUtil;
+import hexirp.collection.TwoFields;
 
 /**
- * {@link ShapedRecipeAbstractOrder}と{@link ShapedRecipeMaterialMap}を合わせてレシピの並べ方を表現する.
+ * レシピの並べ方を表現する.
  *
  * @author Hexirp
  */
-public class ShapedRecipeOrder {
-	/** 文字で抽象的に表現された並べ方. */
-	private final ShapedRecipeAbstractOrder order;
-	
-	/** 文字とアイテムとの対応関係. */
-	private final ShapedRecipeMaterialMap input;
-	
+public class ShapedRecipeOrder extends TwoFields<ShapedRecipeAbstractOrder, ShapedRecipeMaterialMap> {
 	/**
-	 * @param order {@link #order}
-	 * @param input {@link #input}
+	 * @param first 文字で抽象的に表現された並べ方
+	 * @param second 文字とアイテムとの対応関係
 	 */
 	@Setting
-	public ShapedRecipeOrder(final ShapedRecipeAbstractOrder order, final ShapedRecipeMaterialMap input) {
-		this.order = order;
-		this.input = input;
+	public ShapedRecipeOrder(final ShapedRecipeAbstractOrder first, final ShapedRecipeMaterialMap second) {
+		super(first, second);
 	}
 	
 	/**
@@ -31,9 +25,6 @@ public class ShapedRecipeOrder {
 	 */
 	@Getting
 	public Object[] array() {
-		return new ListUtil<>()
-		    .merge(order.order())
-		    .merge(input.list())
-		    .array();
+		return new ListUtil<>().merge(first.order()).merge(second.list()).array();
 	}
 }
