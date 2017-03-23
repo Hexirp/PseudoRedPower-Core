@@ -2,6 +2,7 @@ package hexirp.forge.smelting;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
+import hexirp.collection.TwoFields;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.ItemStack;
 
@@ -12,36 +13,29 @@ import net.minecraft.item.ItemStack;
  *
  * @author Hexirp
  */
-public class SmeltingRecipeInga {
-	/** 結果. */
-	private final MinecraftItem product;
-
-	/** 材料. */
-	private final MinecraftItem material;
-
+public class SmeltingRecipeInga extends TwoFields<MinecraftItem, MinecraftItem> {
 	/**
-	 * @param product {@link #product}
-	 * @param material {@link #material}
+	 * @param first 完成物
+	 * @param second 材料
 	 */
 	@Setting
-	public SmeltingRecipeInga(final MinecraftItem product, final MinecraftItem material) {
-		this.product = product;
-		this.material = material;
+	public SmeltingRecipeInga(final MinecraftItem first, final MinecraftItem second) {
+		super(first, second);
 	}
-
+	
 	/**
 	 * @return 結果
 	 */
 	@Getting
 	public ItemStack product() {
-		return new ItemStack(product.item());
+		return new ItemStack(first.item());
 	}
-
+	
 	/**
 	 * @return 材料
 	 */
 	@Getting
 	public ItemStack material() {
-		return new ItemStack(material.item());
+		return new ItemStack(second.item());
 	}
 }

@@ -8,7 +8,7 @@ package hexirp.collection;
  * @param <T1> 第一要素
  * @param <T2> 第二要素
  */
-public final class Pair<T1, T2> extends TwoFields<T1, T2> {
+public final class Pair<T1, T2> extends GettableTwoFields<T1, T2> {
 	/**
 	 * @param first 第一値
 	 * @param second 第二値

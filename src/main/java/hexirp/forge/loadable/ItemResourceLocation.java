@@ -3,6 +3,7 @@ package hexirp.forge.loadable;
 import hexirp.annotation.Command;
 import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
+import hexirp.collection.TwoFields;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
@@ -12,22 +13,14 @@ import net.minecraftforge.fml.relauncher.Side;
  *
  * @author Hexirp
  */
-public class ItemResourceLocation {
-	/** 保持するアイテム. */
-	private final Item item;
-	
-	/** 保持する名前. */
-	private final String name;
-	
+public class ItemResourceLocation extends TwoFields<Item, String> {
 	/**
-	 * @param item 名前付きアイテム
-	 * @param name スネークケースでの名前
+	 * @param first 名前付きアイテム
+	 * @param second スネークケースでの名前
 	 */
 	@Setting
-	public ItemResourceLocation(final @Nullable Item item, final String name) {
-		if (null == item) throw null;
-		this.item = item;
-		this.name = name;
+	public ItemResourceLocation(final @Nullable Item first, final String second) {
+		super(first, second);
 	}
 	
 	/**
@@ -39,8 +32,8 @@ public class ItemResourceLocation {
 	public void set(final Environment env) {
 		if (env.side() == Side.CLIENT)
 		    ModelLoader.setCustomModelResourceLocation(
-		        item,
+		        first,
 		        0,
-		        env.location(name, "inventory"));
+		        env.location(second, "inventory"));
 	}
 }

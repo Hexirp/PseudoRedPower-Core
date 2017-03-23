@@ -4,7 +4,7 @@ import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
 import hexirp.builder.FinalPhase;
-import hexirp.collection.TwoFields;
+import hexirp.collection.GettableTwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipe;
@@ -17,12 +17,14 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  *
  * @author Hexirp
  */
-public class MaterialPhase extends FinalPhase<TwoFields<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
+public class MaterialPhase
+    extends
+        FinalPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
 	@Setting
-	public MaterialPhase(final TwoFields<TwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
+	public MaterialPhase(final GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
 		super(stack, new ShapedRecipeMaterialMap());
 	}
 	
@@ -33,8 +35,8 @@ public class MaterialPhase extends FinalPhase<TwoFields<TwoFields<MinecraftItem,
 	 * @return this
 	 */
 	@Chaining
-	public MaterialPhase set(final TwoFields<Character, MinecraftItem> element) {
-		second().put(element.first(), element.second());
+	public MaterialPhase set(final GettableTwoFields<Character, MinecraftItem> element) {
+		second.put(element.first(), element.second());
 		return this;
 	}
 	

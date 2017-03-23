@@ -1,6 +1,8 @@
 package hexirp.collection;
 
-import hexirp.annotation.Getting;
+import java.util.Objects;
+
+import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
 
 /**
@@ -12,34 +14,33 @@ import hexirp.annotation.Setting;
  */
 public class TwoFields<T1, T2> {
 	/** 値1. */
-	private final T1 first;
+	protected final T1 first;
 	
 	/** 値2. */
-	private final T2 second;
+	protected final T2 second;
 	
 	/**
 	 * @param first {@link #first}
 	 * @param second {@link #second}
 	 */
 	@Setting
-	public TwoFields(final T1 first, final T2 second) {
+	public TwoFields(final @Nullable T1 first, final @Nullable T2 second) {
+		if (null == first || null == second) throw null;
 		this.first = first;
 		this.second = second;
 	}
 	
-	/**
-	 * @return {@link #first}
-	 */
-	@Getting
-	public T1 first() {
-		return first;
+	@Override
+	public boolean equals(final @Nullable Object obj) {
+		if (null == obj) return false;
+		if (this.getClass() != obj.getClass()) return false;
+		
+		final TwoFields<?, ?> that = (TwoFields<?, ?>) obj;
+		return Objects.equals(this.first, that.first) && Objects.equals(this.second, that.second);
 	}
 	
-	/**
-	 * @return {@link #second}
-	 */
-	@Getting
-	public T2 second() {
-		return second;
+	@Override
+	public int hashCode() {
+		return Objects.hash(first, second);
 	}
 }

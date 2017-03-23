@@ -2,6 +2,7 @@ package hexirp.forge.loadable;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
+import hexirp.collection.TwoFields;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -12,21 +13,14 @@ import net.minecraftforge.fml.relauncher.Side;
  *
  * @author Hexirp
  */
-public class Environment {
-	/** アイテムが登録されるMODの情報. */
-	private final ModMetadata metadata;
-	
-	/** アイテムが登録されるイベントの情報. */
-	private final FMLPreInitializationEvent event;
-	
+public class Environment extends TwoFields<ModMetadata, FMLPreInitializationEvent> {
 	/**
-	 * @param metadata {@link #metadata}
-	 * @param event {@link #event}
+	 * @param first アイテムが登録されるMODの情報
+	 * @param second アイテムが登録されるイベントの情報
 	 */
 	@Setting
-	public Environment(final ModMetadata metadata, final FMLPreInitializationEvent event) {
-		this.metadata = metadata;
-		this.event = event;
+	public Environment(final ModMetadata first, final FMLPreInitializationEvent second) {
+		super(first, second);
 	}
 	
 	/**
@@ -34,7 +28,7 @@ public class Environment {
 	 */
 	@Getting
 	public Side side() {
-		final Side side = event.getSide();
+		final Side side = second.getSide();
 		if (null == side) throw null;
 		return side;
 	}
@@ -46,6 +40,6 @@ public class Environment {
 	 */
 	@Getting
 	public ModelResourceLocation location(final String name, final String loc) {
-		return new ModelResourceLocation(metadata.modId + ":" + name, loc);
+		return new ModelResourceLocation(first.modId + ":" + name, loc);
 	}
 }

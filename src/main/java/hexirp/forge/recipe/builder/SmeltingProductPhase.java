@@ -23,6 +23,6 @@ public class SmeltingProductPhase extends Phase<Unit, MinecraftItem, SmeltingMat
 	@Override
 	@Getting
 	public SmeltingMaterialPhase to(final MinecraftItem value) {
-		return new SmeltingMaterialPhase(second(), value);
+		return new SmeltingMaterialPhase(second, value);
 	}
 }
