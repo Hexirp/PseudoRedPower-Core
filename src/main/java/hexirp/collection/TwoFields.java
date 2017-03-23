@@ -24,7 +24,8 @@ public class TwoFields<T1, T2> {
 	 * @param second {@link #second}
 	 */
 	@Setting
-	public TwoFields(final T1 first, final T2 second) {
+	public TwoFields(final @Nullable T1 first, final @Nullable T2 second) {
+		if (null == first || null == second) throw null;
 		this.first = first;
 		this.second = second;
 	}
@@ -35,7 +36,6 @@ public class TwoFields<T1, T2> {
 		if (this.getClass() != obj.getClass()) return false;
 		
 		final TwoFields<?, ?> that = (TwoFields<?, ?>) obj;
-		
 		return Objects.equals(this.first, that.first) && Objects.equals(this.second, that.second);
 	}
 	
