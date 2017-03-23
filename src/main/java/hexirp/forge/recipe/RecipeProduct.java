@@ -2,6 +2,7 @@ package hexirp.forge.recipe;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
+import hexirp.collection.TwoFields;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.ItemStack;
 
@@ -10,28 +11,21 @@ import net.minecraft.item.ItemStack;
  *
  * @author Hexirp
  */
-public class RecipeProduct {
-	/** 生成物. */
-	private final MinecraftItem output;
-	
-	/** 生成数. */
-	private final int size;
+public class RecipeProduct extends TwoFields<MinecraftItem, Integer> {
+	/**
+	 * @param first 結果となるアイテムの種類
+	 * @param second 結果となるアイテムのスタック数
+	 */
+	@Setting
+	public RecipeProduct(final MinecraftItem first, final Integer second) {
+		super(first, second);
+	}
 	
 	/**
 	 * @return ItemStackでの結果
 	 */
 	@Getting
 	public ItemStack product() {
-		return new ItemStack(output.item(), size);
-	}
-	
-	/**
-	 * @param output {@link #output}
-	 * @param size {@link #size}
-	 */
-	@Setting
-	public RecipeProduct(final MinecraftItem output, final int size) {
-		this.output = output;
-		this.size = size;
+		return new ItemStack(first.item(), second);
 	}
 }
