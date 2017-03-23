@@ -6,7 +6,7 @@ import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
 
 /**
- * 二つのフィールドを持つことを表す.
+ * 二つしかフィールドを持つことを表す.
  *
  * @author Hexirp
  * @param <T1> 型1

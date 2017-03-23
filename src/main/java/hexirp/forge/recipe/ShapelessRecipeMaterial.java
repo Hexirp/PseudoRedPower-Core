@@ -5,7 +5,9 @@ import java.util.List;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
 import hexirp.collection.ListUtil;
+import hexirp.collection.OneField;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.Item;
 
@@ -14,16 +16,19 @@ import net.minecraft.item.Item;
  *
  * @author Hexirp
  */
-public class ShapelessRecipeMaterial {
-	/** 不定形レシピの材料. */
-	private final List<Item> list = new LinkedList<>();
+public class ShapelessRecipeMaterial extends OneField<List<Item>> {
+	/** Setting. */
+	@Setting
+	public ShapelessRecipeMaterial() {
+		super(new LinkedList<Item>());
+	}
 	
 	/**
 	 * @return 材料の配列
 	 */
 	@Getting
 	public Object[] array() {
-		return new ListUtil<Item>().merge(list).array();
+		return new ListUtil<Item>().merge(value).array();
 	}
 	
 	/**
@@ -36,7 +41,7 @@ public class ShapelessRecipeMaterial {
 	@Chaining
 	public ShapelessRecipeMaterial add(final MinecraftItem obj, final int n) {
 		for (int india = 0; india < n; india++)
-			list.add(obj.item());
+			value.add(obj.item());
 		
 		return this;
 	}

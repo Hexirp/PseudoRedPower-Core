@@ -6,6 +6,8 @@ import java.util.function.Consumer;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Command;
+import hexirp.annotation.Setting;
+import hexirp.collection.OneField;
 
 /**
  * MODにおいて追加される要素を保持する辞書を表現する.
@@ -15,10 +17,13 @@ import hexirp.annotation.Command;
  * @author Hexirp
  * @param <Element> 要素の型
  */
-public class Library<Element> {
-	/** 内部に保持され、辞書として扱われるリスト. */
-	private final List<Element> library = new LinkedList<>();
-
+public class Library<Element> extends OneField<List<Element>> {
+	/** Setting. */
+	@Setting
+	public Library() {
+		super(new LinkedList<>());
+	}
+	
 	/**
 	 * 値を追加する.
 	 *
@@ -28,10 +33,10 @@ public class Library<Element> {
 	 */
 	@Chaining
 	public Library<Element> add(final Element element) {
-		library.add(element);
+		value.add(element);
 		return this;
 	}
-
+	
 	/**
 	 * 全ての要素に操作を適用する.
 	 *
@@ -40,6 +45,6 @@ public class Library<Element> {
 	 */
 	@Command
 	public void forEach(final Consumer<? super Element> action) {
-		library.forEach(action);
+		value.forEach(action);
 	}
 }
