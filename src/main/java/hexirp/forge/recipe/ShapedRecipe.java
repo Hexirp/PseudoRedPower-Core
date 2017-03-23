@@ -2,6 +2,7 @@ package hexirp.forge.recipe;
 
 import hexirp.annotation.Command;
 import hexirp.annotation.Setting;
+import hexirp.collection.TwoFields;
 import hexirp.forge.Registerable;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -10,26 +11,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  *
  * @author Hexirp
  */
-public class ShapedRecipe implements Registerable {
-	/** レシピの結果. */
-	private final RecipeProduct product;
-	
-	/** レシピの並べ方. */
-	private final ShapedRecipeOrder order;
-	
+public class ShapedRecipe extends TwoFields<RecipeProduct, ShapedRecipeOrder> implements Registerable {
 	/**
-	 * @param item {@link #product}
-	 * @param input {@link #order}
+	 * @param first レシピの結果
+	 * @param second レシピの並べ方
 	 */
 	@Setting
-	public ShapedRecipe(final RecipeProduct item, final ShapedRecipeOrder input) {
-		product = item;
-		order = input;
+	public ShapedRecipe(final RecipeProduct first, final ShapedRecipeOrder second) {
+		super(first, second);
 	}
 	
 	@Override
 	@Command
 	public final void register() {
-		GameRegistry.addRecipe(product.product(), order.array());
+		GameRegistry.addRecipe(first.product(), second.array());
 	}
 }
