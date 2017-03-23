@@ -3,6 +3,7 @@ package hexirp.forge;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
+import hexirp.collection.OneField;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
@@ -13,23 +14,17 @@ import net.minecraft.item.Item;
  *
  * @author Hexirp
  */
-public class MinecraftItem {
-	/** アイテム. */
-	private final Item obj;
-	
+public class MinecraftItem extends OneField<Item> {
 	/**
-	 * @param item {@link #obj}
+	 * @param item アイテム
 	 */
 	@Setting
 	public MinecraftItem(@Nullable final Item item) {
-		if (null == item) throw null;
-		obj = item;
+		super(item);
 	}
 	
 	/**
-	 * ブロックもアイテムとして取り扱うことが出来るため、受け付ける.
-	 *
-	 * @param block {@link #obj}
+	 * @param block ブロック(事実上アイテムを継承している)
 	 */
 	@Setting
 	public MinecraftItem(@Nullable final Block block) {
@@ -37,10 +32,10 @@ public class MinecraftItem {
 	}
 	
 	/**
-	 * @return {@link #obj}
+	 * @return アイテム
 	 */
 	@Getting
 	public Item item() {
-		return obj;
+		return value;
 	}
 }

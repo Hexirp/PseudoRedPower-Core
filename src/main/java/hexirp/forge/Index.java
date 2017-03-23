@@ -5,6 +5,8 @@ import java.util.Map;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
+import hexirp.annotation.Setting;
+import hexirp.collection.OneField;
 
 /**
  * アイテムの索引を表す.
@@ -12,9 +14,12 @@ import hexirp.annotation.Getting;
  * @author Hexirp
  * @param <Item> 項目
  */
-public class Index<Item> {
-	/** 索引. */
-	private final Map<String, Item> index = new HashMap<>();
+public class Index<Item> extends OneField<Map<String, Item>> {
+	/** Setting. */
+	@Setting
+	public Index() {
+		super(new HashMap<String, Item>());
+	}
 	
 	/**
 	 * 索引を結合する.
@@ -24,7 +29,7 @@ public class Index<Item> {
 	 */
 	@Chaining
 	public Index<Item> merge(final Index<? extends Item> i) {
-		index.putAll(i.index);
+		value.putAll(i.value);
 		return this;
 	}
 	
@@ -37,7 +42,7 @@ public class Index<Item> {
 	 */
 	@Chaining
 	public Index<Item> put(final String s, final Item i) {
-		index.put(s, i);
+		value.put(s, i);
 		return this;
 	}
 	
@@ -47,6 +52,6 @@ public class Index<Item> {
 	 */
 	@Getting
 	public Item lookup(final String string) {
-		return index.get(string);
+		return value.get(string);
 	}
 }
