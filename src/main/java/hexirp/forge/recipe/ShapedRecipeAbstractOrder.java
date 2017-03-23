@@ -5,23 +5,27 @@ import java.util.List;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
-import hexirp.annotation.Nullable;
+import hexirp.annotation.Setting;
+import hexirp.collection.OneField;
 
 /**
  * レシピの並べ方を文字で抽象的に表現する.
  *
  * @author Hexirp
  */
-public class ShapedRecipeAbstractOrder {
-	/** 文字で表現されたレシピの並べ方. */
-	private final List<String> order = new LinkedList<String>();
+public class ShapedRecipeAbstractOrder extends OneField<List<String>> {
+	/** Setting. */
+	@Setting
+	public ShapedRecipeAbstractOrder() {
+		super(new LinkedList<String>());
+	}
 	
 	/**
-	 * @return {@link #order}
+	 * @return 文字で表現されたレシピの並べ方
 	 */
 	@Getting
 	public List<String> order() {
-		return order;
+		return value;
 	}
 	
 	/**
@@ -32,21 +36,8 @@ public class ShapedRecipeAbstractOrder {
 	 */
 	@Chaining
 	public ShapedRecipeAbstractOrder add(final String string) {
-		order.add(string);
+		value.add(string);
 		
 		return this;
-	}
-	
-	@Getting
-	@Override
-	public boolean equals(@Nullable final Object obj) {
-		if (null == obj) return false;
-		return (obj instanceof ShapedRecipeAbstractOrder) ? order.equals(((ShapedRecipeAbstractOrder) obj).order) : false;
-	}
-	
-	@Getting
-	@Override
-	public int hashCode() {
-		return order.hashCode();
 	}
 }
