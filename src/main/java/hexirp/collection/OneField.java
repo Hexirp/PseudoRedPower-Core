@@ -28,7 +28,7 @@ public class OneField<T> {
 	@Override
 	public boolean equals(@Nullable final Object obj) {
 		if (null == obj) return false;
-		if (this.getClass() == obj.getClass()) return false;
+		if (this.getClass() != obj.getClass()) return false;
 		
 		final OneField<?> that = (OneField<?>) obj;
 		return Objects.equals(this.value, that.value);
