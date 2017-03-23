@@ -2,6 +2,7 @@ package hexirp.forge.smelting;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
+import hexirp.collection.TwoFields;
 
 /**
  * 製錬レシピにおいて、経験値が得られる確率の目安を表現する.
@@ -10,21 +11,14 @@ import hexirp.annotation.Setting;
  *
  * @author Hexirp
  */
-public class SmeltingRecipeExp {
-	/** 基準と同じ回数製錬した時に得られる経験値. */
-	private final int exp;
-	
-	/** 製錬回数の基準. */
-	private final int times;
-	
+public class SmeltingRecipeExp extends TwoFields<Integer, Integer> {
 	/**
-	 * @param exp {@link #exp}
-	 * @param times {@link #times}
+	 * @param first 基準と同じ回数製錬した時に得られる経験値
+	 * @param second 製錬回数の基準
 	 */
 	@Setting
-	public SmeltingRecipeExp(final int exp, final int times) {
-		this.exp = exp;
-		this.times = times;
+	public SmeltingRecipeExp(final Integer first, final Integer second) {
+		super(first, second);
 	}
 	
 	/**
@@ -32,6 +26,6 @@ public class SmeltingRecipeExp {
 	 */
 	@Getting
 	public float value() {
-		return (float) exp / (float) times;
+		return (float) first / (float) second;
 	}
 }
