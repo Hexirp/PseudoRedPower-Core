@@ -25,5 +25,4 @@ public class SilverBlock extends Block implements ExtendedBlock {
 	public @NonNull String name() {
 		return "silver_block";
 	}
-	
 }
