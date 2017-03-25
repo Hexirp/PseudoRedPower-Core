@@ -3,9 +3,8 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.builder.Phase;
+import hexirp.builder.InfolessPhase;
 import hexirp.collection.GettableTwoFields;
-import hexirp.collection.Unit;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
 
@@ -14,7 +13,7 @@ import hexirp.forge.recipe.ShapedRecipeAbstractOrder;
  *
  * @author Hexirp
  */
-public class OrderPhase extends Phase<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder, MaterialPhase, Unit> {
+public class OrderPhase extends InfolessPhase<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder, MaterialPhase> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
@@ -37,7 +36,7 @@ public class OrderPhase extends Phase<GettableTwoFields<MinecraftItem, Integer>,
 	
 	@Override
 	@Getting
-	public MaterialPhase to(final Unit value) {
+	public MaterialPhase to() {
 		return new MaterialPhase(this);
 	}
 }

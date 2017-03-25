@@ -3,7 +3,7 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.builder.FinalPhase;
+import hexirp.builder.InfolessPhase;
 import hexirp.collection.GettableTwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
@@ -19,7 +19,7 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  */
 public class MaterialPhase
     extends
-        FinalPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
+        InfolessPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */

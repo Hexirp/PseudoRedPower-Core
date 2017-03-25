@@ -2,7 +2,7 @@ package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.builder.FinalPhase;
+import hexirp.builder.InfolessPhase;
 import hexirp.collection.GettableTwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.smelting.SmeltingRecipe;
@@ -16,7 +16,7 @@ import hexirp.forge.smelting.SmeltingRecipeInga;
  */
 public class SmeltingTimesPhase
     extends
-        FinalPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, MinecraftItem>, Integer>, Integer, SmeltingRecipe> {
+        InfolessPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, MinecraftItem>, Integer>, Integer, SmeltingRecipe> {
 	/**
 	 * @param stack これまでの値の記録
 	 * @param value この段階で保存する値

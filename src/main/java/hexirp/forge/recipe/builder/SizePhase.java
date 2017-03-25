@@ -20,16 +20,32 @@ public class SizePhase extends BranchedPhase<MinecraftItem, Integer, OrderPhase,
 	public SizePhase(final MinecraftItem stack, final Integer value) {
 		super(stack, value);
 	}
-
+	
 	@Override
 	@Getting
 	public OrderPhase to(final Unit value) {
+		return to();
+	}
+	
+	/**
+	 * @return {@link #to(Unit)}
+	 */
+	@Getting
+	public OrderPhase to() {
 		return new OrderPhase(this);
 	}
-
+	
 	@Override
 	@Getting
 	public ShapelessPhase to2(final Unit value) {
+		return to2();
+	}
+	
+	/**
+	 * @return {@link #to2(Unit)}
+	 */
+	@Getting
+	public ShapelessPhase to2() {
 		return new ShapelessPhase(this);
 	}
 }
