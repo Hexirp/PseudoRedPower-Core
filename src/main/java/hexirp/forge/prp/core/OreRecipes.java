@@ -2,7 +2,6 @@ package hexirp.forge.prp.core;
 
 import hexirp.annotation.Setting;
 import hexirp.collection.Pair;
-import hexirp.collection.Unit;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
@@ -34,19 +33,19 @@ public class OreRecipes extends RegisterableLibrary {
 		add(new RecipeBuilder()
 		    .to(items.lookup(new SilverBlock().name()))
 		    .to(1)
-		    .to(Unit.$())
+		    .to()
 		    .set("AAA")
 		    .set("AAA")
 		    .set("AAA")
-		    .to(Unit.$())
+		    .to()
 		    .set(new Pair<>('A', items.lookup(new SilverIngot().name())))
 		    .to());
 		add(new RecipeBuilder()
 		    .to(items.lookup(new SilverIngot().name()))
 		    .to(9)
-		    .to(Unit.$())
+		    .to()
 		    .set("A")
-		    .to(Unit.$())
+		    .to()
 		    .set(new Pair<>('A', items.lookup(new SilverBlock().name())))
 		    .to());
 	}
