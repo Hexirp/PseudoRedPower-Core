@@ -1,7 +1,7 @@
 # PseudoRedPower-Core
 [![Build Status](https://travis-ci.org/Hexirp/PseudoRedPower-Core.svg?branch=master)](https://travis-ci.org/Hexirp/PseudoRedPower-Core)
 
-これはMinecraftのMODであり、**RedPower2を1.8.9以降に移植したもの**だ。そのため、もしあなたがこのMODを面白いと思ったのなら、あなたが**RedPower2の作者を尊敬することを望む**。
+これはMinecraftのMODであり、**RedPower2を1.8.9以降に移植したもの**だ。そのため、もしこのMODを面白いと思ったのなら、**RedPower2の作者を尊敬して欲しい**。
 
 ## 特徴
 * 壁に設置することが出来るレッドワイヤー
