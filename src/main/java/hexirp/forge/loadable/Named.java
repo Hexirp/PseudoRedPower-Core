@@ -16,6 +16,7 @@ public interface Named {
 	public String name();
 	
 	/**
+	 * @param <Item> 要素の型
 	 * @param index 索引
 	 * @return 索引において、自分自身と同じ名前を持つ要素
 	 */
