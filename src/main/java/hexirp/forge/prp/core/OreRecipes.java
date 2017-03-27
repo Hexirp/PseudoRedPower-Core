@@ -23,30 +23,29 @@ public class OreRecipes extends RegisterableLibrary {
 	 */
 	@Setting
 	public OreRecipes(final Index<MinecraftItem> items) {
-		add(
-		    new RecipeBuilder()
-		        .to2(items.lookup(new SilverIngot().name()))
-		        .to(items.lookup(new SilverOre().name()))
-		        .to(1)
-		        .to(1)
-		        .to());
 		add(new RecipeBuilder()
-		    .to(items.lookup(new SilverBlock().name()))
+		    .to2(new SilverIngot().find(items))
+		    .to(new SilverOre().find(items))
+		    .to(1)
+		    .to(1)
+		    .to());
+		add(new RecipeBuilder()
+		    .to(new SilverBlock().find(items))
 		    .to(1)
 		    .to()
 		    .set("AAA")
 		    .set("AAA")
 		    .set("AAA")
 		    .to()
-		    .set(new Pair<>('A', items.lookup(new SilverIngot().name())))
+		    .set(new Pair<>('A', new SilverIngot().find(items)))
 		    .to());
 		add(new RecipeBuilder()
-		    .to(items.lookup(new SilverIngot().name()))
+		    .to(new SilverIngot().find(items))
 		    .to(9)
 		    .to()
 		    .set("A")
 		    .to()
-		    .set(new Pair<>('A', items.lookup(new SilverBlock().name())))
+		    .set(new Pair<>('A', new SilverBlock().find(items)))
 		    .to());
 	}
 }
