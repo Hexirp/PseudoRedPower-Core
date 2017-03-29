@@ -32,7 +32,7 @@ public class MaterialPhase
 	@Override
 	@Chaining
 	public MaterialPhase set(final Pair<Character, MinecraftItem> element) {
-		second.put(element.first(), element.second());
+		this.set(element.first(), element.second());
 		return this;
 	}
 	
