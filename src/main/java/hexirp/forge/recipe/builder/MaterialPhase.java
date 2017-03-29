@@ -5,6 +5,7 @@ import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
 import hexirp.builder.ListingPhase;
 import hexirp.collection.GettableTwoFields;
+import hexirp.collection.Pair;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipe;
@@ -19,7 +20,7 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  */
 public class MaterialPhase
     extends
-        ListingPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, GettableTwoFields<Character, MinecraftItem>> {
+        ListingPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Pair<Character, MinecraftItem>> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
@@ -30,7 +31,7 @@ public class MaterialPhase
 	
 	@Override
 	@Chaining
-	public MaterialPhase set(final GettableTwoFields<Character, MinecraftItem> element) {
+	public MaterialPhase set(final Pair<Character, MinecraftItem> element) {
 		second.put(element.first(), element.second());
 		return this;
 	}
