@@ -12,7 +12,7 @@ import hexirp.annotation.Setting;
  *
  * @param <T> 型
  */
-public class OneField<T> {
+public abstract class OneField<T> {
 	/** 値. */
 	protected final T value;
 	

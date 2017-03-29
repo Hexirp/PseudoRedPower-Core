@@ -11,7 +11,7 @@ import hexirp.annotation.Setting;
  * @param <T1> 型1
  * @param <T2> 型2
  */
-public class GettableTwoFields<T1, T2> extends TwoFields<T1, T2> {
+public abstract class GettableTwoFields<T1, T2> extends TwoFields<T1, T2> {
 	/**
 	 * @param first {@link #first}
 	 * @param second {@link #second}
