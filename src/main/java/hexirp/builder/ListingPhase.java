@@ -6,6 +6,8 @@ import hexirp.annotation.Setting;
 // TODO: 本来は「不定数の値を集める」という性質は「次の段階に進むのに情報を必要としない」という性質と直交するはずだが...
 // 多重継承が出来ないため、InfolessPhaseを継承してしまっている。
 /**
+ * 不定数の数を集める段階を表現する.
+ *
  * @author Hexirp
  *
  * @param <T1> 受け継いだ値

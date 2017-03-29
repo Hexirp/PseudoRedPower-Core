@@ -4,6 +4,7 @@ import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
 
 /**
+ * 進む先が二つに分岐している段階を表す.
  *
  * @author Hexirp
  * @param <T1> これまでの段階で保存された値の記録
@@ -22,7 +23,7 @@ public abstract class BranchedPhase<T1, T2, T3, T4, T5, T6> extends Phase<T1, T2
 	public BranchedPhase(final T1 stack, final T2 value) {
 		super(stack, value);
 	}
-	
+
 	/**
 	 * @param value 次の段階が必要とする値
 	 * @return 次の段階
