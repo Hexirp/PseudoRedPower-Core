@@ -6,13 +6,13 @@ import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
 
 /**
- * 二つしかフィールドを持つことを表す.
+ * 二つしかフィールドを持たないことを表す.
  *
  * @author Hexirp
  * @param <T1> 型1
  * @param <T2> 型2
  */
-public class TwoFields<T1, T2> {
+public abstract class TwoFields<T1, T2> {
 	/** 値1. */
 	protected final T1 first;
 	
