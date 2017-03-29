@@ -1,7 +1,6 @@
 package hexirp.forge.prp.core;
 
 import hexirp.annotation.Setting;
-import hexirp.collection.Pair;
 import hexirp.forge.Index;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.RegisterableLibrary;
@@ -37,7 +36,7 @@ public class OreRecipes extends RegisterableLibrary {
 		    .set("AAA")
 		    .set("AAA")
 		    .to()
-		    .set(new Pair<>('A', new SilverIngot().find(items)))
+		    .set('A', new SilverIngot().find(items))
 		    .to());
 		add(new RecipeBuilder()
 		    .to(new SilverIngot().find(items))
@@ -45,7 +44,7 @@ public class OreRecipes extends RegisterableLibrary {
 		    .to()
 		    .set("A")
 		    .to()
-		    .set(new Pair<>('A', new SilverBlock().find(items)))
+		    .set('A', new SilverBlock().find(items))
 		    .to());
 	}
 }

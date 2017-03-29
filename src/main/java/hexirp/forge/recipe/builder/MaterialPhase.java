@@ -40,6 +40,19 @@ public class MaterialPhase
 		return this;
 	}
 	
+	/**
+	 * 要素を追加する.
+	 *
+	 * @param c 文字
+	 * @param i 文字に対応するアイテム
+	 * @return this
+	 */
+	@Chaining
+	public MaterialPhase set(final Character c, final MinecraftItem i) {
+		second.put(c, i);
+		return this;
+	}
+	
 	@Override
 	@Getting
 	public ShapedRecipe to() {
