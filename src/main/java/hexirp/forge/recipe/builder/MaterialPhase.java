@@ -3,9 +3,8 @@ package hexirp.forge.recipe.builder;
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.builder.ListingPhase;
+import hexirp.builder.MaplikePhase;
 import hexirp.collection.GettableTwoFields;
-import hexirp.collection.Pair;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
 import hexirp.forge.recipe.ShapedRecipe;
@@ -20,20 +19,13 @@ import hexirp.forge.recipe.ShapedRecipeOrder;
  */
 public class MaterialPhase
     extends
-        ListingPhase<GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Pair<Character, MinecraftItem>> {
+        MaplikePhase<GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder>, ShapedRecipeMaterialMap, ShapedRecipe, Character, MinecraftItem> {
 	/**
 	 * @param stack これまでの段階の記録
 	 */
 	@Setting
 	public MaterialPhase(final GettableTwoFields<GettableTwoFields<MinecraftItem, Integer>, ShapedRecipeAbstractOrder> stack) {
 		super(stack, new ShapedRecipeMaterialMap());
-	}
-	
-	@Override
-	@Chaining
-	public MaterialPhase set(final Pair<Character, MinecraftItem> element) {
-		this.set(element.first(), element.second());
-		return this;
 	}
 	
 	/**
@@ -43,6 +35,7 @@ public class MaterialPhase
 	 * @param i 文字に対応するアイテム
 	 * @return this
 	 */
+	@Override
 	@Chaining
 	public MaterialPhase set(final Character c, final MinecraftItem i) {
 		second.put(c, i);
