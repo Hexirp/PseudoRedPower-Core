@@ -27,7 +27,7 @@ public abstract class MaplikePhase<T1, T2, T3, K, V> extends ListingPhase<T1, T2
 	
 	@Override
 	@Chaining
-	public MaplikePhase<T1, T2, T3, K, V> set(final Pair<K, V> element) {
+	public final MaplikePhase<T1, T2, T3, K, V> set(final Pair<K, V> element) {
 		this.set(element.first(), element.second());
 		return this;
 	}
