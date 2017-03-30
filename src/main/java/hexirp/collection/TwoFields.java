@@ -36,6 +36,14 @@ public abstract class TwoFields<T1, T2> {
 		if (this.getClass() != obj.getClass()) return false;
 		
 		final TwoFields<?, ?> that = (TwoFields<?, ?>) obj;
+		return eq(that);
+	}
+	
+	/**
+	 * @param that 比較対象
+	 * @return 同値である
+	 */
+	public boolean eq(final TwoFields<?, ?> that) {
 		return Objects.equals(this.first, that.first) && Objects.equals(this.second, that.second);
 	}
 	
