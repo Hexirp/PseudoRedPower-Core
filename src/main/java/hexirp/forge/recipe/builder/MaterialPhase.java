@@ -2,7 +2,6 @@ package hexirp.forge.recipe.builder;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.builder.SettingMaterialPhase;
 import hexirp.collection.GettableTwoFields;
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.RecipeProduct;
