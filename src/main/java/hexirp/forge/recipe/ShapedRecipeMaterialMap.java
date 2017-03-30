@@ -1,14 +1,11 @@
 package hexirp.forge.recipe;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
-import hexirp.annotation.Setting;
-import hexirp.collection.OneField;
+import hexirp.collection.HashMapHolder;
 import hexirp.forge.MinecraftItem;
 
 /**
@@ -16,13 +13,7 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class ShapedRecipeMaterialMap extends OneField<Map<Character, MinecraftItem>> {
-	/** Setting. */
-	@Setting
-	public ShapedRecipeMaterialMap() {
-		super(new HashMap<Character, MinecraftItem>());
-	}
-	
+public class ShapedRecipeMaterialMap extends HashMapHolder<Character, MinecraftItem> {
 	/**
 	 * @return 対応関係がリストで表現されたもの
 	 */
