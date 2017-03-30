@@ -1,12 +1,8 @@
 package hexirp.forge;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
-import hexirp.annotation.Setting;
-import hexirp.collection.OneField;
+import hexirp.collection.HashMapHolder;
 
 /**
  * アイテムの索引を表す.
@@ -14,13 +10,7 @@ import hexirp.collection.OneField;
  * @author Hexirp
  * @param <Item> 項目
  */
-public class Index<Item> extends OneField<Map<String, Item>> {
-	/** Setting. */
-	@Setting
-	public Index() {
-		super(new HashMap<String, Item>());
-	}
-	
+public class Index<Item> extends HashMapHolder<String, Item> {
 	/**
 	 * 索引を結合する.
 	 *
