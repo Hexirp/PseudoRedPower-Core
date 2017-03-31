@@ -3,6 +3,8 @@ package hexirp.collection.test;
 import static hexirp.annotation.test.MethodTest.*;
 import static org.junit.Assert.*;
 
+import java.util.function.Supplier;
+
 import org.junit.Test;
 
 import hexirp.collection.GettableTwoFields;
@@ -13,16 +15,21 @@ import hexirp.collection.GettableTwoFields;
  * @author Hexirp
  */
 public class GettableTwoFieldsTest {
+	/** インスタンスの生産者. */
+	private static final Supplier<GettableTwoFields<Integer, String>> init = () -> new GettableTwoFields<Integer, String>(3, "aaa") {};
+	
 	/** {@link GettableTwoFields#GettableTwoFields(Object, Object)}をテストする. */
 	@Test
 	public void testGettableTwoFields() {
-		assertSetting(() -> new GettableTwoFields<Integer, String>(3, "aaa") {});
+		assertSetting(init);
 	}
 	
 	/** {@link GettableTwoFields#first()}をテストする. */
 	@Test
 	public void testFirst() {
-		fail("まだ実装されていません");
+		assertGetting(init.get(), t -> t.first());
+		
+		assertEquals((int) init.get().first(), 3);
 	}
 	
 	/** {@link GettableTwoFields#second()}をテストする. */
