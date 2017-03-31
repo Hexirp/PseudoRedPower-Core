@@ -23,11 +23,7 @@ public final class ShapedRecipeAbstractOrderTest {
 	@Test
 	public final void testShapedRecipeAbstractOrder() {
 		assertSetting(testee);
-	}
-	
-	/** コントストラクタで生成される内容は空のリストである. */
-	@Test
-	public final void testShapedRecipeAbstractOrder2() {
+		
 		assertEquals(testee.get().order(), new LinkedList<>());
 	}
 	
@@ -35,11 +31,7 @@ public final class ShapedRecipeAbstractOrderTest {
 	@Test
 	public final void testAdd() {
 		assertChaining(testee.get(), t -> t.add(""));
-	}
-	
-	/** addは内部のリストに値を追加する. */
-	@Test
-	public final void testAdd2() {
+		
 		final List<String> testee1 = testee.get().add("AAA").order();
 		final LinkedList<String> testee2 = new LinkedList<String>();
 		testee2.add("AAA");
