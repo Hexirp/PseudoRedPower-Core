@@ -32,6 +32,7 @@ public abstract class TwoFields<T1, T2> {
 	}
 	
 	@Override
+	@Getting
 	public boolean equals(final @Nullable Object obj) {
 		if (null == obj) return false;
 		return eq(obj);
@@ -49,6 +50,7 @@ public abstract class TwoFields<T1, T2> {
 	}
 	
 	@Override
+	@Getting
 	public int hashCode() {
 		return Objects.hash(first, second);
 	}
