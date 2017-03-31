@@ -2,6 +2,7 @@ package hexirp.collection;
 
 import java.util.Objects;
 
+import hexirp.annotation.Getting;
 import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
 
@@ -26,6 +27,7 @@ public abstract class OneField<T> {
 	}
 	
 	@Override
+	@Getting
 	public boolean equals(@Nullable final Object obj) {
 		if (null == obj) return false;
 		if (this.getClass() != obj.getClass()) return false;
@@ -35,6 +37,7 @@ public abstract class OneField<T> {
 	}
 	
 	@Override
+	@Getting
 	public int hashCode() {
 		return Objects.hash(value);
 	}
