@@ -1,6 +1,6 @@
 package hexirp.forge.recipe.test;
 
-import static hexirp.annotation.test.MethodTest.*;
+import static hexirp.annotation.test.MethodLaw.*;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;

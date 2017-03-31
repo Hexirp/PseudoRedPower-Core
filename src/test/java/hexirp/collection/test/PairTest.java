@@ -1,6 +1,6 @@
 package hexirp.collection.test;
 
-import static hexirp.annotation.test.MethodTest.*;
+import static hexirp.annotation.test.MethodLaw.*;
 
 import org.junit.Test;
 
