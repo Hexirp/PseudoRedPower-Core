@@ -1,4 +1,4 @@
-package hexirp.test;
+package hexirp.annotation.test;
 
 import static org.junit.Assert.*;
 
@@ -14,7 +14,7 @@ import hexirp.annotation.Setting;
  *
  * @author Hexirp
  */
-public class MethodTest {
+public class MethodLaw {
 	/**
 	 * メソッドが{@link Setting}を満たす.
 	 *

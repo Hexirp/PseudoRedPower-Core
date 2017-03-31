@@ -2,6 +2,7 @@ package hexirp.collection;
 
 import java.util.Objects;
 
+import hexirp.annotation.Getting;
 import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
 
@@ -33,17 +34,17 @@ public abstract class TwoFields<T1, T2> {
 	@Override
 	public boolean equals(final @Nullable Object obj) {
 		if (null == obj) return false;
-		if (this.getClass() != obj.getClass()) return false;
-		
-		final TwoFields<?, ?> that = (TwoFields<?, ?>) obj;
-		return eq(that);
+		return eq(obj);
 	}
 	
 	/**
-	 * @param that 比較対象
-	 * @return 同値である
+	 * @param obj nullではないオブジェクト
+	 * @return 同値であるか
 	 */
-	public boolean eq(final TwoFields<?, ?> that) {
+	@Getting
+	public boolean eq(final Object obj) {
+		if (this.getClass() != obj.getClass()) return false;
+		final TwoFields<?, ?> that = (TwoFields<?, ?>) obj;
 		return Objects.equals(this.first, that.first) && Objects.equals(this.second, that.second);
 	}
 	
