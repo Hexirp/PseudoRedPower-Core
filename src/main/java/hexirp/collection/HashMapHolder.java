@@ -11,7 +11,7 @@ import hexirp.annotation.Setting;
  * @param <K> キー
  * @param <V> 値
  */
-public class HashMapHolder<K, V> extends OneField<HashMap<K, V>> {
+public abstract class HashMapHolder<K, V> extends OneField<HashMap<K, V>> {
 	/** Setting. */
 	@Setting
 	public HashMapHolder() {
