@@ -1,4 +1,4 @@
-package hexirp.test;
+package hexirp.annotation.test;
 
 import static org.junit.Assert.*;
 
