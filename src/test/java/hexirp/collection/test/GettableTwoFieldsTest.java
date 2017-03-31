@@ -35,7 +35,9 @@ public class GettableTwoFieldsTest {
 	/** {@link GettableTwoFields#second()}をテストする. */
 	@Test
 	public void testSecond() {
-		fail("まだ実装されていません");
+		assertGetting(init.get(), t -> t.second());
+		
+		assertEquals(init.get().second(), "aaa");
 	}
 	
 }
