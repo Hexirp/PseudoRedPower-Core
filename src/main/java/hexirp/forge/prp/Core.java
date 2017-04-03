@@ -20,12 +20,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
     name = Metadata.NAME,
     version = Metadata.VERSION,
     useMetadata = true)
-public class Core {
+public final class Core {
 	/** MODの情報. Forgeにより初期化されるため、自分では初期化しない。 */
 	@Mod.Metadata
 	@Nullable
 	public static ModMetadata metadata;
-	
+
 	/**
 	 * 初期化前処理を行う.
 	 *
@@ -37,13 +37,13 @@ public class Core {
 	@Command
 	public void preInit(final @Nullable FMLPreInitializationEvent event) {
 		final @Nullable ModMetadata localData = metadata; // この時点でのメタデータを確定させる
-		
+
 		if (null == localData || null == event) throw null;
-		
+
 		new Metadata().set(localData); // メタデータに設定する
-		
+
 		final Environment env = new Environment(localData, event); // 環境をセットする
-		
+
 		new Mechanism().add(env); // 様々な物を追加する
 	}
 }

@@ -10,7 +10,7 @@ import hexirp.forge.loadable.Environment;
  *
  * @author Hexirp
  */
-public class Mechanism {
+public final class Mechanism {
 	/**
 	 * PRP-Coreのメカニズム群を追加する.
 	 *
