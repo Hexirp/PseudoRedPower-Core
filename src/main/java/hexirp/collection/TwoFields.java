@@ -13,13 +13,13 @@ import hexirp.annotation.Setting;
  * @param <T1> 型1
  * @param <T2> 型2
  */
-public abstract class TwoFields<T1, T2> extends PoorTwoFields<T1, T2> {
+public abstract class TwoFields<@Nullable T1, @Nullable T2> extends PoorTwoFields<T1, T2> {
 	/**
 	 * @param first {@link #first}
 	 * @param second {@link #second}
 	 */
 	@Setting
-	public TwoFields(final @Nullable T1 first, final @Nullable T2 second) {
+	public TwoFields(final T1 first, final T2 second) {
 		super(first, second);
 	}
 	
@@ -37,7 +37,7 @@ public abstract class TwoFields<T1, T2> extends PoorTwoFields<T1, T2> {
 	@Getting
 	public boolean eq(final Object obj) {
 		if (this.getClass() != obj.getClass()) return false;
-		final TwoFields<?, ?> that = (TwoFields<?, ?>) obj;
+		final TwoFields<@Nullable ?, @Nullable ?> that = (TwoFields<@Nullable ?, @Nullable ?>) obj;
 		return Objects.equals(this.first, that.first) && Objects.equals(this.second, that.second);
 	}
 	
