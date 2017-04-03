@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
  *
  * @author Hexirp
  */
-public class SilverIngot extends Item implements ExtendedItem {
+public final class SilverIngot extends Item implements ExtendedItem {
 	/** コントストラクタ. */
 	@Setting
 	public SilverIngot() {

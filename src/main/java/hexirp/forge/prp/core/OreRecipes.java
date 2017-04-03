@@ -14,7 +14,7 @@ import hexirp.forge.recipe.builder.RecipeBuilder;
  *
  * @author Hexirp
  */
-public class OreRecipes extends RegisterableLibrary {
+public final class OreRecipes extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 *
