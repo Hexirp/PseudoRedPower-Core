@@ -8,7 +8,7 @@ import hexirp.forge.RegisterableLibrary;
  *
  * @author Hexirp
  */
-public class Recipes extends RegisterableLibrary {
+public final class Recipes extends RegisterableLibrary {
 	/**
 	 * 初期化する.
 	 */

@@ -12,7 +12,7 @@ import net.minecraft.creativetab.CreativeTabs;
  *
  * @author Hexirp
  */
-public class SilverBlock extends Block implements ExtendedBlock {
+public final class SilverBlock extends Block implements ExtendedBlock {
 	/** Setiing. */
 	@Setting
 	public SilverBlock() {

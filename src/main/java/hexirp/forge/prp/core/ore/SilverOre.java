@@ -12,7 +12,7 @@ import net.minecraft.creativetab.CreativeTabs;
  *
  * @author Hexirp
  */
-public class SilverOre extends Block implements ExtendedBlock {
+public final class SilverOre extends Block implements ExtendedBlock {
 	/** コントストラクタ. */
 	@Setting
 	public SilverOre() {

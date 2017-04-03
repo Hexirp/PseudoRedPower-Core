@@ -11,7 +11,7 @@ import hexirp.forge.prp.core.ore.SilverOre;
  *
  * @author Hexirp
  */
-public class Ore extends LoadableLibrary {
+public final class Ore extends LoadableLibrary {
 	/** コントストラクタ. */
 	@Setting
 	public Ore() {

@@ -12,7 +12,7 @@ import net.minecraft.init.Items;
  *
  * @author Hexirp
  */
-public class ChainMail extends RegisterableLibrary {
+public final class ChainMail extends RegisterableLibrary {
 	/** 初期化する. */
 	@Setting
 	public ChainMail() {
