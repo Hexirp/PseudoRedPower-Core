@@ -1,6 +1,7 @@
 package hexirp.collection.test;
 
 import static hexirp.annotation.test.MethodLaw.*;
+import static org.junit.Assert.*;
 
 import java.util.function.Supplier;
 
@@ -29,10 +30,17 @@ public class OneFieldTest {
 		assertSetting(init);
 	}
 	
+	/** {@link OneField#OneField(Object)}の例外パターンをテストする. */
+	@Test(expected = NullPointerException.class)
+	public void testOneField_Exception() {
+		new OneField<Object>(null) {};
+	}
+	
 	/** {@link OneField#equals(Object)}をテストする. */
 	@Test
 	public void testEqualsObject() {
 		assertGetting(init.get(), t -> t.equals(null));
+		assertTrue(init.get().equals(init.get()));
+		assertFalse(init.get().equals(new Object()));
 	}
-	
 }
