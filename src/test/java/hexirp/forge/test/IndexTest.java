@@ -29,6 +29,7 @@ public class IndexTest {
 	@Test
 	public final void testPut() {
 		assertChaining(init.get(), t -> t.put("", ""));
+		assertEquals(init.get().put("A", "1").lookup("A"), "1");
 		assertEquals(init.get().put("A", "1").put("A", "2").lookup("A"), "2");
 	}
 	
@@ -36,6 +37,12 @@ public class IndexTest {
 	@Test
 	public final void testLookup() {
 		assertGetting(init.get().put("A", "AAA"), t -> t.lookup("A"));
-		assertNotNull(init.get().lookup(""));
+		
+	}
+	
+	/** {@link Index#lookup(String)}の例外パターンをテストする. */
+	@Test(expected = IllegalArgumentException.class)
+	public final void testLookup_Exception() {
+		init.get().lookup("");
 	}
 }
