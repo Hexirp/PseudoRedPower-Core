@@ -42,6 +42,8 @@ public class Index<Item> extends HashMapHolder<String, Item> {
 	 */
 	@Getting
 	public Item lookup(final String string) {
-		return value.get(string);
+		final Item v = value.get(string);
+		if (null == v) throw new IllegalArgumentException();
+		return v;
 	}
 }
