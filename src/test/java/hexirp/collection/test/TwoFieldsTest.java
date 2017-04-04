@@ -35,12 +35,15 @@ public class TwoFieldsTest {
 	@Test
 	public void testEqualsObject() {
 		assertGetting(init.get(), t -> t.equals(null));
-		assertTrue(init.get().equals(init.get()));
+		assertFalse(init.get().equals(null));
 	}
 	
 	/** {@link TwoFields#eq(Object)}をテストする. */
 	@Test
 	public void testEq() {
-		assertGetting(init.get(), t -> t.eq(init));
+		assertGetting(init.get(), t -> t.eq(new Object()));
+		assertFalse(init.get().eq(new Object()));
+		assertTrue(init.get().eq(init.get()));
+		assertFalse(init.get().eq(new TwoFields<Float, String>(0.2f, "www") {}));
 	}
 }
