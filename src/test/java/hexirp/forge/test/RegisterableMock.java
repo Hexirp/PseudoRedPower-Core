@@ -1,5 +1,7 @@
 package hexirp.forge.test;
 
+import hexirp.annotation.Command;
+import hexirp.annotation.Setting;
 import hexirp.forge.Registerable;
 
 /**
@@ -9,16 +11,18 @@ import hexirp.forge.Registerable;
  */
 public class RegisterableMock implements Registerable {
 	/** 送信先. */
-	public final RegistringLog host;
+	public final RegisteringLog host;
 	
 	/**
 	 * @param host {@link #register()}が呼び出された際のメッセージを送るための参照
 	 */
-	public RegisterableMock(final RegistringLog host) {
+	@Setting
+	public RegisterableMock(final RegisteringLog host) {
 		this.host = host;
 	}
 	
 	@Override
+	@Command
 	public void register() {
 		host.inc();
 	}

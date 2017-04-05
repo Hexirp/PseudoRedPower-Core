@@ -15,12 +15,12 @@ public class RegisterableLibraryTest {
 	/** {@link RegisterableLibrary#register()}をテストする. */
 	@Test
 	public final void testRegister() {
-		final RegistringLog log = new RegistringLog();
+		final RegisteringLog log = new RegisteringLog();
 		final RegisterableLibrary testee = new RegisterableLibrary()
 		    .add(new RegisterableMock(log))
 		    .add(new RegisterableMock(log))
 		    .add(new RegisterableMock(log));
 		testee.register();
-		assertEquals(log, new RegistringLog().inc().inc().inc());
+		assertEquals(log, new RegisteringLog().inc().inc().inc());
 	}
 }

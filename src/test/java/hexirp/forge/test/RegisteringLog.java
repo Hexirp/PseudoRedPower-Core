@@ -10,7 +10,7 @@ import hexirp.forge.Registerable;
  *
  * @author Hexirp
  */
-public class RegistringLog {
+public class RegisteringLog {
 	/** 呼び出された回数. */
 	private int count = 0;
 	
@@ -20,7 +20,7 @@ public class RegistringLog {
 	 * @return this
 	 */
 	@Chaining
-	public RegistringLog inc() {
+	public RegisteringLog inc() {
 		count++;
 		return this;
 	}
@@ -30,7 +30,7 @@ public class RegistringLog {
 	public boolean equals(@Nullable final Object obj) {
 		if (null == obj) return false;
 		if (this.getClass() != obj.getClass()) return false;
-		final RegistringLog that = (RegistringLog) obj;
+		final RegisteringLog that = (RegisteringLog) obj;
 		return this.count == that.count;
 	}
 	
