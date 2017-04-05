@@ -10,7 +10,7 @@ import hexirp.forge.loadable.Environment;
  *
  * @author Hexirp
  */
-public abstract class LoadableLibrary extends Library<Loadable> implements Loadable {
+public class LoadableLibrary extends Library<Loadable> implements Loadable {
 	@Override
 	@Command
 	public Index<MinecraftItem> load(final Environment env) {

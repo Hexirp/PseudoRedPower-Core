@@ -9,7 +9,7 @@ import hexirp.annotation.Command;
  *
  * @author Hexirp
  */
-public abstract class RegisterableLibrary extends Library<Registerable> implements Registerable {
+public class RegisterableLibrary extends Library<Registerable> implements Registerable {
 	@Override
 	@Command
 	public void register() {
