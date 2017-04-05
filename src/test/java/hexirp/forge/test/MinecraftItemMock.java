@@ -16,4 +16,12 @@ public class MinecraftItemMock extends MinecraftItem {
 	public MinecraftItemMock(final ItemMock item) {
 		super(item);
 	}
+	
+	/**
+	 * @param block ブロック
+	 */
+	@Setting
+	public MinecraftItemMock(final BlockMock block) {
+		super(block.item());
+	}
 }

@@ -22,12 +22,13 @@ public class MinecraftItemTest {
 	/** {@link MinecraftItem#MinecraftItem(net.minecraft.block.Block)}をテストする. */
 	@Test
 	public final void testMinecraftItemBlock() {
-		fail("まだ実装されていません");
+		assertSetting(() -> new MinecraftItemMock(new BlockMock("")));
 	}
 	
 	/** {@link MinecraftItem#item()}をテストする. */
 	@Test
 	public final void testItem() {
-		fail("まだ実装されていません");
+		assertGetting(new MinecraftItemMock(new ItemMock("A")), t -> t.item());
+		assertEquals(new MinecraftItemMock(new ItemMock("A")).item(), new ItemMock("A"));
 	}
 }
