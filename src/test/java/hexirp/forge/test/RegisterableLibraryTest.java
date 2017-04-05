@@ -17,7 +17,9 @@ public class RegisterableLibraryTest {
 	public final void testRegister() {
 		final RegistringLog log = new RegistringLog();
 		final RegisterableLibrary testee = new RegisterableLibrary()
-		    .add(new RegisterableMock(log).add(new RegisterableMock(log)).add(new RegisterableMock(log)));
+		    .add(new RegisterableMock(log))
+		    .add(new RegisterableMock(log))
+		    .add(new RegisterableMock(log));
 		testee.register();
 		assertEquals(log, new RegistringLog().inc().inc().inc());
 	}
