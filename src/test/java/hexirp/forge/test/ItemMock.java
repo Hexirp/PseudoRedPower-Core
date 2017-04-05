@@ -1,5 +1,7 @@
 package hexirp.forge.test;
 
+import java.util.Objects;
+
 import hexirp.annotation.Nullable;
 import net.minecraft.item.Item;
 
@@ -22,8 +24,11 @@ public class ItemMock extends Item {
 	}
 	
 	@Override
-	public boolean equals(@Nullable final Object o) {
-		return (o != null && o instanceof ItemMock) ? name == ((ItemMock) o).name : false;
+	public boolean equals(@Nullable final Object obj) {
+		if (null == obj) return false;
+		if (this.getClass() != obj.getClass()) return false;
+		final ItemMock that = (ItemMock) obj;
+		return Objects.equals(this.name, that.name);
 	}
 	
 	@Override
