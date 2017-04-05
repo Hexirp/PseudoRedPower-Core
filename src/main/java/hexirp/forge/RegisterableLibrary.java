@@ -1,5 +1,6 @@
 package hexirp.forge;
 
+import hexirp.annotation.Chaining;
 import hexirp.annotation.Command;
 
 /**
@@ -14,5 +15,12 @@ public class RegisterableLibrary extends Library<Registerable> implements Regist
 	@Command
 	public void register() {
 		forEach(recipe -> recipe.register());
+	}
+	
+	@Override
+	@Chaining
+	public RegisterableLibrary add(final Registerable element) {
+		super.add(element);
+		return this;
 	}
 }
