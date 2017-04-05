@@ -11,7 +11,7 @@ import hexirp.annotation.Setting;
  * @param <T1> 型1
  * @param <T2> 型2
  */
-public class PoorTwoFields<T1, T2> {
+public abstract class PoorTwoFields<T1, T2> {
 	/** 値1. */
 	protected final T1 first;
 	

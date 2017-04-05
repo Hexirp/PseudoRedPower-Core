@@ -36,9 +36,9 @@ public final class ShapedRecipeMaterialMapTest {
 	/** putは副作用を持つ. */
 	@Test
 	public final void test_put_effect() {
-		assertChaining(testee.get(), t -> t.put('A', new MinecraftItemMock("acacia_door")));
+		assertChaining(testee.get(), t -> t.put('A', new MinecraftItemMock(new ItemMock("acacia_door"))));
 		
-		final List<Object> testee1 = testee.get().put('A', new MinecraftItemMock("acacia_door")).list();
+		final List<Object> testee1 = testee.get().put('A', new MinecraftItemMock(new ItemMock("acacia_door"))).list();
 		
 		final LinkedList<Object> testee2 = new LinkedList<>();
 		testee2.add('A');

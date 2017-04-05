@@ -5,23 +5,22 @@ import java.util.Objects;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Nullable;
 import hexirp.annotation.Setting;
-import net.minecraft.item.Item;
 
 /**
  * テストのためのダミーを表す.
  *
  * @author Hexirp
  */
-public class ItemMock extends Item {
-	/** 名前を表す. */
-	private final String name;
+public class BlockMock {
+	/** 比較用のID. */
+	private final String id;
 	
 	/**
-	 * @param s 名前
+	 * @param id 比較用
 	 */
 	@Setting
-	public ItemMock(final String s) {
-		this.name = s;
+	public BlockMock(final String id) {
+		this.id = id;
 	}
 	
 	@Override
@@ -29,13 +28,21 @@ public class ItemMock extends Item {
 	public boolean equals(@Nullable final Object obj) {
 		if (null == obj) return false;
 		if (this.getClass() != obj.getClass()) return false;
-		final ItemMock that = (ItemMock) obj;
-		return Objects.equals(this.name, that.name);
+		final BlockMock that = (BlockMock) obj;
+		return Objects.equals(this.id, that.id);
 	}
 	
 	@Override
 	@Getting
 	public int hashCode() {
-		return name.hashCode();
+		return id.hashCode();
+	}
+	
+	/**
+	 * @return アイテムに変換されたブロック
+	 */
+	@Getting
+	public ItemMock item() {
+		return new ItemMock(id);
 	}
 }

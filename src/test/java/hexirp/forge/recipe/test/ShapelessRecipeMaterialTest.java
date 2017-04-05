@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import hexirp.forge.MinecraftItem;
 import hexirp.forge.recipe.ShapelessRecipeMaterial;
+import hexirp.forge.test.ItemMock;
 import hexirp.forge.test.MinecraftItemMock;
 import net.minecraft.item.Item;
 
@@ -34,9 +35,9 @@ public class ShapelessRecipeMaterialTest {
 	/** addは内部のリストに値を追加する. */
 	@Test
 	public void testAdd() {
-		final MinecraftItem A = new MinecraftItemMock("acacia_door");
+		final MinecraftItem A = new MinecraftItemMock(new ItemMock("acacia_door"));
 		final Item a = A.item();
-		final MinecraftItem E = new MinecraftItemMock("emerald");
+		final MinecraftItem E = new MinecraftItemMock(new ItemMock("emerald"));
 		final Item e = E.item();
 		
 		assertArrayEquals(
