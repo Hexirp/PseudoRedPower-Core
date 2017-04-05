@@ -1,18 +1,18 @@
 package hexirp.forge.test;
 
+import hexirp.annotation.Setting;
 import hexirp.forge.MinecraftItem;
 
 /**
- * テストのためのダミー.
+ * {@link MinecraftItem}のテストのためのダミーを表す.
  *
  * @author Hexirp
  */
 public class MinecraftItemMock extends MinecraftItem {
 	/**
-	 * コントストラクタ.
-	 *
 	 * @param item アイテムの代理
 	 */
+	@Setting
 	public MinecraftItemMock(final ItemMock item) {
 		super(item);
 	}
