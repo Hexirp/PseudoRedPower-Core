@@ -16,7 +16,7 @@ public class MinecraftItemTest {
 	/** {@link MinecraftItem#MinecraftItem(net.minecraft.item.Item)}をテストする. */
 	@Test
 	public final void testMinecraftItemItem() {
-		assertSetting(() -> new MinecraftItemMock(""));
+		assertSetting(() -> new MinecraftItemMock(new ItemMock("")));
 	}
 	
 	/** {@link MinecraftItem#MinecraftItem(net.minecraft.block.Block)}をテストする. */
@@ -30,5 +30,4 @@ public class MinecraftItemTest {
 	public final void testItem() {
 		fail("まだ実装されていません");
 	}
-	
 }

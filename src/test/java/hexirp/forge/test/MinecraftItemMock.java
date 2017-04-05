@@ -11,9 +11,9 @@ public class MinecraftItemMock extends MinecraftItem {
 	/**
 	 * コントストラクタ.
 	 *
-	 * @param str アイテムの代理
+	 * @param item アイテムの代理
 	 */
-	public MinecraftItemMock(String str) {
-		super(new ItemMock(str));
+	public MinecraftItemMock(final ItemMock item) {
+		super(item);
 	}
 }
