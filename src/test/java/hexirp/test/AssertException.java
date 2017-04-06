@@ -15,8 +15,9 @@ public final class AssertException {
 	public static final void assertException(final Runnable runner, final Class<? extends Exception> exclass) {
 		try {
 			runner.run();
+			fail(exclass.toString() + " wasn't thrown");
 		} catch (final Exception e) {
-			assertEquals(e.getClass(), exclass);
+			assertTrue("Thrown " + e.toString() + " isn't " + exclass.toString(), exclass.isInstance(e));
 		}
 	}
 	
@@ -28,8 +29,9 @@ public final class AssertException {
 	public static final void assertException(final Runnable runner, final Class<? extends Exception> exclass, final String exmessage) {
 		try {
 			runner.run();
+			fail(exclass.toString() + " wasn't thrown");
 		} catch (final Exception e) {
-			assertEquals(e.getClass(), exclass);
+			assertTrue("Thrown " + e.toString() + " isn't " + exclass.toString(), exclass.isInstance(e));
 			assertEquals(e.getMessage(), exmessage);
 		}
 	}
