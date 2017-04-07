@@ -16,11 +16,11 @@ public interface ExtendedItem extends Named {
 	 *
 	 * @return this
 	 */
-	// TODO: アノテーションは何が相応しい？
+	@Getting
 	public default Item self() {
 		return (Item) this;
 	}
-	
+
 	/**
 	 * @return {@link Loadable}を実装したアイテム
 	 */
@@ -28,7 +28,7 @@ public interface ExtendedItem extends Named {
 	public default Loadable loader() {
 		return new LoadableItem(self(), name());
 	}
-	
+
 	/**
 	 * 名前を設定する.
 	 *

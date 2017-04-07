@@ -15,7 +15,7 @@ public interface ExtendedBlock extends Named {
 	 *
 	 * @return this
 	 */
-	// TODO: アノテーションは何が相応しい？
+	@Getting
 	public default Block self() {
 		return (Block) this;
 	}
