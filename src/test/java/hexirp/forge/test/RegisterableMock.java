@@ -2,6 +2,7 @@ package hexirp.forge.test;
 
 import hexirp.annotation.Command;
 import hexirp.annotation.Setting;
+import hexirp.collection.OneField;
 import hexirp.forge.Registerable;
 
 /**
@@ -9,21 +10,18 @@ import hexirp.forge.Registerable;
  *
  * @author Hexirp
  */
-public class RegisterableMock implements Registerable {
-	/** 送信先. */
-	public final RegisteringLog host;
-	
+public class RegisterableMock extends OneField<RegisteringLog> implements Registerable {
 	/**
-	 * @param host {@link #register()}が呼び出された際のメッセージを送るための参照
+	 * @param value {@link #register()}が呼び出された際のメッセージを送るための参照
 	 */
 	@Setting
-	public RegisterableMock(final RegisteringLog host) {
-		this.host = host;
+	public RegisterableMock(final RegisteringLog value) {
+		super(value);
 	}
 	
 	@Override
 	@Command
 	public void register() {
-		host.inc();
+		value.inc();
 	}
 }

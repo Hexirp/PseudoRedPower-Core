@@ -15,7 +15,7 @@ public class RegisteringLog {
 	private int count = 0;
 	
 	/**
-	 * 数える.
+	 * メッセージを受け取り、その回数を数える.
 	 *
 	 * @return this
 	 */
