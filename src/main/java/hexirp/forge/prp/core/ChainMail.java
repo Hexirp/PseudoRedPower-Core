@@ -24,7 +24,7 @@ public final class ChainMail extends RegisterableLibrary {
 		        .set(" A ")
 		        .set("A A")
 		        .to()
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set('A', new MinecraftItem(Items.iron_ingot))
 		        .to());
 		add(
 		    new RecipeBuilder()
@@ -35,7 +35,7 @@ public final class ChainMail extends RegisterableLibrary {
 		        .set(" A ")
 		        .set("AAA")
 		        .to()
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set('A', new MinecraftItem(Items.iron_ingot))
 		        .to());
 		add(
 		    new RecipeBuilder()
@@ -46,7 +46,7 @@ public final class ChainMail extends RegisterableLibrary {
 		        .set("A A")
 		        .set("A A")
 		        .to()
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set('A', new MinecraftItem(Items.iron_ingot))
 		        .to());
 		add(
 		    new RecipeBuilder()
@@ -56,7 +56,7 @@ public final class ChainMail extends RegisterableLibrary {
 		        .set("A  ")
 		        .set("  A")
 		        .to()
-		        .set(new Pair<>('A', new MinecraftItem(Items.iron_ingot)))
+		        .set('A', new MinecraftItem(Items.iron_ingot))
 		        .to());
 	}
 }
