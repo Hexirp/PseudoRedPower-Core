@@ -13,7 +13,5 @@ public final class Recipes extends RegisterableLibrary {
 	 * 初期化する.
 	 */
 	@Setting
-	public Recipes() {
-		add(new ChainMail());
-	}
+	public Recipes() {}
 }
