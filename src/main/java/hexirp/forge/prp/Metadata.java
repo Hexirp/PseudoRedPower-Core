@@ -1,4 +1,4 @@
-package hexirp.forge.prp;
+﻿package hexirp.forge.prp;
 
 import hexirp.annotation.Command;
 import hexirp.forge.ModData;
@@ -27,7 +27,7 @@ final class Metadata implements ModData {
 	 * <li>第四レベルはバグの修正など</li>
 	 * </ul>
 	 */
-	static final String VERSION = "0.0.1.0";
+	static final String VERSION = "0.0.2.0";
 
 	@Override
 	@Command
