@@ -1,4 +1,4 @@
-﻿package hexirp.forge.prp;
+package hexirp.forge.prp;
 
 import hexirp.annotation.Command;
 import hexirp.forge.ModData;
