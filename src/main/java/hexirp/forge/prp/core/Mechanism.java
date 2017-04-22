@@ -20,7 +20,6 @@ public final class Mechanism {
 	public void add(final Environment env) {
 		final Index<MinecraftItem> ore_index = new Ore().load(env); // 鉱石のアイテムやブロックを読み込み、アイテムのリストを作る
 		
-		new Recipes().register(); // 汎用レシピを登録する
 		new OreRecipes(ore_index).register(); // 鉱石のレシピを登録する
 	}
 }
