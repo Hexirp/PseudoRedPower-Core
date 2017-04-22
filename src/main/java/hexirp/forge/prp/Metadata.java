@@ -27,7 +27,7 @@ final class Metadata implements ModData {
 	 * <li>第四レベルはバグの修正など</li>
 	 * </ul>
 	 */
-	static final String VERSION = "0.0.1.0";
+	static final String VERSION = "0.0.1.1";
 
 	@Override
 	@Command
