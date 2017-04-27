@@ -12,8 +12,6 @@ import hexirp.collection.OneField;
 /**
  * MODにおいて追加される要素を保持する辞書を表現する.
  *
- * 何かを追加するクラスを抽象化したクラス群の共通部分を取り出すことにより作成された。
- *
  * @author Hexirp
  * @param <Element> 要素の型
  */

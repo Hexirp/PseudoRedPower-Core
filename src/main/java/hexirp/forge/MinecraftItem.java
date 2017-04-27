@@ -8,9 +8,9 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 /**
- * {@link Item}を表現する.
+ * アイテムを表現する.
  *
- * {@link Item}と{@link Block}を統一的に取り扱うために作成された。
+ * {@link Item}と{@link Block}を統一的に取り扱う。
  *
  * @author Hexirp
  */
