@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 // サンプルに従い変更
 version = "0.0.2.0"
-group= "com.github.hexirp.forge.prp.core"
+group= "hexirp.forge.prp.core"
 archivesBaseName = project.projectDir.name
 
 // とりあえずコピペ
