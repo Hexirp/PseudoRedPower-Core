@@ -2,6 +2,7 @@ package hexirp.collection;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.LinkedList;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
