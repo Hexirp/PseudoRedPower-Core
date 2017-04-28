@@ -7,7 +7,6 @@ import java.util.LinkedList;
 
 import org.junit.Test;
 
-import hexirp.collection.AbstractListUtil;
 import hexirp.collection.ArrayBuilder;
 
 /**
@@ -27,10 +26,8 @@ public class ListUtilTest {
 	/** {@link NullPointerException}を投げる. */
 	@Test(expected = NullPointerException.class)
 	public void test_array_null() {
-		/** Mixin */
-		class ErrorListUtil extends AbstractListUtil<Object> implements UsingErrorList<Object> {}
-		
-		new ErrorListUtil().array();
+		// TODO: どうにかしてLinkedList#toArray()にnullを返させる、またはArrayBuilderの内部で使用しているLinkedListをtoArray()でnullを返すように変えた物に置き換える
+		throw null;
 	}
 	
 	/** 副作用がある. */
@@ -38,6 +35,6 @@ public class ListUtilTest {
 	public void test_merge() {
 		assertChaining(
 		    new ArrayBuilder<String>(),
-		    (final AbstractListUtil<String> t) -> t.merge(new LinkedList<String>()));
+		    (final ArrayBuilder<String> t) -> t.merge(new LinkedList<String>()));
 	}
 }
