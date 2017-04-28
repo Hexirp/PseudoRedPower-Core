@@ -5,7 +5,7 @@ import java.util.List;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
-import hexirp.collection.HashMapHolder;
+import hexirp.collection.HashMapUser;
 import hexirp.forge.MinecraftItem;
 
 /**
@@ -13,7 +13,7 @@ import hexirp.forge.MinecraftItem;
  *
  * @author Hexirp
  */
-public class ShapedRecipeMaterialMap extends HashMapHolder<Character, MinecraftItem> {
+public class ShapedRecipeMaterialMap extends HashMapUser<Character, MinecraftItem> {
 	/**
 	 * @return 対応関係がリストで表現されたもの
 	 */

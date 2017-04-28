@@ -2,7 +2,7 @@ package hexirp.forge;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
-import hexirp.collection.HashMapHolder;
+import hexirp.collection.HashMapUser;
 
 /**
  * アイテムの索引を表す.
@@ -10,7 +10,7 @@ import hexirp.collection.HashMapHolder;
  * @author Hexirp
  * @param <Item> 項目
  */
-public class Index<Item> extends HashMapHolder<String, Item> {
+public class Index<Item> extends HashMapUser<String, Item> {
 	/**
 	 * 索引を結合する.
 	 *
