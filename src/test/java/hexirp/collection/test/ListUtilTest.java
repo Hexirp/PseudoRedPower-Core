@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import org.junit.Test;
 
 import hexirp.collection.AbstractListUtil;
-import hexirp.collection.ListUtil;
+import hexirp.collection.ArrayBuilder;
 
 /**
  * {@link ListUtil}のテストを記述する.
@@ -20,7 +20,7 @@ public class ListUtilTest {
 	@Test
 	public void test_array() {
 		assertArrayEquals(
-		    new ListUtil<String>().array(),
+		    new ArrayBuilder<String>().array(),
 		    new String[] {});
 	}
 	
@@ -37,7 +37,7 @@ public class ListUtilTest {
 	@Test
 	public void test_merge() {
 		assertChaining(
-		    new ListUtil<String>(),
+		    new ArrayBuilder<String>(),
 		    (final AbstractListUtil<String> t) -> t.merge(new LinkedList<String>()));
 	}
 }

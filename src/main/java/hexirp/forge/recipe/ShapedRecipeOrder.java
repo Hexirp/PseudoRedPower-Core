@@ -2,7 +2,7 @@ package hexirp.forge.recipe;
 
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.collection.ListUtil;
+import hexirp.collection.ArrayBuilder;
 import hexirp.collection.TwoFields;
 
 /**
@@ -25,6 +25,6 @@ public class ShapedRecipeOrder extends TwoFields<ShapedRecipeAbstractOrder, Shap
 	 */
 	@Getting
 	public Object[] array() {
-		return new ListUtil<>().merge(first.order()).merge(second.list()).array();
+		return new ArrayBuilder<>().merge(first.order()).merge(second.list()).array();
 	}
 }

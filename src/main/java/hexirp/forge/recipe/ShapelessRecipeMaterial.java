@@ -6,7 +6,7 @@ import java.util.List;
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
 import hexirp.annotation.Setting;
-import hexirp.collection.ListUtil;
+import hexirp.collection.ArrayBuilder;
 import hexirp.collection.OneField;
 import hexirp.forge.MinecraftItem;
 import net.minecraft.item.Item;
@@ -28,7 +28,7 @@ public class ShapelessRecipeMaterial extends OneField<List<Item>> {
 	 */
 	@Getting
 	public Object[] array() {
-		return new ListUtil<Item>().merge(value).array();
+		return new ArrayBuilder<Item>().merge(value).array();
 	}
 	
 	/**
