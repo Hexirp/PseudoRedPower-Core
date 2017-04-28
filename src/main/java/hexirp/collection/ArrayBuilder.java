@@ -1,12 +1,9 @@
 package hexirp.collection;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.LinkedList;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
-import hexirp.annotation.Setting;
 
 /**
  * 配列への変換を表現する.
@@ -14,13 +11,7 @@ import hexirp.annotation.Setting;
  * @author Hexirp
  * @param <Element> 要素
  */
-public class ArrayBuilder<Element> extends OneField<List<Element>> {
-	/** Setting. */
-	@Setting
-	public ArrayBuilder() {
-		super(new LinkedList<Element>());
-	}
-
+public class ArrayBuilder<Element> extends LinkedListUser<Element> {
 	/**
 	 * @return 配列に変換されたリスト
 	 */
@@ -40,7 +31,6 @@ public class ArrayBuilder<Element> extends OneField<List<Element>> {
 	@Chaining
 	public ArrayBuilder<Element> merge(final Collection<? extends Element> col) {
 		value.addAll(col);
-		
 		return this;
 	}
 }

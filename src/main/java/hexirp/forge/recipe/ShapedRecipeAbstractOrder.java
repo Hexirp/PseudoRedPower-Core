@@ -1,25 +1,17 @@
 package hexirp.forge.recipe;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Getting;
-import hexirp.annotation.Setting;
-import hexirp.collection.OneField;
+import hexirp.collection.LinkedListUser;
 
 /**
  * レシピの並べ方を文字で抽象的に表現する.
  *
  * @author Hexirp
  */
-public class ShapedRecipeAbstractOrder extends OneField<List<String>> {
-	/** Setting. */
-	@Setting
-	public ShapedRecipeAbstractOrder() {
-		super(new LinkedList<String>());
-	}
-	
+public class ShapedRecipeAbstractOrder extends LinkedListUser<String> {
 	/**
 	 * @return 文字で表現されたレシピの並べ方
 	 */
@@ -37,7 +29,6 @@ public class ShapedRecipeAbstractOrder extends OneField<List<String>> {
 	@Chaining
 	public ShapedRecipeAbstractOrder add(final String string) {
 		value.add(string);
-		
 		return this;
 	}
 }

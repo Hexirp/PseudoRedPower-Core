@@ -1,13 +1,10 @@
 package hexirp.forge;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.function.Consumer;
 
 import hexirp.annotation.Chaining;
 import hexirp.annotation.Command;
-import hexirp.annotation.Setting;
-import hexirp.collection.OneField;
+import hexirp.collection.LinkedListUser;
 
 /**
  * MODにおいて追加される要素を保持する辞書を表現する.
@@ -15,13 +12,7 @@ import hexirp.collection.OneField;
  * @author Hexirp
  * @param <Element> 要素の型
  */
-public class Library<Element> extends OneField<List<Element>> {
-	/** Setting. */
-	@Setting
-	public Library() {
-		super(new LinkedList<>());
-	}
-	
+public class Library<Element> extends LinkedListUser<Element> {
 	/**
 	 * 値を追加する.
 	 *
