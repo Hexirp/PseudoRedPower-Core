@@ -2,6 +2,8 @@ package hexirp.collection;
 
 import java.util.LinkedList;
 
+import hexirp.annotation.Setting;
+
 /**
  * {@link LinkedList}を保持するクラスを表す.
  *
