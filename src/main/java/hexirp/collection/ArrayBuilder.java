@@ -37,7 +37,7 @@ public class ArrayBuilder<Element> extends OneField<List<Element>> {
 	 * @return this
 	 */
 	@Chaining
-	public AbstractListUtil<Element> merge(final Collection<? extends Element> col) {
+	public ArrayBuilder<Element> merge(final Collection<? extends Element> col) {
 		value.addAll(col);
 		
 		return this;
