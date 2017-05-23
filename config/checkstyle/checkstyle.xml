@@ -26,7 +26,7 @@ It's Hexirp's style.
     </module>
     <module name="MethodLength">
       <property name="severity" value="info"/>
-      <property name="max" value="10"/>
+      <property name="max" value="20"/>
       <property name="countEmpty" value="false"/>
     </module>
     <module name="JavadocMethod">
@@ -50,7 +50,7 @@ It's Hexirp's style.
   </module>
   <module name="FileLength">
     <property name="severity" value="info"/>
-    <property name="max" value="50"/>
+    <property name="max" value="100"/>
   </module>
   <module name="JavadocPackage"/>
 </module>
