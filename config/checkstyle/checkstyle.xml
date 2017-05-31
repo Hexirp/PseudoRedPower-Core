@@ -53,4 +53,6 @@ It's Hexirp's style.
     <property name="max" value="100"/>
   </module>
   <module name="JavadocPackage"/>
+  <module name="ModifierOrder"/>
+  <module name="RedundantModifier"/>
 </module>
