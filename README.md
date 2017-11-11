@@ -1,6 +1,8 @@
 # PseudoRedPower-Core
 [![Build Status](https://travis-ci.org/Hexirp/PseudoRedPower-Core.svg?branch=master)](https://travis-ci.org/Hexirp/PseudoRedPower-Core)
 
+**It's deprecated. You can see [akariki](https://github.com/Hexirp/akariki).**
+
 It's a MOD of Minecraft and is **the salvaged RedPower2** to 1.8.9 or later. So, **respect the author of RedPower2** if you think this MOD is interesting.
 
 ## Feature
